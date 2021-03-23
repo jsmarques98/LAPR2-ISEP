@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+:Doctor: --> (precribes lab order)
+
+:Receptionist: --> (registers the test to be performed)
+:Receptionist: --> (registers the client)
+
+:Courier: --> (delivers the samples)
+:Chemistry topologist: --> (receives the samples)
+:Chemistry topologist: --> (registers the result of the samples)
+
+:Medical Lab Technician: --> (collects samples)
+:Medical Lab Technician: --> (associates samples in the system between client/test)
+
+:Specialist Doctor: --> (writes reports)
+
+:Client: --> (receives reports)
+
+@enduml

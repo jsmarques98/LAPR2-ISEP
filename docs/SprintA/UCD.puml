@@ -1,8 +1,6 @@
 @startuml
 left to right direction
 
-:Doctor: --> (precribes lab order)
-
 :Receptionist: --> (registers the test to be performed)
 :Receptionist: --> (registers the client)
 
@@ -10,17 +8,17 @@ left to right direction
 :Chemistry topologist: --> (registers the result of the samples)
 
 :Medical Lab Technician: --> (collects samples)
-:Medical Lab Technician: --> (associates samples in the system between client/test)
 
-:Specialist Doctor: --> (writes reports)
+:Specialist Doctor: --> (diagnostics/writes reports)
 
 :Laboratory Coordinator: --> (validates reports)
 
-:Client: --> (receives reports)
+:Client: --> (views the reports/examination)
 
 :Administrator: --> (specify new type of test and its collecting methods)
 :Administrator: --> (specify new test parameter and categorize it)
 :Administrator: --> (specify new parameter category)
 
+:Time: --> (generate daily report)
 
 @enduml

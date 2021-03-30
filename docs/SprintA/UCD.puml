@@ -6,7 +6,6 @@ left to right direction
 :Receptionist: --> (registers the test to be performed)
 :Receptionist: --> (registers the client)
 
-:Courier: --> (delivers the samples)
 :Chemistry topologist: --> (receives the samples)
 :Chemistry topologist: --> (registers the result of the samples)
 
@@ -15,6 +14,13 @@ left to right direction
 
 :Specialist Doctor: --> (writes reports)
 
+:Laboratory Coordinator: --> (validates reports)
+
 :Client: --> (receives reports)
+
+:Administrator: --> (specify new type of test and its collecting methods)
+:Administrator: --> (specify new test parameter and categorize it)
+:Administrator: --> (specify new parameter category)
+
 
 @enduml

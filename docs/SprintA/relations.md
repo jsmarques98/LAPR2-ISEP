@@ -158,7 +158,7 @@ An association is a relationship between instances of objects that indicates a r
 | Test  | requested by | Client |
 | Test  | is of | TestType | 
 | Sample | collect by | medical lab technician |
-| Report | analyzed by | Clinical chemistry tecnologist |
+| Sample | analyzed by | Clinical chemistry tecnologist |
 | Report | written by | medical lab technician | 
 | Report   | written by |  Specialist doctor |
 | Report | written by | Laboratiry coordinator |  

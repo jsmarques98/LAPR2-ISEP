@@ -10,28 +10,22 @@ _Specifies functionalities that:_
 
 
 ### Audits
-	* Covid reports (made someone in the headquarters)
+	* Covid reports (made by someone in the headquarters)
 	* Daily reports (automatically generated)
 ### Localization
 	* Language only in English, location being in England
 ### Email
-	* Client may receive notifications by email,
+	* Client may receive notifications by email
 ### Printing
-	* There is no proof of any physical printing of date, everything is done
-in the application.
+	* There is no proof of any physical printing of date, everything is done in the application.
 ### Security
 	* Everyone must be authenticated.
-	* Each access is given by roles, which are established by what the 
-actor do in the system.
+	* Each access is given by roles, which are established by what the actors do in the system.
 	* Only Specialist Doctor is allowed to access all client data.
-	* Medical Lab Technicians, Specialist Doctor and Laboratory Coordinators
-have access to reports.
+	* Medical Lab Technicians, Specialist Doctor and Laboratory Coordinators have access to reports.
 
 ### Workflow
-	In order for a report to be made there needs to be some pre accepted 
-happenings: client must have been registered, called, samples must have been 
-retrieved, delivered to the laboratory, a diagnosis made, a report in base 
-of the diagnosis made and the approval of the report.
+In order for a report to be made there needs to be some pre accepted happenings: client must have been registered, called, samples must have been retrieved, delivered to the laboratory, a diagnosis made, a report in base of the diagnosis made and the approval of the report.
 
 
 ## Usability 

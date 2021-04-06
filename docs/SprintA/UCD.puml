@@ -4,8 +4,8 @@ left to right direction
 :Receptionist: --> (registers the test to be performed)
 :Receptionist: --> (registers the client)
 
-:Chemistry topologist: --> (receives the samples)
-:Chemistry topologist: --> (registers the result of the samples)
+:Chemistry Technologist: --> (receives the samples)
+:Chemistry Technologist: --> (registers the result of the samples)
 
 :Medical Lab Technician: --> (collects samples)
 

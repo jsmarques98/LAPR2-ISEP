@@ -19,6 +19,7 @@ _Specifies functionalities that:_
 ### Printing
 	* There is no proof of any physical printing of date, everything is done in the application.
 ### Security
+	* Authentication system
 	* Everyone must be authenticated.
 	* Each access is given by roles, which are established by what the actors do in the system.
 	* Only Specialist Doctor is allowed to access all client data.
@@ -34,6 +35,8 @@ _Evaluates the user interface. It has several subcategories,
 among them: error prevention; interface aesthetics and design; help and
 documentation; consistency and standards._
 
+### Documentation
+ Those who use the application will have a manual in the application.
 
 ### Interface
  Graphical interface unsing JavaFX11.
@@ -60,10 +63,8 @@ _The supportability requirements gathers several characteristics, such as:
 testability, adaptability, maintainability, compatibility,
 configurability, installability, scalability and more._ 
 
-
-
-N/A as of sprint A
-
+Ordering algorithm to be defined by a file configuration
+The ordering will consist in ordering clients data by number or by name.
 
 ## +
 
@@ -82,6 +83,9 @@ _Specifies or constraints the code or construction of a system such
 such as: mandatory standards/patterns, implementation languages,
 database integrity, resource limits, operating system._
 
+Programming language - Java
+
+Developers must use NetBeans or IntelliJ
 
 Unit Tests (with JUnit 4), Javadocs, CamelCase, Jacoco.
 Images use SVG, class Object must use data serialization.

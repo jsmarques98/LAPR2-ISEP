@@ -4,14 +4,16 @@ left to right direction
 :Receptionist: --> (registers the test to be performed)
 :Receptionist: --> (registers the client)
 
-:Chemistry Technologist: --> (receives the samples)
 :Chemistry Technologist: --> (registers the result of the samples)
+:Chemistry Technologist: --> (verifies report)
 
 :Medical Lab Technician: --> (collects samples)
+:Medical Lab Technician: --> (verifies report)
 
-:Specialist Doctor: --> (diagnostics/writes reports)
+:Specialist Doctor: --> (diagnostics sample)
+:Specialist Doctor: --> (verifies report)
 
-:Laboratory Coordinator: --> (validates reports)
+:Laboratory Coordinator: --> (validates/verifies reports)
 
 :Client: --> (views the reports/examination)
 

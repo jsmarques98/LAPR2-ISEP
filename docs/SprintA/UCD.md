@@ -4,7 +4,7 @@
 
 However, be aware, this is a pedagogical simplification. On further projects and curricular units might also exist _1 to N **and/or** N to 1 relationships between US and UC.
 
-![Use Case Diagram](UCD.png)
+![Use Case Diagram](UCD.svg)
 
 
 **For each UC/US, it must be provided evidences of applying main activities of the software development process (requirements, analysis, design, tests and code). Gather those evidences on a separate file for each UC/US and set up a link as suggested below.**

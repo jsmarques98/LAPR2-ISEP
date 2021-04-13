@@ -15,12 +15,12 @@ _Specifies functionalities that:_
 ### Localization
 	* Language only in English, location being in England
 ### Email
-	* Client may receive notifications by email
+	* Client may receive notifications by email (by whom, internal system? services like outlook,gmail?)
 ### Printing
 	* There is no proof of any physical printing of date, everything is done in the application.
 ### Security
 	* Authentication system
-	* Everyone must be authenticated.
+	* Everyone must be authenticated by a password.
 	* Each access is given by roles, which are established by what the actors do in the system.
 	* Only Specialist Doctor is allowed to access all client data.
 	* Medical Lab Technicians, Specialist Doctor and Laboratory Coordinators have access to reports.
@@ -39,10 +39,9 @@ documentation; consistency and standards._
  Those who use the application will have a manual in the application.
 
 ### Interface
- Graphical interface unsing JavaFX11.
+ 
 
 ### Interface consistency
- JavaFX11 provides multiplatform support.
 
 
 ## Reliability
@@ -50,7 +49,7 @@ _Refers to the integrity, compliance and interoperability of the software. The r
 
 
 ### Disaster recover possibility
-	Laboratory coordinator checks, rechecks the results of the reports.
+
 
 ## Performance
 _Evaluates the performance requirements of the software, namely: response time, start-up time, recovery time, memory consumption, CPU usage, load capacity and application availability._
@@ -63,6 +62,8 @@ _The supportability requirements gathers several characteristics, such as:
 testability, adaptability, maintainability, compatibility,
 configurability, installability, scalability and more._ 
 
+Language will be only in English.
+
 Ordering algorithm to be defined by a file configuration
 The ordering will consist in ordering clients data by number or by name.
 
@@ -73,7 +74,7 @@ The ordering will consist in ordering clients data by number or by name.
 _Specifies or constraints the system design process. Examples may include: programming languages, software process, mandatory standards/patterns, use of development tools, class library, etc._
   
 
-Software will be developed using the artefacts developed in Requirements 
+Software will be developed using the artefacts developed in Requirements.
 Engineering as a reference, Object Oriented Design.
 
 
@@ -85,10 +86,16 @@ database integrity, resource limits, operating system._
 
 Programming language - Java
 
-Developers must use NetBeans or IntelliJ
+Developers must use NetBeans or IntelliJ.
+Graphical interface using JavaFX11.
 
-Unit Tests (with JUnit 4), Javadocs, CamelCase, Jacoco.
-Images use SVG, class Object must use data serialization.
+Documentation using Javadocs
+CamelCase, 
+Images use SVG, classes must use data serialization.
+
+Jacoco to generate coding reports.
+Coverage
+Unit Tests (with JUnit 4).
 
 
 ### Interface Constraints

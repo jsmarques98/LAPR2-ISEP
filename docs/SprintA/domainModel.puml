@@ -1,9 +1,17 @@
 @startuml
 
 object Company{
+-designation
+-address
+}
+
+object LabOrder{
 }
 
 object Test{
+-testID
+-nhscode
+-createdAT
 }
 
 
@@ -11,76 +19,125 @@ object Clinic{
 }
 
 object Parameter{
+-designation
 }
 
-object Category{
+object ParameterCategory{
+-code
+-description
+-nhsld
 }
+
 
 object Administrator{
+-authenticationID
+-password
+}
+
+object Diagnosis{
+-result
 }
 
 object Sample{
+-barCode
+
 }
 
 object Report{
+-type
+-result
 }
 
 object MedicalLabTechnician{
+-authenticationID
+-password
+
 }
 
 object SpecialistDoctor{
+-authenticationID
+-password
 }
 
 object LaboratoryCoordinator{
+-authenticationID
+-password
+
 }
 
 object Client{
-}
-
-object Administrator{
+-name
+-citizenCardNumber
+-nationalHealthcareServiceNumber
+-birthdate
+-sex
+-taxIdentificationNumber
+-phoneNumber
+-email
 }
 
 object Receptionist{
+-authenticationID
+-password
 }
 
 object ClinicalChemistryTechnologist{
+-authenticationID
+-password
+
 }
 
 object ChemicalLaboratory{
 }
 
-object DailyReport{
+object TestType{
+-testTypeID
+-designation
 }
 
-object CovidReport{
+object NHSReport{
 }
 
-
+Company "1" -- "*" TestType : conducts
 Company "1" -- "*" Test : performs
 Company "1" -- "*" Clinic : has
 Company "1" -- "1" ChemicalLaboratory : has
-Parameter "1" -- "*" Category : is presented under
-Category "1" -- "1" Administrator : is created by
-Test "*" -- "1" Client : is requested by
-Test "*" -- "1" Category : is of
-Sample "*" -- "1" MedicalLabTechnician : is analyzed by
-Report "*" -- "1" ClinicalChemistryTechnologist : is written by
-Report "*" -- "1" MedicalLabTechnician : is written by
-Report "*" -- "1" SpecialistDoctor : is written by
-Report "*" -- "1" LaboratoryCoordinator : is written by
+Company "1" -- "*" Parameter : capable of analysing
+Company "1" -- "*" ParameterCategory : adopts
+
+
+ParameterCategory "*" -- "1" Parameter : belongs to
+ParameterCategory "1" -- "1" Administrator : is created by
+
+Test "*" -- "1" Client : makes
+Test "*" -- "1" ParameterCategory : is of
+Test "*" -- "1" TestType : is of
+
+Sample "*" -- "1" MedicalLabTechnician : is collected/analyzed by
+Sample "1" -- "1" Test : is based on
+
+Diagnosis "*" -- "1" SpecialistDoctor : makes
+Diagnosis "1" -- "1" Report : generates
+Diagnosis "1" -- "1" Sample : is based on
 Report "1" -- "1" Test : is based on
 Report "*" -- "1" Client : is sent to
 Administrator "1" -- "*" Test : specifies
 Receptionist "1" -- "*" Client : registers
 Receptionist "1" -- "*" Test : registers
-LaboratoryCoordinator "1" -- "*" Report : validates
+LaboratoryCoordinator "1" -- "*" Report : validates and confirms the report
 ChemicalLaboratory "1" -- "*" Sample : is received
 ClinicalChemistryTechnologist "1" -- "*" Sample : registers the result
 ChemicalLaboratory "1" -- "*" Sample : it's where it analyzes
 ChemicalLaboratory "1" -- "*" Report : it's where it writes
 Clinic "1" -- "*" Sample : it's where are collected
-DailyReport "1" -- "1" DailyReport : writes
-CovidReport "1" -- "1" Someone : is done by
+
+Company "1" -- "*" Report : generates reports
+NHSReport "1" -- "*" Report : are of type
+Company "1" -- "*" NHSReport : sends reports to
+LabOrder "1" -- "1" Client : belongs to
+
+Test "1" -- "1" LabOrder : is based on
+
 
 @enduml
 Administrator "1"-- "1" Pharmacy : creates

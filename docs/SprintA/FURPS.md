@@ -10,8 +10,7 @@ _Specifies functionalities that:_
 
 
 ### Audits
-	* Covid reports (made by someone in the headquarters)
-	* Daily reports (automatically generated)
+
 ### Localization
 	* Language only in English, location being in England
 ### Email
@@ -39,7 +38,8 @@ documentation; consistency and standards._
  Those who use the application will have a manual in the application.
 
 ### Interface
- 
+
+The user interface must be simple, intuitive and consistent. 
 
 ### Interface consistency
 
@@ -50,17 +50,21 @@ _Refers to the integrity, compliance and interoperability of the software. The r
 
 ### Disaster recover possibility
 
+The system should not fail more than 5 days in one year. Whenever the system fails, there should be no data loss.
 
 ## Performance
 _Evaluates the performance requirements of the software, namely: response time, start-up time, recovery time, memory consumption, CPU usage, load capacity and application availability._
 
+Any interface between a user and the system shall have a maximum response time of 3 seconds. The system should start up in less than 10 seconds.
 
-N/A as of sprint A
+
 
 ## Supportability
 _The supportability requirements gathers several characteristics, such as:
 testability, adaptability, maintainability, compatibility,
 configurability, installability, scalability and more._ 
+
+The application should run on all platforms for which there exists a Java Virtual Machine.
 
 Language will be only in English.
 
@@ -89,12 +93,12 @@ Programming language - Java
 Developers must use NetBeans or IntelliJ.
 Graphical interface using JavaFX11.
 
-Documentation using Javadocs
+Documentation using Javadocs,
 CamelCase, 
 Images use SVG, classes must use data serialization.
 
 Jacoco to generate coding reports.
-Coverage
+Testing coverage for quality control.
 Unit Tests (with JUnit 4).
 
 
@@ -109,4 +113,4 @@ system being developed with other external systems._
 
 _Specifies a limitation or physical requirement regarding the hardware used to house the system, as for example: material, shape, size or weight._
 
-(fill in here )
+The application will be deployed to a machine with 8GB of RAM.

@@ -1,0 +1,160 @@
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object LabOrder{
+}
+
+object Test{
+-testID
+-nhscode
+-createdAT
+}
+
+
+object Clinic{
+}
+
+object Parameter{
+-designation
+}
+
+object ParameterCategory{
+-code
+-description
+-nhsld
+}
+
+
+object Administrator{
+-authenticationID
+-password
+}
+
+object Diagnosis{
+-result
+}
+
+object Sample{
+-barCode
+-type
+}
+
+object Report{
+-type
+-result
+}
+
+object MedicalLabTechnician{
+-authenticationID
+-password
+
+}
+
+object SpecialistDoctor{
+-authenticationID
+-password
+}
+
+object LaboratoryCoordinator{
+-authenticationID
+-password
+
+}
+
+object Client{
+-name
+-citizenCardNumber
+-nationalHealthcareServiceNumber
+-birthdate
+-sex
+-taxIdentificationNumber
+-phoneNumber
+-email
+}
+
+object Receptionist{
+-authenticationID
+-password
+}
+
+object ClinicalChemistryTechnologist{
+-authenticationID
+-password
+
+}
+
+object ChemicalLaboratory{
+}
+
+object TestType{
+-testTypeID
+-designation
+}
+
+object NHSReport{
+}
+
+object BarCodeAPI{
+}
+
+object NHSAPI{
+}
+
+Company "1" -- "*" TestType : conducts
+Company "1" -- "*" Test : performs
+Company "1" -- "*" Clinic : has
+Company "1" -- "1" ChemicalLaboratory : has
+Company "1" -- "*" Parameter : capable of analysing
+Company "1" -- "*" ParameterCategory : adopts
+
+
+ParameterCategory "*" -- "1" Parameter : belongs to
+ParameterCategory "1" -- "1" Administrator : is created by
+
+Test "*" -- "1" Client : makes
+Test "*" -- "1" ParameterCategory : is of
+Test "*" -- "1" TestType : is of
+Test "1" -- "1" Diagnosis
+
+Sample "*" -- "1" MedicalLabTechnician : is collected/analyzed by
+Sample "*" -- "1" Test : is based on
+
+Diagnosis "*" -- "1" SpecialistDoctor : makes
+SpecialistDoctor "1" -- "1" Report : elaborates
+Diagnosis "1" -- "1" Report : generates
+Diagnosis "*" -- "1" Sample : is based on
+Report "1" -- "1" Test : is based on
+Report "*" -- "1" Client : is sent via application
+Administrator "1" -- "*" Test : specifies
+Receptionist "1" -- "*" Client : registers
+Receptionist "1" -- "*" Test : registers
+LaboratoryCoordinator "1" -- "*" Report : validates and confirms the report
+ChemicalLaboratory "1" -- "*" Sample : is received
+ClinicalChemistryTechnologist "1" -- "*" Sample : registers the result
+ChemicalLaboratory "1" -- "*" Sample : it's where it analyzes
+ChemicalLaboratory "1" -- "*" Report : it's where it writes
+Clinic "1" -- "*" Sample : it's where are collected
+Company "1" -- "1" Client : notifies by SMS when report is ready
+
+Company "1" -- "*" Report : generates reports
+NHSReport "1" -- "*" Report : are of type
+Company "1" -- "*" NHSReport : sends reports to
+NHSReport "*" -- "1" NHSAPI : sends reports via API
+LabOrder "1" -- "1" Client : belongs to
+
+Test "1" -- "1" LabOrder : is based on
+BarCodeAPI "1" -- "*" Sample : generates barCode
+
+
+@enduml
+Administrator "1"-- "1" Pharmacy : creates
+Courier "1"--"0..1" ParkingSpace : can reserve - um courier pode reservar ponto de abastecimento????
+ParkingSpace "1"--"*" Courier : sends notifications
+RegisteredUser "1"--"*" Product : views
+object NonRegisteredUser
+NonRegisteredUser "1"--"1" RegisteredUser : registers as
+NonRegisteredUser "1"--"*" Product : views

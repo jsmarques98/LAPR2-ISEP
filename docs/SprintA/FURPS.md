@@ -39,24 +39,24 @@ documentation; consistency and standards._
 
 ### Interface
 
-The user interface must be simple, intuitive and consistent. 
+The user interface must be simple, intuitive.
 
 ### Interface consistency
+User interface must be consistent.
 
 
 ## Reliability
 _Refers to the integrity, compliance and interoperability of the software. The requirements to be considered are: frequency and severity of failure, possibility of recovery, possibility of prediction, accuracy, average time between failures._
-
+The system should not fail more than 5 days in one year.
 
 ### Disaster recover possibility
-
-The system should not fail more than 5 days in one year. Whenever the system fails, there should be no data loss.
+ Whenever the system fails, there should be no data loss.
 
 ## Performance
 _Evaluates the performance requirements of the software, namely: response time, start-up time, recovery time, memory consumption, CPU usage, load capacity and application availability._
 
 Any interface between a user and the system shall have a maximum response time of 3 seconds. The system should start up in less than 10 seconds.
-
+The application will be deployed to a machine with 8GB of RAM.
 
 
 ## Supportability
@@ -106,8 +106,7 @@ Unit Tests (with JUnit 4).
 _Specifies or constraints the features inherent to the interaction of the
 system being developed with other external systems._
 
-
-(fill in here )
+Language of the interface will be only in English since the localization is in English.
 
 ### Physical Constraints
 

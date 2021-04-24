@@ -11,11 +11,20 @@ object LabOrder{
 object Test{
 -testID
 -nhscode
--createdAT
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
 }
 
 
 object Clinic{
+-laboratoryID
+-name
+-address
+-phoneNumber
+-TINNumber
 }
 
 object Parameter{
@@ -48,20 +57,26 @@ object Report{
 -result
 }
 
-object MedicalLabTechnician{
--authenticationID
--password
 
+object Employee{
+-employeeID
+-organizationRole
+-name
+-address
+-phoneNumber
+-email
+-SOCCode
+
+}
+
+object MedicalLabTechnician{
 }
 
 object SpecialistDoctor{
--authenticationID
--password
+-doctorIndexNumber
 }
 
 object LaboratoryCoordinator{
--authenticationID
--password
 
 }
 
@@ -77,17 +92,17 @@ object Client{
 }
 
 object Receptionist{
--authenticationID
--password
 }
 
 object ClinicalChemistryTechnologist{
--authenticationID
--password
 
 }
 
 object ChemicalLaboratory{
+-name
+-address
+-phoneNumber
+-TINNumber
 }
 
 object TestType{
@@ -98,10 +113,15 @@ object TestType{
 object NHSReport{
 }
 
+
 object BarCodeAPI{
 }
 
+
 object NHSAPI{
+}
+
+object TimeReport{
 }
 
 Company "1" -- "*" TestType : conducts
@@ -116,7 +136,7 @@ ParameterCategory "*" -- "1" Parameter : belongs to
 ParameterCategory "1" -- "1" Administrator : is created by
 
 Test "*" -- "1" Client : makes
-Test "*" -- "1" ParameterCategory : is of
+Test "1" -- "*" Parameter : is of
 Test "*" -- "1" TestType : is of
 Test "1" -- "1" Diagnosis
 
@@ -141,14 +161,31 @@ Clinic "1" -- "*" Sample : it's where are collected
 Company "1" -- "1" Client : notifies by SMS when report is ready
 
 Company "1" -- "*" Report : generates reports
-NHSReport "1" -- "*" Report : are of type
-Company "1" -- "*" NHSReport : sends reports to
-NHSReport "*" -- "1" NHSAPI : sends reports via API
+NHSReport "1" -- "*" Test : are of type
+Company "1" -- "*" NHSReport : generates reports
 LabOrder "1" -- "1" Client : belongs to
 
-Test "1" -- "1" LabOrder : is based on
-BarCodeAPI "1" -- "*" Sample : generates barCode
 
+package "BarCodeAPI" #DDDDDD{
+	BarCodeAPI "1" -- "*" Sample : generates barCode
+}
+
+
+package "NHSAPI" #DDDDDD{
+	NHSAPI "1" -- "*" NHSReport : are sent to	
+}
+
+Test "1" -- "1" LabOrder : is based on
+
+ClinicalChemistryTechnologist "*" -- "1" Employee : is a
+LaboratoryCoordinator "*" -- "1" Employee : is a
+Receptionist "*" -- "1" Employee : is a
+SpecialistDoctor "*" -- "1" Employee : is a
+MedicalLabTechnician "*" -- "1" Employee : is a
+Employee "*" -- "1" Company : works for
+
+LaboratoryCoordinator "1" -- "*" TimeReport : generates
+ 
 
 @enduml
 Administrator "1"-- "1" Pharmacy : creates

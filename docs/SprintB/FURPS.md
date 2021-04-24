@@ -23,6 +23,7 @@ _Specifies functionalities that:_
 	* Each access is given by roles, which are established by what the actors do in the system.
 	* Only Specialist Doctor is allowed to access all client data.
 	* Medical Lab Technicians, Specialist Doctor and Laboratory Coordinators have access to reports.
+	* Administrator can modify ordering algorithm
 
 ### Workflow
 In order for a report to be made there needs to be some pre accepted happenings: client must have been registered, called, samples must have been retrieved, delivered to the laboratory, a diagnosis made, a report in base of the diagnosis made and the approval of the report.
@@ -44,6 +45,10 @@ The user interface must be simple, intuitive.
 ### Interface consistency
 User interface must be consistent.
 
+Sorting data:
+A good practice is to always sort data when we present it to the users.
+Moreover, if the user wants, at any time he can use another criterium/order 
+to analyze the data.
 
 ## Reliability
 _Refers to the integrity, compliance and interoperability of the software. The requirements to be considered are: frequency and severity of failure, possibility of recovery, possibility of prediction, accuracy, average time between failures._
@@ -107,6 +112,11 @@ _Specifies or constraints the features inherent to the interaction of the
 system being developed with other external systems._
 
 Language of the interface will be only in English since the localization is in English.
+
+Sorting data:
+A good practice is to always sort data when we present it to the users.
+Moreover, if the user wants, at any time he can use another criterium/order 
+to analyze the data.
 
 ### Physical Constraints
 

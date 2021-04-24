@@ -1,13 +1,13 @@
 @startuml
 left to right direction
 
-:Receptionist: --> (registers the test to be performed)
+:Receptionist: --> (US 4 - registers the test to be performed)
 :Receptionist: --> (US 3 - registers the client)
 
 :Chemistry Technologist: --> (registers the result of the samples)
 :Chemistry Technologist: --> (verifies report)
 
-:Medical Lab Technician: --> (collects samples)
+:Medical Lab Technician: --> (US 5 - collects samples)
 :Medical Lab Technician: --> (verifies report)
 
 :Specialist Doctor: --> (diagnostics sample)

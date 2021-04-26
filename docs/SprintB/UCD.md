@@ -18,11 +18,11 @@ However, be aware, this is a pedagogical simplification. On further projects and
 | US4 | [registers the test to be performed](US4.md)|
 | US5 | [Collect samples](US5.md)|
 | US6 | [ShortNameOfUS6](US6.md) |
-| US7 | [Registers a new employee](US7.md)|
-| US8 | [Register a new clinical analysis laboratory stating which kind of test(s) it operates](US8.md)|
-| US9 | [Specify a new type of test and its collecting methods](US9.md)|
-| US10 | [Specify a new parameter and categorize it](US10.md)|
-| US11 | [Specify a new parameter category](US11.md)|
+| US7 | [Registers a new employee](US7/US7.md)|
+| US8 | [Register a new clinical analysis laboratory stating which kind of test(s) it operates](US8/US8.md)|
+| US9 | [Specify a new type of test and its collecting methods](US9/US9.md)|
+| US10 | [Specify a new parameter and categorize it](US10/US10.md)|
+| US11 | [Specify a new parameter category](US11/US11.md)|
 | … | … |
 | US326 | [ShortNameOfUS4](US326.md)|
 

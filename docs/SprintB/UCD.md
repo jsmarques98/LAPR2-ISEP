@@ -14,7 +14,7 @@ However, be aware, this is a pedagogical simplification. On further projects and
 |:----|:------------------------------------------------------------------------|
 | US1 | [ShortNameOfUS1](US1.md)   |
 | US2 | [ShortNameOfUS2](US2.md)  |
-| US3 | [Register the client](US3US3.md)|
+| US3 | [Register the client](US3/US3.md)|
 | US4 | [registers the test to be performed](US4.md)|
 | US5 | [Collect samples](US5.md)|
 | US6 | [ShortNameOfUS6](US6.md) |

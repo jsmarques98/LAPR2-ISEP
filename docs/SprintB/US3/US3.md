@@ -1,4 +1,4 @@
-# US XXX - XXXX XXXX
+# US US3 - Register Client
 
 ## 1. Requirements Engineering
 
@@ -39,7 +39,7 @@ This US is held when a client comes for the first time.
 ### 2.1. Relevant Domain Model Excerpt 
 *In this section, it is suggested to present an excerpt of the domain model that is seen as relevant to fulfill this requirement.* 
 
-![USXX-MD](USXX-MD.svg)
+![US3-MD](US3-MD.svg)
 
 ### 2.2. Other Remarks
 

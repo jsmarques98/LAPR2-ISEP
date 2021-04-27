@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="544px" preserveAspectRatio="none" style="width:413px;height:544px;" version="1.1" viewBox="0 0 413 544" width="413px" zoomAndPan="magnify"><defs><filter height="300%" id="ff28d101bdkhh" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#ff28d101bdkhh)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="80" x="83" y="317"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="53" x="96.5" y="330.1481">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="84" x2="162" y1="335.4001" y2="335.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="91" y="343.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="54" x="103" y="348.6901">designation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="91" y="355.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="103" y="360.6901">address</text><rect fill="#FEFECE" filter="url(#ff28d101bdkhh)" height="34.4001" style="stroke:#A80036;stroke-width:1.5;" width="66" x="275" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="52" x="282" y="20.1481">LabOrder</text><line style="stroke:#A80036;stroke-width:1.5;" x1="276" x2="340" y1="25.4001" y2="25.4001"/><rect fill="#FEFECE" filter="url(#ff28d101bdkhh)" height="86.4" style="stroke:#A80036;stroke-width:1.5;" width="92" x="7" y="444"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="31" x="37.5" y="457.1481">Clinic</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="98" y1="462.4001" y2="462.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="470.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="56" x="27" y="475.6901">laboratoryID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="482.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="26" x="27" y="487.6901">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="494.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="27" y="499.6901">address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="506.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="66" x="27" y="511.6901">phoneNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="518.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="52" x="27" y="523.69">TINNumber</text><rect fill="#FEFECE" filter="url(#ff28d101bdkhh)" height="110.4" style="stroke:#A80036;stroke-width:1.5;" width="104" x="77" y="124"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="101.5" y="137.1481">Employee</text><line style="stroke:#A80036;stroke-width:1.5;" x1="78" x2="180" y1="142.4001" y2="142.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="85" y="150.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="55" x="97" y="155.6901">employeeID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="85" y="162.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="78" x="97" y="167.6901">organizationRole</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="85" y="174.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="26" x="97" y="179.6901">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="85" y="186.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="97" y="191.6901">address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="85" y="198.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="66" x="97" y="203.69">phoneNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="85" y="210.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="24" x="97" y="215.69">email</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="85" y="222.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="47" x="97" y="227.69">SOCCode</text><rect fill="#FEFECE" filter="url(#ff28d101bdkhh)" height="122.4" style="stroke:#A80036;stroke-width:1.5;" width="183" x="216.5" y="118"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="292" y="131.1481">Client</text><line style="stroke:#A80036;stroke-width:1.5;" x1="217.5" x2="398.5" y1="136.4001" y2="136.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="144.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="26" x="236.5" y="149.6901">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="156.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="87" x="236.5" y="161.6901">citizenCardNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="168.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="157" x="236.5" y="173.6901">nationalHealthcareServiceNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="180.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="41" x="236.5" y="185.6901">birthdate</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="192.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="16" x="236.5" y="197.69">sex</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="204.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="109" x="236.5" y="209.69">taxIdentificationNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="216.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="66" x="236.5" y="221.69">phoneNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="224.5" y="228.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="24" x="236.5" y="233.69">email</text><rect fill="#FEFECE" filter="url(#ff28d101bdkhh)" height="34.4001" style="stroke:#A80036;stroke-width:1.5;" width="82" x="88" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="95" y="20.1481">Receptionist</text><line style="stroke:#A80036;stroke-width:1.5;" x1="89" x2="169" y1="25.4001" y2="25.4001"/><!--MD5=[196bcb1a5e107afd614f248cc96d54e7]
+link Company to Clinic--><path codeLine="45" d="M111.13,367.26 C100.87,388.22 85.81,418.97 73.59,443.93 " fill="none" id="Company-Clinic" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="21" x="98" y="410.077">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="100.3836" y="387.3466">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="71.6992" y="432.3325">*</text><!--MD5=[6a35157f4c730bda767e7c9f1b8b7f73]
+link Receptionist to Client--><path codeLine="47" d="M147.82,41.08 C169.09,59.27 204.99,89.95 237.42,117.67 " fill="none" id="Receptionist-Client" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="50" x="204" y="84.077">registers</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="145.8948" y="61.3322">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="223.5134" y="106.3705">*</text><!--MD5=[b097d9d314264888b7dbeddc95343863]
+link LabOrder to Client--><path codeLine="49" d="M308,41.08 C308,59.27 308,89.95 308,117.67 " fill="none" id="LabOrder-Client" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="60" x="309" y="84.077">belongs to</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="299.8406" y="61.3322">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="300.5734" y="106.3705">1</text><!--MD5=[08fc311684e3067e3bee2b1eb2e56bdb]
+link Receptionist to Clinic--><path codeLine="51" d="M111.6,41.2 C94.53,58.38 69.57,87.23 59,118 C20.35,230.56 34.76,374.12 45.49,444 " fill="none" id="Receptionist-Clinic" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="48" x="36" y="283.077">works in</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="97.6769" y="61.492">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="36.5977" y="432.4145">1</text><!--MD5=[06bb7d2a85a007b79d10922b2d5e4cdd]
+link Receptionist to Employee--><path codeLine="53" d="M129,41.08 C129,60.65 129,94.69 129,123.93 " fill="none" id="Receptionist-Employee" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="21" x="130" y="84.077">is a</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="123.1719" y="61.3322">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="121.5297" y="112.6126">1</text><!--MD5=[d7ace9ce94145b54e26b24a174e1b7b9]
+link Employee to Company--><path codeLine="54" d="M126.99,234.06 C125.94,262.19 124.71,295.18 123.89,317 " fill="none" id="Employee-Company" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="53" x="127" y="283.077">works for</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="121.384" y="254.5569">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="116.1886" y="305.3695">1</text><!--MD5=[0cc08b85223158cd511a122459ca5ca6]
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object LabOrder{
+}
+
+object Clinic{
+-laboratoryID
+-name
+-address
+-phoneNumber
+-TINNumber
+}
+
+object Employee{
+-employeeID
+-organizationRole
+-name
+-address
+-phoneNumber
+-email
+-SOCCode
+
+}
+
+
+object Client{
+-name
+-citizenCardNumber
+-nationalHealthcareServiceNumber
+-birthdate
+-sex
+-taxIdentificationNumber
+-phoneNumber
+-email
+}
+
+object Receptionist{
+}
+
+
+Company "1" - - "*" Clinic : has
+
+Receptionist "1" - - "*" Client : registers
+
+LabOrder "1" - - "1" Client : belongs to
+
+Receptionist "1" - - "1" Clinic : works in
+
+Receptionist "*" - - "1" Employee : is a
+Employee "*" - - "1" Company : works for
+
+ 
+
+@enduml
+
+PlantUML version 1.2020.26(Mon Dec 21 17:45:07 WET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

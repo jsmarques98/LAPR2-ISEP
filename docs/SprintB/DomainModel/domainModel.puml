@@ -185,7 +185,10 @@ MedicalLabTechnician "*" -- "1" Employee : is a
 Employee "*" -- "1" Company : works for
 
 LaboratoryCoordinator "1" -- "*" TimeReport : generates
- 
+Administrator "*" -- "1" Employee : is a
+
+Company "1" -- "*" Client : provides service to
+Receptionist "*" -- "1" Clinics :  works in
 
 @enduml
 Administrator "1"-- "1" Pharmacy : creates

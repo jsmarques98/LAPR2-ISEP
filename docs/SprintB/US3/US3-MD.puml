@@ -45,13 +45,16 @@ object Receptionist{
 
 Company "1" -- "*" Clinic : has
 
+Company "1" -- "*" Client : provides a service to
+
 Receptionist "1" -- "*" Client : registers
 
 LabOrder "1" -- "1" Client : belongs to
 
-Receptionist "1" -- "1" Clinic : works in
+Receptionist "*" -- "1" Clinic : works in
 
 Receptionist "*" -- "1" Employee : is a
+
 Employee "*" -- "1" Company : works for
 
  

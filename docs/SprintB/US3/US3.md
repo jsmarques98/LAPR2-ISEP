@@ -55,24 +55,25 @@ This US is held when a client comes for the first time.
 
 | Interaction ID | Question: Which class is responsible for... | Answer  | Justification (with patterns)  |
 |:-------------  |:--------------------- |:------------|:---------------------------- |
-| Step 1  		 |							 |             |                              |
-| Step 2  		 |							 |             |                              |
-| Step 3  		 |							 |             |                              |
-| Step 4  		 |							 |             |                              |
-| Step 5  		 |							 |             |                              |
-| Step 6  		 |							 |             |                              |              
+| Step 1  		 |	... instantiating a new Client?	 |   Receptionist          |  Creator: Receptionist records instances of Clients           |
+| Step 2  		 |		n/a					 |             |                              |
+| Step 3  		 |	... saving the input data?		 |      Client       | IE: The object created in step 1 has its own data                             |
+| Step 4.1  		 |	... validating the data locally?						 |    Client         | IE: knows its own data                             |
+| Step 4.2  		 |	... validating the data globally?						 |    Company         | IE: knows all Client objects                             |
+| Step 5  		 |	... saving the created Client?						 |    Company         |    IE: records all client objects                          |
+| Step 6  		 |	... informing operation success?						 |       UI      |    IE: responsible for user interaction                         |              
 
 ### Systematization ##
 
 According to the taken rationale, the conceptual classes promoted to software classes are: 
 
- * Class1
- * Class2
- * Class3
+ * Receptionist
+ * Client
+ * Company
 
 Other software classes (i.e. Pure Fabrication) identified: 
- * xxxxUI  
- * xxxxController
+ * RegisterClientUI  
+ * RegisterClientController
 
 ## 3.2. Sequence Diagram (SD)
 

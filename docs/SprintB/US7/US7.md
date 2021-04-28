@@ -69,24 +69,28 @@ There is no dependencies.
 
 | Interaction ID | Question: Which class is responsible for... | Answer  | Justification (with patterns)  |
 |:-------------  |:--------------------- |:------------|:---------------------------- |
-| Step 1  		 |							 |             |                              |
-| Step 2  		 |							 |             |                              |
-| Step 3  		 |							 |             |                              |
-| Step 4  		 |							 |             |                              |
-| Step 5  		 |							 |             |                              |
-| Step 6  		 |							 |             |                              |              
+| Step 1 The Administrator starts to register a new employee |What class interacts with the user?| RegisterEmployeeUI | Pure Fabrication, because it is not justified to assign this responsibility to any class that exists in the Domain Model.                             |
+| | Which class coordinates the US? | RegisterEmployeeController | Controller |
+| | What class creates employee? | Company | Creator |
+| Step 2 The system request data(employeeID,doctor index number organization role, name, address, phone number, email, SOC code) |							 |             |                              |
+| Step 3 The Administrator types requested data |	Where are the entered data stored? | Employee | Information Expert (IE)  |
+| Step 4 The system validates and show all data and requests confirmation | What class validates the data of the employee (local validation)? | Employee | IE: Employee has his own data |
+| | What class validates Employee data (global validation)? | Company |  IE: The Company contains / adds Employee |
+| Step 5 The Administrator confirms the data |							 |             |                              |
+| Step 6 The system records the data and informs the administrator of the success of the operation.| What class does the specified / created Employee keep? | Company | IE. In the MD, the Company contains / aggregates Employees |              
+| | What class notifies? | RegisterEmployeeUI |
 
 ### Systematization ##
 
 According to the taken rationale, the conceptual classes promoted to software classes are: 
 
- * Class1
- * Class2
- * Class3
+ * Company
+ * Employee
+
 
 Other software classes (i.e. Pure Fabrication) identified: 
- * xxxxUI  
- * xxxxController
+ * RegisterEmployeeUI  
+ * RegisterEmployeeController
 
 ## 3.2. Sequence Diagram (SD)
 

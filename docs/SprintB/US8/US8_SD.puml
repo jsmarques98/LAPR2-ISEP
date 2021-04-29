@@ -1,0 +1,28 @@
+@startuml
+skinparam classAtributionIconSize 0
+
+class RegisterLaboratoryIU
+
+class RegisterLaboratoryController {
+    +registerLaboratory(LabID, address, phoneNumber, TIN)
+    +saveLaboratory()
+    +registerTest(sample)
+    +saveTest()
+}
+
+class Clinic {
+    +registerTest(sample)
+    +saveTest()
+    +validateTest()
+    +addTest()
+  }
+
+class Company {
+    +registerLaboratory(LabID, address, phoneNumber, TIN)
+    +saveLaboratory()
+    +validateLaboratory()
+    +addLaboratory()
+
+}
+
+@enduml

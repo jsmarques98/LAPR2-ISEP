@@ -1,19 +1,11 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-
-class Company
-class ClinicalAnalysisLab
-class TypeOfTest
-
-
 Company "1" --> "*" Clinic : has
 Clinic "1" --> "*" Sample : it´s where are collected
 Company "1" --> "*" Test : performs
 Test "*" --> "1" TestType : is of
 Sample "*" --> "1" Test : are of type
-
-
 
 class Company {
 - designation

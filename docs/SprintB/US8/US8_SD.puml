@@ -1,4 +1,5 @@
 @startuml
+
 skinparam classAtributionIconSize 0
 
 class RegisterLaboratoryIU

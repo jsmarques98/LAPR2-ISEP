@@ -43,7 +43,7 @@ There is no dependencies.
 
 
 
-![US7-SSD](SSD_US7.svg)
+![US7-SSD](US7-SSD.svg)
 
 
 ### 1.7 Other Relevant Remarks

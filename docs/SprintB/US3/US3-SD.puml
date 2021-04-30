@@ -1,0 +1,41 @@
+@startuml
+autonumber
+
+actor "ReceptionistActor" as RCP
+participant "RegisterClientUI" as ui
+participant "RegisterClientController" as controller
+participant "Receptionist" as receptionist
+participant "Client" as client
+activate RCP
+
+
+RCP -> ui : initiates the registration of a client
+activate ui
+
+ui -> RCP : requests the data required (name, CCNumber, NHSNumber, birthdate, sex, TINNumber, phoneNumber, email)
+
+RCP -> ui : inserts the requested data
+ui -> controller : createClient( ... )
+activate controller
+controller -> controller : clientDTO = createClientDTO( ... )
+
+controller -> ui : show(clientDTO)
+ui -> RCP : shows the data and requests a confirmation
+RCP -> ui : confirms the data
+ui -> controller : registerClient(clientDTO)
+' class receptionist is the Creator that instanciates the client
+controller -> receptionist :receptionist = getUser()
+activate receptionist
+receptionist -> client : client = createClient(clientDTO)
+activate client
+controller -> receptionist : client = getClient()
+receptionist -> receptionist : getClient()
+controller -> Company : boolean state = register(client)
+activate Company
+Company -> Company : set.add(client)
+ui <- controller : show(state)
+ui -> RCP : informs operation success
+
+deactivate ui
+
+@enduml

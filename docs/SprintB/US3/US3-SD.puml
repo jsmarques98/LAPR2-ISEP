@@ -11,11 +11,11 @@ activate RCP
 
 RCP -> ui : initiates the registration of a client
 activate ui
-
+ui -> controller ** : create
 ui -> RCP : requests the data required (name, CCNumber, NHSNumber, birthdate, sex, TINNumber, phoneNumber, email)
 
 RCP -> ui : inserts the requested data
-ui -> controller : createClient( ... )
+ui -> controller : createClientDTO( ... )
 activate controller
 controller -> controller : clientDTO = createClientDTO( ... )
 
@@ -24,15 +24,15 @@ ui -> RCP : shows the data and requests a confirmation
 RCP -> ui : confirms the data
 ui -> controller : registerClient(clientDTO)
 ' class receptionist is the Creator that instanciates the client
-controller -> receptionist :receptionist = getUser()
+controller -> receptionist ** : getUser()
 activate receptionist
-receptionist -> client : client = createClient(clientDTO)
+receptionist -> client ** : createClient(clientDTO)
 activate client
 controller -> receptionist : client = getClient()
 receptionist -> receptionist : getClient()
-controller -> Company : boolean state = register(client)
+controller -> Company : boolean state = save(client)
 activate Company
-Company -> Company : set.add(client)
+Company -> Company : save(client)
 ui <- controller : show(state)
 ui -> RCP : informs operation success
 

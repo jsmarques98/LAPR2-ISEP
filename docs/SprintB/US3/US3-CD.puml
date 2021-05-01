@@ -1,0 +1,60 @@
+@startuml
+class RegisterClientUI {
+ -show(clientDTO)
+ -show(state)
+}
+
+class RegisterClientController {
+  +boolean state
+  +registerClient(clientDTO)
+  +createClientDTO(name, CCNumber, NHSNumber, birthdate, sex, TINNumber, phoneNumber, email)
+}
+
+RegisterClientUI ..> RegisterClientController
+RegisterClientController ..> ClientDTO : creates
+
+class ClientDTO{
++String name
++String CCNumber
++String NHSNumber
++Date birthdate
++String sex
++String TINNumber
++String phoneNumber
++String email
+}
+
+
+RegisterClientController ..> Receptionist
+class Receptionist{
++getUser();
++getClient();
++createClient(ClientDTO)
+}
+
+Receptionist ..> Client : creates
+
+class Client{
++String name
++String CCNumber
++String NHSNumber
++Date birthdate
++String sex
++String TINNumber
++String phoneNumber
++String email
+}
+
+class Company{
++save(Client)
+-Set<Client> clients
+}
+
+RegisterClientUI ..> ClientDTO
+Company "1" --> "*" Client : contains
+
+Receptionist ..> ClientDTO
+RegisterClientController ..> Company
+
+@enduml
+

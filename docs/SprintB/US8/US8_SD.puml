@@ -3,9 +3,13 @@
 
 autonumber
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+actor "Admin"
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+Admin -> RegisterLaboratoryIU: starts the registry of a new Clinical Analysis Laboratory and tests
+RegisterLaboratoryIU --> Admin: request data (labID, name, address, phoneNr, TIN)
+
+Admin -> RegisterLaboratoryIU: types requested data
+RegisterLaboratoryIU --> RegisterLaboratoryController: registerLab(labID,name, address, phoneNr, TIN)
+
+
 @enduml

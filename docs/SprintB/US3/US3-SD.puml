@@ -6,8 +6,11 @@ participant "RegisterClientUI" as ui
 participant "RegisterClientController" as controller
 participant "Receptionist" as receptionist
 participant "Client" as client
+participant "Company"
+participant "AuthFacade"
+activate AuthFacade
 activate RCP
-
+activate Company
 
 RCP -> ui : initiates the registration of a client
 activate ui
@@ -24,15 +27,23 @@ ui -> RCP : shows the data and requests a confirmation
 RCP -> ui : confirms the data
 ui -> controller : registerClient(clientDTO)
 ' class receptionist is the Creator that instanciates the client
-controller -> receptionist ** : getUser()
+controller -> Company :Receptionist = getReceptionist(getCurrentUserSession())
+Company -> Company : getReceptionist(getCurrentUserSession().getID())
+
 activate receptionist
+
+controller -> receptionist : createClient(ClientDTO)
 receptionist -> client ** : createClient(clientDTO)
 activate client
 controller -> receptionist : client = getClient()
 receptionist -> receptionist : getClient()
 controller -> Company : boolean state = save(client)
-activate Company
 Company -> Company : save(client)
+controller -> AuthFacade : state = registerUser(ClientDTO)
+AuthFacade -> AuthFacade : addUserWithRole(ClientDTO.name, ClientDTO.email, ClientDTO.name, "Client")
+controller -> MailAdapter ** : state = sendCredentials(ClientDTO)
+activate MailAdapter
+MailAdapter -> MailAdapter : sendMsg(ClientDTO.email + ClientDTO.ID + ClientDTO.pwd)
 ui <- controller : show(state)
 ui -> RCP : informs operation success
 

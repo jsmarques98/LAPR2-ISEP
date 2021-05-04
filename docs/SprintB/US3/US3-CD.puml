@@ -8,6 +8,11 @@ class RegisterClientController {
   +boolean state
   +registerClient(clientDTO)
   +createClientDTO(name, CCNumber, NHSNumber, birthdate, sex, TINNumber, phoneNumber, email)
+  +createClient(ClientDTO)
+  +getClient()
+  +save(Client)
+  +registerUser(ClientDTO)
+  +sendCredentials(ClientDTO)
 }
 
 RegisterClientUI ..> RegisterClientController
@@ -22,10 +27,13 @@ class ClientDTO{
 +String TINNumber
 +String phoneNumber
 +String email
++String password
 }
 
 
 RegisterClientController ..> Receptionist
+
+
 class Receptionist{
 +getUser();
 +getClient();
@@ -35,26 +43,45 @@ class Receptionist{
 Receptionist ..> Client : creates
 
 class Client{
-+String name
-+String CCNumber
-+String NHSNumber
-+Date birthdate
-+String sex
-+String TINNumber
-+String phoneNumber
-+String email
+-String name
+-String CCNumber
+-String NHSNumber
+-String birthdate
+-String sex
+-String TINNumber
+-String phoneNumber
+-String email
+-String password
+
 }
 
 class Company{
 +save(Client)
++getReceptionist(String id)
 -Set<Client> clients
+-Set<Receptionist> receptionists
 }
 
 RegisterClientUI ..> ClientDTO
 Company "1" --> "*" Client : contains
+Company "1" --> "*" Receptionist : contains
 
 Receptionist ..> ClientDTO
 RegisterClientController ..> Company
+AuthFacade ..> ClientDTO
+MailAdapter ..> ClientDTO
+
+RegisterClientController ..> AuthFacade : registers a new user
+
+class AuthFacade{
++addUserWithRole()
+}
+
+class MailAdapter{
++sendmsg(email, text)
+}
+
+RegisterClientController ..> MailAdapter : sends credential to Client
 
 @enduml
 

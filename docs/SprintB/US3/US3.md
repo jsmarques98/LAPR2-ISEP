@@ -9,21 +9,18 @@ As a receptionist of the clinic, I want to register a client.
 
 ### 1.2. Customer Specifications and Clarifications 
 
-The "auth" component available  on the repository must be reused (without modifications).
-
-The application must validate and should not accept clients who have more than 150 years of age.
-It is good to have old people using our services, but 150 years it's too much and it may be a typo.
-The password should be randomly generated. It should have ten alphanumeric characters
-The maximum length of the String with the name of the Client should be no more than 35 characters.
-TIN should be a 10 digit number.
-Citizen Card: 16 digit number.
-NHS: 10 digit number.
-Birth day - in which format: DD/MM/YY
-Sex - should only be Male/Female or include more options. Male/Female
-Phone number: 11 digit number
-The sex is opcional. All other fields are required. 
-
-The e-mail address and phone number should be unique for each user. The system should present a message informing about the error and asking for a different phone number.
+ - The "auth" component available  on the repository must be reused (without modifications).
+ - The application must validate and should not accept clients who have more than 150 years of age. It is good to have old people using our services, but 150 years it's too much and it may be a typo.
+ - The password should be randomly generated. It should have ten alphanumeric characters
+ - The maximum length of the String with the name of the Client should be no more than 35 characters.
+ - TIN should be a 10 digit number.
+ - Citizen Card: 16 digit number.
+ - NHS: 10 digit number.
+ - Birth day - in which format: DD/MM/YY
+ - Sex - should only be Male/Female or include more options. Male/Female
+ - Phone number: 11 digit number
+ - The sex is opcional. All other fields are required. 
+ - The e-mail address and phone number should be unique for each user. The system should present a message informing about the error and asking for a different phone number.
 
 ### 1.3. Acceptance Criteria
 
@@ -36,7 +33,6 @@ Receptionist needs to be a functinal actor in the system.
 ### 1.5 Input and Output Data
 
 The receptionist will need to input the clients information: name, Citizen Card Number, NHS Number, birthdate, sex, TINNumber, phone Number, email and Lab Order
-
 The output should be a registered client that will have access to the system via authentication.
 Each client receives an e-mail informing that the registration was successful and that he can start to use the system. The e-mail includes the user password.
 

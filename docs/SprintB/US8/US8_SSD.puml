@@ -3,6 +3,8 @@
 
 autonumber
 
+actor  "Admin"
+
 Admin -> System: starts to register new laboratory
 System --> Admin: requests data (labID, name, address, phoneNR, TIN)
 

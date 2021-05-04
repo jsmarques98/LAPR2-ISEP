@@ -48,14 +48,12 @@ This US is held when a client comes for the first time.
 ## 2. OO Analysis
 
 ### 2.1. Relevant Domain Model Excerpt 
-*In this section, it is suggested to present an excerpt of the domain model that is seen as relevant to fulfill this requirement.* 
 
 ![US3-MD](US3-MD.svg)
 
 ### 2.2. Other Remarks
 
-*Use this section to capture some aditional notes/remarks that must be taken into consideration into the design activity. In some case, it might be usefull to add other analysis artifacts (e.g. activity or state diagrams).* 
-
+NA
 
 
 ## 3. Design - User Story Realization 
@@ -83,18 +81,20 @@ According to the taken rationale, the conceptual classes promoted to software cl
  * Company
 
 Other software classes (i.e. Pure Fabrication) identified: 
- * RegisterClientUI  
- * RegisterClientController
+
+ - RegisterClientUI  
+ - RegisterClientController
+ - MailAdapter
+ - AuthFacade
+ 
+MailAdapter is a software class that uses the software adapter in order to asbtract how the MailAPI, responsible for sending email messages (in this the User information to the client's email)
+Authfacade is the class responsible, in this case, for creating the User account.
 
 ## 3.2. Sequence Diagram (SD)
-
-*In this section, it is suggested to present an UML dynamic view stating the sequence of domain related software objects' interactions that allows to fulfill the requirement.* 
 
 ![USXX-SD](US3-SD.svg)
 
 ## 3.3. Class Diagram (CD)
-
-*In this section, it is suggested to present an UML static view representing the main domain related software classes that are involved in fulfilling the requirement as well as and their relations, attributes and methods.*
 
 ![USXX-CD](US3-CD.svg)
 

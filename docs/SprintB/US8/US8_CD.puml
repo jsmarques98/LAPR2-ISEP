@@ -5,7 +5,7 @@ skinparam classAtributionIconSize 0
 class RegisterLaboratoryIU
 
 class RegisterLaboratoryController {
-    +registerLab(LabID, address, phoneNumber, TIN)
+    +registerLab(labID, address, phoneNumber, TINnr)
     +saveLab()
     +registerTest(sample)
     +saveTest()
@@ -19,7 +19,7 @@ class Clinic {
   }
 
 class Company {
-    +registerLab(LabID, address, phoneNumber, TIN)
+    +registerLab(labID, address, phoneNumber, TINnr)
     +saveLab()
     +validateLab()
     +addLab()

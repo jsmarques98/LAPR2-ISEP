@@ -18,16 +18,16 @@ Admin -> IU : types requested data
 activate IU
 activate RLC
 
-IU -> RLC : registerLab(labID,name, address, phoneNr, TINnr)
+IU -> RLC : registerLab(labID,name, address, phoneNr, TINnr, testName, sample)
 
 activate COM
 
-RLC -> COM : lab = registerLab(labID, address, phoneNumber, TINnr)
+RLC -> COM : lab = registerLab(labID, name, address, phoneNr, TINnr)
 RLC -> COM : labTest = registerTest(testName, sample)
 
 activate LAB
 
-COM -> LAB : registerLab(labID, address, phoneNumber, TINnr)
+COM -> LAB : registerLab(labID, name, address, phoneNumber, TINnr)
 COM -> LAB : registerTest(testName, sample)
 
 deactivate LAB

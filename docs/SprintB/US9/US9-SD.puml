@@ -1,0 +1,47 @@
+@startuml
+autonumber
+
+actor "Admin" as ADM
+participant "RegisterTestTypeUI" as ui
+participant "RegisterTestTypeController" as controller
+participant "Administrator" as administrator
+participant "Company"
+activate ADM
+activate Company
+
+ADM -> ui : initiates the creation of a test type and its collecting methods
+activate ui
+ui -> controller ** : create
+ui -> ADM : requests the data required (testTypeDesignation, CMDesignation )
+
+ADM -> ui : inserts the data required ( testTypeDesignation, CMDesignation )
+ui -> controller : createTestTypeDTO( testTypeDesignation, CMDesignation )
+activate controller
+controller -> controller : testTypeDTO = createTestTypeDTO( testTypeDesignation, CMDesignation  )
+
+controller -> ui : show(testTypeDTO)
+ui -> ADM : shows the data and requests a confirmation
+ADM -> ui : confirms the data
+
+
+
+ui -> controller : registerTestType(testTypeDTO)
+' class receptionist is the Creator that instanciates the client
+controller -> Company : Administrator = getAdministrator(getCurrentUserSession())
+activate administrator
+Company -> Company : getAdministrator(getCurrentUserSession().getID())
+
+
+controller -> administrator : createTestType(TestTypeDTO)
+administrator -> TestType ** : createTestType(TestTypeDTO)
+activate TestType
+TestType -> CollectingMethod ** : create(CMDesignation)
+activate CollectingMethod
+controller -> Company : boolean state = save(TestType)
+Company -> Company : save(testType)
+ui <- controller : show(state)
+ui -> ADM : informs operation success
+
+deactivate ui
+
+@enduml

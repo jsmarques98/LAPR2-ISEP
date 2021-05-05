@@ -124,7 +124,13 @@ object NHSAPI{
 object TimeReport{
 }
 
+object CollectingMethod{
+-designation
+}
+
 Company "1" -- "*" TestType : conducts
+TestType "*" -- "1" CollectingMethod : has
+
 Company "1" -- "*" Test : performs
 Company "1" -- "*" Clinic : has
 Company "1" -- "1" ChemicalLaboratory : has
@@ -188,7 +194,7 @@ LaboratoryCoordinator "1" -- "*" TimeReport : generates
 Administrator "*" -- "1" Employee : is a
 
 Company "1" -- "*" Client : provides service to
-Receptionist "*" -- "1" Clinics :  works in
+Receptionist "*" -- "1" Clinic :  works in
 
 @enduml
 Administrator "1"-- "1" Pharmacy : creates

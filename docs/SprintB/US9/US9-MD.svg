@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="500px" preserveAspectRatio="none" style="width:250px;height:500px;" version="1.1" viewBox="0 0 250 500" width="250px" zoomAndPan="magnify"><defs><filter height="300%" id="fdrqtj95t15lr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#fdrqtj95t15lr)" height="110.4" style="stroke:#A80036;stroke-width:1.5;" width="93" x="124.5" y="134"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="23" x="159.5" y="147.1481">Test</text><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="216.5" y1="152.4001" y2="152.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="132.5" y="160.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="27" x="144.5" y="165.6901">testID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="132.5" y="172.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="40" x="144.5" y="177.6901">nhscode</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="132.5" y="184.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="50" x="144.5" y="189.6901">description</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="132.5" y="196.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="66" x="144.5" y="201.6901">dateDiagnosis</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="132.5" y="208.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="64" x="144.5" y="213.69">timeDiagnosis</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="132.5" y="220.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="144.5" y="225.69">dateValidation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="132.5" y="232.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="65" x="144.5" y="237.69">timeValidation</text><rect fill="#FEFECE" filter="url(#fdrqtj95t15lr)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="102" x="134" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="72" x="149" y="20.1481">Administrator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="135" x2="235" y1="25.4001" y2="25.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="142" y="33.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="76" x="154" y="38.6901">authenticationID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="142" y="45.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="44" x="154" y="50.6901">password</text><rect fill="#FEFECE" filter="url(#fdrqtj95t15lr)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="80" x="23" y="321"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="50" x="38" y="334.1481">TestType</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24" x2="102" y1="339.4001" y2="339.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="31" y="347.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="50" x="43" y="352.6901">testTypeID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="31" y="359.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="54" x="43" y="364.6901">designation</text><rect fill="#FEFECE" filter="url(#fdrqtj95t15lr)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="80" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="53" x="20.5" y="20.1481">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="86" y1="25.4001" y2="25.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="33.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="54" x="27" y="38.6901">designation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="45.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="27" y="50.6901">address</text><rect fill="#FEFECE" filter="url(#fdrqtj95t15lr)" height="38.4001" style="stroke:#A80036;stroke-width:1.5;" width="110" x="8" y="448"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="96" x="15" y="461.1481">CollectingMethod</text><line style="stroke:#A80036;stroke-width:1.5;" x1="9" x2="117" y1="466.4001" y2="466.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="16" y="474.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="54" x="28" y="479.6901">designation</text><!--MD5=[742a261f27a3dcd734c626287d811acd]
+link Company to TestType--><path codeLine="32" d="M46.91,57.08 C46.91,96.29 47.52,176.36 52,244 C53.75,270.4 57.22,300.54 59.8,320.97 " fill="none" id="Company-TestType" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="53" x="53" y="193.577">conducts</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="38.9901" y="77.5313">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="53.2681" y="309.3314">*</text><!--MD5=[f82686d89c0d6694b448608866eb139d]
+link TestType to CollectingMethod--><path codeLine="33" d="M63,371.08 C63,393.76 63,427.25 63,447.78 " fill="none" id="TestType-CollectingMethod" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="21" x="64" y="414.077">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="57.3594" y="391.5313">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="54.8844" y="436.3719">1</text><!--MD5=[7e4bc624457760b649895ff2ead938fa]
+link Company to Test--><path codeLine="35" d="M66.38,57.22 C82.72,77.65 106.73,107.67 127.63,133.79 " fill="none" id="Company-Test" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="51" x="103" y="100.077">performs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="63.2508" y="77.2969">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="116.4662" y="122.4538">*</text><!--MD5=[e981d4f96c4342412d1e68160b30cf70]
+link Test to TestType--><path codeLine="36" d="M133.23,244.21 C114.98,270.4 94,300.5 79.76,320.94 " fill="none" id="Test-TestType" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="25" x="112" y="287.077">is of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="123.0704" y="264.3345">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="76.3236" y="309.2934">1</text><!--MD5=[f0cf61b3d44ca7b4a714aa4fb0975b4b]
+link Administrator to Test--><path codeLine="38" d="M182.81,57.22 C180.97,77.65 178.26,107.67 175.9,133.79 " fill="none" id="Administrator-Test" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="182" y="100.077">specifies</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="174.4231" y="77.2969">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="171.2225" y="122.4538">*</text><!--MD5=[1caa872ef906b1b34b91aeeb1480537e]
+@startuml
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+
+object Administrator{
+-authenticationID
+-password
+}
+
+
+object TestType{
+-testTypeID
+-designation
+}
+object Company{
+-designation
+-address
+}
+
+object CollectingMethod{
+-designation
+}
+
+Company "1" - - "*" TestType : conducts
+TestType "*" - - "1" CollectingMethod : has
+
+Company "1" - - "*" Test : performs
+Test "*" - - "1" TestType : is of
+
+Administrator "1" - - "*" Test : specifies
+
+
+@enduml
+
+PlantUML version 1.2020.26(Mon Dec 21 17:45:07 WET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,50 @@
+@startuml
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+
+object Administrator{
+-authenticationID
+-password
+}
+
+
+object TestType{
+-testTypeID
+-designation
+}
+object Company{
+-designation
+-address
+}
+
+object CollectingMethod{
+-designation
+}
+
+Company "1" -- "*" TestType : conducts
+TestType "*" -- "1" CollectingMethod : has
+Administrator "*" -- "*" TestType : creates
+Company "1" -- "*" Test : performs
+Test "*" -- "1" TestType : is of
+
+Administrator "1" -- "*" Test : specifies
+
+
+@enduml
+Administrator "1"-- "1" Pharmacy : creates
+Courier "1"--"0..1" ParkingSpace : can reserve - um courier pode reservar ponto de abastecimento????
+ParkingSpace "1"--"*" Courier : sends notifications
+RegisteredUser "1"--"*" Product : views
+object NonRegisteredUser
+NonRegisteredUser "1"--"1" RegisteredUser : registers as
+NonRegisteredUser "1"--"*" Product : views
+

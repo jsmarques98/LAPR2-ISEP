@@ -85,7 +85,11 @@ There is no dependencies.
 According to the taken rationale, the conceptual classes promoted to software classes are: 
 
  * Company
- * Employee
+ * Receptionist
+ * Medical Lab Technician
+ * Clinical Chemistry Technoloist
+ * Laboratory Coordinator
+ * Specialist Doctor 
 
 
 Other software classes (i.e. Pure Fabrication) identified: 

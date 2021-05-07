@@ -1,8 +1,8 @@
 package app.adapter;
 
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import javax.jms.Message;
+import javax.jms.Session;
+import java.net.PasswordAuthentication;
 import java.security.InvalidParameterException;
 import java.util.Properties;
 

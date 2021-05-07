@@ -1,5 +1,5 @@
 package app.controller;
-
+import app.domain.model.Company;
 public class RegisterLabController {
 
     private Company company;

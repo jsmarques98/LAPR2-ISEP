@@ -1,6 +1,5 @@
 package app.controller;
 
-import app.adapter.MailAdapter;
 import app.domain.model.Client;
 import app.domain.model.Receptionist;
 import app.dto.ClientDTO;

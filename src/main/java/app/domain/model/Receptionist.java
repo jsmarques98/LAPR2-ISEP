@@ -1,9 +1,11 @@
 package app.domain.model;
-
 import app.dto.ClientDTO;
 import auth.domain.model.User;
+public class Receptionist extends Employee{
 
-public class Receptionist {
+    public Receptionist(String id, String role, String name, String address, String phoneNumber, String email, String socCode) {
+        super(id, role, name, address, phoneNumber, email, socCode);
+    }
 
     private Client registeredClient = null;
 
@@ -16,6 +18,5 @@ public class Receptionist {
     public Client getClient(){
         return registeredClient;
     }
-
 
 }

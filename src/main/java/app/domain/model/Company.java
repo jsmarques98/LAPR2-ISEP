@@ -1,8 +1,11 @@
 package app.domain.model;
 
 import auth.AuthFacade;
-import org.apache.commons.lang3.StringUtils;
 
+import javax.management.relation.Role;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -31,7 +34,7 @@ public class Company {
 
     public Company(String designation)
     {
-        if (StringUtils.isBlank(designation))
+        if (designation.length() < 1)
             throw new IllegalArgumentException("Designation cannot be blank.");
 
         this.designation = designation;
@@ -45,4 +48,36 @@ public class Company {
     public AuthFacade getAuthFacade() {
         return authFacade;
     }
+
+
+//    us7
+
+    public List<Employee>employeeList;
+
+    String[] r = new String[5];
+    r[0] = "recepcionist";
+    r[1] = "clincal chemestry technologist";
+    r[2] = "laboratory coordinator";
+    r[3] = "medical lab technician";
+    r[4] = "specialist doctor";
+
+
+
+    public Employee createEmloyee(String id, String role, String name, String address, String phoneNumber, String email, String socCode){
+        return  new Employee(id, role, name, address, phoneNumber, email, socCode);
+    }
+
+    public boolean validateEmployee(Employee e) {
+        if (e == null)
+            return false;
+        return ! this.employeeList.contains(e);
+    }
+    public boolean saveEmployee(Employee e) {
+        if (!validateEmployee(e))
+            return false;
+        return this.employeeList.add(e);
+    }
+
+
+
 }

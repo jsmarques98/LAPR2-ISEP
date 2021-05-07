@@ -7,17 +7,16 @@ public class RegisterLab {
     private String address;
     private int phoneNr;
     private int TINnr;
-    private String testName;
-    private String sample;
 
-    public RegisterLab(String labId, String name, String address, int phoneNr, int TINnr, String testName, String sample ) {
+
+
+    public RegisterLab(String labId, String name, String address, int phoneNr, int TINnr) {
         this.labId = labId;
         this.name = name;
         this.address = address;
         this.phoneNr = phoneNr;
         this.TINnr = TINnr;
-        this.testName = testName;
-        this.sample = sample;
+
     }
 
     private void checkLabID(String labId){

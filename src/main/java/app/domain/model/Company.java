@@ -31,24 +31,44 @@ public class Company {
 
     //us9
 
+    /**
+     * Array list where the objects are going to be stored
+     */
     private List<Category> categories;
+
+    /**
+     * The test type record.
+     */
     private TestTypeRecord testTypes;
 
+    /**
+     * Get TestTypes
+     * @return
+     */
     public TestTypeRecord getTestTypes() {
         return testTypes;
     }
 
+    /**
+     * Get Categories
+     * @return
+     */
     public List<Category> getCategories() {
         return categories;
     }
 
+    /**
+     * Saves the instance of the testType created in the SpecifyTypeTest
+     * @param testType
+     * @return
+     */
     public boolean save(TestType testType) {
         return testTypes.appendTestType(testType);
     }
 
 
 
-    
+
     public boolean save(Client client) {
         //return false if already exists
         return true;

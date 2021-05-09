@@ -5,6 +5,7 @@ import app.controller.RegisterTest;
 import app.controller.RegisterLabController;
 import app.controller.TestTypeRecord;
 import auth.AuthFacade;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 
 import javax.management.relation.Role;
@@ -51,8 +52,17 @@ public class Company {
     
     public boolean save(Client client) {
         //return false if already exists
+        if(clients.contains(client)){
+            return false;
 
-        return true;
+        }
+        else{
+
+            clients.add(client);
+            System.out.println(clients);
+            return true;
+        }
+
     }
 
     public Receptionist getReceptionist(String username) {

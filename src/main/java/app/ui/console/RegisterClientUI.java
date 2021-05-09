@@ -3,15 +3,13 @@ package app.ui.console;
 
 //import app.adapter.MailAdapter;
 import app.controller.RegisterClientController;
+import app.domain.model.Category;
 import app.domain.model.Client;
 import app.dto.ClientDTO;
 import app.ui.console.utils.Utils;
 
 import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -54,9 +52,7 @@ public class RegisterClientUI implements Runnable{
 
         ClientDTO ClientDTO = controller.createClientDTO(args);
 
-        String show = show(ClientDTO);
-
-
+        show(ClientDTO);
 
 
 
@@ -64,23 +60,25 @@ public class RegisterClientUI implements Runnable{
 
     }
 
-    public String show(ClientDTO C){
+
+
+    public void show(ClientDTO C){
 
         System.out.println(C.toString());
 
 
         String confirm = Utils.readLineFromConsole("Confirm client?(Yes or No)");
 
-        if(confirm == "Yes"){
+        if(confirm.equalsIgnoreCase("Yes")){
 
             controller.registerClient(C);
             System.out.println("Account successfully created \n");
         }
-        if(confirm == "No"){
+        if(confirm.equalsIgnoreCase("No")){
 
-            //return RegisterClientUI;
+            this.run();
         }
-        return null;
+
     }
 
     private String RandomPassword(int lenght){

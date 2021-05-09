@@ -14,6 +14,41 @@ public class ClientDTO {
     String Password;
 
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCCNumber() {
+        return CCNumber;
+    }
+
+    public String getNHSNumber() {
+        return NHSNumber;
+    }
+
+    public String getBirthdate() {
+        return birthdate;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public String getTINNumber() {
+        return TINNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
 
     public ClientDTO(Object name, Object number, Object cCard, Object nhs, Object date, Object phoneNumber, Object email, Object password) {
 
@@ -26,6 +61,8 @@ public class ClientDTO {
         this.email = (String) email;
         this.Password = (String) password;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

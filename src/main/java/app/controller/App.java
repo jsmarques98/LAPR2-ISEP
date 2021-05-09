@@ -15,7 +15,6 @@ import java.util.Properties;
  */
 public class App {
 
-    private final Platform plat;
     private Company company;
     private AuthFacade authFacade;
 
@@ -23,7 +22,6 @@ public class App {
         Properties props = getProperties();
         this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
         this.authFacade = this.company.getAuthFacade();
-        this.plat = new Platform();
         bootstrap();
     }
 
@@ -81,7 +79,4 @@ public class App {
         return singleton;
     }
 
-    public Platform accessPlatform() {
-        return plat;
-    }
 }

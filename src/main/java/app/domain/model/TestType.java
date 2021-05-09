@@ -5,6 +5,7 @@ import java.util.Set;
 
 public class TestType {
 
+
     /**
      * The id of the test type.
      */
@@ -39,6 +40,24 @@ public class TestType {
         this.categories = categories;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getCollection() {
+        return collection;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+
+
     /**
      * Validates if attributes are valid.
      * @return
@@ -48,4 +67,7 @@ public class TestType {
                 collection.length() <= 20 && categories != null && !description.isEmpty() &&
                 !collection.isEmpty() && !categories.isEmpty();
     }
+
+
+
 }

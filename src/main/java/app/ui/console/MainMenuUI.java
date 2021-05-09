@@ -26,6 +26,7 @@ public class MainMenuUI {
         options.add(new MenuItem("Do the registration of Lab", new RegisterLabUI()));
         options.add(new MenuItem("Do Login", new AuthUI()));
         options.add(new MenuItem("Know the Development Team",new DevTeamUI()));
+        options.add(new MenuItem("Specify a new test type", new SpecifyTypeTestUI()));
 
         int option = 0;
         do

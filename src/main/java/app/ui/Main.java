@@ -23,37 +23,19 @@ public class Main {
         Employee.roles.add("specialist doctor");
         Employee.roles.add("administrator");
 
-        Employee e1 = new Employee("1","administrator", "Joao Oliveira", "address", "99999999999", "email", "1254");
-//        Employee e2 = new Employee("recepcionist", "Manel Jorge", "address", "99999999999", "email", "1254");
-//        Employee e3 = new Employee("specialist doctor", "palhaço", "address", "99999999999", "email", "1254");
-
-
-
-        Company.employeeList.add(e1);
-//        Company.employeeList.add(e2);
-//        Company.employeeList.add(e3);
-
-        for(int i=0;i<Company.employeeList.size();i++){
-            System.out.println(Company.employeeList.get(i));
-        }
-
+        // Criar o 1º empregado com o role de Administrator
+        Employee employeeAdmin = new Employee("JO1","administrator", "Joao Silva Oliveira", "address", "99999999999", "email@gmail.com", "1254","qwertyuiop");
+        Company.employeeList.add(employeeAdmin);
 
         try
         {
             MainMenuUI menu = new MainMenuUI();
-
             menu.run();
-
         }
         catch( Exception e )
         {
             e.printStackTrace();
         }
-
-
     }
-
-
-
 
 }

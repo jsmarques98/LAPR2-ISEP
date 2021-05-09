@@ -18,8 +18,8 @@ public class TestType {
     }
 
     public boolean validate() {
-        return id.toLowerCase().matches("^[0-9a-z]{5}$") && description.length()<=15 &&
-                collection.length()<= 20 && categories != null && !description.isEmpty() &&
+        return id.toLowerCase().matches("^[0-9a-z]{5}$") && description.length() <= 15 &&
+                collection.length() <= 20 && categories != null && !description.isEmpty() &&
                 !collection.isEmpty() && !categories.isEmpty();
     }
 }

@@ -1,5 +1,6 @@
 package app.ui.console;
 
+import app.controller.App;
 import app.controller.SpecifyTypeTestController;
 import app.domain.model.Category;
 import app.domain.model.Company;
@@ -13,7 +14,7 @@ public class SpecifyTypeTestUI {
 
     public SpecifyTypeTestUI() {
         controller = new SpecifyTypeTestController();
-        company = new Company("");//ir buscar a Company à classe singleton
+        company = App.getInstance().getCompany();
     }
 
     public void run() {

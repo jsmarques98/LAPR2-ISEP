@@ -13,10 +13,10 @@ public class Employee {
     private String phoneNumber;
     private String email;
     private String socCode;
+    private String pass;
 
 
     public Employee (String role, String name, String address, String phoneNumber, String email, String socCode){
-//    id =
         checkRoleRules(role);
         checkNameRules(name);
         checkAddressRules(address);
@@ -24,19 +24,18 @@ public class Employee {
         checkEmailRules(email);
         checkSocCodeRules(socCode);
 
-        this.id = createEmployeeId();
         this.role = role;
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.socCode = socCode;
-//        passe =
+        this.id = createEmployeeId();
 
     }
 
     //For first emplooyee
-    public Employee(String id, String role, String name, String address, String phoneNumber, String email, String socCode) {
+    public Employee(String id, String role, String name, String address, String phoneNumber, String email, String socCode, String pass) {
         this.id = id;
         this.role = role;
         this.name = name;
@@ -44,6 +43,7 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.socCode = socCode;
+        this.pass = pass;
     }
 
     private void checkSocCodeRules(String socCode) {
@@ -87,8 +87,6 @@ public class Employee {
     private void checkRoleRules(String role) {
         if (role.length() == 0 )
             throw new IllegalArgumentException("role cannot be blank.");
-        if ( (role.length() > 16))
-            throw new IllegalArgumentException("role must have les the 16 chars.");
 
         if(!this.roles.contains(role))
             throw new IllegalArgumentException("role does note exists");
@@ -98,9 +96,7 @@ public class Employee {
         this.role = role;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 
     public String getId() {
         return id;
@@ -113,12 +109,9 @@ public class Employee {
      * @return String com iniciais + número
      */
     public String createEmployeeId(){
-        int num = Company.employeeList.size()+1;
-
-        System.out.println(getName());
-
-        String temp = null;
-        String[] arr = getName().split(" ");
+        int num = Company.employeeList.size()+2;
+        String temp = "";
+        String[] arr = name.split(" ");
         for (String var : arr) {
             temp += var.charAt(0);
         }

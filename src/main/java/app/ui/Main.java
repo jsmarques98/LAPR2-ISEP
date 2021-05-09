@@ -1,6 +1,7 @@
 package app.ui;
 
 import app.ui.console.MainMenuUI;
+import app.ui.console.SpecifyTypeTestUI;
 
 import java.util.ArrayList;
 

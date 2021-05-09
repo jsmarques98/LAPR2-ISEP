@@ -1,10 +1,16 @@
 package app.domain.model;
 
 
+import javax.swing.*;
+import java.lang.*;
+import java.io.File;  // Import the File class
+import java.io.IOException;  // Import the IOException class to handle errors
+import java.io.FileWriter;   // Import the FileWriter class
+import java.util.Random;
 
 public class Employee {
 
-
+    private String id;
     private String role;
     private String name;
     private String address;
@@ -22,7 +28,7 @@ public class Employee {
         checkEmailRules(email);
         checkSocCodeRules(socCode);
 
-
+        this.id = createEmployeeId();
         this.role = role;
         this.name = name;
         this.address = address;
@@ -83,4 +89,44 @@ public class Employee {
     public void setRole(String role) {
         this.role = role;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * Método que converte o nome completo em iniciais do empregado
+     * e devolve uma String com essas iniciais e o seu número
+     *
+     * @return String com iniciais + número
+     */
+    public String createEmployeeId(){
+        int num = Company.employeeList.size()+1;
+        String temp = null;
+        String[] arr = getName().split(" ");
+        for (String var : arr) {
+            temp += var.charAt(0);
+        }
+        temp += String.valueOf(num);
+        return temp;
+    }
+
+    public String getPasswordEmployee() {
+        int leftLimit = 97; // letter 'a'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 10;
+        Random random = new Random();
+
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
+
+        return generatedString;
+    }
+
 }

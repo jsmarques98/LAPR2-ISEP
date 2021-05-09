@@ -7,6 +7,9 @@ import auth.AuthFacade;
 
 
 import javax.management.relation.Role;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,8 +85,7 @@ public class Company {
 
 //    us7
 
-    public List<Employee>employeeList;
-
+    public static List<Employee> employeeList;
 
     public Employee createEmloyee(String id, String role, String name, String address, String phoneNumber, String email, String socCode, String passe){
         return  new Employee(id, role, name, address, phoneNumber, email, socCode, passe);
@@ -95,12 +97,42 @@ public class Company {
         return ! this.employeeList.contains(e);
     }
     public boolean saveEmployee(Employee e) {
-        if (!validateEmployee(e))
+        if (!validateEmployee(e)){
             return false;
-        return this.employeeList.add(e);
+        }else {
+            sendEmailWithPassword(e.getId(),e.getPasswordEmployee());
+            return this.employeeList.add(e);
+        }
     }
 
+    public void sendEmailWithPassword(String idParaONome, String textoAEnviar){
+        try {
+            File myObj = new File("C:\\Users\\MyName\\" + idParaONome);
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+                writePassword(idParaONome,textoAEnviar);
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
 
+    public void writePassword(String idParaONome, String textToWrite) {
+        try {
+//            Metes aqui o caminho que quiseres onde guarde
+            FileWriter myWriter = new FileWriter("C:\\Users\\MyName\\"+idParaONome);
+            myWriter.write(textToWrite);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
 
 
 

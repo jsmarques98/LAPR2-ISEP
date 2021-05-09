@@ -1,7 +1,7 @@
 package auth.domain.model;
 
-import org.apache.commons.lang3.StringUtils;
-
+import org.codehaus.plexus.interpolation.util.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
@@ -21,7 +21,7 @@ public class Email {
     }
 
     private boolean validate(String email) {
-        if (StringUtils.isBlank(email))
+        if (email.isBlank())
             return false;
         // Check for other invalid criteria here
 

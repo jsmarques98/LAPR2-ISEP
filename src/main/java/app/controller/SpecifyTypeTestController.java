@@ -1,4 +1,5 @@
 package app.controller;
+
 import app.domain.model.Category;
 import app.domain.model.TestType;
 
@@ -12,21 +13,21 @@ public class SpecifyTypeTestController {
         plat = App.getInstance().accessPlatform();
     }
 
-     SpecifyTypeTestController(Platform plat) {
+    SpecifyTypeTestController(Platform plat) {
         this.plat = plat;
     }
 
-    public void specifyTypeOfTest(String id, String description, String collection, Set<Category>categories){
+    public void specifyTypeOfTest(String id, String description, String collection, Set<Category> categories) {
         TestType type = new TestType(id, description, collection, categories);
-        if (validateTestType(type)){
+        if (validateTestType(type)) {
             plat.getTestTypes().appendTestType(type);
-        }else{
+        } else {
             //TODO catch exception on UI
             throw new IllegalArgumentException("dados introduzidos são inválidos");
         }
     }
 
-    private boolean validateTestType(TestType testType){
+    private boolean validateTestType(TestType testType) {
         return testType.validate();
     }
 

@@ -27,21 +27,21 @@ class SpecifyTypeTestControllerTest {
 
     @Test
     void specifyTypeOfTest() {
-        try{
-            Set<Category>categories = new HashSet<>();
-            categories.add(new Category( "name", "2112432"));
-            controller.specifyTypeOfTest("214ad", "Teste", "Seringa", categories );
+        try {
+            Set<Category> categories = new HashSet<>();
+            categories.add(new Category("name", "2112432"));
+            controller.specifyTypeOfTest("214ad", "Teste", "Seringa", categories);
 
-        }catch(IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             fail();
         }
-        try{
-            Set<Category>categories = new HashSet<>();
-            categories.add(new Category( "name", "2112432"));
-            controller.specifyTypeOfTest("214add", "Teste", "Seringa", categories );
+        try {
+            Set<Category> categories = new HashSet<>();
+            categories.add(new Category("name", "2112432"));
+            controller.specifyTypeOfTest("214add", "Teste", "Seringa", categories);
             fail();
 
-        }catch(IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
 
         }
     }

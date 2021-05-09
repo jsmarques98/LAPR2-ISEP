@@ -7,13 +7,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class TestTypeRecord {
-    private List<TestType>record;
+    private List<TestType> record;
 
     public TestTypeRecord() {
         record = new ArrayList<>();
     }
 
-    public boolean appendTestType(TestType type){
+    public boolean appendTestType(TestType type) {
         return record.add(type);
     }
 }

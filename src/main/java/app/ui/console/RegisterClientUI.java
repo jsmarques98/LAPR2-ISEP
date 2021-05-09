@@ -4,6 +4,7 @@ package app.ui.console;
 //import app.adapter.MailAdapter;
 import app.controller.RegisterClientController;
 import app.domain.model.Client;
+import app.dto.ClientDTO;
 import app.ui.console.utils.Utils;
 
 import java.sql.SQLOutput;
@@ -44,13 +45,42 @@ public class RegisterClientUI implements Runnable{
 
         String Password = RandomPassword(10);
 
+
+
+
 //        MailAdapter mailAdapter = new MailAdapter("1200614", "tua passe aqui");
 
+        String args[] = {name, number, CCard, NHS, Date, PhoneNumber, Email, Password};
 
-        Client C = new Client(name, number, CCard, NHS, Date, PhoneNumber, Email, Password);
+        ClientDTO ClientDTO = controller.createClientDTO(args);
+
+        String show = show(ClientDTO);
 
 
 
+
+
+
+
+    }
+
+    public String show(ClientDTO C){
+
+        System.out.println(C.toString());
+
+
+        String confirm = Utils.readLineFromConsole("Confirm client?(Yes or No)");
+
+        if(confirm == "Yes"){
+
+            controller.registerClient(C);
+            System.out.println("Account successfully created \n");
+        }
+        if(confirm == "No"){
+
+            //return RegisterClientUI;
+        }
+        return null;
     }
 
     private String RandomPassword(int lenght){
@@ -65,7 +95,7 @@ public class RegisterClientUI implements Runnable{
         }
 
         System.out.println("Password randomly created \n");
-        System.out.println("Account successfully created \n");
+
         return password.toString();
     }
 

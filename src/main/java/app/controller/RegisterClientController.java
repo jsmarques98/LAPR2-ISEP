@@ -16,7 +16,9 @@ public class RegisterClientController {
     //factory for class ClientDTO
     public ClientDTO createClientDTO(Object args[]){
 
-        return null;
+        clientDTO = new ClientDTO(args[0], args[1], args[2],args[3], args[4], args[5], args[6], args[7]);
+
+        return clientDTO;
     }
 
 
@@ -47,7 +49,14 @@ public class RegisterClientController {
     //at the same time validate if there are repetitions
     public boolean saveClient(Client client){
 
+        //for(Client c:clients){
 
+            //if(c.equals(client)){
+               // return false;
+            //}
+
+        //}
+        //clients.add(client);
 
         return true;
     }

@@ -54,6 +54,14 @@ public class Company {
 
     public boolean save(Client client){
         //return false if already exists
+        for(Client c:clients){
+
+            if(c.equals(client)){
+                return false;
+            }
+
+        }
+        clients.add(client);
         return true;
     }
 

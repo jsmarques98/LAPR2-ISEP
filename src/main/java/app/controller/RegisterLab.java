@@ -2,14 +2,40 @@ package app.controller;
 
 public class RegisterLab {
 
+    /**
+     * The id of the lab to be registered
+     */
     private String labId;
+
+    /**
+     * The name of the lab to be registered
+     */
     private String name;
+
+    /**
+     * The address of the lab to be registered
+     */
     private String address;
+
+    /**
+     * The phone number of the lab to be registered
+     */
     private int phoneNr;
+
+    /**
+     * The TIN number of the lab to be registered
+     */
     private int TINnr;
 
 
-
+    /**
+     * Builds an instance of the lab that is being created
+     * @param labId The id of the lab to be registered
+     * @param name The name of the lab to be registered
+     * @param address The address of the lab to be registered
+     * @param phoneNr The phone number of the lab to be registered
+     * @param TINnr The TIN number of the lab to be registered
+     */
     public RegisterLab(String labId, String name, String address, int phoneNr, int TINnr) {
         this.labId = labId;
         this.name = name;
@@ -19,6 +45,10 @@ public class RegisterLab {
 
     }
 
+    /**
+     * Checks if the id of the lab is correctly given with the constraints
+     * @param labId The id of the lab to be registered
+     */
     private void checkLabID(String labId){
             if (labId.length() == 0){
                 throw new IllegalArgumentException("The labId can´t be blank, you have to enter a number");
@@ -30,6 +60,10 @@ public class RegisterLab {
     }
 
 
+    /**
+     * Checks if the name of the lab is correctly given with the constraints
+     * @param name The name of the lab to be registered
+     */
     private void checkName(String name){
         if (name.length() == 0){
             throw new IllegalArgumentException("The name can´t be blank, you have to enter a name");
@@ -40,7 +74,10 @@ public class RegisterLab {
         }
     }
 
-
+    /**
+     * Checks if the address of the lab is correctly given with the constraints
+     * @param address The address of the lab to be registered
+     */
     private void checkAdress(String address) {
         if (address.length() == 0) {
             throw new IllegalArgumentException("The address can´t be blank, you have to enter an address");
@@ -51,7 +88,10 @@ public class RegisterLab {
         }
     }
 
-
+    /**
+     * Checks if the phone number of the lab is correctly given with the constraints
+     * @param phoneNr The phone number of the lab to be registered
+     */
     private void checkPhoneNr (int phoneNr){
         String phoneNumber = Integer.toString(phoneNr);
 
@@ -69,6 +109,10 @@ public class RegisterLab {
 
     }
 
+    /**
+     * Checks if the TIN number of the lab is correctly given with the constraints
+     * @param TINnr The TIN number of the lab to be registered
+     */
     private void checkTinNr (int TINnr){
         String Tin = Integer.toString(TINnr);
 

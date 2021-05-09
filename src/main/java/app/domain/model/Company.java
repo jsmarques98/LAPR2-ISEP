@@ -2,6 +2,7 @@ package app.domain.model;
 
 import app.controller.RegisterLab;
 import app.controller.RegisterTest;
+import app.controller.RegisterLabController;
 import app.controller.TestTypeRecord;
 import auth.AuthFacade;
 
@@ -140,17 +141,45 @@ public class Company {
 
 
 //    us8
+
+    /**
+     * The array list where the objects of the lab are going to be stored
+     */
     private List<RegisterLab>registerLabList;
+
+    /**
+     * The array list where the objects of the test are going to be stored
+     */
     private List<RegisterTest>registerTestList;
 
+    /**
+     * Registering the lab that is going to be created
+     * @param labId the id of the lab that is being registered
+     * @param name the name of the lab that is being registered
+     * @param address the address of the lab that is being registered
+     * @param phoneNr the phone number of the lab that is being registered
+     * @param TINnr the TIN number of the lab that is being registered
+     * @return the object of the lab created
+     */
     public RegisterLab registerLab(String labId, String name, String address, int phoneNr, int TINnr){
         return new RegisterLab(labId, name, address, phoneNr, TINnr);
     }
 
+    /**
+     * Registering the test that is going to be created
+     * @param testName the name of the test that is being registered
+     * @param sample the sample of the test that is being registered
+     * @return the object of the test created
+     */
     public RegisterTest registerTest(String testName, String sample){
         return new RegisterTest(testName, sample);
     }
 
+    /**
+     * Checking if the lab is valid or not
+     * @param lab object of the lab created
+     * @return if the object of the lab can or cannot be validated
+     */
     public boolean validateLab(RegisterLab lab){
         if (lab == null)
         {
@@ -159,6 +188,11 @@ public class Company {
         return ! this.registerLabList.contains(lab);
     }
 
+    /**
+     * Checking if the test is valid or not
+     * @param test object of the test created
+     * @return if the object of the test can or cannot be created
+     */
     public boolean validateTest(RegisterTest test){
         if (test == null){
             return false;
@@ -166,6 +200,11 @@ public class Company {
         return ! this.registerTestList.contains(test);
     }
 
+    /**
+     * Saves the object lab in the array list
+     * @param lab object of the lab to be saved
+     * @return the object lab added to the array list
+     */
     public boolean saveLab(RegisterLab lab){
         if (!validateLab(lab)){
             return false;
@@ -173,6 +212,11 @@ public class Company {
         return this.registerLabList.add(lab);
     }
 
+    /**
+     * Saves the object test in the array list
+     * @param test object of the test to be saved
+     * @return the object test added to the array list
+     */
     public boolean saveTest(RegisterTest test){
         if (!validateTest(test)) {
             return false;

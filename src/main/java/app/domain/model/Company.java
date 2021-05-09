@@ -91,6 +91,10 @@ public class Company {
         return new Employee(role, name, address, phoneNumber, email, socCode);
     }
 
+    public static Employee createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, String indxNumber){
+        return new SpecialistDoctor(role, name, address, phoneNumber, email, socCode,indxNumber);
+    }
+
     public boolean validateEmployee(Employee e) {
         if (e == null)
             return false;

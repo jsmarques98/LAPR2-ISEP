@@ -1,5 +1,6 @@
 package app.controller;
 import app.domain.model.Company;
+import app.domain.model.RegisterLab;
 
 
 public class RegisterLabController {

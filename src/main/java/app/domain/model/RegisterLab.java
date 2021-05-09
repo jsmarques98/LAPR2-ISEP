@@ -1,4 +1,4 @@
-package app.controller;
+package app.domain.model;
 
 public class RegisterLab {
 

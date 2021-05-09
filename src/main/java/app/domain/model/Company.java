@@ -1,18 +1,13 @@
 package app.domain.model;
 
-import app.controller.RegisterLab;
 import app.controller.RegisterTest;
-import app.controller.RegisterLabController;
 import app.controller.TestTypeRecord;
 import auth.AuthFacade;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 
-import javax.management.relation.Role;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;

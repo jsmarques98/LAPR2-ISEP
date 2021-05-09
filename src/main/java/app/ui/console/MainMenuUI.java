@@ -23,6 +23,7 @@ public class MainMenuUI {
         List<MenuItem> options = new ArrayList<MenuItem>();
         options.add(new MenuItem("Do the registration",new RegisterClientUI()));
         options.add(new MenuItem("Do the registration of an Employee",new EmployeeUI()));
+        options.add(new MenuItem("Do the registration of Lab", new RegisterLabUI()));
         options.add(new MenuItem("Do Login", new AuthUI()));
         options.add(new MenuItem("Know the Development Team",new DevTeamUI()));
 

@@ -1,5 +1,6 @@
 package app.ui;
 
+import app.domain.model.Employee;
 import app.ui.console.MainMenuUI;
 import app.ui.console.SpecifyTypeTestUI;
 
@@ -24,13 +25,12 @@ public class Main {
         {
             e.printStackTrace();
         }
-        ArrayList<String> roles = new ArrayList<>(5);
 
-        roles.add("recepcionist");
-        roles.add("clincal chemestry technologist");
-        roles.add("laboratory coordinator");
-        roles.add("medical lab technician");
-        roles.add("specialist doctor");
+        Employee.roles.add("recepcionist");
+        Employee.roles.add("clincal chemestry technologist");
+        Employee.roles.add("laboratory coordinator");
+        Employee.roles.add("medical lab technician");
+        Employee.roles.add("specialist doctor");
     }
 
 

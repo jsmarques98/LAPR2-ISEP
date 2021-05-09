@@ -6,6 +6,7 @@ import java.lang.*;
 import java.io.File;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileWriter;   // Import the FileWriter class
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Employee {
@@ -19,7 +20,7 @@ public class Employee {
     private String socCode;
 
 
-    public Employee (String id, String role, String name, String address, String phoneNumber, String email, String socCode, String passe){
+    public Employee (String id, String role, String name, String address, String phoneNumber, String email, String socCode){
 //    id =
         checkRoleRules(role);
         checkNameRules(name);
@@ -84,6 +85,9 @@ public class Employee {
             throw new IllegalArgumentException("role cannot be blank.");
         if ( (role.length() > 16))
             throw new IllegalArgumentException("role must have les the 16 chars.");
+
+        if(!this.roles.contains(role))
+            throw new IllegalArgumentException("role does note exists");
     }
 
     public void setRole(String role) {
@@ -128,5 +132,7 @@ public class Employee {
 
         return generatedString;
     }
+
+    public static ArrayList<String> roles = new ArrayList<>(5);
 
 }

@@ -1,0 +1,53 @@
+@startuml
+class RegisterTestTypeUI {
+ -show(testTypeDTO)
+ -show(state)
+}
+
+class RegisterTestTypeController {
+  +boolean state
+  +createTestTypeDTO(testTypeDesignation, CMDesignation)
+  +registerTestType(testTypeDTO)
+}
+
+RegisterTestTypeUI ..> RegisterTestTypeController
+RegisterTestTypeController ..> TestTypeDTO : creates
+
+class TestTypeDTO{
++String testTypeDesignation
++String CMDesignation
+}
+
+
+RegisterTestTypeController ..> Administrator
+RegisterTestTypeController ..> Company
+
+class Administrator{
++getTestType();
++createTestType(TestTypeDTO)
+}
+
+Company "1" --> "*" Administrator : has
+Administrator --> TestType : creates
+
+class TestType{
+-String designation
+}
+class CollectingMethod{
+-String designation
+}
+
+TestType "1" --> "1..*" CollectingMethod
+Company "1" --> "*" TestType : contains
+
+class Company{
++save(TestType)
++getAdministrator(String id)
+-Set<Client> testTypes
+}
+
+TestTypeDTO ..> Administrator : uses DTO
+RegisterTestTypeUI ..> TestTypeDTO
+
+@enduml
+

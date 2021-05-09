@@ -26,7 +26,7 @@ ADM -> ui : confirms the data
 
 
 ui -> controller : registerTestType(testTypeDTO)
-' class receptionist is the Creator that instanciates the client
+' class receptionist is the Creator that instantiates the client
 controller -> Company : Administrator = getAdministrator(getCurrentUserSession())
 activate administrator
 Company -> Company : getAdministrator(getCurrentUserSession().getID())

@@ -24,13 +24,13 @@ public class Main {
         Employee.roles.add("administrator");
 
         Employee e1 = new Employee("1","administrator", "Joao Oliveira", "address", "99999999999", "email", "1254");
-        Employee e2 = new Employee("recepcionist", "Manel Jorge", "address", "99999999999", "email", "1254");
+//        Employee e2 = new Employee("recepcionist", "Manel Jorge", "address", "99999999999", "email", "1254");
 //        Employee e3 = new Employee("specialist doctor", "palhaço", "address", "99999999999", "email", "1254");
 
 
 
         Company.employeeList.add(e1);
-        Company.employeeList.add(e2);
+//        Company.employeeList.add(e2);
 //        Company.employeeList.add(e3);
 
         for(int i=0;i<Company.employeeList.size();i++){
@@ -38,17 +38,17 @@ public class Main {
         }
 
 
-//        try
-//        {
-//            MainMenuUI menu = new MainMenuUI();
-//
-//            menu.run();
-//
-//        }
-//        catch( Exception e )
-//        {
-//            e.printStackTrace();
-//        }
+        try
+        {
+            MainMenuUI menu = new MainMenuUI();
+
+            menu.run();
+
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
 
 
     }

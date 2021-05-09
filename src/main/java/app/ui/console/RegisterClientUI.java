@@ -1,7 +1,7 @@
 package app.ui.console;
 //package auth.domain.model;
 
-import app.adapter.MailAdapter;
+//import app.adapter.MailAdapter;
 import app.controller.RegisterClientController;
 import app.domain.model.Client;
 import app.ui.console.utils.Utils;
@@ -44,7 +44,7 @@ public class RegisterClientUI implements Runnable{
 
         String Password = RandomPassword(10);
 
-        MailAdapter mailAdapter = new MailAdapter("1200614", "tua passe aqui");
+//        MailAdapter mailAdapter = new MailAdapter("1200614", "tua passe aqui");
 
 
         Client C = new Client(name, number, CCard, NHS, Date, PhoneNumber, Email, Password);

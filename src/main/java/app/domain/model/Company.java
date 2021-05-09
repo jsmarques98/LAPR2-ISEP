@@ -2,6 +2,7 @@ package app.domain.model;
 
 import app.controller.RegisterLab;
 import app.controller.RegisterTest;
+import app.controller.TestTypeRecord;
 import auth.AuthFacade;
 
 
@@ -27,6 +28,30 @@ public class Company {
     private Set<Client> clients;
     private Set<Receptionist> receptionists;
 
+
+
+    //us9
+
+    private List<Category> categories;
+    private TestTypeRecord testTypes;
+
+    public TestTypeRecord getTestTypes() {
+        return testTypes;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public boolean save(TestType testType){
+        return testTypes.appendTestType(testType);
+    }
+
+
+
+
+
+
     public boolean save(Client client){
         //return false if already exists
         return true;
@@ -42,6 +67,8 @@ public class Company {
     {
         if (designation.length() < 1)
             throw new IllegalArgumentException("Designation cannot be blank.");
+        this.testTypes = new TestTypeRecord();
+        this.categories = new ArrayList<>();
 
         this.designation = designation;
         this.authFacade = new AuthFacade();

@@ -8,7 +8,7 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 
-public class SpecifyTypeTestUI {
+public class SpecifyTypeTestUI implements Runnable {
     private final SpecifyTypeTestController controller;
     private Company company;
 
@@ -18,6 +18,7 @@ public class SpecifyTypeTestUI {
     }
 
     public void run() {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Insira o id do tipo de teste:");
         String id = sc.nextLine();
@@ -27,6 +28,10 @@ public class SpecifyTypeTestUI {
         String coll = sc.nextLine();
         System.out.println("Lista de categorias:");
         List<Category> lst = company.getCategories();
+        lst.add(new Category("categoria1","codigo1"));
+        lst.add(new Category("categoria2","codigo2"));
+        lst.add(new Category("categoria3","codigo3"));
+        lst.add(new Category("categoria4","codigo4"));
         Set<Category> listCat = new TreeSet<Category>();
         String option = "";
         while (true) {
@@ -40,7 +45,7 @@ public class SpecifyTypeTestUI {
             Category c = null;
             option = sc.nextLine();
             if (!option.equals("0")) {
-                c = lst.get(Integer.parseInt(sc.nextLine())-1);
+                c = lst.get(Integer.parseInt(option)-1);
                 lst.remove(c);
                 listCat.add(c);
             } else {

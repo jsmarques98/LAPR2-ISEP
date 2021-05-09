@@ -1,11 +1,6 @@
 package app.domain.model;
 
-
-import javax.swing.*;
 import java.lang.*;
-import java.io.File;  // Import the File class
-import java.io.IOException;  // Import the IOException class to handle errors
-import java.io.FileWriter;   // Import the FileWriter class
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -20,7 +15,7 @@ public class Employee {
     private String socCode;
 
 
-    public Employee (String id, String role, String name, String address, String phoneNumber, String email, String socCode){
+    public Employee (String role, String name, String address, String phoneNumber, String email, String socCode){
 //    id =
         checkRoleRules(role);
         checkNameRules(name);
@@ -40,7 +35,16 @@ public class Employee {
 
     }
 
-
+    //For first emplooyee
+    public Employee(String id, String role, String name, String address, String phoneNumber, String email, String socCode) {
+        this.id = id;
+        this.role = role;
+        this.name = name;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.socCode = socCode;
+    }
 
     private void checkSocCodeRules(String socCode) {
         if (socCode.length() == 0)
@@ -110,6 +114,9 @@ public class Employee {
      */
     public String createEmployeeId(){
         int num = Company.employeeList.size()+1;
+
+        System.out.println(getName());
+
         String temp = null;
         String[] arr = getName().split(" ");
         for (String var : arr) {
@@ -135,4 +142,16 @@ public class Employee {
 
     public static ArrayList<String> roles = new ArrayList<>(5);
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", role='" + role + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", socCode='" + socCode + '\'' +
+                '}';
+    }
 }

@@ -85,10 +85,10 @@ public class Company {
 
 //    us7
 
-    public static List<Employee> employeeList;
+    public static List<Employee> employeeList = new ArrayList<>(20);
 
-    public Employee createEmloyee(String id, String role, String name, String address, String phoneNumber, String email, String socCode, String passe){
-        return  new Employee(id, role, name, address, phoneNumber, email, socCode);
+    public static Employee createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode, String passe){
+        return new Employee(role, name, address, phoneNumber, email, socCode);
     }
 
     public boolean validateEmployee(Employee e) {

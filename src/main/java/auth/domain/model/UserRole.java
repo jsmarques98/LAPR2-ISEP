@@ -1,6 +1,6 @@
 package auth.domain.model;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 import org.codehaus.plexus.interpolation.util.StringUtils;
 
 import java.util.Objects;
@@ -16,7 +16,7 @@ public class UserRole {
 
     public UserRole(String id, String description)
     {
-        if (StringUtils.isBlank(id) || StringUtils.isBlank(description))
+        if (id.length()==0 || description.length()==0)
             throw new IllegalArgumentException("UserRole id and/or description cannot be blank.");
 
         this.id = extractId(id);
@@ -38,7 +38,7 @@ public class UserRole {
 
     public boolean hasId(String id)
     {
-        if (StringUtils.isBlank(id))
+        if (id.length()==0)
             return false;
         return this.id.equals(extractId(id));
     }

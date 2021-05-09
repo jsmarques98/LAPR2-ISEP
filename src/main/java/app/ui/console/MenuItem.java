@@ -1,6 +1,6 @@
 package app.ui.console;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public class MenuItem {
 
     public MenuItem(String description,  Runnable ui)
     {
-        if (StringUtils.isBlank(description))
+        if (description.length()==0)
             throw new IllegalArgumentException("MenuItem description cannot be null or empty.");
         if (Objects.isNull(ui))
             throw new IllegalArgumentException("MenuItem does not support a null UI.");

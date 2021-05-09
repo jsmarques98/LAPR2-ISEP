@@ -1,7 +1,7 @@
 package auth.domain.model;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.ObjectUtils;
+//import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.*;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class User {
 
     public User(Email id, Password pwd, String name)
     {
-        if ( (!ObjectUtils.allNotNull(id, pwd)) || StringUtils.isBlank(name))
+        if ( name.length()==0)
             throw new IllegalArgumentException("User cannot have an id, password or name as null/blank.");
 
         this.id = id;
@@ -40,10 +40,10 @@ public class User {
         return this.id.equals(id);
     }
 
-    public boolean hasPassword(String pwd)
-    {
-        return this.password.checkPassword(pwd);
-    }
+//    public boolean hasPassword(String pwd)
+//    {
+//        return this.password.checkPassword(pwd);
+//    }
 
     public boolean addRole(UserRole role)
     {
@@ -64,15 +64,15 @@ public class User {
         return this.roles.contains(role);
     }
 
-    public boolean hasRole(String roleId)
-    {
-        for(UserRole role: this.roles)
-        {
-            if (role.hasId(roleId))
-                return true;
-        }
-        return false;
-    }
+//    public boolean hasRole(String roleId)
+//    {
+//        for(UserRole role: this.roles)
+//        {
+//            if (role.hasId(roleId))
+//                return true;
+//        }
+//        return false;
+//    }
 
     public List<UserRole> getRoles()
     {
@@ -112,5 +112,10 @@ public class User {
     public String toString()
     {
         return String.format("%s - %s", this.id.toString(), this.name);
+    }
+
+    //Alterar
+    public boolean hasPassword(String password) {
+        return false;
     }
 }

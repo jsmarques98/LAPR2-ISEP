@@ -4,8 +4,8 @@ public class SpecialistDoctor extends Employee {
 
     private String doctorIndxNumber;
 
-    public SpecialistDoctor(String id, String role, String name, String address, String phoneNumber, String email, String socCode, String indxNumber) {
-        super(id, role, name, address, phoneNumber, email, socCode);
+    public SpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, String indxNumber) {
+        super(role, name, address, phoneNumber, email, socCode);
         checkIndxNumberRules(indxNumber);
         this.doctorIndxNumber = indxNumber;
     }

@@ -102,6 +102,10 @@ public class Employee {
         return id;
     }
 
+    public String getPass() {
+        return pass;
+    }
+
     /**
      * Método que converte o nome completo em iniciais do empregado
      * e devolve uma String com essas iniciais e o seu número
@@ -109,7 +113,7 @@ public class Employee {
      * @return String com iniciais + número
      */
     public String createEmployeeId(){
-        int num = Company.employeeList.size()+2;
+        int num = Company.employeeList.size()+1;
         String temp = "";
         String[] arr = name.split(" ");
         for (String var : arr) {

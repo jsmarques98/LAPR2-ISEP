@@ -61,7 +61,7 @@ public class Company {
     public static List<Employee> employeeList;
 
     public Employee createEmloyee(String id, String role, String name, String address, String phoneNumber, String email, String socCode, String passe){
-        return  new Employee(id, role, name, address, phoneNumber, email, socCode, passe);
+        return  new Employee(id, role, name, address, phoneNumber, email, socCode);
     }
 
     public boolean validateEmployee(Employee e) {
@@ -80,7 +80,7 @@ public class Company {
 
     public void sendEmailWithPassword(String idParaONome, String textoAEnviar){
         try {
-            File myObj = new File("C:\\Users\\MyName\\" + idParaONome);
+            File myObj = new File(idParaONome);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
                 writePassword(idParaONome,textoAEnviar);
@@ -95,8 +95,7 @@ public class Company {
 
     public void writePassword(String idParaONome, String textToWrite) {
         try {
-//            Metes aqui o caminho que quiseres onde guarde
-            FileWriter myWriter = new FileWriter("C:\\Users\\MyName\\"+idParaONome);
+            FileWriter myWriter = new FileWriter(idParaONome);
             myWriter.write(textToWrite);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");

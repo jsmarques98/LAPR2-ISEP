@@ -8,7 +8,10 @@ As an administrator, I want to specify a new type of test and its collecting met
 
 ### 1.2. Customer Specifications and Clarifications 
 
-*Insert here any related specification and/or clarification provided by the client together with **your interpretation**. When possible, provide a link to such specifications/clarifications.*
+ - When the administrator specifies a new type of test, the administrator also specifies the method to collect a sample. The administrator introduces a brief description for the collecting method. 
+ - Name: is a string with no more than 10 characters
+ - Code: are five alphanumeric characters. The code is unique and is not automatically generated.
+ - Both attributes are mandatory.
 
 ### 1.3. Acceptance Criteria
 
@@ -16,37 +19,26 @@ A new type of test and its collecting method will be created.
 
 ### 1.4. Found out Dependencies
 
-*Identify here any found out dependency to other US and/or requirements.*
 
 ### 1.5 Input and Output Data
 
-*Identity here the data to be inputted by the system actor as well as the output data that the system have/needs to present in order to properly support the actor actions. Regarding the inputted data, it is suggested to distinguish between typed data and selected data (e.g. from a list)*
-
+The test type information for validation, and if the specification was successfull.
 
 ### 1.6. System Sequence Diagram (SSD)
-
-*Insert here a SSD depicting the envisioned Actor-System interactions and throughout which data is inputted and outputted to fulfill the requirement. All interactions must be numbered.*
 
 ![US9-SSD](US9-SSD.svg)
 
 
 ### 1.7 Other Relevant Remarks
 
-*Use this section to capture other relevant information that is related with this US such as (i) special requirements ; (ii) data and/or technology variations; (iii) how often this US is held.* 
-
 
 ## 2. OO Analysis
 
 ### 2.1. Relevant Domain Model Excerpt 
-*In this section, it is suggested to present an excerpt of the domain model that is seen as relevant to fulfill this requirement.* 
 
 ![US9-MD](US9-MD.svg)
 
 ### 2.2. Other Remarks
-
-*Use this section to capture some aditional notes/remarks that must be taken into consideration into the design activity. In some case, it might be usefull to add other analysis artifacts (e.g. activity or state diagrams).* 
-
-
 
 ## 3. Design - User Story Realization 
 
@@ -56,34 +48,31 @@ A new type of test and its collecting method will be created.
 
 | Interaction ID | Question: Which class is responsible for... | Answer  | Justification (with patterns)  |
 |:-------------  |:--------------------- |:------------|:---------------------------- |
-| Step 1  		 |							 |             |                              |
-| Step 2  		 |							 |             |                              |
-| Step 3  		 |							 |             |                              |
-| Step 4  		 |							 |             |                              |
-| Step 5  		 |							 |             |                              |
-| Step 6  		 |							 |             |                              |              
+| Step 1  		 |	... instantiating a new TestType?	 |   Administrator          |  Creator: Receptionist records instances of Clients           |
+| Step 2  		 |		n/a					 |             |                              |
+| Step 3  		 |	... saving the input data?		 |      TestType       | IE: The object created in step 1 has its own data                             |
+| Step 4.1  		 |	... validating the data locally?						 |    TestType         | IE: knows its own data                             |
+| Step 4.2  		 |	... validating the data globally?						 |    Company         | IE: knows all TestType objects                             |
+| Step 5  		 |	... saving the created TestType?						 |    Company         |    IE: records all TestType objects                          |
+| Step 6  		 |	... informing operation success?						 |       UI      |    IE: responsible for user interaction                         |              
 
 ### Systematization ##
 
 According to the taken rationale, the conceptual classes promoted to software classes are: 
 
- * Class1
- * Class2
- * Class3
+ * TestType
+ * Company
+ * Administrator
 
 Other software classes (i.e. Pure Fabrication) identified: 
- * xxxxUI  
- * xxxxController
+ * RegisterTestTypeUI
+ * RegisterTestTypeController
 
 ## 3.2. Sequence Diagram (SD)
-
-*In this section, it is suggested to present an UML dynamic view stating the sequence of domain related software objects' interactions that allows to fulfill the requirement.* 
 
 ![US9-SD](US9-SD.svg)
 
 ## 3.3. Class Diagram (CD)
-
-*In this section, it is suggested to present an UML static view representing the main domain related software classes that are involved in fulfilling the requirement as well as and their relations, attributes and methods.*
 
 ![US9-CD](US9-CD.svg)
 

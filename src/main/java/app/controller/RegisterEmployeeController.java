@@ -2,7 +2,7 @@ package app.controller;
 import app.domain.model.Company;
 import app.domain.model.Employee;
 
-public class RegisterEmployeeController {
+public class RegisterEmployeeController implements Runnable{
 
     private Company company;
     private Employee employee;
@@ -25,4 +25,25 @@ public class RegisterEmployeeController {
         return this.company.saveEmployee(employee);
     }
 
+    @Override
+    public void run() {
+        Employee.roles.add("recepcionist");
+        Employee.roles.add("clincal chemestry technologist");
+        Employee.roles.add("laboratory coordinator");
+        Employee.roles.add("medical lab technician");
+        Employee.roles.add("specialist doctor");
+        Employee.roles.add("administrator");
+
+        Employee e1 = new Employee("JO1","administrator", "Joao Oliveira", "address", "99999999999", "email", "1254","qwertyuiop");
+        Employee e2 = new Employee("clincal chemestry technologist", "Manel Jorge", "address", "99999999999", "email", "1254");
+        Employee e3 = new Employee("specialist doctor", "Palhaço Luis", "address", "99999999999", "email", "1254");
+
+        Company.employeeList.add(e1);
+        Company.employeeList.add(e2);
+        Company.employeeList.add(e3);
+
+        for(int i=0;i<Company.employeeList.size();i++){
+            System.out.println(Company.employeeList.get(i));
+        }
+    }
 }

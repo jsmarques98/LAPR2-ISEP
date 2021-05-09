@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/plexus-interpolation-1.11-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

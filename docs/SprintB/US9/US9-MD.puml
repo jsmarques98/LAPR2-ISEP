@@ -40,11 +40,3 @@ Administrator "1" -- "*" Test : specifies
 
 
 @enduml
-Administrator "1"-- "1" Pharmacy : creates
-Courier "1"--"0..1" ParkingSpace : can reserve - um courier pode reservar ponto de abastecimento????
-ParkingSpace "1"--"*" Courier : sends notifications
-RegisteredUser "1"--"*" Product : views
-object NonRegisteredUser
-NonRegisteredUser "1"--"1" RegisteredUser : registers as
-NonRegisteredUser "1"--"*" Product : views
-

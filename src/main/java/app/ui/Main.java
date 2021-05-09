@@ -1,6 +1,10 @@
 package app.ui;
 
+import app.domain.model.Employee;
 import app.ui.console.MainMenuUI;
+import app.ui.console.SpecifyTypeTestUI;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -15,10 +19,21 @@ public class Main {
             MainMenuUI menu = new MainMenuUI();
 
             menu.run();
+
         }
         catch( Exception e )
         {
             e.printStackTrace();
         }
+
+        Employee.roles.add("recepcionist");
+        Employee.roles.add("clincal chemestry technologist");
+        Employee.roles.add("laboratory coordinator");
+        Employee.roles.add("medical lab technician");
+        Employee.roles.add("specialist doctor");
     }
+
+
+
+
 }

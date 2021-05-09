@@ -85,7 +85,11 @@ There is no dependencies.
 According to the taken rationale, the conceptual classes promoted to software classes are: 
 
  * Company
- * Employee
+ * Receptionist
+ * Medical Lab Technician
+ * Clinical Chemistry Technoloist
+ * Laboratory Coordinator
+ * Specialist Doctor 
 
 
 Other software classes (i.e. Pure Fabrication) identified: 
@@ -103,7 +107,7 @@ Other software classes (i.e. Pure Fabrication) identified:
 
 *In this section, it is suggested to present an UML static view representing the main domain related software classes that are involved in fulfilling the requirement as well as and their relations, attributes and methods.*
 
-![USXX-CD](USXX-CD.svg)
+![CD-US7](CD-US7.svg)
 
 # 4. Tests 
 *In this section, it is suggested to systematize how the tests were designed to allow a correct measurement of requirements fulfilling.* 

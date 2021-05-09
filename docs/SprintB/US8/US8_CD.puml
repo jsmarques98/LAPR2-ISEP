@@ -19,11 +19,17 @@ class Clinic {
   }
 
 class Company {
-    +registerLab(labID, address, phoneNumber, TINnr)
-    +saveLab()
-    +validateLab()
-    +addLab()
+    +registerLab(labID, address, phoneNumber, TINnr)\
+    +registerTest(testName, sample)
+    *validateTest(labTest)
+    +validateLab(lab)
+    +addLab(lab)
+    +addTest(labTest)
 
 }
+
+RegisterLaboratoryIU ..> RegisterLaboratoryController
+Company "1" --> "*" Clinic : contains
+Company "1" --> "*" RegisterLaboratoryController : contains
 
 @enduml

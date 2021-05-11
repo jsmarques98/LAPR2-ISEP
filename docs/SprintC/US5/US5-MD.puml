@@ -1,0 +1,76 @@
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object Sample{
+-barCode
+-type
+}
+
+object ChemicalLaboratory{
+-name
+-address
+-phoneNumber
+-TINNumber
+}
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+
+object Employee{
+-employeeID
+-organizationRole
+-name
+-address
+-phoneNumber
+-email
+-SOCCode
+
+}
+
+object MedicalLabTechnician{
+}
+
+object TestType{
+-testTypeID
+-designation
+}
+
+object BarCodeAPI{
+}
+
+object CollectingMethod{
+-designation
+}
+
+Company "1" -- "*" TestType : conducts
+TestType "*" -- "1" CollectingMethod : has
+
+Company "1" -- "*" Test : performs
+
+Test "*" -- "1" TestType : is of
+
+Sample "*" -- "1" MedicalLabTechnician : is collected/analyzed by
+Sample "*" -- "1" Test : is based on
+
+ChemicalLaboratory "1" -- "*" Sample : is received
+
+package "BarCodeAPI" #DDDDDD{
+	BarCodeAPI "1" -- "*" Sample : generates barCode
+}
+
+MedicalLabTechnician "*" -- "1" Employee : is a
+Employee "*" -- "1" Company : works for
+
+@enduml

@@ -4,6 +4,7 @@ import app.controller.AuthController;
 import app.controller.RegisterEmployeeController;
 import app.domain.model.Company;
 import app.domain.model.Employee;
+import app.domain.model.SpecialistDoctor;
 import app.ui.console.utils.Utils;
 
 public class EmployeeUI implements Runnable{
@@ -27,7 +28,7 @@ public class EmployeeUI implements Runnable{
         if(role.equals("specialist doctor")){
             String indxNumber =  selectIndxNumber();
             if(controller.createSpecialistDoctor(role, name, address, phoneNumber, email, socCode, indxNumber)){
-                System.out.println("Empregado criado com sucesso");
+                System.out.println("Specialist Doctor criado com sucesso com o index: " + indxNumber);
                 controller.saveEmployee();
             }else{
                 System.out.println("Empregado não criado");

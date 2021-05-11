@@ -1,8 +1,6 @@
 package app.domain.model;
 
 public class Lab {
-
-
     /**
      * The identification code of the laboratory.
      */

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="736px" preserveAspectRatio="none" style="width:918px;height:736px;" version="1.1" viewBox="0 0 918 736" width="918px" zoomAndPan="magnify"><defs><filter height="300%" id="f1qdwciurbbuwe" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="4.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="8.0" dy="8.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke:#A80036;stroke-width:2.0;stroke-dasharray:5.0,5.0;" x1="110" x2="110" y1="176.9766" y2="568.7031"/><line style="stroke:#A80036;stroke-width:2.0;stroke-dasharray:5.0,5.0;" x1="833" x2="833" y1="176.9766" y2="568.7031"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacing" textLength="190" x="10" y="171.0703">Administrator</text><ellipse cx="111" cy="30" fill="#FEFECE" filter="url(#f1qdwciurbbuwe)" rx="16" ry="16" style="stroke:#A80036;stroke-width:4.0;"/><path d="M111,46 L111,100 M85,62 L137,62 M111,100 L85,130 M111,100 L137,130 " fill="none" filter="url(#f1qdwciurbbuwe)" style="stroke:#A80036;stroke-width:4.0;"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacing" textLength="190" x="10" y="593.7734">Administrator</text><ellipse cx="111" cy="619.6797" fill="#FEFECE" filter="url(#f1qdwciurbbuwe)" rx="16" ry="16" style="stroke:#A80036;stroke-width:4.0;"/><path d="M111,635.6797 L111,689.6797 M85,651.6797 L137,651.6797 M111,689.6797 L85,719.6797 M111,689.6797 L137,719.6797 " fill="none" filter="url(#f1qdwciurbbuwe)" style="stroke:#A80036;stroke-width:4.0;"/><rect fill="#FEFECE" filter="url(#f1qdwciurbbuwe)" height="60.9766" style="stroke:#A80036;stroke-width:3.0;" width="124" x="767" y="106"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacing" textLength="96" x="781" y="147.0703">System</text><rect fill="#FEFECE" filter="url(#f1qdwciurbbuwe)" height="60.9766" style="stroke:#A80036;stroke-width:3.0;" width="124" x="767" y="566.7031"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacing" textLength="96" x="781" y="607.7734">System</text><polygon fill="#A80036" points="809,231.5977,829,239.5977,809,247.5977,817,239.5977" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;" x1="111" x2="821" y1="239.5977" y2="239.5977"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacing" textLength="18" x="125" y="230.1133">1</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacing" textLength="404" x="151" y="230.1133">starts to register new laboratory</text><polygon fill="#A80036" points="133,290.2188,113,298.2188,133,306.2188,125,298.2188" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;stroke-dasharray:2.0,2.0;" x1="121" x2="831" y1="298.2188" y2="298.2188"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacing" textLength="18" x="145" y="288.7344">2</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacing" textLength="648" x="171" y="288.7344">requests data (labID, name, address, phoneNR, TIN)</text><polygon fill="#A80036" points="809,348.8398,829,356.8398,809,364.8398,817,356.8398" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;" x1="111" x2="821" y1="356.8398" y2="356.8398"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacing" textLength="18" x="125" y="347.3555">3</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacing" textLength="262" x="151" y="347.3555">types requested data</text><polygon fill="#A80036" points="133,407.4609,113,415.4609,133,423.4609,125,415.4609" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;stroke-dasharray:2.0,2.0;" x1="121" x2="831" y1="415.4609" y2="415.4609"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacing" textLength="18" x="145" y="405.9766">4</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacing" textLength="530" x="171" y="405.9766">shows the data and requests confirmation</text><polygon fill="#A80036" points="809,466.082,829,474.082,809,482.082,817,474.082" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;" x1="111" x2="821" y1="474.082" y2="474.082"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacing" textLength="18" x="125" y="464.5977">5</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacing" textLength="174" x="151" y="464.5977">confirms data</text><polygon fill="#A80036" points="133,524.7031,113,532.7031,133,540.7031,125,532.7031" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;stroke-dasharray:2.0,2.0;" x1="121" x2="831" y1="532.7031" y2="532.7031"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacing" textLength="18" x="145" y="523.2188">6</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacing" textLength="206" x="171" y="523.2188">informs success</text><!--MD5=[405358ea9322dcd906d3c9c333649bbc]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Administrator" as Admin
+
+Admin -> System: starts to register new laboratory
+System - -> Admin: requests data (labID, name, address, phoneNR, TIN)
+
+Admin -> System: types requested data
+System - -> Admin: shows the data and requests confirmation
+
+Admin -> System: confirms data
+System - -> Admin: informs success
+@enduml
+
+@startuml
+
+autonumber
+
+actor  "Administrator" as Admin
+
+Admin -> System: starts to register new laboratory
+System - -> Admin: requests data (labID, name, address, phoneNR, TIN)
+
+Admin -> System: types requested data
+System - -> Admin: shows the data and requests confirmation
+
+Admin -> System: confirms data
+System - -> Admin: informs success
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: PT
+--></g></svg>

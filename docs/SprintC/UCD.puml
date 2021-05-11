@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+:Receptionist: --> (US 4 - registers the test to be performed)
+:Receptionist: --> (US 3 - registers the client)
+
+:Chemistry Technologist: --> (registers the result of the samples)
+:Chemistry Technologist: --> (verifies report)
+
+:Medical Lab Technician: --> (US 5 - collects samples)
+:Medical Lab Technician: --> (verifies report)
+
+:Specialist Doctor: --> (diagnostics sample)
+:Specialist Doctor: --> (verifies report)
+
+:Laboratory Coordinator: --> (validates/verifies reports)
+:Laboratory Coordinator: --> (creates reports on waiting time)
+
+:Client: --> (views the reports/examination)
+
+:Administrator: --> (US 9 - specify new type of test and its collecting methods)
+:Administrator: --> (US 10 - specify new test parameter and categorize it)
+:Administrator: --> (US 11 - specify new parameter category)
+:Administrator: --> (US 7 - registers a new employee)
+:Administrator: --> (US 8 - register new clinical analysis laboratory stating which kind of test it operates)
+
+
+:Time: --> (generate daily report)
+
+@enduml

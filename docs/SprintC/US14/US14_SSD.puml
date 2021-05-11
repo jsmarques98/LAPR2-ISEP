@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Administrator" as Admin
+
+Admin -> System: starts to to write a diagnosis report of a given test
+System --> Admin: requests data (diagnosis))
+
+Admin -> System: types requested data (diagnosis)
+System --> Admin: shows the data and requests confirmation
+
+Admin -> System: confirms data
+System --> Admin: informs success or insuccess
+@enduml

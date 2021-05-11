@@ -19,7 +19,7 @@ class Clinic {
   }
 
 class Company {
-    +registerLab(labID, address, phoneNumber, TINnr)\
+    +registerLab(labID, address, phoneNumber, TINnr)
     +registerTest(testName, sample)
     *validateTest(labTest)
     +validateLab(lab)

@@ -1,0 +1,52 @@
+@startuml
+autonumber
+
+actor "ReceptionistActor" as RCP
+participant "RegisterClientUI" as ui
+participant "RegisterClientController" as controller
+participant "Receptionist" as receptionist
+participant "Client" as client
+participant "Company"
+participant "AuthFacade"
+activate AuthFacade
+activate RCP
+activate Company
+
+RCP -> ui : initiates the registration of a client
+activate ui
+ui -> controller ** : create
+ui -> RCP : requests the data required (name, CCNumber, NHSNumber, birthdate, sex, TINNumber, phoneNumber, email)
+
+RCP -> ui : inserts the requested data
+ui -> controller : createClientDTO( ... )
+activate controller
+controller -> controller : clientDTO = createClientDTO( ... )
+
+controller -> ui : show(clientDTO)
+ui -> RCP : shows the data and requests a confirmation
+RCP -> ui : confirms the data
+ui -> controller : registerClient(clientDTO)
+' class receptionist is the Creator that instanciates the client
+controller -> Company :Receptionist = getReceptionist(getCurrentUserSession())
+Company -> Company : getReceptionist(getCurrentUserSession().getID())
+
+activate receptionist
+
+controller -> receptionist : createClient(ClientDTO)
+receptionist -> client ** : createClient(clientDTO)
+activate client
+controller -> receptionist : client = getClient()
+receptionist -> receptionist : getClient()
+controller -> Company : boolean state = save(client)
+Company -> Company : save(client)
+controller -> AuthFacade : state = registerUser(ClientDTO)
+AuthFacade -> AuthFacade : addUserWithRole(ClientDTO.name, ClientDTO.email, ClientDTO.name, "Client")
+controller -> MailAdapter ** : state = sendCredentials(ClientDTO)
+activate MailAdapter
+MailAdapter -> MailAdapter : sendMsg(ClientDTO.email + ClientDTO.ID + ClientDTO.pwd)
+ui <- controller : show(state)
+ui -> RCP : informs operation success
+
+deactivate ui
+
+@enduml

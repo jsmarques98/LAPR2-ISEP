@@ -1,0 +1,42 @@
+@startuml
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+
+object Administrator{
+-authenticationID
+-password
+}
+
+
+object TestType{
+-testTypeID
+-designation
+}
+object Company{
+-designation
+-address
+}
+
+object CollectingMethod{
+-designation
+}
+
+Company "1" -- "*" TestType : conducts
+TestType "*" -- "1" CollectingMethod : has
+Administrator "*" -- "*" TestType : creates
+Company "1" -- "*" Test : performs
+Test "*" -- "1" TestType : is of
+
+Administrator "1" -- "*" Test : specifies
+
+
+@enduml

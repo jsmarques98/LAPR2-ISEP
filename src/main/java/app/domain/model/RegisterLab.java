@@ -89,7 +89,7 @@ public class RegisterLab {
             throw new IllegalArgumentException("The address can´t be blank, you have to enter an address");
         }
 
-        if (address.length() < 0 || address.length() > 30) {
+        if (address.length() > 30) {
             throw new IllegalArgumentException("The address of the lab can contain a maximum of 30 characters");
         }
     }

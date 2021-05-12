@@ -37,6 +37,12 @@ public class RegisterLab {
      * @param TINnr The TIN number of the lab to be registered
      */
     public RegisterLab(String labId, String name, String address, int phoneNr, int TINnr) {
+        checkLabID(labId);
+        checkName(name);
+        checkAdress(address);
+        checkPhoneNr(phoneNr);
+        checkTinNr(TINnr);
+
         this.labId = labId;
         this.name = name;
         this.address = address;
@@ -130,7 +136,85 @@ public class RegisterLab {
 
     }
 
+    /**
+     * Get the id of the lab
+     * @return the id of the lab
+     */
+    public String getLabId() {
+        return labId;
+    }
 
+    /**
+     * Get the name of the lab
+     * @return the name of the lab
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Get the address of the lab
+     * @return the address of the lab
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * Get the phone number of the lab
+     * @return the phone number of the lab
+     */
+    public int getPhoneNr() {
+        return phoneNr;
+    }
+
+    /**
+     * Get the TIN number of the lab
+     * @return the TIN number of the lab
+     */
+    public int getTINnr() {
+        return TINnr;
+    }
+
+    /**
+     * Sets the id of the lab
+     * @param labId is the id of the lab
+     */
+    public void setLabId(String labId) {
+        this.labId = labId;
+    }
+
+    /**
+     * Sets the name of the lab
+     * @param name is the name of the lab
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Sets the address of the lab
+     * @param address is the address of the lab
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /**
+     * Sets the phone number of the Lab
+     * @param phoneNr is the TIN number of the lab
+     */
+    public void setPhoneNr(int phoneNr) {
+        this.phoneNr = phoneNr;
+    }
+
+    /**
+     * Sets the TIN number of the lab
+     * @param TINnr is the phone number of the lab
+     */
+    public void setTINnr(int TINnr) {
+        this.TINnr = TINnr;
+    }
 }
 
 

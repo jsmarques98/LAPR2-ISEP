@@ -1,19 +1,14 @@
 @startuml
-'https://plantuml.com/sequence-diagram
-
 autonumber
 
 actor  "Administrator" as Admin
 
 Admin -> System: starts to register new laboratory
-System -> Admin: requests data (labID, name, address, phoneNR, TIN)
+System -> Admin: requests data (labID, name, address, phoneNR, TINnr, testType)
 
-Admin -> System: types requested data
-System -> Admin: shows the data, requests confirmation and shows the list of tests
+Admin -> System: types/selects requested data
+System  -> Admin: shows the data and requests confirmation
 
-Admin -> System: confirms data and chooses tests
-System -> Admin: shows the chosen tests and requests confirmation
-
-Admin -> System: Confirms the chosen tests
+Admin -> System: confirms data
 System -> Admin: Informs success
 @enduml

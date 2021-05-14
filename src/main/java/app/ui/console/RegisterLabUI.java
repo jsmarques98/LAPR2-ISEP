@@ -1,6 +1,7 @@
 package app.ui.console;
 
 import app.controller.RegisterLabController;
+import app.domain.model.Company;
 import app.ui.console.utils.Utils;
 
 public class RegisterLabUI implements Runnable{
@@ -18,16 +19,22 @@ public class RegisterLabUI implements Runnable{
         String labId = selectLab();
         String name = selectName();
         String address = selectAddr();
-        int phoneNr = selectPhoneNr();
-        int TINnr = selectTINnr();
+        String phoneNr = selectPhoneNr();
+        String TINnr = selectTINnr();
 
         if(controller.registerLab(labId, name, address, phoneNr, TINnr)){
-            System.out.println("Lab criado com sucesso");
+            System.out.println("Lab registered with success");
             controller.saveLab();
         }else{
-            System.out.println("Lab não criado");
+            System.out.println("Lab not registered");
+        }
+
+        for(int i = 0; i< Company.labList.size(); i++){
+            System.out.println(Company.labList.get(i));
         }
     }
+
+
 
     public String selectLab(){
         return Utils.readLineFromConsole("LabId: ");
@@ -38,10 +45,10 @@ public class RegisterLabUI implements Runnable{
     public String selectAddr(){
         return Utils.readLineFromConsole("Address: ");
     }
-    public int selectPhoneNr(){
-        return Utils.readIntegerFromConsole("Phone: ");
+    public String selectPhoneNr(){
+        return Utils.readLineFromConsole("Phone: ");
     }
-    public int selectTINnr(){
-        return Utils.readIntegerFromConsole("TINnr: ");
+    public String selectTINnr(){
+        return Utils.readLineFromConsole("TINnr: ");
     }
 }

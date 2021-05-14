@@ -1,6 +1,6 @@
 package app.controller;
 import app.domain.model.Company;
-import app.domain.model.RegisterLab;
+import app.domain.model.Lab;
 
 
 public class RegisterLabController {
@@ -12,31 +12,25 @@ public class RegisterLabController {
     /**
      * The lab of RegisterLabController
      */
-    private RegisterLab lab;
+    private Lab lab;
 
-    /**
-     * The test of RegisterLabController
-     */
-    private RegisterTest test;
 
     /**
      *
      */
 
     public RegisterLabController() {
+        this(App.getInstance().getCompany());
     }
 
     /**
      *Builds an instance of RegisterLabController receiving the company, the lab and the test.
      *
      * @param company the name of the company.
-     * @param lab  the name of the lab to register.
-     * @param test the type of test to tegister.
      */
-    public RegisterLabController(Company company, RegisterLab lab, RegisterTest test) {
+    public RegisterLabController(Company company) {
         this.company = company;
         this.lab = null;
-        this.test = null;
     }
 
     /**
@@ -48,22 +42,11 @@ public class RegisterLabController {
      * @param TINnr the TIN number of the lab to register.
      * @return
      */
-    public boolean registerLab(String labId, String name, String address, int phoneNr, int TINnr){
+    public boolean registerLab(String labId, String name, String address, String phoneNr, String TINnr){
         this.lab = this.company.registerLab(labId, name, address, phoneNr, TINnr);
         return this.company.validateLab(lab);
     }
 
-    /**
-     * Builds an instance of a test receiving the testName and sample
-     * @param testName
-     * @param sample
-     * @return
-     */
-
-    public boolean registerTest(String testName, String sample){
-        this.test = this.company.registerTest(testName, sample);
-        return this.company.validateTest(test);
-    }
 
     /**
      * Saves the instance of the lab created in the registerLab
@@ -73,12 +56,4 @@ public class RegisterLabController {
         return this.company.saveLab(lab);
     }
 
-    /**
-     * Saves the instance of the test created in the registerTest
-     * @return
-     */
-
-    public boolean saveTest(){
-        return this.company.saveTest(test);
-    }
 }

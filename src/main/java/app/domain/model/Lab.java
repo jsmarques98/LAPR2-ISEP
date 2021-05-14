@@ -1,6 +1,8 @@
 package app.domain.model;
 
-public class RegisterLab {
+import java.util.ArrayList;
+
+public class Lab {
 
     /**
      * The id of the lab to be registered
@@ -20,12 +22,12 @@ public class RegisterLab {
     /**
      * The phone number of the lab to be registered
      */
-    private int phoneNr;
+    private String phoneNr;
 
     /**
      * The TIN number of the lab to be registered
      */
-    private int TINnr;
+    private String TINnr;
 
 
     /**
@@ -36,7 +38,7 @@ public class RegisterLab {
      * @param phoneNr The phone number of the lab to be registered
      * @param TINnr The TIN number of the lab to be registered
      */
-    public RegisterLab(String labId, String name, String address, int phoneNr, int TINnr) {
+    public Lab(String labId, String name, String address, String phoneNr, String TINnr) {
         checkLabID(labId);
         checkName(name);
         checkAdress(address);
@@ -60,7 +62,7 @@ public class RegisterLab {
                 throw new IllegalArgumentException("The labId can´t be blank, you have to enter a number");
             }
 
-            if (labId.length() < 0 || labId.length() > 5){
+            if (labId.length() > 5){
                 throw new IllegalArgumentException("The labId should be a 5 number code");
             }
     }
@@ -75,7 +77,7 @@ public class RegisterLab {
             throw new IllegalArgumentException("The name can´t be blank, you have to enter a name");
         }
 
-        if (name.length() < 0 || name.length() > 20){
+        if (name.length() > 20){
             throw new IllegalArgumentException("The name of the lab can contain a maximum of 20 characters");
         }
     }
@@ -98,18 +100,17 @@ public class RegisterLab {
      * Checks if the phone number of the lab is correctly given with the constraints
      * @param phoneNr The phone number of the lab to be registered
      */
-    private void checkPhoneNr (int phoneNr){
-        String phoneNumber = Integer.toString(phoneNr);
+    private void checkPhoneNr (String phoneNr){
 
-        if (phoneNumber.length() == 0) {
+        if (phoneNr.length() == 0) {
             throw new IllegalArgumentException("The phone number can´t be blank, you have to enter a phone number");
         }
 
-        if (phoneNumber.length() < 0 || phoneNumber.length() < 11) {
+        if (phoneNr.length() < 11) {
             throw new IllegalArgumentException("The phone number of the lab has to be a 11 digit number");
         }
 
-        if (phoneNumber.length() > 11){
+        if (phoneNr.length() > 11){
             throw new IllegalArgumentException("The phone number can´t have more than 10 digits");
         }
 
@@ -119,18 +120,17 @@ public class RegisterLab {
      * Checks if the TIN number of the lab is correctly given with the constraints
      * @param TINnr The TIN number of the lab to be registered
      */
-    private void checkTinNr (int TINnr){
-        String Tin = Integer.toString(TINnr);
+    private void checkTinNr (String TINnr){
 
-        if (Tin.length() == 0) {
+        if (TINnr.length() == 0) {
             throw new IllegalArgumentException("The TIN number can´t be blank, you have to enter a TIN number");
         }
 
-        if (Tin.length() < 0 || Tin.length() < 10) {
+        if (TINnr.length() < 10) {
             throw new IllegalArgumentException("The TIN number of the lab has to be a 10 digit number");
         }
 
-        if (Tin.length() > 10){
+        if (TINnr.length() > 10){
             throw new IllegalArgumentException("The TIN number can´t have more than 10 digits");
         }
 
@@ -164,7 +164,7 @@ public class RegisterLab {
      * Get the phone number of the lab
      * @return the phone number of the lab
      */
-    public int getPhoneNr() {
+    public String getPhoneNr() {
         return phoneNr;
     }
 
@@ -172,7 +172,7 @@ public class RegisterLab {
      * Get the TIN number of the lab
      * @return the TIN number of the lab
      */
-    public int getTINnr() {
+    public String getTINnr() {
         return TINnr;
     }
 
@@ -204,7 +204,7 @@ public class RegisterLab {
      * Sets the phone number of the Lab
      * @param phoneNr is the TIN number of the lab
      */
-    public void setPhoneNr(int phoneNr) {
+    public void setPhoneNr(String phoneNr) {
         this.phoneNr = phoneNr;
     }
 
@@ -212,8 +212,21 @@ public class RegisterLab {
      * Sets the TIN number of the lab
      * @param TINnr is the phone number of the lab
      */
-    public void setTINnr(int TINnr) {
+    public void setTINnr(String TINnr) {
         this.TINnr = TINnr;
+    }
+
+    public static ArrayList<String> labs = new ArrayList<>(5);
+
+    @Override
+    public String toString() {
+        return "Lab{" +
+                "id='" + labId + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber='" + phoneNr + '\'' +
+                ", TIN number='" + TINnr + '\'' +
+                '}';
     }
 }
 

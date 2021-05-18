@@ -126,7 +126,7 @@ public class Company {
         if (!validateEmployee(e)) {
             return false;
         } else {
-            sendEmailWithPassword(e.getId(), e.getPasswordEmployee());
+            sendEmailWithPassword(e.getId(), e.getPassword());
             return this.employeeList.add(e);
         }
     }

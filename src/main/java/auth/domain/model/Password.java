@@ -2,6 +2,7 @@ package auth.domain.model;
 
 //import at.favre.lib.crypto.bcrypt.BCrypt;
 //import org.apache.commons.lang3.StringUtils;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.codehaus.plexus.interpolation.util.StringUtils;
 
 import java.util.Objects;
@@ -18,7 +19,7 @@ public class Password {
     {
         if (!validate(password))
             throw new IllegalArgumentException("Invalid Email Address.");
-//        this.password = createHash(password);
+        this.password = createHash(password);
     }
 
     private boolean validate(String password) {
@@ -30,18 +31,18 @@ public class Password {
         return true;
     }
 
-//    private String createHash(String password)
-//    {
-//        return BCrypt.withDefaults().hashToString(BCrypt.MIN_COST,password.toCharArray());
-//    }
-//
-//    public boolean checkPassword(String pwd)
-//    {
-//        if (pwd.length()==0)
-//            return false;
-//        BCrypt.Result result = BCrypt.verifyer().verify(pwd.toCharArray(),this.password.toCharArray());
-//        return result.verified;
-//    }
+    private String createHash(String password)
+    {
+        return BCrypt.withDefaults().hashToString(BCrypt.MIN_COST,password.toCharArray());
+    }
+
+    public boolean checkPassword(String pwd)
+    {
+        if (pwd.length()==0)
+            return false;
+        BCrypt.Result result = BCrypt.verifyer().verify(pwd.toCharArray(),this.password.toCharArray());
+        return result.verified;
+    }
 
     @Override
     public int hashCode()

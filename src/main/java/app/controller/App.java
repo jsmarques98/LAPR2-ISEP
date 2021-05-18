@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.domain.model.Company;
+import app.domain.model.Employee;
 import app.domain.shared.Constants;
 import auth.AuthFacade;
 import auth.UserSession;
@@ -62,6 +63,13 @@ public class App {
 
 
     private void bootstrap() {
+        Employee.roles.add(Constants.ROLE_ADMIN);
+        Employee.roles.add(Constants.ROLE_RECEPTIONIST);
+        Employee.roles.add("clincal chemestry technologist");
+        Employee.roles.add("laboratory coordinator");
+        Employee.roles.add("medical lab technician");
+        Employee.roles.add("specialist doctor");
+
         this.authFacade.addUserRole(Constants.ROLE_ADMIN, Constants.ROLE_ADMIN);
 
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);

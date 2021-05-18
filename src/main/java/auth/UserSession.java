@@ -39,14 +39,14 @@ public class UserSession {
         return this.user != null;
     }
 
-//    public boolean isLoggedInWithRole(String roleId)
-//    {
-//        if (isLoggedIn())
-//        {
-//            return this.user.hasRole(roleId);
-//        }
-//        return false;
-//    }
+    public boolean isLoggedInWithRole(String roleId)
+    {
+        if (isLoggedIn())
+        {
+            return this.user.hasRole(roleId);
+        }
+        return false;
+    }
 
     public String getUserName()
     {

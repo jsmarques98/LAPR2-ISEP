@@ -13,7 +13,7 @@ public class Employee {
     private String phoneNumber;
     private String email;
     private String socCode;
-    private String pass;
+    private String password;
 
 
     public Employee (String role, String name, String address, String phoneNumber, String email, String socCode){
@@ -31,19 +31,7 @@ public class Employee {
         this.email = email;
         this.socCode = socCode;
         this.id = createEmployeeId();
-
-    }
-
-    //For first emplooyee
-    public Employee(String id, String role, String name, String address, String phoneNumber, String email, String socCode, String pass) {
-        this.id = id;
-        this.role = role;
-        this.name = name;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.socCode = socCode;
-        this.pass = pass;
+        this.password = generatePasswordEmployee();
     }
 
     private void checkSocCodeRules(String socCode) {
@@ -102,9 +90,7 @@ public class Employee {
         return id;
     }
 
-    public String getPass() {
-        return pass;
-    }
+    public String getPassword() { return password; }
 
     /**
      * Método que converte o nome completo em iniciais do empregado
@@ -123,7 +109,7 @@ public class Employee {
         return temp;
     }
 
-    public String getPasswordEmployee() {
+    public String generatePasswordEmployee() {
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
         int targetStringLength = 10;

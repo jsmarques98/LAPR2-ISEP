@@ -40,10 +40,10 @@ public class User {
         return this.id.equals(id);
     }
 
-//    public boolean hasPassword(String pwd)
-//    {
-//        return this.password.checkPassword(pwd);
-//    }
+    public boolean hasPassword(String pwd)
+    {
+        return this.password.checkPassword(pwd);
+    }
 
     public boolean addRole(UserRole role)
     {
@@ -64,15 +64,15 @@ public class User {
         return this.roles.contains(role);
     }
 
-//    public boolean hasRole(String roleId)
-//    {
-//        for(UserRole role: this.roles)
-//        {
-//            if (role.hasId(roleId))
-//                return true;
-//        }
-//        return false;
-//    }
+    public boolean hasRole(String roleId)
+    {
+        for(UserRole role: this.roles)
+        {
+            if (role.hasId(roleId))
+                return true;
+        }
+        return false;
+    }
 
     public List<UserRole> getRoles()
     {
@@ -114,8 +114,5 @@ public class User {
         return String.format("%s - %s", this.id.toString(), this.name);
     }
 
-    //Alterar
-    public boolean hasPassword(String password) {
-        return false;
-    }
+
 }

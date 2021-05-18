@@ -1,0 +1,23 @@
+@startuml
+autonumber
+
+actor "SpecialistDoctor" as Spec
+
+participant ":CreateReportUI" as UI
+participant ":CreateReportController" as CRC
+participant ":Company" as COM
+participant ":CreateReport" as CR
+
+activate Spec
+
+Spec -> UI : starts to make a diagnosis and write a report of a given test
+UI --> Spec : requests data (client)
+
+Spec -> UI : types requested data (client name)
+
+activate UI
+activate CRC
+
+
+
+@enduml

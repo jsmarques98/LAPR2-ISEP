@@ -3,14 +3,23 @@
 
 autonumber
 
-actor  "Administrator" as Admin
+actor  "Specialist Doctor" as Spec
 
-Admin -> System: starts to to write a diagnosis report of a given test
-System --> Admin: requests data (diagnosis))
+Spec -> System: starts to make a diagnosis and write a report of a given test
+System --> Spec: requests data (client)
 
-Admin -> System: types requested data (diagnosis)
-System --> Admin: shows the data and requests confirmation
+Spec -> System: types requested data (client name)
+System --> Spec: shows the data of the client and asks to confirm him
 
-Admin -> System: confirms data
-System --> Admin: informs success or insuccess
+Spec -> System: confirms data
+System --> Spec: shows the test results
+
+Spec -> System: makes a diagnostic and want to write a report
+System --> Spec: requests data (report)
+
+Spec -> System: types data (report)
+System --> Spec: shows data and asks to confirm
+
+Spec -> System: confirms data
+System --> Spec: informs success or insuccess of the op
 @enduml

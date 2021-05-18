@@ -6,22 +6,22 @@ class RegisterLaboratoryIU
 
 class RegisterLaboratoryController {
     +registerLab(labID, address, phoneNumber, TINnr)
-    +saveLab()
-    +registerTest(sample)
-    +saveTest()
+    +saveLab(lab)
+    +registerTest(sample, testName)
+    +saveTest(labTest)
 }
 
 class Clinic {
-    +registerTest(sample)
-    +saveTest()
-    +validateTest()
-    +addTest()
+    +registerTest(sample, testName)
+    +saveTest(labTest)
+    +validateTest(labTest)
+    +addTest(labTest)
   }
 
 class Company {
-    +registerLab(labID, address, phoneNumber, TINnr)\
+    +registerLab(labID, address, phoneNumber, TINnr)
     +registerTest(testName, sample)
-    *validateTest(labTest)
+    +validateTest(labTest)
     +validateLab(lab)
     +addLab(lab)
     +addTest(labTest)
@@ -29,7 +29,7 @@ class Company {
 }
 
 RegisterLaboratoryIU ..> RegisterLaboratoryController
-Company "1" --> "*" Clinic : contains
-Company "1" --> "*" RegisterLaboratoryController : contains
+Company "1" --> "*" Clinic : has
+RegisterLaboratoryController "*" ..> "1" Company : belongs to
 
 @enduml

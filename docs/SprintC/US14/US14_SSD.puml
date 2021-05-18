@@ -5,12 +5,21 @@ autonumber
 
 actor  "Specialist Doctor" as Spec
 
-Spec -> System: starts to to write a diagnosis report of a given test
-System --> Spec: requests data (diagnosis))
+Spec -> System: starts to make a diagnosis and write a report of a given test
+System --> Spec: requests data (client)
 
-Spec -> System: types requested data (diagnosis)
-System --> Spec: shows the data and requests confirmation
+Spec -> System: types requested data (client name)
+System --> Spec: shows the data of the client and asks to confirm him
 
 Spec -> System: confirms data
-System --> Spec: informs success or insuccess
+System --> Spec: shows the test results
+
+Spec -> System: makes a diagnostic and want to write a report
+System --> Spec: requests data (report)
+
+Spec -> System: types data (report)
+System --> Spec: shows data and asks to confirm
+
+Spec -> System: confirms data
+System --> Spec: informs success or insuccess of the operation
 @enduml

@@ -65,12 +65,17 @@ public class App {
     private void bootstrap() {
         Employee.roles.add(Constants.ROLE_ADMIN);
         Employee.roles.add(Constants.ROLE_RECEPTIONIST);
-        Employee.roles.add("clincal chemestry technologist");
-        Employee.roles.add("laboratory coordinator");
-        Employee.roles.add("medical lab technician");
-        Employee.roles.add("specialist doctor");
+        Employee.roles.add(Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
+        Employee.roles.add(Constants.ROLE_LABORATORY_COORDINATOR);
+        Employee.roles.add(Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
+        Employee.roles.add(Constants.ROLE_SEPECIALIST_DOCTOR);
 
         this.authFacade.addUserRole(Constants.ROLE_ADMIN, Constants.ROLE_ADMIN);
+        this.authFacade.addUserRole(Constants.ROLE_RECEPTIONIST, Constants.ROLE_RECEPTIONIST);
+        this.authFacade.addUserRole(Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST, Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
+        this.authFacade.addUserRole(Constants.ROLE_LABORATORY_COORDINATOR, Constants.ROLE_LABORATORY_COORDINATOR);
+        this.authFacade.addUserRole(Constants.ROLE_MEDICAL_LAB_TECHNICIAN, Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
+        this.authFacade.addUserRole(Constants.ROLE_SEPECIALIST_DOCTOR, Constants.ROLE_SEPECIALIST_DOCTOR);
 
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);
     }

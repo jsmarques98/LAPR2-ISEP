@@ -7,7 +7,7 @@ import java.util.Random;
 public class Employee {
 
     private String id;
-    private String role;
+    private String roleId;
     private String name;
     private String address;
     private String phoneNumber;
@@ -16,15 +16,15 @@ public class Employee {
     private String password;
 
 
-    public Employee (String role, String name, String address, String phoneNumber, String email, String socCode){
-        checkRoleRules(role);
+    public Employee (String roleId, String name, String address, String phoneNumber, String email, String socCode){
+        checkRoleRules(roleId);
         checkNameRules(name);
         checkAddressRules(address);
         checkPhoneNUmberRules(phoneNumber);
         checkEmailRules(email);
         checkSocCodeRules(socCode);
 
-        this.role = role;
+        this.roleId = roleId;
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -81,7 +81,7 @@ public class Employee {
     }
 
     public void setRole(String role) {
-        this.role = role;
+        this.roleId = role;
     }
 
     public String getName() {return name;}
@@ -91,6 +91,10 @@ public class Employee {
     }
 
     public String getPassword() { return password; }
+
+    public String getRoleId() { return roleId; }
+
+    public String getEmail() { return email;}
 
     /**
      * Método que converte o nome completo em iniciais do empregado
@@ -129,7 +133,7 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id='" + id + '\'' +
-                ", role='" + role + '\'' +
+                ", role='" + roleId + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +

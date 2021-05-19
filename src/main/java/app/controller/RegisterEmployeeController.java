@@ -16,13 +16,13 @@ public class RegisterEmployeeController{
         this.employee = null;
     }
 
-    public boolean createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode) {
-        this.employee = this.company.createEmloyee(role, name, address, phoneNumber, email, socCode);
+    public boolean createEmloyee(String roleId, String name, String address, String phoneNumber, String email, String socCode) {
+        this.employee = this.company.createEmloyee(roleId, name, address, phoneNumber, email, socCode);
         return this.company.validateEmployee(employee);
     }
 
-    public boolean createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, String indxNumber) {
-        this.employee = this.company.createSpecialistDoctor(role, name, address, phoneNumber, email, socCode, indxNumber);
+    public boolean createSpecialistDoctor(String roleId, String name, String address, String phoneNumber, String email, String socCode, String indxNumber) {
+        this.employee = this.company.createSpecialistDoctor(roleId, name, address, phoneNumber, email, socCode, indxNumber);
         return this.company.validateEmployee(employee);
     }
 

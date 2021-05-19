@@ -127,6 +127,7 @@ public class Company {
             return false;
         } else {
             sendEmailWithPassword(e.getId(), e.getPassword());
+            authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleId());
             return this.employeeList.add(e);
         }
     }

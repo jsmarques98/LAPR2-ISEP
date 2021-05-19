@@ -18,23 +18,23 @@ public class EmployeeUI implements Runnable{
     @Override
     public void run() {
 
-        String role = selectRole();
+        String roleId = selectRoleId();
         String name = selectName();
         String address = selectAddress();
         String phoneNumber = selectPhoneNumber();
         String email = selectEmail();
         String socCode = selectSocCode();
 
-        if(role.equals("specialist doctor")){
+        if(roleId.equals("specialist doctor")){
             String indxNumber =  selectIndxNumber();
-            if(controller.createSpecialistDoctor(role, name, address, phoneNumber, email, socCode, indxNumber)){
+            if(controller.createSpecialistDoctor(roleId, name, address, phoneNumber, email, socCode, indxNumber)){
                 System.out.println("Specialist Doctor criado com sucesso com o index: " + indxNumber);
                 controller.saveEmployee();
             }else{
                 System.out.println("Empregado não criado");
             }
         }else{
-            if(controller.createEmloyee(role, name, address, phoneNumber, email, socCode)){
+            if(controller.createEmloyee(roleId, name, address, phoneNumber, email, socCode)){
                 System.out.println("Empregado criado com sucesso");
                 controller.saveEmployee();
             }else{
@@ -48,7 +48,7 @@ public class EmployeeUI implements Runnable{
         }
     }
 
-    public String selectRole(){
+    public String selectRoleId(){
         return Utils.readLineFromConsole("Enter Employee's role: ");
     }
     public String selectName(){

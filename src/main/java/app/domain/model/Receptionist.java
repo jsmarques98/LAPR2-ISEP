@@ -3,8 +3,8 @@ import app.dto.ClientDTO;
 import auth.domain.model.User;
 public class Receptionist extends Employee{
 
-    public Receptionist(String role, String name, String address, String phoneNumber, String email, String socCode) {
-        super(role, name, address, phoneNumber, email, socCode);
+    public Receptionist(String roleId, String name, String address, String phoneNumber, String email, String socCode) {
+        super(roleId, name, address, phoneNumber, email, socCode);
     }
 
     private Client registeredClient = null;

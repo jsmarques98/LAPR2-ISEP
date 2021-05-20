@@ -133,12 +133,13 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id='" + id + '\'' +
-                ", role='" + roleId + '\'' +
+                ", roleId='" + roleId + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", socCode='" + socCode + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

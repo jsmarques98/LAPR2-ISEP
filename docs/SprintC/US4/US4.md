@@ -43,7 +43,7 @@ there is some dependencies from type of test, category and parameter.
 ### 1.6. System Sequence Diagram (SSD)
 
 
-![US4-SSD](SSD-US4.svg)
+![US4-SSD](SSD-US4 .svg)
 
 
 ### 1.7 Other Relevant Remarks

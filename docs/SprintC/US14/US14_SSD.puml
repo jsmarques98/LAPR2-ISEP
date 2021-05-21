@@ -20,16 +20,21 @@ activate System
 System -> Spec: asks to confirm the test chosen
 deactivate System
 
-Spec -> System: confirms the test and writes the report for that test (report)
+Spec -> System: confirms the test and wants to write the report for that test (report)
 
 activate System
-System -> Spec: asks to confirm the report
+System -> Spec: asks for data to write the report (report)
 deactivate System
 
-Spec -> System: confirms the report(report)
+Spec -> System: types requested data(report)
+
+activate System
+System -> Spec: asks to confirm data (report)
+deactivate System
+
+Spec -> System: Confirms data (report)
 
 activate System
 System -> Spec: informs success or insuccess of the operation
 deactivate System
-
 @enduml

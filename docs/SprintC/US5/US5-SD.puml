@@ -1,52 +1,56 @@
 @startuml
 autonumber
 
-actor "ReceptionistActor" as RCP
-participant "RegisterClientUI" as ui
-participant "RegisterClientController" as controller
-participant "Receptionist" as receptionist
-participant "Client" as client
+actor "MedicalLabTechnician" as MLT
+participant "RecordSamplesUI" as ui
+participant "RecordSamplesController" as controller
 participant "Company"
-participant "AuthFacade"
-activate AuthFacade
-activate RCP
-activate Company
+participant "ReflectorUtility"
 
-RCP -> ui : initiates the registration of a client
+activate MLT
+activate ReflectorUtility
+
+MLT -> ui : initiates the record of a sample
 activate ui
 ui -> controller ** : create
-ui -> RCP : requests the data required (name, CCNumber, NHSNumber, birthdate, sex, TINNumber, phoneNumber, email)
-
-RCP -> ui : inserts the requested data
-ui -> controller : createClientDTO( ... )
 activate controller
-controller -> controller : clientDTO = createClientDTO( ... )
 
-controller -> ui : show(clientDTO)
-ui -> RCP : shows the data and requests a confirmation
-RCP -> ui : confirms the data
-ui -> controller : registerClient(clientDTO)
-' class receptionist is the Creator that instanciates the client
-controller -> Company :Receptionist = getReceptionist(getCurrentUserSession())
-Company -> Company : getReceptionist(getCurrentUserSession().getID())
+controller -> Company ** : create
+controller -> controller : Company = App.getInstance(Company)
+activate Company
 
-activate receptionist
+controller -> Company : List<Test> freeTests = getTests()
+controller -> controller : List<TestDTO> freeTestsDTO = freeTests.toDTO()
 
-controller -> receptionist : createClient(ClientDTO)
-receptionist -> client ** : createClient(clientDTO)
-activate client
-controller -> receptionist : client = getClient()
-receptionist -> receptionist : getClient()
-controller -> Company : boolean state = save(client)
-Company -> Company : save(client)
-controller -> AuthFacade : state = registerUser(ClientDTO)
-AuthFacade -> AuthFacade : addUserWithRole(ClientDTO.name, ClientDTO.email, ClientDTO.name, "Client")
-controller -> MailAdapter ** : state = sendCredentials(ClientDTO)
-activate MailAdapter
-MailAdapter -> MailAdapter : sendMsg(ClientDTO.email + ClientDTO.ID + ClientDTO.pwd)
-ui <- controller : show(state)
-ui -> RCP : informs operation success
+controller -> ui : show(freeTestsDTO)
+ui -> MLT : shows a list of available tests
 
+
+deactivate ui
+
+MLT ->ui : selects a test and specifies the number of samples
+activate ui
+
+ui -> controller : generateSamples(int testIndex, int numSamples)
+controller -> Test ** : freeTests.get(testIndex)
+activate Test
+
+
+loop numSamples
+Test -> Sample ** : create
+activate Sample
+Sample -> Barcode ** : create
+Sample -> BarcodeInterface ** : Barcode = generateBarcode()
+activate BarcodeInterface
+BarcodeInterface -> ReflectorUtility : adapterReflection("BarcodeAdapter")
+activate Barcode
+Test -> Test : samples.add(Sample)
+end
+controller -> controller : List<SampleDTO> SamplesDTO = Samples.toDTO()
+
+controller -> ui : show(samplesDTO)
+
+ui -> MLT : shows the generated barcode of each sample
 deactivate ui
 
 @enduml

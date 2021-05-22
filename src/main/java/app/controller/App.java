@@ -2,6 +2,7 @@ package app.controller;
 
 import app.domain.model.Company;
 import app.domain.model.Employee;
+import app.domain.model.Test;
 import app.domain.shared.Constants;
 import auth.AuthFacade;
 import auth.UserSession;
@@ -79,6 +80,14 @@ public class App {
 
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
+        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
+
+        this.company.save(new Test());
+        this.company.save(new Test());
+        this.company.save(new Test());
+        this.company.save(new Test());
+        this.company.save(new Test());
+        this.company.save(new Test());
     }
 
     // Extracted from https://www.javaworld.com/article/2073352/core-java/core-java-simply-singleton.html?page=2

@@ -20,6 +20,8 @@ public class Company {
     private AuthFacade authFacade;
 
 
+    private List<Test> tests;
+
     private Set<Client> clients;
     private Set<Receptionist> receptionists;
 
@@ -57,10 +59,20 @@ public class Company {
      * @param testType
      * @return
      */
+
+
+
     public boolean save(TestType testType) {
         return testTypes.appendTestType(testType);
     }
 
+    public List<Test> getTests() {
+        return tests;
+    }
+
+    public boolean save(Test test){
+        return this.getTests().add(test);
+    }
 
 
 
@@ -93,6 +105,8 @@ public class Company {
 
         this.designation = designation;
         this.authFacade = new AuthFacade();
+
+        this.tests = new ArrayList<>();
     }
 
     public String getDesignation() {

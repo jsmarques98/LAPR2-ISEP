@@ -1,6 +1,7 @@
 package app.domain.model;
 
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class Lab {
 
@@ -58,12 +59,12 @@ public class Lab {
      * @param labId The id of the lab to be registered
      */
     private void checkLabID(String labId){
-            if (labId.length() == 0){
-                throw new IllegalArgumentException("The labId can´t be blank, you have to enter a number");
+            if (labId == null){
+                throw new IllegalArgumentException("The labId can´t be null, you have to enter a number");
             }
 
-            if (labId.length() > 5){
-                throw new IllegalArgumentException("The labId should be a 5 number code");
+            if (labId.length() != 5){
+                throw new IllegalArgumentException("The labId must be a 5 alphanumerical characters code");
             }
     }
 
@@ -73,10 +74,12 @@ public class Lab {
      * @param name The name of the lab to be registered
      */
     private void checkName(String name){
-        if (name.length() == 0){
-            throw new IllegalArgumentException("The name can´t be blank, you have to enter a name");
+        if (name == null){
+            throw new IllegalArgumentException("The name can´t be null");
         }
-
+        if (name.isEmpty()) {
+            throw new IllegalArgumentException("The lab name can't be empty");
+        }
         if (name.length() > 20){
             throw new IllegalArgumentException("The name of the lab can contain a maximum of 20 characters");
         }
@@ -87,8 +90,8 @@ public class Lab {
      * @param address The address of the lab to be registered
      */
     private void checkAdress(String address) {
-        if (address.length() == 0) {
-            throw new IllegalArgumentException("The address can´t be blank, you have to enter an address");
+        if (address == null) {
+            throw new IllegalArgumentException("The address can´t be null, you have to enter an address");
         }
 
         if (address.length() > 30) {
@@ -102,17 +105,11 @@ public class Lab {
      */
     private void checkPhoneNr (String phoneNr){
 
-        if (phoneNr.length() == 0) {
-            throw new IllegalArgumentException("The phone number can´t be blank, you have to enter a phone number");
-        }
+        String phoneNrRegex = "^[0-9]{11}$";
+        Pattern pat = Pattern.compile(phoneNrRegex);
 
-        if (phoneNr.length() < 11) {
-            throw new IllegalArgumentException("The phone number of the lab has to be a 11 digit number");
-        }
-
-        if (phoneNr.length() > 11){
-            throw new IllegalArgumentException("The phone number can´t have more than 10 digits");
-        }
+        if (!pat.matcher(phoneNr).matches())
+            throw new IllegalArgumentException("Invalid Phone number");
 
     }
 
@@ -120,20 +117,15 @@ public class Lab {
      * Checks if the TIN number of the lab is correctly given with the constraints
      * @param TINnr The TIN number of the lab to be registered
      */
-    private void checkTinNr (String TINnr){
+    private void checkTinNr(String TINnr) {
 
-        if (TINnr.length() == 0) {
-            throw new IllegalArgumentException("The TIN number can´t be blank, you have to enter a TIN number");
+        String TINnrRegex = "^[0-9]{10}$";
+
+        Pattern pat = Pattern.compile(TINnrRegex);
+
+        if (!pat.matcher(TINnrRegex).matches()) {
+            throw new IllegalArgumentException("Invalid TIN.");
         }
-
-        if (TINnr.length() < 10) {
-            throw new IllegalArgumentException("The TIN number of the lab has to be a 10 digit number");
-        }
-
-        if (TINnr.length() > 10){
-            throw new IllegalArgumentException("The TIN number can´t have more than 10 digits");
-        }
-
     }
 
     /**
@@ -181,6 +173,7 @@ public class Lab {
      * @param labId is the id of the lab
      */
     public void setLabId(String labId) {
+        checkLabID(labId);
         this.labId = labId;
     }
 
@@ -189,6 +182,7 @@ public class Lab {
      * @param name is the name of the lab
      */
     public void setName(String name) {
+        checkName(name);
         this.name = name;
     }
 
@@ -197,6 +191,7 @@ public class Lab {
      * @param address is the address of the lab
      */
     public void setAddress(String address) {
+        checkAdress(address);
         this.address = address;
     }
 
@@ -205,6 +200,7 @@ public class Lab {
      * @param phoneNr is the TIN number of the lab
      */
     public void setPhoneNr(String phoneNr) {
+        checkPhoneNr(phoneNr);
         this.phoneNr = phoneNr;
     }
 
@@ -213,6 +209,7 @@ public class Lab {
      * @param TINnr is the phone number of the lab
      */
     public void setTINnr(String TINnr) {
+        checkTinNr(TINnr);
         this.TINnr = TINnr;
     }
 
@@ -220,13 +217,8 @@ public class Lab {
 
     @Override
     public String toString() {
-        return "Lab{" +
-                "id='" + labId + '\'' +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", phoneNumber='" + phoneNr + '\'' +
-                ", TIN number='" + TINnr + '\'' +
-                '}';
+        return String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumberr: %s%nTIN: %s",
+                this.labId, this.name, this.address, this.phoneNr, this.TINnr);
     }
 }
 

@@ -1,13 +1,0 @@
-
-‹
-java:S1319Û"oThe type of the "labs" object should be an interface such as "List" rather than the implementation "ArrayList".(‘ıê§ûÿÿÿÿ
-F
-java:S1444Û"*Make this "public static labs" field final(‘ıê§ûÿÿÿÿ
-k	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áø‘òüÿÿÿÿ
-f	java:S117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÅëÙ
-l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…”à…üÿÿÿÿ
-l
-java:S1104Û"PMake labs a static final constant or non-public and provide accessors if needed.(‘ıê§ûÿÿÿÿ
-e	java:S116"PRename this field "TINnr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó˜œ
-9
-java:S2386Û"Make this member "protected".(‘ıê§ûÿÿÿÿ

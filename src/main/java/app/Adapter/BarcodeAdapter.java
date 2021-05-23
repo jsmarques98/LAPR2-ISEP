@@ -18,7 +18,7 @@ public class BarcodeAdapter implements BarcodeInterface {
             File file = new File("barcodes/" + filename + ".png");
             BarcodeImageHandler.savePNG(barcode,file);
 
-        } catch (IOException | OutputException | BarcodeException e) {
+        } catch (OutputException | BarcodeException e) {
             e.printStackTrace();
         }
         return barcode;

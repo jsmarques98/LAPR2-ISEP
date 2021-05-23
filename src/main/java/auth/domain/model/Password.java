@@ -1,9 +1,6 @@
 package auth.domain.model;
 
-//import at.favre.lib.crypto.bcrypt.BCrypt;
-//import org.apache.commons.lang3.StringUtils;
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import org.codehaus.plexus.interpolation.util.StringUtils;
 
 import java.util.Objects;
 

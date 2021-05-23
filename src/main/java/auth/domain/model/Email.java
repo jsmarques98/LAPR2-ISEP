@@ -1,7 +1,5 @@
 package auth.domain.model;
 
-import org.codehaus.plexus.interpolation.util.StringUtils;
-//import org.apache.commons.lang.StringUtils;
 import java.util.Objects;
 import java.util.regex.Pattern;
 

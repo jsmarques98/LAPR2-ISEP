@@ -1,0 +1,6 @@
+
+[	java:S1075"AConstructor has 8 parameters, which is greater than 7 authorized.(æş“ùûÿÿÿÿ
+m	java:S116"SRename this field "CCNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ‰æøûÿÿÿÿ
+n	java:S116"TRename this field "NHSNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×‚Ï“úÿÿÿÿ
+n	java:S116"TRename this field "TINNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½½Ìûÿÿÿÿ
+h	java:S116"SRename this field "Password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğí¢Í

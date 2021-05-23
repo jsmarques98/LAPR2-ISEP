@@ -9,7 +9,7 @@ public class SampleTest {
     public void createSample(){
         Sample sample = new Sample();
 
-        String arg = "A123A";
+        String arg = "A69A";
 
         sample.generateBarcode(arg);
 

@@ -1,8 +1,6 @@
 
 =
 src/ESOFT.iml,2/9/2920f160e195fadbac36c67b11ed4c88615db5d5
-o
-?src/test/java/app/controller/SpecifyTypeTestControllerTest.java,9/2/92c02512d18854b31d63db52bc709eef71908c30
 ]
 -src/main/java/auth/domain/model/Password.java,b/7/b773d5fdb119e743004c97f14b9a7c8e06d2f0a3
 d
@@ -25,8 +23,6 @@ b
 ,src/main/java/app/domain/model/Employee.java,1/7/172c090ab1c754bae4d9ce2efae5056312661a20
 b
 2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
-^
-.src/test/java/app/domain/model/SampleTest.java,3/0/30a600e399b7ae013cc66d630992203751d9841b
 F
 docs/SprintC/README.md,f/a/facb53f23383e1076876744957a421a955453477
 I
@@ -37,8 +33,6 @@ U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 `
 0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
-[
-+src/test/java/app/domain/model/LabTest.java,9/a/9aa586d56dda01e0cc957829447f49a7f102d334
 Z
 *src/main/java/app/ui/console/MenuItem.java,7/4/740030e937298447c12c48a7f0a934b08c3819e9
 X

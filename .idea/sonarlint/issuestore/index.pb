@@ -33,10 +33,6 @@ I
 docs/SprintC/US14/US14.md,6/f/6f96408c492c73eec23f503267589633c522eb76
 N
 docs/SprintC/US14/US14_SSD.svg,9/a/9ae189de9b55a2fa2afdd3912a9ca5cbcf55a203
-O
-docs/SprintC/US14/US14_SSD.puml,f/c/fc975f2ac25582a586d61c165934f286b71bde3b
-N
-docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
 U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 `

@@ -1,6 +1,5 @@
 package app.domain.model;
 
-import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 public class Lab {
@@ -26,7 +25,7 @@ public class Lab {
     private String phoneNr;
 
     /**
-     * The TIN number of the lab to be registered
+     * The tin number of the lab to be registered
      */
     private String tin;
 
@@ -42,7 +41,7 @@ public class Lab {
     public Lab(String labId, String name, String address, String phoneNr, String tin) {
         checkLabID(labId);
         checkName(name);
-        checkAdress(address);
+        checkAddress(address);
         checkPhoneNr(phoneNr);
         checkTin(tin);
 
@@ -89,7 +88,7 @@ public class Lab {
      * Checks if the address of the lab is correctly given with the constraints
      * @param address The address of the lab to be registered
      */
-    private void checkAdress(String address) {
+    private void checkAddress(String address) {
         if (address == null) {
             throw new IllegalArgumentException("The address can´t be null, you have to enter an address");
         }
@@ -190,7 +189,7 @@ public class Lab {
      * @param address is the address of the lab
      */
     public void setAddress(String address) {
-        checkAdress(address);
+        checkAddress(address);
         this.address = address;
     }
 

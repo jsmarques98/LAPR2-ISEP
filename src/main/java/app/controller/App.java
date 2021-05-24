@@ -20,8 +20,11 @@ public class App {
     private Company company;
     private AuthFacade authFacade;
 
+    private String barcodeAdapter;
+
     private App() {
         Properties props = getProperties();
+        this.barcodeAdapter = props.getProperty("BarcodeAdapter");
         this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
         this.authFacade = this.company.getAuthFacade();
         bootstrap();
@@ -31,6 +34,9 @@ public class App {
         return this.company;
     }
 
+    public String getBarcodeAdapter(){
+            return barcodeAdapter;
+    }
 
     public UserSession getCurrentUserSession() {
         return this.authFacade.getCurrentUserSession();

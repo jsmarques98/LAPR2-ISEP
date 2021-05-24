@@ -7,11 +7,18 @@ public class SampleTest {
 
     @Test
     public void createSample(){
-        Sample sample = new Sample();
 
-        String arg = "A69A";
+        String arg = "42100005264";
+        Sample sample = new Sample(arg);
 
-        sample.generateBarcode(arg);
+        assertTrue("Expected: " + arg + " Got: " + sample.getBarcode().toString(),sample.getBarcode().toString().equals(arg));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void createNullSample(){
+
+        String arg = null;
+        Sample sample = new Sample(arg);
 
         assertTrue("Expected: " + arg + " Got: " + sample.getBarcode().toString(),sample.getBarcode().toString().equals(arg));
     }

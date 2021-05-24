@@ -19,6 +19,7 @@ public class ReflectorUtility {
 
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
             e.printStackTrace();
+            System.out.println("Class " + adapterClass + " not found!");
             return null;
         }
     }

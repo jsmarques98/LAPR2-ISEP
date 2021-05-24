@@ -109,15 +109,15 @@ public class LabTest {
 
     @Test
     public void setTINnr() {
-        lab.setTINnr("1234567890");
-        Assert.assertEquals("1234567890", lab.getTINnr());
+        lab.setTin("1234567890");
+        Assert.assertEquals("1234567890", lab.getTin());
 
         assertDoesNotThrow(() -> {
-            lab.setTINnr("1234567890");
+            lab.setTin("1234567890");
         });
 
         assertThrows(IllegalArgumentException.class, () -> {
-            lab.setTINnr("12345678901");
+            lab.setTin("12345678901");
         });
 
     }
@@ -145,14 +145,14 @@ public class LabTest {
 
     @Test
     public void getTINnr() {
-        Assert.assertEquals("1234567890", lab.getTINnr());
+        Assert.assertEquals("1234567890", lab.getTin());
 
     }
 
     @Test
     public void testToString() {
         String result = String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumber: %s%nTIN: %s", lab.getLabId(),
-                lab.getName(), lab.getAddress(), lab.getPhoneNr(), lab.getTINnr());
+                lab.getName(), lab.getAddress(), lab.getPhoneNr(), lab.getTin());
 
         Assert.assertEquals(result, lab.toString());
     }

@@ -3,8 +3,6 @@
 src/ESOFT.iml,2/9/2920f160e195fadbac36c67b11ed4c88615db5d5
 o
 ?src/test/java/app/controller/SpecifyTypeTestControllerTest.java,9/2/92c02512d18854b31d63db52bc709eef71908c30
-Y
-)src/main/java/app/ui/console/AdminUI.java,0/a/0a9fb9c3271ce78061d523da4e5474691abf5009
 ]
 -src/main/java/auth/domain/model/Password.java,b/7/b773d5fdb119e743004c97f14b9a7c8e06d2f0a3
 d
@@ -27,5 +25,3 @@ b
 ,src/main/java/app/domain/model/Employee.java,1/7/172c090ab1c754bae4d9ce2efae5056312661a20
 b
 2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
-X
-(src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036

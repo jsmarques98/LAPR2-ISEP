@@ -28,7 +28,7 @@ public class Lab {
     /**
      * The TIN number of the lab to be registered
      */
-    private String TINnr;
+    private String tin;
 
 
     /**
@@ -37,20 +37,20 @@ public class Lab {
      * @param name The name of the lab to be registered
      * @param address The address of the lab to be registered
      * @param phoneNr The phone number of the lab to be registered
-     * @param TINnr The TIN number of the lab to be registered
+     * @param tin The TIN number of the lab to be registered
      */
-    public Lab(String labId, String name, String address, String phoneNr, String TINnr) {
+    public Lab(String labId, String name, String address, String phoneNr, String tin) {
         checkLabID(labId);
         checkName(name);
         checkAdress(address);
         checkPhoneNr(phoneNr);
-        checkTinNr(TINnr);
+        checkTin(tin);
 
         this.labId = labId;
         this.name = name;
         this.address = address;
         this.phoneNr = phoneNr;
-        this.TINnr = TINnr;
+        this.tin = tin;
 
     }
 
@@ -115,17 +115,16 @@ public class Lab {
 
     /**
      * Checks if the TIN number of the lab is correctly given with the constraints
-     * @param TINnr The TIN number of the lab to be registered
+     * @param tin The TIN number of the lab to be registered
      */
-    private void checkTinNr(String TINnr) {
+    private void checkTin(String tin) {
 
-        String TINnrRegex = "^[0-9]{10}$";
+        String tinRegex = "^[0-9]{10}$";
+        Pattern pat = Pattern.compile(tinRegex);
 
-        Pattern pat = Pattern.compile(TINnrRegex);
+        if (!pat.matcher(tinRegex).matches())
+            throw new IllegalArgumentException("Invalid TIN");
 
-        if (!pat.matcher(TINnrRegex).matches()) {
-            throw new IllegalArgumentException("Invalid TIN.");
-        }
     }
 
     /**
@@ -164,8 +163,8 @@ public class Lab {
      * Get the TIN number of the lab
      * @return the TIN number of the lab
      */
-    public String getTINnr() {
-        return TINnr;
+    public String getTin() {
+        return tin;
     }
 
     /**
@@ -206,11 +205,11 @@ public class Lab {
 
     /**
      * Sets the TIN number of the lab
-     * @param TINnr is the phone number of the lab
+     * @param tin is the phone number of the lab
      */
-    public void setTINnr(String TINnr) {
-        checkTinNr(TINnr);
-        this.TINnr = TINnr;
+    public void setTin(String tin) {
+        checkTin(tin);
+        this.tin = tin;
     }
 
     public static ArrayList<String> labs = new ArrayList<>(5);
@@ -218,7 +217,7 @@ public class Lab {
     @Override
     public String toString() {
         return String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumberr: %s%nTIN: %s",
-                this.labId, this.name, this.address, this.phoneNr, this.TINnr);
+                this.labId, this.name, this.address, this.phoneNr, this.tin);
     }
 }
 

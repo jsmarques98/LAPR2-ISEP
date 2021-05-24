@@ -39,11 +39,11 @@ public class RegisterLabController {
      * @param name the name of the lab to register.
      * @param address the address of the lab to register.
      * @param phoneNr the phone number of the lab to register.
-     * @param TINnr the TIN number of the lab to register.
+     * @param tin the TIN number of the lab to register.
      * @return
      */
-    public boolean registerLab(String labId, String name, String address, String phoneNr, String TINnr){
-        this.lab = this.company.registerLab(labId, name, address, phoneNr, TINnr);
+    public boolean registerLab(String labId, String name, String address, String phoneNr, String tin){
+        this.lab = this.company.registerLab(labId, name, address, phoneNr, tin);
         return this.company.validateLab(lab);
     }
 

@@ -190,11 +190,11 @@ public class Company {
      * @param name    the name of the lab that is being registered
      * @param address the address of the lab that is being registered
      * @param phoneNr the phone number of the lab that is being registered
-     * @param TINnr   the TIN number of the lab that is being registered
+     * @param tin   the TIN number of the lab that is being registered
      * @return the object of the lab created
      */
-    public Lab registerLab(String labId, String name, String address, String phoneNr, String TINnr) {
-        return new Lab(labId, name, address, phoneNr, TINnr);
+    public Lab registerLab(String labId, String name, String address, String phoneNr, String tin) {
+        return new Lab(labId, name, address, phoneNr, tin);
     }
 
 

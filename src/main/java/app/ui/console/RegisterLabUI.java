@@ -20,9 +20,9 @@ public class RegisterLabUI implements Runnable{
         String name = selectName();
         String address = selectAddr();
         String phoneNr = selectPhoneNr();
-        String TINnr = selectTINnr();
+        String tin = selectTin();
 
-        if(controller.registerLab(labId, name, address, phoneNr, TINnr)){
+        if(controller.registerLab(labId, name, address, phoneNr, tin)){
             System.out.println("Lab registered with success");
             controller.saveLab();
         }else{
@@ -48,7 +48,7 @@ public class RegisterLabUI implements Runnable{
     public String selectPhoneNr(){
         return Utils.readLineFromConsole("Phone: ");
     }
-    public String selectTINnr(){
-        return Utils.readLineFromConsole("TINnr: ");
+    public String selectTin(){
+        return Utils.readLineFromConsole("TIN: ");
     }
 }

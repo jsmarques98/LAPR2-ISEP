@@ -102,7 +102,7 @@ public class Lab {
      * Checks if the phone number of the lab is correctly given with the constraints
      * @param phoneNr The phone number of the lab to be registered
      */
-    private void checkPhoneNr (String phoneNr){
+    private void checkPhoneNr(String phoneNr){
 
         String phoneNrRegex = "^[0-9]{11}$";
         Pattern pat = Pattern.compile(phoneNrRegex);
@@ -116,7 +116,7 @@ public class Lab {
      * Checks if the TIN number of the lab is correctly given with the constraints
      * @param tin The TIN number of the lab to be registered
      */
-    private void checkTin (String tin) {
+    private void checkTin(String tin) {
 
         String tinRegex = "^[0-9]{10}$";
         Pattern pat = Pattern.compile(tinRegex);

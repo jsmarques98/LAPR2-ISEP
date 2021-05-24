@@ -7,6 +7,8 @@ participant ":CreateReportUI" as UI
 participant ":CreateReportController" as CRC
 participant ":Company" as COM
 participant ":CreateReport" as CR
+participant "TestStore: testIdStore" as TS
+participant "rep : Report" as reporttt
 
 activate Spec
 
@@ -18,86 +20,93 @@ UI --> Spec : shows the tests and asks to choose one to make the report (test)
 
 activate CRC
 
-UI -> CRC : getTestsToReport()
+UI -> CRC : selectTestId(testID)
 
-deactivate UI
-activate COM
 
-CRC -> COM : getTestsToReport()
+CRC -> TS : tID = getTestID(testID)
+
+activate TS
+
+deactivate TS
+
+create reporttt
+
+CRC -> reporttt : addT = addTestID(tID)
+
+CRC -> UI : ok
 
 deactivate CRC
-deactivate COM
 
-
-Spec -> UI : Types requested data (test)
-
-activate UI
-
-Spec -> UI : shows the test and asks to confirm it
+Spec <-- UI : shows testID and chemical analysis results and asks to confirm
 
 deactivate UI
 
-Spec -> UI : wants to write a report for that test
+
+
+Spec -> UI : writes a diagnosis for that test
 
 activate UI
 
-UI -> Spec : requests data to write the report (report)
 
-deactivate UI
-
-Spec -> UI : types requested data (report)
-
-activate UI
-
-UI -> CRC : createReport(report)
+UI -> CRC : createReport(diagnosis)
 
 activate CRC
 
-CRC -> COM : rep = createReport(report)
+
+CRC -> COM : rep = createReport(diagnosis)
 
 activate COM
 
-COM -> CR : createReport(report)
+COM -> reporttt : create(diagnosis)
 
-activate CR
+activate reporttt
 
-deactivate CRC
-deactivate CR
+deactivate reporttt
+
+CRC -> COM : validateReport(rep)
+
 deactivate COM
 
-UI -> Spec : shows data and asks to confirm
+deactivate CRC
+
+UI --> Spec : shows report and asks to confirm
 
 deactivate UI
 
-Spec -> UI : confirms data
+Spec -> UI : confirms report
 
 activate UI
 
-UI -> CRC : createReport()
+UI -> CRC : saveReport()
 
 activate CRC
 
-CRC -> COM : createReport(rep)
+CRC -> COM : saveReport(rep)
 
 activate COM
+
+COM -> COM : validateReport(rep)
+
+activate COM
+
+deactivate COM
 
 COM -> COM : addReport(rep)
-COM -> COM: validateReport(rep)
+
+activate COM
 
 deactivate COM
+
+deactivate COM
+
 deactivate CRC
 
-UI -> Spec : informs success or insuccess of the operation
-
-deactivate UI
-deactivate Spec
-
-
-
-
-
-
-
-
-
+UI --> Spec : informs success
 @enduml
+
+
+
+
+
+
+

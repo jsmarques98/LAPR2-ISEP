@@ -117,7 +117,7 @@ public class Lab {
      * Checks if the TIN number of the lab is correctly given with the constraints
      * @param tin The TIN number of the lab to be registered
      */
-    private void checkTin(String tin) {
+    private void checkTin (String tin) {
 
         String tinRegex = "^[0-9]{10}$";
         Pattern pat = Pattern.compile(tinRegex);
@@ -212,11 +212,10 @@ public class Lab {
         this.tin = tin;
     }
 
-    public static ArrayList<String> labs = new ArrayList<>(5);
 
     @Override
     public String toString() {
-        return String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumberr: %s%nTIN: %s",
+        return String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumber: %s%nTIN: %s",
                 this.labId, this.name, this.address, this.phoneNr, this.tin);
     }
 }

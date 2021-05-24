@@ -118,12 +118,12 @@ public class Lab {
      */
     private void checkTin(String tin) {
 
-        String tinRegex = "^[0-9]{10}$";
-        Pattern pat = Pattern.compile(tinRegex);
+        String tinNumberRegex = "^[0-9]{10}$";
 
-        if (!pat.matcher(tinRegex).matches())
-            throw new IllegalArgumentException("Invalid TIN");
+        Pattern pat = Pattern.compile(tinNumberRegex);
 
+        if (!pat.matcher(tin).matches())
+            throw new IllegalArgumentException("Invalid TIN.");
     }
 
     /**

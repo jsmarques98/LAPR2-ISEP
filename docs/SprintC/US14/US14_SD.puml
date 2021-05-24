@@ -7,6 +7,7 @@ participant ":CreateReportUI" as UI
 participant ":CreateReportController" as CRC
 participant ":Company" as COM
 participant ":CreateReport" as CR
+participant "TestStore: testIdStore" as TS
 
 activate Spec
 
@@ -18,18 +19,24 @@ UI --> Spec : shows the tests and asks to choose one to make the report (test)
 
 activate CRC
 
-UI -> CRC : getTestsToReport()
+UI -> CRC : grabTestsToReport(testId)
 
 deactivate UI
 activate COM
 
-CRC -> COM : getTestsToReport()
+CRC -> COM : testStore = getTestStore()
 
-deactivate CRC
 deactivate COM
 
+CRC -> TS : rep = grabTestsToReport(testId)
 
-Spec -> UI : Types requested data (test)
+TS ->
+
+deactivate CRC
+
+
+
+Spec -> UI : selects requested data (test)
 
 activate UI
 
@@ -101,3 +108,10 @@ deactivate Spec
 
 
 @enduml
+
+
+
+
+
+
+

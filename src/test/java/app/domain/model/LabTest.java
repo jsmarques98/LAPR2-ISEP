@@ -56,6 +56,28 @@ public class LabTest {
     }
 
     @Test
+    public void setName() {
+        lab.setName("Lab Name");
+        Assert.assertEquals("Lab Name", lab.getName());
+
+        assertDoesNotThrow(() -> {
+            lab.setName("ClinicalClinical");
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            lab.setName(null);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            lab.setName("");
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            lab.setName("ClinicalClinicalClinical");
+        });
+    }
+
+    @Test
     public void setAddress() {
         lab.setAddress("Clinical Lab");
 
@@ -84,27 +106,6 @@ public class LabTest {
         });
     }
 
-    @Test
-    public void setName() {
-        lab.setName("Lab Name");
-        Assert.assertEquals("Lab Name", lab.getName());
-
-        assertDoesNotThrow(() -> {
-            lab.setName("ClinicalClinical");
-        });
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            lab.setName(null);
-        });
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            lab.setName("");
-        });
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            lab.setName("ClinicalClinicalClinical");
-        });
-    }
 
     @Test
     public void setTINnr() {
@@ -127,6 +128,12 @@ public class LabTest {
     }
 
     @Test
+    public void getName() {
+        Assert.assertEquals("ClinicLab", lab.getName());
+
+    }
+
+    @Test
     public void getAddress() {
         Assert.assertEquals("OxfordStreet 10", lab.getAddress());
     }
@@ -134,12 +141,6 @@ public class LabTest {
     @Test
     public void getPhoneNr() {
         Assert.assertEquals("12345678901", lab.getPhoneNr());
-    }
-
-    @Test
-    public void getName() {
-        Assert.assertEquals("ClinicLab", lab.getName());
-
     }
 
     @Test

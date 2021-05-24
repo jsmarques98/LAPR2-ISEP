@@ -10,13 +10,93 @@ participant ":CreateReport" as CR
 
 activate Spec
 
-Spec -> UI : starts to make a diagnosis and write a report of a given test
-UI --> Spec : requests data (client)
-
-Spec -> UI : types requested data (client name)
+Spec -> UI : asks to access the tests already made
 
 activate UI
+
+UI --> Spec : shows the tests and asks to choose one to make the report (test)
+
 activate CRC
+
+UI -> CRC : getTestsToReport()
+
+deactivate UI
+activate COM
+
+CRC -> COM : getTestsToReport()
+
+deactivate CRC
+deactivate COM
+
+
+Spec -> UI : Types requested data (test)
+
+activate UI
+
+Spec -> UI : shows the test and asks to confirm it
+
+deactivate UI
+
+Spec -> UI : wants to write a report for that test
+
+activate UI
+
+UI -> Spec : requests data to write the report (report)
+
+deactivate UI
+
+Spec -> UI : types requested data (report)
+
+activate UI
+
+UI -> CRC : createReport(report)
+
+activate CRC
+
+CRC -> COM : rep = createReport(report)
+
+activate COM
+
+COM -> CR : createReport(report)
+
+activate CR
+
+deactivate CRC
+deactivate CR
+deactivate COM
+
+UI -> Spec : shows data and asks to confirm
+
+deactivate UI
+
+Spec -> UI : confirms data
+
+activate UI
+
+UI -> CRC : createReport()
+
+activate CRC
+
+CRC -> COM : createReport(rep)
+
+activate COM
+
+COM -> COM : addReport(rep)
+COM -> COM: validateReport(rep)
+
+deactivate COM
+deactivate CRC
+
+UI -> Spec : informs success or insuccess of the operation
+
+deactivate UI
+deactivate Spec
+
+
+
+
+
+
 
 
 

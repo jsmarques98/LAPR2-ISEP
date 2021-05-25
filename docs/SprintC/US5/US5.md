@@ -57,7 +57,7 @@ NA
 
 | Interaction ID | Question: Which class is responsible for... | Answer  | Justification (with patterns)  |
 |:-------------  |:--------------------- |:------------|:---------------------------- |
-| Step 1  		 |	... instantiating a new Client?	 |   Receptionist          |  Creator: Receptionist records instances of Clients           |
+| Step 1  		 |	... creating a new Sample?	 |   Receptionist          |  Creator: Receptionist records instances of Clients           |
 | Step 2  		 |		n/a					 |             |                              |
 | Step 3  		 |	... saving the input data?		 |      Client       | IE: The object created in step 1 has its own data                             |
 | Step 4.1  		 |	... validating the data locally?						 |    Client         | IE: knows its own data                             |

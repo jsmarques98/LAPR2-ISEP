@@ -1,87 +1,47 @@
 @startuml
-class RegisterClientUI {
- -show(clientDTO)
- -show(state)
+class RecordSamplesUI {
+ -show(freeTestsDTO)
+ -show(samplesDTO)
 }
 
-class RegisterClientController {
-  +boolean state
-  +registerClient(clientDTO)
-  +createClientDTO(name, CCNumber, NHSNumber, birthdate, sex, TINNumber, phoneNumber, email)
-  +createClient(ClientDTO)
-  +getClient()
-  +save(Client)
-  +registerUser(ClientDTO)
-  +sendCredentials(ClientDTO)
+class RecordSamplesController {
+  +List<Test> freeTests
+  +List<TestDTO> freeTestsDTO
+  +generateSamples(int testIndex, int numSamples)
 }
 
-RegisterClientUI ..> RegisterClientController
-RegisterClientController ..> ClientDTO : creates
-
-class ClientDTO{
-+String name
-+String CCNumber
-+String NHSNumber
-+Date birthdate
-+String sex
-+String TINNumber
-+String phoneNumber
-+String email
-+String password
+class Company {
+  +List<Test> getTests()
 }
 
+RecordSamplesController ..> Company
 
-RegisterClientController ..> Receptionist
-
-
-class Receptionist{
-+getUser();
-+getClient();
-+createClient(ClientDTO)
-}
-
-Receptionist ..> Client : creates
-
-class Client{
--String name
--String CCNumber
--String NHSNumber
--String birthdate
--String sex
--String TINNumber
--String phoneNumber
--String email
--String password
+class Test {
 
 }
 
-class Company{
-+save(Client)
-+getReceptionist(String id)
--Set<Client> clients
--Set<Receptionist> receptionists
+Company "1" --> "*" Test
+
+class Sample {
+
 }
 
-RegisterClientUI ..> ClientDTO
-Company "1" --> "*" Client : contains
-Company "1" --> "*" Receptionist : contains
+Test "1" --> "*" Sample
 
-Receptionist ..> ClientDTO
-RegisterClientController ..> Company
-AuthFacade ..> ClientDTO
-MailAdapter ..> ClientDTO
-
-RegisterClientController ..> AuthFacade : registers a new user
-
-class AuthFacade{
-+addUserWithRole()
+class Barcode {
+ -generateBarcode(code)
 }
 
-class MailAdapter{
-+sendmsg(email, text)
-}
+Sample "1" --> "1" Barcode
 
-RegisterClientController ..> MailAdapter : sends credential to Client
+BarcodeInterface
+
+ReflectorUtility
+
+BarcodeAdapter
+
+RecordSamplesUI ..> RecordSamplesController
+
 
 @enduml
 

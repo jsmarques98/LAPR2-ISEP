@@ -6,8 +6,15 @@ object Company{
 }
 
 object Sample{
--barCode
+
 }
+
+object BarCode{
+
+}
+
+Sample "1" -- "1" BarCode : has a
+
 
 object Test{
 -testID
@@ -28,7 +35,7 @@ Company "1" -- "*" Test : performs
 Sample "*" -- "1" Test : is based on
 
 package "BarCodeAPI" #DDDDDD{
-	BarCodeAPI "1" -- "*" Sample : generates barCode
+	BarCodeAPI "1" -- "*" BarCode : generates barCode
 }
 
 

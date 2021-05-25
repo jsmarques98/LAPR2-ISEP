@@ -9,7 +9,7 @@ activate MLT
 MLT -> SYS : initiates the record of a sample
 activate SYS
 
-SYS -> MLT : shows a list of available tests
+SYS -> MLT : shows a list of tests that have samples to be recorded
 deactivate SYS
 
 MLT -> SYS : selects a test and specifies the number of samples

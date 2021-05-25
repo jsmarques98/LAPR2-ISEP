@@ -1,7 +1,11 @@
 package app.domain.model;
-import org.junit.Test;
-import static org.junit.Assert.assertTrue;
 
+import net.sourceforge.barbecue.output.OutputException;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.atomic.AtomicReference;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SampleTest {
 
@@ -11,15 +15,17 @@ public class SampleTest {
         String arg = "42100005264";
         Sample sample = new Sample(arg);
 
-        assertTrue("Expected: " + arg + " Got: " + sample.getBarcode().toString(),sample.getBarcode().toString().equals(arg));
+        assertEquals(arg, sample.getBarcode().toString(), arg);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test()
     public void createNullSample(){
 
         String arg = null;
-        Sample sample = new Sample(arg);
+        AtomicReference<Sample> sample = null;
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            sample.set(new Sample(arg));
+        });
 
-        assertTrue("Expected: " + arg + " Got: " + sample.getBarcode().toString(),sample.getBarcode().toString().equals(arg));
     }
 }

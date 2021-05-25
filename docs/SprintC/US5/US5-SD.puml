@@ -40,9 +40,12 @@ loop numSamples
 Test -> Sample ** : create
 activate Sample
 Sample -> Barcode ** : create
-Sample -> BarcodeInterface ** : Barcode = generateBarcode()
+Barcode -> BarcodeInterface ** : Barcode = generateBarcode(code)
 activate BarcodeInterface
-BarcodeInterface -> ReflectorUtility : adapterReflection("BarcodeAdapter")
+BarcodeInterface -> ReflectorUtility : adapterReflection(App.getInstance().getBarcodeAdapter())
+ReflectorUtility -> BarcodeAdapter ** : create
+activate BarcodeAdapter
+BarcodeAdapter -> Barcode : generateBarcode(code)
 activate Barcode
 Test -> Test : samples.add(Sample)
 end

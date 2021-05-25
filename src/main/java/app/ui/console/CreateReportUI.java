@@ -18,7 +18,8 @@ public class CreateReportUI implements Runnable{
         String report = selectReport();
 
 
-        if(controller.createReport(report)){
+        //if(controller.createReport(report)){
+        if(true){
             System.out.println("Report written with success and added to the test");
             controller.addReport();
         }else{

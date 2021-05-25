@@ -1,4 +1,4 @@
-/*package app.Adapter;
+package app.Adapter;
 
 import net.sourceforge.barbecue.Barcode;
 import net.sourceforge.barbecue.BarcodeException;
@@ -22,4 +22,4 @@ public class BarcodeAdapter implements BarcodeInterface {
         }
         return barcode;
     }
-}*/
+}

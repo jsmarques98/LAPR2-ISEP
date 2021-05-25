@@ -1,4 +1,3 @@
-/*
 package app.domain.model;
 
 import app.Adapter.BarcodeInterface;
@@ -24,4 +23,3 @@ public class Sample {
         return barcode;
     }
 }
-*/

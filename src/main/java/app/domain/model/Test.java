@@ -16,11 +16,11 @@ public class Test {
 
 
 
-    /*List<Sample> samples;
+    List<Sample> samples;
 
     public Test(){
         samples = new ArrayList<>();
-    }*/
+    }
 
 
 

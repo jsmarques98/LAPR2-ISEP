@@ -31,12 +31,6 @@ X
 (src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036
 Y
 )src/main/java/app/ui/console/AdminUI.java,0/a/0a9fb9c3271ce78061d523da4e5474691abf5009
-g
-7src/main/java/app/controller/RegisterLabController.java,7\b\7b44867c1af58063519159dc8d62c845b68530e3
-[
-+src/main/java/app/domain/model/Company.java,e\6\e66f0f8e51b44df23f2004467961976fbec241aa
-W
-'src/main/java/app/domain/model/Lab.java,d\a\daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
 N
 src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
 o
@@ -71,23 +65,9 @@ Z
 *src/main/java/app/domain/model/Sample.java,b/a/ba164b4c03f593dbc5a575d2806dae1ffe3dfe0c
 ^
 .src/test/java/app/domain/model/SampleTest.java,3/0/30a600e399b7ae013cc66d630992203751d9841b
-Y
-)docs/SprintC/DomainModel/domainModel.puml,1/3/132508e65e346ea769828f703248b860a0f5ed2e
 _
 /src/main/java/app/Adapter/BarcodeInterface.java,d/3/d3c257ccb92f1c5e5af4df2de0b7b0ce50f481ac
 ]
 -src/main/java/app/Adapter/BarcodeAdapter.java,7/f/7fcb80ef034a52ab1666595f738fa65a5efcc4c1
 X
 (src/main/java/app/domain/model/Test.java,0/3/0346ca7efc8246aba1bce2abd18994f1118a0b11
-X
-(docs/SprintC/DomainModel/domainModel.svg,c/e/cef975234fe0241e386e6215a9bd5a5d3b362e4b
-N
-docs/SprintC/US14/US14_SSD.svg,9/a/9ae189de9b55a2fa2afdd3912a9ca5cbcf55a203
-O
-docs/SprintC/US14/US14_SSD.puml,f/c/fc975f2ac25582a586d61c165934f286b71bde3b
-N
-docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
-N
-docs/SprintC/US14/US14_DM.puml,5/f/5f56078aa1241aeeacd18bb63884f5c099aba38e
-M
-docs/SprintC/US14/US14_DM.svg,3/5/3571beaacab9279bac74792a3605c1150e11757f

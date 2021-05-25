@@ -4,6 +4,7 @@ import app.controller.TestTypeRecord;
 import auth.AuthFacade;
 
 
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -222,4 +223,29 @@ public class Company {
         return this.labList.add(lab);
     }
 
+
+
+    // US14
+
+
+    public static List<Report> reportList = new ArrayList<>(1);
+
+    public Report createReport(String report){
+        return new Report(report);
+    }
+
+    public boolean validateReport(Report report){
+        if (report == null){
+            return false;
+        }
+        return !this.reportList.contains(report);
+    }
+
+
+    public boolean addReport(Report report){
+        if (!validateReport(report)) {
+            return false;
+        }
+        return this.reportList.add(report);
+    }
 }

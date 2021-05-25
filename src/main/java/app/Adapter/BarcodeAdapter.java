@@ -6,6 +6,7 @@ import net.sourceforge.barbecue.BarcodeFactory;
 import net.sourceforge.barbecue.BarcodeImageHandler;
 import net.sourceforge.barbecue.output.OutputException;
 import java.io.File;
+import java.util.logging.Logger;
 
 public class BarcodeAdapter implements BarcodeInterface {
     @Override
@@ -18,7 +19,8 @@ public class BarcodeAdapter implements BarcodeInterface {
             BarcodeImageHandler.savePNG(barcode,file);
 
         } catch (OutputException | BarcodeException e) {
-            e.printStackTrace();
+            Logger LOGGER = Logger.getLogger(BarcodeAdapter.class.getName());
+            LOGGER.info(e.getMessage());
         }
         return barcode;
     }

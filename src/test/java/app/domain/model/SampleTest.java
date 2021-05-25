@@ -1,6 +1,5 @@
 package app.domain.model;
 
-import net.sourceforge.barbecue.output.OutputException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

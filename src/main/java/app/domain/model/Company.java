@@ -8,6 +8,7 @@ import auth.AuthFacade;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.AbstractQueue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -66,6 +67,15 @@ public class Company {
 
     public List<Test> getTests() {
         return tests;
+    }
+
+    public List<Test> getAvailableTests() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getSamples().size() == 0)
+                availableTests.add(current);
+
+        return availableTests;
     }
 
     public boolean save(Test test){

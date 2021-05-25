@@ -1,10 +1,6 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-Company "1" --> "*" Test : performs
-Test "1" --> "1" Diagnosis : has
-Diagnosis "*" --> "1" SpecialistDoctor : is made by
-SpecialistDoctor "1" --> "1" Report : elaborates
 
 class Company {
 - designation
@@ -22,16 +18,17 @@ class Test {
 }
 
 class Diagnosis {
-- result
+- report
 }
 
 class SpecialistDoctor {
 - doctorIndexNumber
 }
 
-class Report {
-- type
-- result
-}
+Company "1" --> "*" Test : performs
+Test "1" --> "1" Diagnosis : has
+Diagnosis "*" --> "1" SpecialistDoctor : is made by
+
+
 
 @enduml

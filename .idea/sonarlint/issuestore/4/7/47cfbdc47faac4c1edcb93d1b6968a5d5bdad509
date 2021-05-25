@@ -1,6 +1,6 @@
 
 h
-java:S20958"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(³ˆ•ùÿÿÿÿ
+java:S2095>"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(³ˆ•ùÿÿÿÿ
 ]
-java:S1192Q"GDefine a constant instead of duplicating this literal "123456" 3 times.(µÀ¾ô
->	java:S108;")Either remove or fill this block of code.(Ãôş•
+java:S1192W"GDefine a constant instead of duplicating this literal "123456" 3 times.(µÀ¾ô
+>	java:S108A")Either remove or fill this block of code.(Ãôş•

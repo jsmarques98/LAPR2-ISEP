@@ -1,0 +1,41 @@
+
+_
+java:S2095¤"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(ü‰‚
+G
+java:S1444y"2Make this "public static employeeList" field final(±…îk
+I
+java:S1444µ"-Make this "public static labList" field final(£øßÉúÿÿÿÿ
+G
+java:S1444ç"0Make this "public static reportList" field final(ÁÂû
+m
+java:S1104y"XMake employeeList a static final constant or non-public and provide accessors if needed.(±…îk
+o
+java:S1104µ"SMake labList a static final constant or non-public and provide accessors if needed.(£øßÉúÿÿÿÿ
+m
+java:S1104ç"VMake reportList a static final constant or non-public and provide accessors if needed.(ÁÂû
+2
+java:S2386y"Make this member "protected".(±…îk
+9
+java:S2386µ"Make this member "protected".(£øßÉúÿÿÿÿ
+S	java:S106V"9Replace this use of System.out or System.err by a logger.(·µÓŸÿÿÿÿÿ
+E
+java:S1172\"/Remove this unused method parameter "username".(ÊÁ¼Å
+Q
+java:S2209†"5Change this instance-reference to a static reference.(Ş”†›ûÿÿÿÿ
+L
+java:S2209"5Change this instance-reference to a static reference.(óö´±
+O	java:S106—"9Replace this use of System.out or System.err by a logger.(ò«ÿ
+T	java:S106š"9Replace this use of System.out or System.err by a logger.(ı¤êöıÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(Àûå 
+O	java:S106§"9Replace this use of System.out or System.err by a logger.(’ôÆà
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(Àûå 
+Q
+java:S2209Ñ"5Change this instance-reference to a static reference.(‡³ŠŸøÿÿÿÿ
+Q
+java:S2209ß"5Change this instance-reference to a static reference.(™·Âùÿÿÿÿ
+Q
+java:S2209ñ"5Change this instance-reference to a static reference.(ºå¢›ùÿÿÿÿ
+Q
+java:S2209ù"5Change this instance-reference to a static reference.(Ë©‰¬øÿÿÿÿ
+L
+java:S1068"1Remove this unused "receptionists" private field.(Ñæ¤×üÿÿÿÿ

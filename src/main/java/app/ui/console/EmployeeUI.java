@@ -26,24 +26,31 @@ public class EmployeeUI implements Runnable{
         String email = selectEmail();
         String socCode = selectSocCode();
 
-        if(roleId.equals("specialist doctor")){
-            String indxNumber =  selectIndxNumber();
-            if(controller.createSpecialistDoctor(roleId, name, address, phoneNumber, email, socCode, indxNumber)){
-                System.out.println("Specialist Doctor criado com sucesso com o index: " + indxNumber);
-                controller.saveEmployee();
+        if (roleId.equalsIgnoreCase("SPECIALIST_DOCTOR")) {
+            String indxNumber = selectIndxNumber();
+            if(confirm()){
+                if (controller.createSpecialistDoctor(roleId, name, address, phoneNumber, email, socCode, indxNumber)) {
+                    System.out.println("Specialist Doctor successfully created with index: " + indxNumber);
+                    controller.saveEmployee();
+                } else {
+                    System.out.println("Employee not created");
+                }
             }else{
-                System.out.println("Empregado não criado");
+                System.out.println("Operation canceld");
             }
-        }else{
-            if(controller.createEmloyee(roleId, name, address, phoneNumber, email, socCode)){
-                System.out.println("Empregado criado com sucesso");
-                controller.saveEmployee();
+        } else {
+            if(confirm()){
+                if (controller.createEmloyee(roleId, name, address, phoneNumber, email, socCode)) {
+                    System.out.println("Employee successfully created");
+                    controller.saveEmployee();
+                } else {
+                    System.out.println("Employee not created");
+                }
             }else{
-                System.out.println("Empregado não criado");
+                System.out.println("Operation canceld");
             }
         }
-
-        for(int i=0;i<Company.employeeList.size();i++){
+        for (int i = 0; i < Company.employeeList.size(); i++) {
             System.out.println(Company.employeeList.get(i));
         }
     }
@@ -108,6 +115,18 @@ public class EmployeeUI implements Runnable{
             return selectIndxNumber();
         }
         return indexNumb;
+    }
+
+    public boolean confirm(){
+        String resposta = Utils.readLineFromConsole("Confirm client?(Yes or No)");
+        if(resposta.equalsIgnoreCase("Yes") || resposta.equalsIgnoreCase("Y")){
+            return true;
+        }else{
+            if(resposta.equalsIgnoreCase("No") || resposta.equalsIgnoreCase("N")){
+                return false;
+            }
+        }
+        return confirm();
     }
 
 }

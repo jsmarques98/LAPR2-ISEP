@@ -59,9 +59,6 @@ public class Company {
      * @param testType
      * @return
      */
-
-
-
     public boolean save(TestType testType) {
         return testTypes.appendTestType(testType);
     }

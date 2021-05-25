@@ -44,17 +44,12 @@ object Administrator{
 }
 
 object Diagnosis{
--result
+-report
 }
 
 object Sample{
 -barCode
 -type
-}
-
-object Report{
--type
--result
 }
 
 
@@ -128,74 +123,74 @@ object CollectingMethod{
 -designation
 }
 
-Company "1" -- "*" TestType : conducts
-TestType "*" -- "1" CollectingMethod : has
+Company "1" - - "*" TestType : conducts
+TestType "*" - - "1" CollectingMethod : has
 
-Company "1" -- "*" Test : performs
-Company "1" -- "*" Clinic : has
-Company "1" -- "1" ChemicalLaboratory : has
-Company "1" -- "*" Parameter : capable of analysing
-Company "1" -- "*" ParameterCategory : adopts
+Company "1" - - "*" Test : performs
+Company "1" - - "*" Clinic : has
+Company "1" - - "1" ChemicalLaboratory : has
+Company "1" - - "*" Parameter : capable of analysing
+Company "1" - - "*" ParameterCategory : adopts
 
 
-ParameterCategory "*" -- "1" Parameter : belongs to
-ParameterCategory "1" -- "1" Administrator : is created by
+ParameterCategory "*" - - "1" Parameter : belongs to
+ParameterCategory "1" - - "1" Administrator : is created by
 
-Test "*" -- "1" Client : makes
-Test "1" -- "*" Parameter : is of
-Test "*" -- "1" TestType : is of
-Test "1" -- "1" Diagnosis
+Test "*" - - "1" Client : makes
+Test "1" - - "*" Parameter : is of
+Test "*" - - "1" TestType : is of
+Test "1" - - "1" Diagnosis
 
-Sample "*" -- "1" MedicalLabTechnician : is collected/analyzed by
-Sample "*" -- "1" Test : is based on
+Sample "*" - - "1" MedicalLabTechnician : is collected/analyzed by
+Sample "*" - - "1" Test : is based on
 
-Diagnosis "*" -- "1" SpecialistDoctor : makes
-SpecialistDoctor "1" -- "1" Report : elaborates
-Diagnosis "1" -- "1" Report : generates
-Diagnosis "*" -- "1" Sample : is based on
-Report "1" -- "1" Test : is based on
-Report "*" -- "1" Client : is sent via application
-Administrator "1" -- "*" Test : specifies
-Receptionist "1" -- "*" Client : registers
-Receptionist "1" -- "*" Test : registers
-LaboratoryCoordinator "1" -- "*" Report : validates and confirms the report
-ChemicalLaboratory "1" -- "*" Sample : is received
-ClinicalChemistryTechnologist "1" -- "*" Sample : registers the result
-ChemicalLaboratory "1" -- "*" Sample : it's where it analyzes
-ChemicalLaboratory "1" -- "*" Report : it's where it writes
-Clinic "1" -- "*" Sample : it's where are collected
-Company "1" -- "1" Client : notifies by SMS when report is ready
+Diagnosis "*" - - "1" SpecialistDoctor : makes
+SpecialistDoctor "1" - - "1" Diagnosis : elaborates
+Diagnosis "1" - - "1" Diagnosis : generates
+Diagnosis "*" - - "1" Sample : is based on
+Diagnosis "1" - - "1" Test : is based on
+Diagnosis "*" - - "1" Client : is sent via application
+Administrator "1" - - "*" Test : specifies
+Receptionist "1" - - "*" Client : registers
+Receptionist "1" - - "*" Test : registers
+LaboratoryCoordinator "1" - - "*" Diagnosis : validates and confirms the report
+ChemicalLaboratory "1" - - "*" Sample : is received
+ClinicalChemistryTechnologist "1" - - "*" Sample : registers the result
+ChemicalLaboratory "1" - - "*" Sample : it's where it analyzes
+ChemicalLaboratory "1" - - "*" Diagnosis : it's where it writes
+Clinic "1" - - "*" Sample : it's where are collected
+Company "1" - - "1" Client : notifies by SMS when report is ready
 
-Company "1" -- "*" Report : generates reports
-NHSReport "1" -- "*" Test : are of type
-Company "1" -- "*" NHSReport : generates reports
-LabOrder "1" -- "1" Client : belongs to
+Company "1" - - "*" Diagnosis : generates reports
+NHSReport "1" - - "*" Test : are of type
+Company "1" - - "*" NHSReport : generates reports
+LabOrder "1" - - "1" Client : belongs to
 
 
 package "BarCodeAPI" #DDDDDD{
-	BarCodeAPI "1" -- "*" Sample : generates barCode
+	BarCodeAPI "1" - - "*" Sample : generates barCode
 }
 
 
 package "NHSAPI" #DDDDDD{
-	NHSAPI "1" -- "*" NHSReport : are sent to	
+	NHSAPI "1" - - "*" NHSReport : are sent to
 }
 
-Test "1" -- "1" LabOrder : is based on
+Test "1" - - "1" LabOrder : is based on
 
-ClinicalChemistryTechnologist "*" -- "1" Employee : is a
-LaboratoryCoordinator "*" -- "1" Employee : is a
-Receptionist "*" -- "1" Employee : is a
-SpecialistDoctor "*" -- "1" Employee : is a
-MedicalLabTechnician "*" -- "1" Employee : is a
-Employee "*" -- "1" Company : works for
+ClinicalChemistryTechnologist "*" - - "1" Employee : is a
+LaboratoryCoordinator "*" - - "1" Employee : is a
+Receptionist "*" - - "1" Employee : is a
+SpecialistDoctor "*" - - "1" Employee : is a
+MedicalLabTechnician "*" - - "1" Employee : is a
+Employee "*" - - "1" Company : works for
 
-LaboratoryCoordinator "1" -- "*" TimeReport : generates
-Administrator "*" -- "1" Employee : is a
+LaboratoryCoordinator "1" - - "*" TimeReport : generates
+Administrator "*" - - "1" Employee : is a
 
-Company "1" -- "*" Client : provides service to
-Receptionist "*" -- "1" Clinic :  works in
+Company "1" - - "*" Client : provides service to
+Receptionist "*" - - "1" Clinic :  works in
 
-Clinic "1" -- "*" TestType
+Clinic "1" - - "*" TestType
 
 @enduml

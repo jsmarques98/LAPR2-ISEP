@@ -10,6 +10,7 @@ public class Sample {
     private Barcode barcode;
 
     public Sample( String code ){
+        System.out.println(code);
         generateBarcode(code);
     }
 
@@ -21,5 +22,9 @@ public class Sample {
 
     public Barcode getBarcode() {
         return barcode;
+    }
+
+    public String toString(){
+        return getBarcode().toString();
     }
 }

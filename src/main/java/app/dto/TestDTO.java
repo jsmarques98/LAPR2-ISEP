@@ -1,19 +1,16 @@
-package app.domain.model;
+package app.dto;
+
+import app.domain.model.Sample;
+import app.domain.model.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test {
+public class TestDTO {
 
     private String testID;
     private String nhscode;
     private List<Sample> samples;
-
-    public Test(String testID, String nhscode) {
-        this.testID = testID;
-        this.nhscode = nhscode;
-        this.samples = new ArrayList<>();
-    }
 
     public String getTestID() {
         return testID;
@@ -25,6 +22,12 @@ public class Test {
 
     public List<Sample> getSamples() {
         return samples;
+    }
+
+    public TestDTO(Test test) {
+        this.testID = test.getTestID();
+        this.nhscode = test.getNhscode();
+        this.samples = test.getSamples();
     }
 
     public String toString(){

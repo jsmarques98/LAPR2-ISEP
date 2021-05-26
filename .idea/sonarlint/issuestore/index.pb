@@ -35,8 +35,6 @@ N
 src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
 o
 ?src/test/java/app/controller/SpecifyTypeTestControllerTest.java,9/2/92c02512d18854b31d63db52bc709eef71908c30
-[
-+src/test/java/app/domain/model/LabTest.java,9/a/9aa586d56dda01e0cc957829447f49a7f102d334
 G
 docs/SprintC/US4/US4.md,e/b/eb8449dbd51337621caded84a8b25cddbf573607
 K
@@ -83,11 +81,5 @@ _
 /src/main/java/app/ui/console/RegisterLabUI.java,d/6/d6debc4d5e4b3d7be774ec81bec95f078661bbb3
 `
 0src/main/java/app/ui/console/CreateReportUI.java,c/5/c5f967c75dc97d2f62bbe27e96d075ee002d5745
-g
-7src/main/java/app/controller/RegisterLabController.java,7/b/7b44867c1af58063519159dc8d62c845b68530e3
-[
-+src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
-Z
-*src/main/java/app/domain/model/Report.java,5/0/50aaf8912efcd7144f4cf66a4fbfdabdc16cbbc9
 W
 'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1

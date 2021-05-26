@@ -8,9 +8,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LabTest {
 
-    Lab lab = new Lab("12AB5", "ClinicLab", "OxfordStreet 10",
-            "12345678901", "1234567890");
+   private Lab lab;
 
+    public LabTest(){
+        lab = new Lab("12AB5", "ClinicLab", "OxfordStreet 10",
+                "12345678901", "1234567890");
+    }
 
     @Test
     public void testConstructor() {

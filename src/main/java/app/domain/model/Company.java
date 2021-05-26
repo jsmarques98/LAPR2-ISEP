@@ -244,19 +244,19 @@ public class Company {
         return new Report(report);
     }
 
-    public boolean validateReport(Report report){
-        if (report == null){
+    public boolean validateReport(Report writeRep){
+        if (writeRep == null){
             return false;
         }
-        return !this.reportList.contains(report);
+        return !this.reportList.contains(writeRep);
     }
 
 
-    public boolean addReport(Report report){
-        if (!validateReport(report)) {
+    public boolean addReport(Report writeRep){
+        if (!validateReport(writeRep)) {
             return false;
         }
-        return this.reportList.add(report);
+        return this.reportList.add(writeRep);
     }
 
 

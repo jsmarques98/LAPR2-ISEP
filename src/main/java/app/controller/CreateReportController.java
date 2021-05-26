@@ -13,7 +13,7 @@ public class CreateReportController {
     /**
      * The report of the CreateReportController
      */
-    private Report report;
+    private Report writeRep;
 
     public CreateReportController() {
         this(App.getInstance().getCompany());
@@ -26,7 +26,7 @@ public class CreateReportController {
      */
     public CreateReportController(Company company) {
         this.company = company;
-        this.report = null;
+        this.writeRep = null;
     }
 
     /**
@@ -34,10 +34,10 @@ public class CreateReportController {
      * @param report the report of the test result
      * @return if the report is valid or not and if it was created or not
      */
-   /* public boolean createReport(String report) {
-        this.report = this.company.createReport(report);
-        return this.company.validateReport(report);
-    }*/
+     public boolean createReport(String report) {
+        this.writeRep = this.company.createReport(report);
+        return this.company.validateReport(writeRep);
+     }
 
 
     /**
@@ -45,6 +45,6 @@ public class CreateReportController {
      * @return if it was added with success or insuccess
      */
     public boolean addReport (){
-        return this.company.addReport(report);
+        return this.company.addReport(writeRep);
     }
 }

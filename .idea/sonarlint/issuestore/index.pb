@@ -29,14 +29,8 @@ Z
 *src/main/java/app/ui/console/MenuItem.java,7/4/740030e937298447c12c48a7f0a934b08c3819e9
 X
 (src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036
-Y
-)src/main/java/app/ui/console/AdminUI.java,0/a/0a9fb9c3271ce78061d523da4e5474691abf5009
 N
 src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
-o
-?src/test/java/app/controller/SpecifyTypeTestControllerTest.java,9/2/92c02512d18854b31d63db52bc709eef71908c30
-G
-docs/SprintC/US4/US4.md,e/b/eb8449dbd51337621caded84a8b25cddbf573607
 K
 docs/SprintC/US4/US4-MD.svg,d/b/db509a6cc1668b9a41811bc86c78f30bd67ecb38
 K
@@ -61,8 +55,6 @@ U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 Z
 *src/main/java/app/domain/model/Sample.java,b/a/ba164b4c03f593dbc5a575d2806dae1ffe3dfe0c
-^
-.src/test/java/app/domain/model/SampleTest.java,3/0/30a600e399b7ae013cc66d630992203751d9841b
 _
 /src/main/java/app/Adapter/BarcodeInterface.java,d/3/d3c257ccb92f1c5e5af4df2de0b7b0ce50f481ac
 ]
@@ -79,7 +71,3 @@ N
 docs/SprintC/US14/US14_SSD.svg,9/a/9ae189de9b55a2fa2afdd3912a9ca5cbcf55a203
 _
 /src/main/java/app/ui/console/RegisterLabUI.java,d/6/d6debc4d5e4b3d7be774ec81bec95f078661bbb3
-`
-0src/main/java/app/ui/console/CreateReportUI.java,c/5/c5f967c75dc97d2f62bbe27e96d075ee002d5745
-W
-'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1

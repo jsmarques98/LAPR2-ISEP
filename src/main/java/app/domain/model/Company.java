@@ -8,7 +8,6 @@ import auth.AuthFacade;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.AbstractQueue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -22,7 +21,7 @@ public class Company {
     private AuthFacade authFacade;
 
 
-    private List<Test> tests;
+    public static List<Test> tests;
 
     public static List<Client> clientsList = new ArrayList<>();
 
@@ -34,7 +33,7 @@ public class Company {
     /**
      * Array list where the objects are going to be stored
      */
-    private List<Category> categories;
+    public static List<Category> categories;
 
     /**
      * The test type record.
@@ -264,23 +263,22 @@ public class Company {
 
     //us4
 
-    public static List<Test> TestList = new ArrayList<>();
 
-    public static Test createtest(String ccNum, String nhscode, String description, String idTestType ,String codeCategory, String designation)  {
-        return new Test(ccNum, nhscode, description, idTestType ,codeCategory, designation);
+    public static Test createtest(String ccNum, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
+        return new Test(ccNum, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode);
     }
 
     public boolean validateTest(Test t) {
         if (t == null)
             return false;
-        return !this.TestList.contains(t);
+        return !this.tests.contains(t);
     }
 
     public boolean saveTest(Test t) {
         if (!validateTest(t)) {
             return false;
         } else {
-            return this.TestList.add(t);
+            return this.tests.add(t);
         }
     }
 }

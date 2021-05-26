@@ -10,19 +10,19 @@ public class Test {
     private String nhscode;
     private String description;
     private String idTestType;
-    private String codeCategory;
-    private String designation;
+    private ArrayList listCodeCategory;
+    private ArrayList listParameterTestCode;
 
     private List<Sample> samples;
 
-    public Test(String ccNum, String nhscode, String description, String idTestType ,String codeCategory, String designation) {
-        this.testID = String.valueOf(Company.TestList.size()+1);
+    public Test(String ccNum, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode) {
+        this.testID = String.valueOf(Company.tests.size()+1);
         this.ccNum = ccNum;
         this.nhscode = nhscode;
         this.description = description;
         this.idTestType = idTestType;
-        this.codeCategory = codeCategory;
-        this.designation = designation;
+        this.listCodeCategory = listCodeCategory;
+        this.listParameterTestCode = listParameterTestCode;
         this.samples = new ArrayList<>();
     }
 

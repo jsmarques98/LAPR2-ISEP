@@ -9,7 +9,7 @@ public class TestTypeRecord {
     /**
      * The test types list.
      */
-    private List<TestType> record;
+    public static List<TestType> record;
 
     /**
      * Creates a record of the test types.

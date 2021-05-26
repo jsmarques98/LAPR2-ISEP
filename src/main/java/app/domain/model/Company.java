@@ -27,7 +27,7 @@ public class Company {
 
     public static List<TestType> testList = new ArrayList<>();
 
-    private Set<Receptionist> receptionists;
+    public static List<ParameterTest> parameterList = new ArrayList<>();
 
 
     //us9
@@ -266,8 +266,8 @@ public class Company {
     //us4
 
 
-    public static Test createtest(String ccNum, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
-        return new Test(ccNum, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode);
+    public static Test createtest(String tinNumber, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
+        return new Test(tinNumber, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode);
     }
 
     public boolean validateTest(Test t) {

@@ -17,8 +17,8 @@ public class RegisterTestToClientController {
         this.test = null;
     }
 
-    public boolean createTest(String ccNum, String nhscode, String description, String idTestType , ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
-        this.test = this.company.createtest(ccNum, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode) ;
+    public boolean createTest(String tinNumber, String nhscode, String description, String idTestType , ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
+        this.test = this.company.createtest(tinNumber, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode) ;
         return this.company.validateTest(test);
     }
     public boolean saveTest() {

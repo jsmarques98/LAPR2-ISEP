@@ -84,6 +84,14 @@ public class App {
 
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);
 
+        //Como não está implementado inserimos manualmente
+        ParameterTest parameterTest1 = new ParameterTest("Code1", "name1", "descricao1");
+        ParameterTest parameterTest2 = new ParameterTest("Code2", "name2", "descricao2");
+        ParameterTest parameterTest3 = new ParameterTest("Code3", "name3", "descricao3");
+        Company.parameterList.add(parameterTest1);
+        Company.parameterList.add(parameterTest2);
+        Company.parameterList.add(parameterTest3);
+
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);

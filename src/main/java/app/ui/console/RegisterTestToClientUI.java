@@ -27,7 +27,22 @@ public class RegisterTestToClientUI implements Runnable{
         ArrayList listCodeCategory = selectCodeCategory(idTestType);
         ArrayList listParameterTestCode = selectParameterTestCode();
 
-        controller.createTest(tinNumber, nhscode, description, idTestType , listCodeCategory, listParameterTestCode);
+
+
+        if(Utils.confirm()){
+            if (controller.createTest(tinNumber, nhscode, description, idTestType , listCodeCategory, listParameterTestCode)) {
+                System.out.println("Test successfully created");
+                controller.saveTest();
+            } else {
+                System.out.println("Test not created");
+            }
+        }else{
+            System.out.println("Operation canceld");
+        }
+
+        for (int i = 0; i < Company.tests.size(); i++) {
+            System.out.println(Company.tests.get(i));
+        }
         }
     }
 
@@ -61,11 +76,11 @@ public class RegisterTestToClientUI implements Runnable{
         return description;
     }
     public String selectIdTestType(){
-        System.out.println("TestType List: ");
+        System.out.println("Test Type List: ");
         for(TestType testType : Company.testList) {
             System.out.println(testType.toString());
         }
-        String idTest = Utils.readLineFromConsole("Enter idTest: ");
+        String idTest = Utils.readLineFromConsole("Enter id Test: ");
         for(TestType testType : Company.testList) {
             if (testType.getId().equals(idTest)){
                 return idTest;
@@ -74,23 +89,48 @@ public class RegisterTestToClientUI implements Runnable{
         System.out.println("Id not found.");
         return selectIdTestType();
     }
-
-
     private ArrayList selectCodeCategory(String idTestType) {
         System.out.println("CodeCategory List: ");
         for(TestType testType : Company.testList) {
             if (testType.getId().equals(idTestType)){
-                for(Category cat : Company.categories) {
-                    System.out.println(cat);
-                }
+
             }
         }
-        String codeCategory = Utils.readLineFromConsole("Enter CodeCategory: ");
+        String codeCategory = Utils.readLineFromConsole("Enter Code Category: ");
 
         return null;
     }
     private ArrayList selectParameterTestCode() {
-
-        return null;
+        ArrayList parameterTestCodeList = new ArrayList();
+        String parameterTestCode = "";
+        boolean flag1 = false;
+        boolean flag2 = false;
+        System.out.println("Parameter Test List: ");
+        for(ParameterTest parameterTest : Company.parameterList) {
+            System.out.println(parameterTest.toString());
+        }
+        while(!parameterTestCode.equals("0")){
+            parameterTestCode = Utils.readLineFromConsole("Enter Parameter Test Code or 0 to exit: ");
+            for(ParameterTest parameterTest : Company.parameterList) {
+                if(parameterTest.getCode().equals(parameterTestCode)){
+                    for (int i = 0; i < parameterTestCodeList.size(); i++) {
+                        if(parameterTestCodeList.equals(parameterTestCode)){
+                            flag2 = true;
+                        }
+                    }
+                    if(!flag2){
+                        parameterTestCodeList.add(parameterTest.getCode());
+                    }else{
+                        System.out.println("Parameter Test Code already insert");
+                    }
+                    flag1 = true;
+                }
+            }
+            if(!parameterTestCode.equals("0") && flag1 == false){
+                System.out.println("Parameter Test Code not found.");
+            }
+            flag1 = false;
+        }
+        return parameterTestCodeList;
     }
 }

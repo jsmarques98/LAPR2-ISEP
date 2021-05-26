@@ -6,7 +6,7 @@ import java.util.List;
 public class Test {
 
     private String testID;
-    private String ccNum;
+    private String tinNumber;
     private String nhscode;
     private String description;
     private String idTestType;
@@ -15,9 +15,9 @@ public class Test {
 
     private List<Sample> samples;
 
-    public Test(String ccNum, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode) {
+    public Test(String tinNumber, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode) {
         this.testID = String.valueOf(Company.tests.size()+1);
-        this.ccNum = ccNum;
+        this.tinNumber = tinNumber;
         this.nhscode = nhscode;
         this.description = description;
         this.idTestType = idTestType;
@@ -40,8 +40,17 @@ public class Test {
         return samples;
     }
 
-    public String toString(){
-        return ("testID: " + this.testID + " nhscode: " + this.nhscode);
+    @Override
+    public String toString() {
+        return "Test{" +
+                "testID='" + testID + '\'' +
+                ", tinNumber='" + tinNumber + '\'' +
+                ", nhscode='" + nhscode + '\'' +
+                ", description='" + description + '\'' +
+                ", idTestType='" + idTestType + '\'' +
+                ", listCodeCategory=" + listCodeCategory +
+                ", listParameterTestCode=" + listParameterTestCode +
+                ", samples=" + samples +
+                '}';
     }
-
 }

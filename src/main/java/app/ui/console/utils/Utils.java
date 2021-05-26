@@ -153,4 +153,16 @@ public class Utils {
 
         return value - 1;
     }
+
+    static public boolean confirm(){
+        String resposta = Utils.readLineFromConsole("Confirm? (Yes or No)");
+        if(resposta.equalsIgnoreCase("Yes") || resposta.equalsIgnoreCase("Y")){
+            return true;
+        }else{
+            if(resposta.equalsIgnoreCase("No") || resposta.equalsIgnoreCase("N")){
+                return false;
+            }
+        }
+        return confirm();
+    }
 }

@@ -28,7 +28,7 @@ public class EmployeeUI implements Runnable{
 
         if (roleId.equalsIgnoreCase("SPECIALIST_DOCTOR")) {
             String indxNumber = selectIndxNumber();
-            if(confirm()){
+            if(Utils.confirm()){
                 if (controller.createSpecialistDoctor(roleId, name, address, phoneNumber, email, socCode, indxNumber)) {
                     System.out.println("Specialist Doctor successfully created with index: " + indxNumber);
                     controller.saveEmployee();
@@ -39,7 +39,7 @@ public class EmployeeUI implements Runnable{
                 System.out.println("Operation canceld");
             }
         } else {
-            if(confirm()){
+            if(Utils.confirm()){
                 if (controller.createEmloyee(roleId, name, address, phoneNumber, email, socCode)) {
                     System.out.println("Employee successfully created");
                     controller.saveEmployee();
@@ -115,18 +115,6 @@ public class EmployeeUI implements Runnable{
             return selectIndxNumber();
         }
         return indexNumb;
-    }
-
-    public boolean confirm(){
-        String resposta = Utils.readLineFromConsole("Confirm client?(Yes or No)");
-        if(resposta.equalsIgnoreCase("Yes") || resposta.equalsIgnoreCase("Y")){
-            return true;
-        }else{
-            if(resposta.equalsIgnoreCase("No") || resposta.equalsIgnoreCase("N")){
-                return false;
-            }
-        }
-        return confirm();
     }
 
 }

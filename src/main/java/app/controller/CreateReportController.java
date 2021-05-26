@@ -34,7 +34,7 @@ public class CreateReportController {
      * @param report the report of the test result
      * @return if the report is valid or not and if it was created or not
      */
-   /* public boolean createReport(String report){
+   /* public boolean createReport(String report) {
         this.report = this.company.createReport(report);
         return this.company.validateReport(report);
     }*/

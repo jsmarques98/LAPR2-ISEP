@@ -1,4 +1,3 @@
-/*
 package app.domain.model;
 
 import org.junit.Assert;
@@ -23,13 +22,13 @@ public class LabTest {
 
         assertThrows(IllegalArgumentException.class, () ->
         {
-            new Lab("12AB5", "clinicalLab", "OxfordStreet 10",
+            new Lab("12AB5", "abcdefghijklmnopqertuvxz", "OxfordStreet 10",
                     "12345678901", "1234567890");
         });
 
         assertThrows(IllegalArgumentException.class, () ->
         {
-            new Lab("12AB5", "ClinicLab", "oxfordstreet 21",
+            new Lab("12AB5", "ClinicLab", "ruadocanidelopontedabarcaportofeijao",
                     "12345678901", "1234567890");
         });
         assertThrows(IllegalArgumentException.class, () ->
@@ -85,7 +84,7 @@ public class LabTest {
         Assert.assertEquals("Clinical Lab", lab.getAddress());
 
         assertDoesNotThrow(() -> {
-            lab.setAddress("ClinicalClinicalClinicalClinical");
+            lab.setAddress("ClinicalClinicalClinicalClinic");
         });
 
         assertThrows(IllegalArgumentException.class, () -> {
@@ -157,4 +156,4 @@ public class LabTest {
 
         Assert.assertEquals(result, lab.toString());
     }
-}*/
+}

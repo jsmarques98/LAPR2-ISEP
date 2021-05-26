@@ -258,4 +258,31 @@ public class Company {
         }
         return this.reportList.add(report);
     }
+
+
+
+    //us4
+
+    public static List<Test> TestList = new ArrayList<>(1);
+
+    public static Test createtest(String testId, String nhsCode) {
+        return new Test(testId, nhsCode);
+    }
+
+    public boolean validateTest(Test t) {
+        if (t == null)
+            return false;
+        return !this.TestList.contains(t);
+    }
+
+    public boolean saveTest(Test t) {
+        if (!validateTest(t)) {
+            return false;
+        } else {
+            return this.TestList.add(t);
+        }
+    }
 }
+
+
+

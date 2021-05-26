@@ -14,6 +14,9 @@ class EmployeeTest {
 
     @Test
     void generatePasswordEmployee() {
-        assertEquals(0,0);
+        String teste = "aaaaaaaaaa";
+        String criada = Employee.generatePasswordEmployee();
+
+        assertEquals(criada.length(),teste.length());
     }
 }

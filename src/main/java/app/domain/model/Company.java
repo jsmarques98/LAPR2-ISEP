@@ -265,8 +265,8 @@ public class Company {
 
     public static List<Test> TestList = new ArrayList<>(1);
 
-    public static Test createtest(String testId, String nhsCode) {
-        return new Test(testId, nhsCode);
+    public static Test createtest(String testID, String nhscode,TestType testType, Category category,parameterTest parameterTest )  {
+        return new Test(testID, nhscode,testType, category,parameterTest );
     }
 
     public boolean validateTest(Test t) {

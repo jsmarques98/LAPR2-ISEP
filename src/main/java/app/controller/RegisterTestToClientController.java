@@ -1,8 +1,6 @@
 package app.controller;
 
-import app.domain.model.Company;
-import app.domain.model.Employee;
-import app.domain.model.Test;
+import app.domain.model.*;
 
 public class RegisterTestToClientController {
     private Company company;
@@ -17,8 +15,8 @@ public class RegisterTestToClientController {
         this.test = null;
     }
 
-    public boolean createTest(String testID, String nhscode) {
-        this.test = this.company.createtest(testID, nhscode);
+    public boolean createTest(String testID, String nhscode, TestType testType, Category category, parameterTest parameterTest )  {
+        this.test = this.company.createtest(testID, nhscode,testType, category,parameterTest ) ;
         return this.company.validateTest(test);
     }
     public boolean saveTest() {

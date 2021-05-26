@@ -90,12 +90,12 @@ public class App {
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
 
-        this.company.save(new Test("0000000001","0000000001"));
-        this.company.save(new Test("0000000002","0000000002"));
-        this.company.save(new Test("0000000003","0000000003"));
-        this.company.save(new Test("0000000004","0000000004"));
-        this.company.save(new Test("0000000005","0000000005"));
-        this.company.save(new Test("0000000006","0000000006"));
+//        this.company.save(new Test("0000000001","0000000001"));
+//        this.company.save(new Test("0000000002","0000000002"));
+//        this.company.save(new Test("0000000003","0000000003"));
+//        this.company.save(new Test("0000000004","0000000004"));
+//        this.company.save(new Test("0000000005","0000000005"));
+//        this.company.save(new Test("0000000006","0000000006"));
     }
 
     // Extracted from https://www.javaworld.com/article/2073352/core-java/core-java-simply-singleton.html?page=2

@@ -7,12 +7,19 @@ public class Test {
 
     private String testID;
     private String nhscode;
+    private TestType testType;
+    private Category category;
+    private parameterTest parameterTest;
 
     private List<Sample> samples;
 
-    public Test(String testID, String nhscode) {
+    public Test(String testID, String nhscode,TestType testType, Category category,parameterTest parameterTest ) {
         this.testID = testID;
         this.nhscode = nhscode;
+        this.testType = testType;
+        this.category = category;
+        this.parameterTest = parameterTest;
+
         this.samples = new ArrayList<>();
     }
 

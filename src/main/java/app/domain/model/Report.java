@@ -21,9 +21,19 @@ public class Report {
      * @param report the report of the test result
      */
     private void checkReport(String report){
+
+        if (report == null){
+            throw new IllegalArgumentException("The report can't be null");
+        }
+
+        if (report.isEmpty()){
+            throw new IllegalArgumentException("The report can't be empty, you have to write something");
+        }
+
         if (report.length() > 400){
             throw new IllegalArgumentException("The report can't have mora than 400 characters");
         }
+
     }
 
     /**
@@ -39,6 +49,7 @@ public class Report {
      * @param report the report of the test result
      */
     public void setReport(String report) {
+        checkReport(report);
         this.report = report;
     }
 

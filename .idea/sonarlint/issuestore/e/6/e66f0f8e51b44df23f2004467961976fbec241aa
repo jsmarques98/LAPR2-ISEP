@@ -1,0 +1,59 @@
+
+\
+java:S2095"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(ü‰‚
+E
+java:S1444"2Make this "public static employeeList" field final(±…îk
+F
+java:S1444"-Make this "public static labList" field final(£øßÉúÿÿÿÿ
+D
+java:S1444"0Make this "public static reportList" field final(ÁÂû
+I
+java:S1444".Make this "public static TestList" field final(ıƒ¨´8ÏöÁš/
+^
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(€¾öŸúÿÿÿÿ8’ÏöÁš/
+k
+java:S1104"XMake employeeList a static final constant or non-public and provide accessors if needed.(±…îk
+l
+java:S1104"SMake labList a static final constant or non-public and provide accessors if needed.(£øßÉúÿÿÿÿ
+j
+java:S1104"VMake reportList a static final constant or non-public and provide accessors if needed.(ÁÂû
+o
+java:S1104"TMake TestList a static final constant or non-public and provide accessors if needed.(ıƒ¨´8“ÏöÁš/
+Q
+java:S1128"4Remove this unused import 'java.util.AbstractQueue'.(Ùò§Ş8öâ–¿š/
+n
+java:S3008"SRename this field "TestList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıƒ¨´8•ÏöÁš/
+0
+java:S2386"Make this member "protected".(±…îk
+6
+java:S2386"Make this member "protected".(£øßÉúÿÿÿÿ
+8
+java:S2386"Make this member "protected".(ÁÂû8–ÏöÁš/
+8
+java:S2386"Make this member "protected".(ıƒ¨´8–ÏöÁš/
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(·µÓŸÿÿÿÿÿ
+C
+java:S1172"/Remove this unused method parameter "username".(ÊÁ¼Å
+N
+java:S2209"5Change this instance-reference to a static reference.(Ş”†›ûÿÿÿÿ
+I
+java:S2209"5Change this instance-reference to a static reference.(óö´±
+L	java:S106"9Replace this use of System.out or System.err by a logger.(ò«ÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ı¤êöıÿÿÿÿ
+L	java:S106"9Replace this use of System.out or System.err by a logger.(Àûå 
+S	java:S106"9Replace this use of System.out or System.err by a logger.(’ôÆà8ÊÑı¾š/
+L	java:S106"9Replace this use of System.out or System.err by a logger.(Àûå 
+N
+java:S2209"5Change this instance-reference to a static reference.(‡³ŠŸøÿÿÿÿ
+N
+java:S2209"5Change this instance-reference to a static reference.(™·Âùÿÿÿÿ
+I
+java:S2209"5Change this instance-reference to a static reference.(éõİ»
+I
+java:S2209"5Change this instance-reference to a static reference.(àÓÀ÷
+S
+java:S2209”"5Change this instance-reference to a static reference.(Ü¥ÔÜ8§ÏöÁš/
+R
+java:S2209›"5Change this instance-reference to a static reference.(ıå°L8¨ÏöÁš/
+J
+java:S1068"1Remove this unused "receptionists" private field.(Ñæ¤×üÿÿÿÿ

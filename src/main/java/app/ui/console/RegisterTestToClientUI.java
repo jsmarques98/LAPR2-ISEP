@@ -113,21 +113,14 @@ public class RegisterTestToClientUI implements Runnable{
             parameterTestCode = Utils.readLineFromConsole("Enter Parameter Test Code or 0 to exit: ");
             for(ParameterTest parameterTest : Company.parameterList) {
                 if(parameterTest.getCode().equals(parameterTestCode)){
-                    for (int i = 0; i < parameterTestCodeList.size(); i++) {
-                        if(parameterTestCodeList.equals(parameterTestCode)){
-                            flag2 = true;
-                        }
-                    }
-                    if(!flag2){
+                    if(!parameterTestCodeList.contains(parameterTestCode)){
                         parameterTestCodeList.add(parameterTest.getCode());
-                    }else{
-                        System.out.println("Parameter Test Code already insert");
+                        flag1 = true;
                     }
-                    flag1 = true;
                 }
             }
             if(!parameterTestCode.equals("0") && flag1 == false){
-                System.out.println("Parameter Test Code not found.");
+                System.out.println("Parameter Test Code not found or already insert.");
             }
             flag1 = false;
         }

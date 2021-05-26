@@ -6,20 +6,23 @@ import java.util.List;
 public class Test {
 
     private String testID;
+    private String ccNum;
     private String nhscode;
-    private TestType testType;
-    private Category category;
-    private parameterTest parameterTest;
+    private String description;
+    private String idTestType;
+    private String codeCategory;
+    private String designation;
 
     private List<Sample> samples;
 
-    public Test(String testID, String nhscode,TestType testType, Category category,parameterTest parameterTest ) {
-        this.testID = testID;
+    public Test(String ccNum, String nhscode, String description, String idTestType ,String codeCategory, String designation) {
+        this.testID = String.valueOf(Company.TestList.size()+1);
+        this.ccNum = ccNum;
         this.nhscode = nhscode;
-        this.testType = testType;
-        this.category = category;
-        this.parameterTest = parameterTest;
-
+        this.description = description;
+        this.idTestType = idTestType;
+        this.codeCategory = codeCategory;
+        this.designation = designation;
         this.samples = new ArrayList<>();
     }
 

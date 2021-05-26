@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.domain.model.Client;
 import app.domain.model.Company;
 import app.domain.model.Employee;
 import app.domain.model.Test;
@@ -89,6 +90,13 @@ public class App {
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
+
+        Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c2 = new Client("Joao","5555555555","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c3 = new Client("Rui","5555555555","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Company.clientsList.add(c1);
+        Company.clientsList.add(c2);
+        Company.clientsList.add(c3);
 
 //        this.company.save(new Test("0000000001","0000000001"));
 //        this.company.save(new Test("0000000002","0000000002"));

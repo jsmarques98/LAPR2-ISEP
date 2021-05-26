@@ -68,6 +68,11 @@ public class TestType {
                 !collection.isEmpty() && !categories.isEmpty();
     }
 
-
-
+    @Override
+    public String toString() {
+        return "TestType{" +
+                "id='" + id + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

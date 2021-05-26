@@ -60,6 +60,10 @@ public class Client {
     public String getCCNumber() {
         return CCNumber;
     }
+
+    public String getTINNumber() {
+        return TINNumber;
+    }
 }
 
 

@@ -25,6 +25,8 @@ public class Company {
 
     public static List<Client> clientsList = new ArrayList<>();
 
+    public static List<TestType> testList = new ArrayList<>();
+
     private Set<Receptionist> receptionists;
 
 

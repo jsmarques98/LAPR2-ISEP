@@ -1,9 +1,6 @@
 package app.controller;
 
-import app.domain.model.Client;
-import app.domain.model.Company;
-import app.domain.model.Employee;
-import app.domain.model.Test;
+import app.domain.model.*;
 import app.domain.shared.Constants;
 import auth.AuthFacade;
 import auth.UserSession;
@@ -11,7 +8,7 @@ import auth.UserSession;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * @author Paulo Maio <pam@isep.ipp.pt>
@@ -86,24 +83,30 @@ public class App {
         this.authFacade.addUserRole(Constants.ROLE_SEPECIALIST_DOCTOR, Constants.ROLE_SEPECIALIST_DOCTOR);
 
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);
-        this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
-        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
+
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
+        this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
+        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
 
         Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-        Client c2 = new Client("Joao","5555555555","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-        Client c3 = new Client("Rui","5555555555","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
         Company.clientsList.add(c1);
         Company.clientsList.add(c2);
         Company.clientsList.add(c3);
 
-//        this.company.save(new Test("0000000001","0000000001"));
-//        this.company.save(new Test("0000000002","0000000002"));
-//        this.company.save(new Test("0000000003","0000000003"));
-//        this.company.save(new Test("0000000004","0000000004"));
-//        this.company.save(new Test("0000000005","0000000005"));
-//        this.company.save(new Test("0000000006","0000000006"));
+        Set<Category> listCat1 = new TreeSet<Category>();
+        Set<Category> listCat2 = new TreeSet<Category>();
+        listCat1.add(new Category("categoria1","codigo1"));
+        listCat1.add(new Category("categoria2","codigo2"));
+        listCat2.add(new Category("categoria3","codigo3"));
+        listCat2.add(new Category("categoria4","codigo4"));
+        TestType t1 = new TestType("99999","desc1", "colect1", listCat1);
+        TestType t2 = new TestType("00000","desc2", "colect2", listCat2);
+        Company.testList.add(t1);
+        Company.testList.add(t2);
+
     }
 
     // Extracted from https://www.javaworld.com/article/2073352/core-java/core-java-simply-singleton.html?page=2

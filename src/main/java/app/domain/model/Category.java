@@ -8,11 +8,6 @@ public class Category implements Comparable {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Name: %s", this.getName());
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -34,5 +29,13 @@ public class Category implements Comparable {
     public int compareTo( Object o) {
         Category c = (Category) o ;
         return code.compareTo(c.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "name='" + name + '\'' +
+                ", code='" + code + '\'' +
+                '}';
     }
 }

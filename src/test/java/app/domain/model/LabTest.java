@@ -8,9 +8,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LabTest {
 
-    Lab lab = new Lab("12AB5", "ClinicLab", "OxfordStreet 10",
-            "12345678901", "1234567890");
+  // private Lab lab;
 
+    //public LabTest(){
+         Lab lab = new Lab("12AB5", "ClinicLab", "OxfordStreet 10",
+                "12345678901", "1234567890");
+    //}
 
     @Test
     public void testConstructor() {
@@ -108,7 +111,7 @@ public class LabTest {
 
 
     @Test
-    public void setTINnr() {
+    public void setTIN() {
         lab.setTin("1234567890");
         Assert.assertEquals("1234567890", lab.getTin());
 
@@ -144,7 +147,7 @@ public class LabTest {
     }
 
     @Test
-    public void getTINnr() {
+    public void getTIN() {
         Assert.assertEquals("1234567890", lab.getTin());
 
     }

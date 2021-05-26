@@ -7,6 +7,7 @@ public class Test {
 
     private String testID;
     private String nhscode;
+
     private List<Sample> samples;
 
     public Test(String testID, String nhscode) {
@@ -22,6 +23,8 @@ public class Test {
     public String getNhscode() {
         return nhscode;
     }
+
+
 
     public List<Sample> getSamples() {
         return samples;

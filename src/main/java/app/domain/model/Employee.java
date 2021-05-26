@@ -60,7 +60,7 @@ public class Employee {
         return temp;
     }
 
-    public String generatePasswordEmployee() {
+    public static String generatePasswordEmployee() {
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
         int targetStringLength = 10;

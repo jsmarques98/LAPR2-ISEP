@@ -56,6 +56,10 @@ public class Client {
                 ", Password='" + Password + '\'' +
                 '}';
     }
+
+    public String getCCNumber() {
+        return CCNumber;
+    }
 }
 
 

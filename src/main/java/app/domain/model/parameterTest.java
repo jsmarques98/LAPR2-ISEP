@@ -7,12 +7,8 @@ public class parameterTest {
     private String designation;
 
     public parameterTest(String code, String shortName, String designation){
-
         this.code = code;
         this.shortName = shortName;
         this.designation = designation;
     }
-
-
-
 }

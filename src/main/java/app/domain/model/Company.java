@@ -24,7 +24,8 @@ public class Company {
 
     private List<Test> tests;
 
-    private Set<Client> clients;
+    public static List<Client> clientsList = new ArrayList<>();
+
     private Set<Receptionist> receptionists;
 
 
@@ -86,14 +87,14 @@ public class Company {
 
     public boolean save(Client client) {
         //return false if already exists
-        if(clients.contains(client)){
+        if(clientsList.contains(client)){
             return false;
 
         }
         else{
 
-            clients.add(client);
-            System.out.println(clients);
+            clientsList.add(client);
+            System.out.println(clientsList);
             return true;
         }
 
@@ -263,10 +264,10 @@ public class Company {
 
     //us4
 
-    public static List<Test> TestList = new ArrayList<>(1);
+    public static List<Test> TestList = new ArrayList<>();
 
-    public static Test createtest(String testID, String nhscode,TestType testType, Category category,parameterTest parameterTest )  {
-        return new Test(testID, nhscode,testType, category,parameterTest );
+    public static Test createtest(String ccNum, String nhscode, String description, String idTestType ,String codeCategory, String designation)  {
+        return new Test(ccNum, nhscode, description, idTestType ,codeCategory, designation);
     }
 
     public boolean validateTest(Test t) {

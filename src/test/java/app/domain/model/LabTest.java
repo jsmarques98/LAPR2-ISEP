@@ -48,7 +48,7 @@ public class LabTest {
     }
 
     @Test
-    public void setLabID() {
+    public void testSetLabID() {
         lab.setLabId("12AB5");
 
         Assert.assertEquals("12AB5", lab.getLabId());
@@ -58,8 +58,44 @@ public class LabTest {
         });
     }
 
+
+
     @Test
-    public void setName() {
+    public void testToString() {
+        String result = String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumber: %s%nTIN: %s", lab.getLabId(),
+                lab.getName(), lab.getAddress(), lab.getPhoneNr(), lab.getTin());
+
+        Assert.assertEquals(result, lab.toString());
+    }
+
+    @Test
+    public void testGetLabId() {
+        Assert.assertEquals("12AB5", lab.getLabId());
+    }
+
+    @Test
+    public void testGetName() {
+        Assert.assertEquals("ClinicLab", lab.getName());
+    }
+
+    @Test
+    public void testGetAddress() {
+        Assert.assertEquals("OxfordStreet 10", lab.getAddress());
+    }
+
+    @Test
+    public void testGetPhoneNr() {
+        Assert.assertEquals("12345678901", lab.getPhoneNr());
+    }
+
+    @Test
+    public void testGetTin() {
+        Assert.assertEquals("1234567890", lab.getTin());
+    }
+
+
+    @Test
+    public void testSetName() {
         lab.setName("Lab Name");
         Assert.assertEquals("Lab Name", lab.getName());
 
@@ -81,7 +117,7 @@ public class LabTest {
     }
 
     @Test
-    public void setAddress() {
+    public void testSetAddress() {
         lab.setAddress("Clinical Lab");
 
         Assert.assertEquals("Clinical Lab", lab.getAddress());
@@ -96,7 +132,7 @@ public class LabTest {
     }
 
     @Test
-    public void setPhoneNumber() {
+    public void testSetPhoneNr() {
         lab.setPhoneNr("12345678901");
         Assert.assertEquals("12345678901", lab.getPhoneNr());
 
@@ -109,9 +145,8 @@ public class LabTest {
         });
     }
 
-
     @Test
-    public void setTIN() {
+    public void testSetTin() {
         lab.setTin("1234567890");
         Assert.assertEquals("1234567890", lab.getTin());
 
@@ -122,41 +157,7 @@ public class LabTest {
         assertThrows(IllegalArgumentException.class, () -> {
             lab.setTin("12345678901");
         });
-
     }
 
-    @Test
-    public void getLabId() {
-        Assert.assertEquals("12AB5", lab.getLabId());
-    }
 
-    @Test
-    public void getName() {
-        Assert.assertEquals("ClinicLab", lab.getName());
-
-    }
-
-    @Test
-    public void getAddress() {
-        Assert.assertEquals("OxfordStreet 10", lab.getAddress());
-    }
-
-    @Test
-    public void getPhoneNr() {
-        Assert.assertEquals("12345678901", lab.getPhoneNr());
-    }
-
-    @Test
-    public void getTIN() {
-        Assert.assertEquals("1234567890", lab.getTin());
-
-    }
-
-    @Test
-    public void testToString() {
-        String result = String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumber: %s%nTIN: %s", lab.getLabId(),
-                lab.getName(), lab.getAddress(), lab.getPhoneNr(), lab.getTin());
-
-        Assert.assertEquals(result, lab.toString());
-    }
 }

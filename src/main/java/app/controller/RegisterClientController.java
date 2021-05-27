@@ -14,7 +14,9 @@ public class RegisterClientController {
     Client client;
     String designacao = "designacao";
     Receptionist receptionist;
-    Company company = new Company(designacao);
+
+
+    private Company company;
 
     //factory for class ClientDTO
     public ClientDTO createClientDTO(Object args[]){

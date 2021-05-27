@@ -119,7 +119,7 @@ public class Utils {
             System.out.println(index + ". " + o.toString());
         }
         System.out.println("");
-        System.out.println("0 - Cancel");
+        System.out.println("0. Cancel");
     }
 
     static public Object selectsObject(List list)

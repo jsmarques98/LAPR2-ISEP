@@ -1,5 +1,6 @@
 package app.ui.console;
 
+import app.domain.model.Company;
 import app.ui.console.utils.Utils;
 
 import java.util.ArrayList;
@@ -18,7 +19,6 @@ public class ReceptionistUI implements Runnable{
         do
         {
             option = Utils.showAndSelectIndex(options, "\n\nReceptionis Menu:");
-
             if ( (option >= 0) && (option < options.size()))
             {
                 options.get(option).run();

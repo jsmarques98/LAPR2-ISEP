@@ -4,8 +4,6 @@ import app.controller.RegisterTestToClientController;
 import app.controller.TestTypeRecord;
 import app.domain.model.*;
 import app.ui.console.utils.Utils;
-
-import javax.xml.bind.SchemaOutputResolver;
 import java.util.ArrayList;
 
 public class RegisterTestToClientUI implements Runnable{
@@ -77,24 +75,21 @@ public class RegisterTestToClientUI implements Runnable{
     }
     public String selectIdTestType(){
         System.out.println("Test Type List: ");
-        for(TestType testType : Company.testList) {
-            System.out.println(testType.toString());
-        }
+        System.out.println(Company.record);
         String idTest = Utils.readLineFromConsole("Enter id Test: ");
-        for(TestType testType : Company.testList) {
-            if (testType.getId().equals(idTest)){
-                return idTest;
-            }
+        for(TestType testType : Company.getTestTypes().getRecord()) {
+//            if (testType.getId().equals(idTest)){
+//                return idTest;
+//            }
+            System.out.println("HHHHHHHHHHHHHHHHHH");
         }
         System.out.println("Id not found.");
         return selectIdTestType();
     }
     private ArrayList selectCodeCategory(String idTestType) {
         System.out.println("CodeCategory List: ");
-        for(TestType testType : Company.testList) {
-            if (testType.getId().equals(idTestType)){
-
-            }
+        for(TestType testType : Company.record) {
+            System.out.println(testType.toString());
         }
         String codeCategory = Utils.readLineFromConsole("Enter Code Category: ");
 

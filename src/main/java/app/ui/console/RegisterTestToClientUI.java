@@ -78,29 +78,48 @@ public class RegisterTestToClientUI implements Runnable{
         System.out.println(Company.record);
         String idTest = Utils.readLineFromConsole("Enter id Test: ");
         for(TestType testType : Company.getTestTypes().getRecord()) {
-//            if (testType.getId().equals(idTest)){
-//                return idTest;
-//            }
-            System.out.println("HHHHHHHHHHHHHHHHHH");
+            if (testType.getId().equals(idTest)){
+                return idTest;
+            }
+
         }
         System.out.println("Id not found.");
         return selectIdTestType();
     }
     private ArrayList selectCodeCategory(String idTestType) {
-        System.out.println("CodeCategory List: ");
+        ArrayList codeCategoryList = new ArrayList();
+        String codeCategory = "";
+        boolean flag1 = false;
+        System.out.println("\nCodeCategory List: ");
         for(TestType testType : Company.record) {
-            System.out.println(testType.toString());
+            if(testType.getId().equals(idTestType)){
+                System.out.println(testType.getCategories());
+            }
         }
-        String codeCategory = Utils.readLineFromConsole("Enter Code Category: ");
-
-        return null;
+        while(!codeCategory.equals("0")){
+            codeCategory = Utils.readLineFromConsole("Enter Code Category or 0 to exit: ");
+            for(Category category : Company.categories) {
+                if(category.getCode().equals(codeCategory)){
+                    if(!codeCategoryList.contains(codeCategory)){
+                        codeCategoryList.add(category.getCode());
+                        flag1 = true;
+                    }
+                }
+            }
+            if(!codeCategory.equals("0") && flag1 == false){
+                System.out.println("Code Category not found or already insert.");
+            }
+            flag1 = false;
+        }
+        return codeCategoryList;
     }
+
+
     private ArrayList selectParameterTestCode() {
         ArrayList parameterTestCodeList = new ArrayList();
         String parameterTestCode = "";
         boolean flag1 = false;
-        boolean flag2 = false;
-        System.out.println("Parameter Test List: ");
+        System.out.println("\nParameter Test List: ");
         for(ParameterTest parameterTest : Company.parameterList) {
             System.out.println(parameterTest.toString());
         }

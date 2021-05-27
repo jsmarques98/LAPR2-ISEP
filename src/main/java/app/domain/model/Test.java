@@ -1,5 +1,7 @@
 package app.domain.model;
 
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +32,17 @@ public class Test {
         this.listParameterTestCode = listParameterTestCode;
         this.samples = new ArrayList<>();
         this.map = new HashMap<>();
+
+        /*for(Map.Entry <Sample, Map <String, ValueRecords> > e : map.entrySet()){
+            for(Map.Entry<String, ValueRecords> e1 : map.get(e.getKey()).entrySet()){
+                Sample sample = e.getKey();
+                String sigla = e1.getKey();
+                ValueRecords records = e1.getValue();
+                records.getMinValue();
+                records.getMaxValue();
+                records.getRegisteredValue();
+            }
+        }*/
     }
 
     public String getTestID() {

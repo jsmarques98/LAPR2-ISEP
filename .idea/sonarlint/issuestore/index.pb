@@ -57,8 +57,6 @@ Z
 *src/main/java/app/domain/model/Sample.java,b/a/ba164b4c03f593dbc5a575d2806dae1ffe3dfe0c
 _
 /src/main/java/app/Adapter/BarcodeInterface.java,d/3/d3c257ccb92f1c5e5af4df2de0b7b0ce50f481ac
-]
--src/main/java/app/Adapter/BarcodeAdapter.java,7/f/7fcb80ef034a52ab1666595f738fa65a5efcc4c1
 X
 (src/main/java/app/domain/model/Test.java,0/3/0346ca7efc8246aba1bce2abd18994f1118a0b11
 N

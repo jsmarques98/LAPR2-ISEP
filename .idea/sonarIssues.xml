@@ -118,6 +118,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/app/ui/console/RecordTestResultsUI.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/app/ui/console/RegisterLabUI.java">
           <value>
             <set />

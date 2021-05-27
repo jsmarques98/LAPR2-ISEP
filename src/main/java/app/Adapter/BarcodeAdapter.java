@@ -1,3 +1,4 @@
+/*
 package app.Adapter;
 
 import net.sourceforge.barbecue.Barcode;
@@ -15,8 +16,8 @@ public class BarcodeAdapter implements BarcodeInterface {
         try {
             barcode = BarcodeFactory.createUPCA(filename);
             File file = new File("barcodes/" + filename + ".png");
-            barcode.setBarHeight(100);
-            BarcodeImageHandler.savePNG(barcode,file);
+            //barcode.setBarHeight(100);
+           // BarcodeImageHandler.savePNG(barcode,file);
 
         } catch (OutputException | BarcodeException e) {
             Logger LOGGER = Logger.getLogger(BarcodeAdapter.class.getName());
@@ -25,3 +26,4 @@ public class BarcodeAdapter implements BarcodeInterface {
         return barcode;
     }
 }
+*/

@@ -1,12 +1,13 @@
 package app.domain.model;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class LabTest {
+ class LabTest {
 
   // private Lab lab;
 
@@ -16,7 +17,7 @@ public class LabTest {
     //}
 
     @Test
-    public void testConstructor() {
+     void testConstructor() {
         assertThrows(IllegalArgumentException.class, () ->
         {
             new Lab("12AB56", "ClinicLab", "OxfordStreet 10",
@@ -48,10 +49,10 @@ public class LabTest {
     }
 
     @Test
-    public void testSetLabID() {
+    void testSetLabID() {
         lab.setLabId("12AB5");
 
-        Assert.assertEquals("12AB5", lab.getLabId());
+        Assertions.assertEquals("12AB5", lab.getLabId());
 
         assertThrows(IllegalArgumentException.class, () -> {
             lab.setLabId(null);
@@ -61,43 +62,43 @@ public class LabTest {
 
 
     @Test
-    public void testToString() {
+     void testToString() {
         String result = String.format("LabID: %s%nName: %s%nAddress: %s%nPhoneNumber: %s%nTIN: %s", lab.getLabId(),
                 lab.getName(), lab.getAddress(), lab.getPhoneNr(), lab.getTin());
 
-        Assert.assertEquals(result, lab.toString());
+        Assertions.assertEquals(result, lab.toString());
     }
 
     @Test
-    public void testGetLabId() {
-        Assert.assertEquals("12AB5", lab.getLabId());
+     void testGetLabId() {
+        Assertions.assertEquals("12AB5", lab.getLabId());
     }
 
     @Test
-    public void testGetName() {
-        Assert.assertEquals("ClinicLab", lab.getName());
+     void testGetName() {
+        Assertions.assertEquals("ClinicLab", lab.getName());
     }
 
     @Test
-    public void testGetAddress() {
-        Assert.assertEquals("OxfordStreet 10", lab.getAddress());
+     void testGetAddress() {
+        Assertions.assertEquals("OxfordStreet 10", lab.getAddress());
     }
 
     @Test
-    public void testGetPhoneNr() {
-        Assert.assertEquals("12345678901", lab.getPhoneNr());
+    void testGetPhoneNr() {
+        Assertions.assertEquals("12345678901", lab.getPhoneNr());
     }
 
     @Test
-    public void testGetTin() {
-        Assert.assertEquals("1234567890", lab.getTin());
+     void testGetTin() {
+        Assertions.assertEquals("1234567890", lab.getTin());
     }
 
 
     @Test
-    public void testSetName() {
+    void testSetName() {
         lab.setName("Lab Name");
-        Assert.assertEquals("Lab Name", lab.getName());
+        Assertions.assertEquals("Lab Name", lab.getName());
 
         assertDoesNotThrow(() -> {
             lab.setName("ClinicalClinical");
@@ -117,10 +118,10 @@ public class LabTest {
     }
 
     @Test
-    public void testSetAddress() {
+     void testSetAddress() {
         lab.setAddress("Clinical Lab");
 
-        Assert.assertEquals("Clinical Lab", lab.getAddress());
+        Assertions.assertEquals("Clinical Lab", lab.getAddress());
 
         assertDoesNotThrow(() -> {
             lab.setAddress("ClinicalClinicalClinicalClinic");
@@ -132,9 +133,9 @@ public class LabTest {
     }
 
     @Test
-    public void testSetPhoneNr() {
+     void testSetPhoneNr() {
         lab.setPhoneNr("12345678901");
-        Assert.assertEquals("12345678901", lab.getPhoneNr());
+        Assertions.assertEquals("12345678901", lab.getPhoneNr());
 
         assertDoesNotThrow(() -> {
             lab.setPhoneNr("12345678901");
@@ -146,9 +147,9 @@ public class LabTest {
     }
 
     @Test
-    public void testSetTin() {
+     void testSetTin() {
         lab.setTin("1234567890");
-        Assert.assertEquals("1234567890", lab.getTin());
+        Assertions.assertEquals("1234567890", lab.getTin());
 
         assertDoesNotThrow(() -> {
             lab.setTin("1234567890");

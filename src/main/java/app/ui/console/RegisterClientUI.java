@@ -5,6 +5,7 @@ package app.ui.console;
 import app.controller.RegisterClientController;
 import app.domain.model.Category;
 import app.domain.model.Client;
+import app.domain.model.Company;
 import app.dto.ClientDTO;
 import app.ui.console.utils.Utils;
 
@@ -24,7 +25,6 @@ public class RegisterClientUI implements Runnable{
     @Override
     public void run() {
         //run the controller here
-
         System.out.println("\n");
 
         String name = Askname();

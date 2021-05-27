@@ -25,10 +25,9 @@ public class Company {
 
     public static List<Client> clientsList = new ArrayList<>();
 
-    public static List<TestType> testList = new ArrayList<>();
-
     public static List<ParameterTest> parameterList = new ArrayList<>();
 
+    public static List<TestType> record;
 
     //us9
 
@@ -40,13 +39,13 @@ public class Company {
     /**
      * The test type record.
      */
-    private TestTypeRecord testTypes;
+    public static TestTypeRecord testTypes;
 
     /**
      * Get TestTypes
      * @return
      */
-    public TestTypeRecord getTestTypes() {
+    public static TestTypeRecord getTestTypes() {
         return testTypes;
     }
 

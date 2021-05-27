@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.domain.model.Company;
 import app.domain.model.TestType;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,13 +10,13 @@ public class TestTypeRecord {
     /**
      * The test types list.
      */
-    public static List<TestType> record;
+
 
     /**
      * Creates a record of the test types.
      */
     public TestTypeRecord() {
-        record = new ArrayList<>();
+        Company.record = new ArrayList<>();
     }
 
     /**
@@ -24,10 +25,10 @@ public class TestTypeRecord {
      * @return
      */
     public boolean appendTestType(TestType type) {
-        return record.add(type);
+        return Company.record.add(type);
     }
 
     public List<TestType> getRecord() {
-        return record;
+        return Company.record;
     }
 }

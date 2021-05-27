@@ -104,16 +104,16 @@ public class App {
         Company.clientsList.add(c2);
         Company.clientsList.add(c3);
 
-        Set<Category> listCat1 = new TreeSet<Category>();
-        Set<Category> listCat2 = new TreeSet<Category>();
-        listCat1.add(new Category("categoria1","codigo1"));
-        listCat1.add(new Category("categoria2","codigo2"));
-        listCat2.add(new Category("categoria3","codigo3"));
-        listCat2.add(new Category("categoria4","codigo4"));
-        TestType t1 = new TestType("99999","desc1", "colect1", listCat1);
-        TestType t2 = new TestType("00000","desc2", "colect2", listCat2);
-        Company.testList.add(t1);
-        Company.testList.add(t2);
+//        Set<Category> listCat1 = new TreeSet<Category>();
+//        Set<Category> listCat2 = new TreeSet<Category>();
+//        listCat1.add(new Category("categoria1","codigo1"));
+//        listCat1.add(new Category("categoria2","codigo2"));
+//        listCat2.add(new Category("categoria3","codigo3"));
+//        listCat2.add(new Category("categoria4","codigo4"));
+//        TestType t1 = new TestType("99999","desc1", "colect1", listCat1);
+//        TestType t2 = new TestType("00000","desc2", "colect2", listCat2);
+//        Company.testList.add(t1);
+//        Company.testList.add(t2);
 
     }
 

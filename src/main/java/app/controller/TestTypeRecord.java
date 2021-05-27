@@ -26,4 +26,8 @@ public class TestTypeRecord {
     public boolean appendTestType(TestType type) {
         return record.add(type);
     }
+
+    public List<TestType> getRecord() {
+        return record;
+    }
 }

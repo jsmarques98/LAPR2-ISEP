@@ -27,7 +27,8 @@ public class SpecifyTypeTestUI implements Runnable {
         System.out.println("Insira o modo de coleta:");
         String coll = sc.nextLine();
         System.out.println("Lista de categorias:");
-        List<Category> lst = company.getCategories();
+        //List<Category> lst = company.getCategories();
+        List<Category> lst = new ArrayList<>();
         lst.add(new Category("categoria1","codigo1"));
         lst.add(new Category("categoria2","codigo2"));
         lst.add(new Category("categoria3","codigo3"));
@@ -63,5 +64,6 @@ public class SpecifyTypeTestUI implements Runnable {
         }else{
             System.out.println("O tipo de teste não foi criado.");
         }
+        System.out.println(company.getTestTypes().getRecord());
     }
 }

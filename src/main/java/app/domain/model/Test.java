@@ -33,7 +33,7 @@ public class Test {
         this.samples = new ArrayList<>();
         this.map = new HashMap<>();
 
-        /*for(Map.Entry <Sample, Map <String, ValueRecords> > e : map.entrySet()){
+       /* for(Map.Entry <Sample, Map <String, ValueRecords> > e : map.entrySet()){
             for(Map.Entry<String, ValueRecords> e1 : map.get(e.getKey()).entrySet()){
                 Sample sample = e.getKey();
                 String sigla = e1.getKey();

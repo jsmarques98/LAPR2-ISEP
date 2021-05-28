@@ -1,0 +1,101 @@
+
+
+java:S1319‹"{The type of the "listCodeCategory" object should be an interface such as "List" rather than the implementation "ArrayList".(á×­ıÿÿÿÿ8èõÑ÷š/
+¤
+java:S1319‹"€The type of the "listParameterTestCode" object should be an interface such as "List" rather than the implementation "ArrayList".(á×­ıÿÿÿÿ8êõÑ÷š/
+_
+java:S2095®"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(ü‰‚
+M
+java:S1444"+Make this "public static tests" field final(ÃßÀ’üÿÿÿÿ8ìõÑ÷š/
+S
+java:S1444"1Make this "public static clientsList" field final(ïçªúÿÿÿÿ8ìõÑ÷š/
+P
+java:S1444"3Make this "public static parameterList" field final(è…¿Ì8íõÑ÷š/
+N
+java:S1444",Make this "public static record" field final(ÂÄ¬ûÿÿÿÿ8Õèß”›/
+M
+java:S1444$"0Make this "public static categories" field final(×·²8íõÑ÷š/
+Q
+java:S1444)"/Make this "public static testTypes" field final(´¿ı„úÿÿÿÿ8Øèß”›/
+H
+java:S1444ƒ"2Make this "public static employeeList" field final(±…îk
+I
+java:S1444¿"-Make this "public static labList" field final(£øßÉúÿÿÿÿ
+L
+java:S1444ñ"0Make this "public static reportList" field final(¾™ãşÿÿÿÿ
+R
+java:S3740‹"/Provide the parametrized type for this generic.(á×­ıÿÿÿÿ8îõÑ÷š/
+R
+java:S3740‹"/Provide the parametrized type for this generic.(á×­ıÿÿÿÿ8ïõÑ÷š/
+`
+java:S1155K">Use isEmpty() to check whether the collection is empty or not.(€¾öŸúÿÿÿÿ8’ÏöÁš/
+s
+java:S1104"QMake tests a static final constant or non-public and provide accessors if needed.(ÃßÀ’üÿÿÿÿ8òõÑ÷š/
+y
+java:S1104"WMake clientsList a static final constant or non-public and provide accessors if needed.(ïçªúÿÿÿÿ8òõÑ÷š/
+v
+java:S1104"YMake parameterList a static final constant or non-public and provide accessors if needed.(è…¿Ì8óõÑ÷š/
+t
+java:S1104"RMake record a static final constant or non-public and provide accessors if needed.(ÂÄ¬ûÿÿÿÿ8ãèß”›/
+s
+java:S1104$"VMake categories a static final constant or non-public and provide accessors if needed.(×·²8óõÑ÷š/
+w
+java:S1104)"UMake testTypes a static final constant or non-public and provide accessors if needed.(´¿ı„úÿÿÿÿ8äèß”›/
+n
+java:S1104ƒ"XMake employeeList a static final constant or non-public and provide accessors if needed.(±…îk
+o
+java:S1104¿"SMake labList a static final constant or non-public and provide accessors if needed.(£øßÉúÿÿÿÿ
+r
+java:S1104ñ"VMake reportList a static final constant or non-public and provide accessors if needed.(¾™ãşÿÿÿÿ
+?
+java:S2386"Make this member "protected".(ïçªúÿÿÿÿ8ûõÑ÷š/
+:
+java:S2386"Make this member "protected".(è…¿Ì8ûõÑ÷š/
+3
+java:S2386ƒ"Make this member "protected".(±…îk
+9
+java:S2386¿"Make this member "protected".(£øßÉúÿÿÿÿ
+@
+java:S2386ñ"Make this member "protected".(¾™ãşÿÿÿÿ8¤«“©›/
+\
+java:S6213":Rename this variable to not match a restricted identifier.(ÂÄ¬ûÿÿÿÿ8òèß”›/
+Z	java:S106`"9Replace this use of System.out or System.err by a logger.(¹êÏëüÿÿÿÿ8‰öÑ÷š/
+E
+java:S1172f"/Remove this unused method parameter "username".(ÊÁ¼Å
+B
+java:S3010o"&Remove this assignment of "testTypes".(ÿÿƒ88úèß”›/
+I
+java:S3010p"'Remove this assignment of "categories".(·¨’øÿÿÿÿ8‹öÑ÷š/
+?
+java:S3010u""Remove this assignment of "tests".(êØê÷8‹öÑ÷š/
+Q
+java:S2209o"5Change this instance-reference to a static reference.(ÿÿƒ88üèß”›/
+G
+java:S2386p"%Make member "categories" "protected".(·¨’øÿÿÿÿ8ŒöÑ÷š/
+W
+java:S2209p"5Change this instance-reference to a static reference.(·¨’øÿÿÿÿ8ŒöÑ÷š/
+=
+java:S2386u" Make member "tests" "protected".(êØê÷8öÑ÷š/
+R
+java:S2209u"5Change this instance-reference to a static reference.(êØê÷8öÑ÷š/
+Q
+java:S2209"5Change this instance-reference to a static reference.(Ş”†›ûÿÿÿÿ
+L
+java:S2209™"5Change this instance-reference to a static reference.(óö´±
+O	java:S106¡"9Replace this use of System.out or System.err by a logger.(ò«ÿ
+T	java:S106¤"9Replace this use of System.out or System.err by a logger.(ı¤êöıÿÿÿÿ
+O	java:S106§"9Replace this use of System.out or System.err by a logger.(Àûå 
+V	java:S106±"9Replace this use of System.out or System.err by a logger.(’ôÆà8ÊÑı¾š/
+O	java:S106´"9Replace this use of System.out or System.err by a logger.(Àûå 
+Q
+java:S2209Û"5Change this instance-reference to a static reference.(‡³ŠŸøÿÿÿÿ
+Q
+java:S2209é"5Change this instance-reference to a static reference.(™·Âùÿÿÿÿ
+L
+java:S2209û"5Change this instance-reference to a static reference.(éõİ»
+L
+java:S2209ƒ"5Change this instance-reference to a static reference.(àÓÀ÷
+X
+java:S2209’"5Change this instance-reference to a static reference.(şÃ¡Âùÿÿÿÿ8§ÏöÁš/
+S
+java:S2209™"5Change this instance-reference to a static reference.(§€±8¨ÏöÁš/

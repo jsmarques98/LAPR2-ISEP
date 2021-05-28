@@ -1,5 +1,13 @@
 
-@
-java:S1068"*Remove this unused "testID" private field.(°ΟªΆ
-F
-java:S1068	"+Remove this unused "nhscode" private field.(ΤΒ½Νώÿÿÿÿ
+
+java:S1319"{The type of the "listCodeCategory" object should be an interface such as "List" rather than the implementation "ArrayList".(«¶»…ÿÿÿÿÿ8Κ«έψ/
+£
+java:S1319"€The type of the "listParameterTestCode" object should be an interface such as "List" rather than the implementation "ArrayList".(«¶»…ÿÿÿÿÿ8Κ«έψ/
+L
+java:S3740"/Provide the parametrized type for this generic.(¬ΞΣθ8Κ«έψ/
+Q
+java:S3740"/Provide the parametrized type for this generic.(€ά†ψÿÿÿÿ8Κ«έψ/
+Q
+java:S3740"/Provide the parametrized type for this generic.(«¶»…ÿÿÿÿÿ8Λ«έψ/
+Q
+java:S3740"/Provide the parametrized type for this generic.(«¶»…ÿÿÿÿÿ8Λ«έψ/

@@ -1,0 +1,25 @@
+
+`
+java:S1128"ERemove this unused import 'app.controller.SpecifyTypeTestController'.(°™ËÓýÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÑÖ‚â
+V	java:S125	"<This block of commented-out lines of code should be removed.(³»Óöùÿÿÿÿ
+R
+java:S18541"7Remove this useless assignment to local variable "map".(²Ë„êüÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(þÏ’²
+g
+java:S3457""Q%n should be used in place of \n to produce the platform-specific line separator.(±áÒê
+N	java:S106""9Replace this use of System.out or System.err by a logger.(±áÒê
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(ÖÆ×¤
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(—¹µ§
+t
+java:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(²Ë„êüÿÿÿÿ
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(Þ…ðøÿÿÿÿ
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(¤¯¡¸
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(”¦âù
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(¬Þîøüÿÿÿÿ
+N	java:S106A"9Replace this use of System.out or System.err by a logger.(ŒýÒ¿
+N	java:S106D"9Replace this use of System.out or System.err by a logger.(œÉßÙ
+N	java:S106G"9Replace this use of System.out or System.err by a logger.(œÍý–
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(¾¦¿ó
+C
+java:S14811"(Remove this unused "map" local variable.(²Ë„êüÿÿÿÿ

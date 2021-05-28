@@ -9,13 +9,13 @@ import java.util.Map;
 
 public class Test {
 
-    private String testID;
-    private String tinNumber;
-    private String nhscode;
-    private String description;
-    private String idTestType;
-    private ArrayList listCodeCategory;
-    private ArrayList listParameterTestCode;
+    private final String testID;
+    private final String tinNumber;
+    private final String nhscode;
+    private final String description;
+    private final String idTestType;
+    private final ArrayList listCodeCategory;
+    private final ArrayList listParameterTestCode;
 
     private List<Sample> samples;
     private Map<Sample , Map <String, ValueRecords> > map ;

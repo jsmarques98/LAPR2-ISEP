@@ -10,7 +10,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author Paulo Maio <pam@isep.ipp.pt>
@@ -239,13 +238,13 @@ public class Company {
     // US14
 
 
-    public static List<Report> reportList = new ArrayList<>(1);
+    public static List<Diagnosis> reportList = new ArrayList<>(1);
 
-    public Report createReport(String report){
-        return new Report(report);
+    public Diagnosis createReport(String report, Test test){
+        return new Diagnosis(report, test);
     }
 
-    public boolean validateReport(Report writeRep){
+    public boolean validateReport(Diagnosis writeRep){
         if (writeRep == null){
             return false;
         }
@@ -253,7 +252,7 @@ public class Company {
     }
 
 
-    public boolean addReport(Report writeRep){
+    public boolean addReport(Diagnosis writeRep){
         if (!validateReport(writeRep)) {
             return false;
         }

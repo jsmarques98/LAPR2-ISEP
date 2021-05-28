@@ -1,9 +1,12 @@
 package app.controller;
 
 import app.domain.model.Company;
-import app.domain.model.Report;
+import app.domain.model.Diagnosis;
+import app.domain.model.Test;
 
-public class CreateReportController {
+import java.io.Serializable;
+
+public class CreateReportController implements Serializable {
 
     /**
      * The company of CreateReportController
@@ -13,7 +16,7 @@ public class CreateReportController {
     /**
      * The report of the CreateReportController
      */
-    private Report writeRep;
+    private Diagnosis writeRep;
 
     public CreateReportController() {
         this(App.getInstance().getCompany());
@@ -34,8 +37,8 @@ public class CreateReportController {
      * @param report the report of the test result
      * @return if the report is valid or not and if it was created or not
      */
-     public boolean createReport(String report) {
-        this.writeRep = this.company.createReport(report);
+     public boolean createReport(String report, Test test) {
+        this.writeRep = this.company.createReport(report, test);
         return this.company.validateReport(writeRep);
      }
 

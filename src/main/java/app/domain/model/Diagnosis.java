@@ -1,6 +1,8 @@
 package app.domain.model;
 
-public class Report {
+import java.io.Serializable;
+
+public class Diagnosis implements Serializable {
 
     /**
      * The report of the test result
@@ -8,12 +10,20 @@ public class Report {
     private String report;
 
     /**
-     * Builds an instance of the report that is being made
-     * @param report the report of the test result
+     * The test we are going to grab the results to do the report
      */
-    public Report(String report) {
+    private final transient Test test;
+
+    /**
+     * Receives the information necessary to make the diagnosis
+     * @param report the report of the test result
+     * @param test the test with the results we are going to do the report for
+     */
+    public Diagnosis(String report, Test test) {
         checkReport(report);
         this.report = report;
+        this.test = test;
+
     }
 
     /**
@@ -56,6 +66,6 @@ public class Report {
 
     @Override
     public String toString() {
-        return String.format("Report: %s%n", this.report);
+        return String.format("Report: %s%nTest: %s%n", this.report, this.test);
     }
 }

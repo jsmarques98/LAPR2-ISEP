@@ -1,19 +1,27 @@
-package app.ui.console;
+/*package app.ui.console;
 
+import app.controller.App;
 import app.controller.CreateReportController;
 import app.domain.model.Company;
 import app.ui.console.utils.Utils;
 
-public class CreateReportUI implements Runnable {
+public class CreateReportUI //implements Runnable {
+
+    private Company company;
 
     private CreateReportController controller;
 
-    public CreateReportUI() {
+    public CreateReportUI(){
+        this(App.getInstance().getCompany());
+    }
+
+    public CreateReportUI(Company company) {
+        this.company = company;
         controller = new CreateReportController();
     }
 
     @Override
-    public void run() {
+ *//*   public void run() {
 
         String report = selectReport();
 
@@ -28,10 +36,10 @@ public class CreateReportUI implements Runnable {
 
         }
 
-    }
+    }*//*
 
     public String selectReport() {
         return Utils.readLineFromConsole("Report: ");
     }
 
-}
+}*/

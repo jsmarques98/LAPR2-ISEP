@@ -2,17 +2,6 @@
 h
 java:S2095<"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(³ˆ•ùÿÿÿÿ
 ]
-java:S1192U"GDefine a constant instead of duplicating this literal "123456" 7 times.(µÀ¾ô
-g
-java:S1192d"LDefine a constant instead of duplicating this literal "55555555555" 3 times.(è½¦§ùÿÿÿÿ
-f
-java:S1192d"KDefine a constant instead of duplicating this literal "03/05/2021" 3 times.(è½¦§ùÿÿÿÿ
-k
-java:S1192d"PDefine a constant instead of duplicating this literal "manel@gmail.com" 3 times.(è½¦§ùÿÿÿÿ
-h
-java:S1192d"MDefine a constant instead of duplicating this literal "555555555555" 3 times.(è½¦§ùÿÿÿÿ
+java:S1192U"GDefine a constant instead of duplicating this literal "123456" 4 times.(µÀ¾ô
 >	java:S108?")Either remove or fill this block of code.(Ãôş•
-t
-java:S2293k"YReplace the type specification in this constructor call with the diamond operator ("<>").(¼¦ø›üÿÿÿÿ
-t
-java:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").(‚ø˜øÿÿÿÿ
+]	java:S125d"<This block of commented-out lines of code should be removed.(å±ÄÍşÿÿÿÿ8ççß”›/

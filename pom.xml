@@ -187,12 +187,10 @@
                     <targetClasses>
                         <param>app.domain.model.*</param>
                         <param>app.utils.*</param>
-                        <param>app.controller.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>app.domain.model.*</param>
                         <param>app.utils.*</param>
-                        <param>app.controller.*</param>
                     </targetTests>
                     <outputFormats>
                         <outputFormat>XML</outputFormat>

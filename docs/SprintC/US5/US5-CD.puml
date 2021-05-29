@@ -10,6 +10,8 @@ class RecordSamplesController {
   +generateSamples(int testIndex, int numSamples)
 }
 
+
+
 class Company {
   +List<Test> getTests()
 }
@@ -17,8 +19,21 @@ class Company {
 RecordSamplesController ..> Company
 
 class Test {
+-LocalDate sampleDate
+-LocalTime sampleTime
 
 }
+
+
+class TestDTO {
+-LocalDate sampleDate
+-LocalTime sampleTime
+
+}
+
+RecordSamplesController ..> TestDTO
+RecordSamplesUI ..> TestDTO
+TestDTO ..> Test
 
 Company "1" --> "*" Test
 
@@ -34,14 +49,21 @@ class Barcode {
 
 Sample "1" --> "1" Barcode
 
-BarcodeInterface
+interface BarcodeInterface
 
-ReflectorUtility
+class ReflectorUtility
 
-BarcodeAdapter
+class BarcodeAdapter
+
+BarcodeAdapter -|> BarcodeInterface
+
+ReflectorUtility ..> BarcodeAdapter : creates using reflection
 
 RecordSamplesUI ..> RecordSamplesController
 
+Barcode --> BarcodeInterface
+
+Barcode ..> ReflectorUtility
 
 @enduml
 

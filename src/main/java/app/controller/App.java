@@ -103,6 +103,30 @@ public class App {
         Company.clientsList.add(c1);
         Company.clientsList.add(c2);
         Company.clientsList.add(c3);
+
+
+        ArrayList listCat;
+        ArrayList listPara;
+        Category category1 = new Category("categoria1","codigo1");
+        Category category2 = new Category("categoria2","codigo2");
+        listCat = new ArrayList<>();
+        listPara = new ArrayList<>();
+        listCat.add(category1);
+        listCat.add(category2);
+        listPara.add(parameterTest1);
+        listPara.add(parameterTest2);
+
+        Test test1 =  new Test("0000000000","0000","sad","sdsad1",  listCat, listPara);
+        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
+        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
+        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
+
+        company.saveTest(test1);
+        company.saveTest(test2);
+        company.saveTest(test3);
+        company.saveTest(test4);
+
+
 //
 //        Category category1 = new Category("categoria1","codigo1");
 //        Category category2 = new Category("categoria2","codigo2");

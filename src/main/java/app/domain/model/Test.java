@@ -57,6 +57,10 @@ public class Test {
         return testID;
     }
 
+    public String getTinNumber() {
+        return tinNumber;
+    }
+
     public String getNhscode() {
         return nhscode;
     }

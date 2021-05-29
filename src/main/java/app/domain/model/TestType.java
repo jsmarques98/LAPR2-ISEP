@@ -24,7 +24,7 @@ public class TestType {
     /**
      * The set of categories of the test type.
      */
-    private final Set<Category> categories;
+    private static Set<Category> categories;
 
     /**
      * Builds an instance of TestType receiving the id, description, collection method and set of categories.
@@ -52,7 +52,7 @@ public class TestType {
         return collection;
     }
 
-    public Set<Category> getCategories() {
+    public static Set<Category> getCategories() {
         return categories;
     }
 

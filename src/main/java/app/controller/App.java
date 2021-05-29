@@ -97,15 +97,15 @@ public class App {
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
 
-//        Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-//        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-//        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-//        Company.clientsList.add(c1);
-//        Company.clientsList.add(c2);
-//        Company.clientsList.add(c3);
+        Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Company.clientsList.add(c1);
+        Company.clientsList.add(c2);
+        Company.clientsList.add(c3);
 //
-        Category category1 = new Category("categoria1","codigo1");
-        Category category2 = new Category("categoria2","codigo2");
+//        Category category1 = new Category("categoria1","codigo1");
+//        Category category2 = new Category("categoria2","codigo2");
 //        Category category3 = new Category("categoria3","codigo3");
 //        Category category4 = new Category("categoria4","codigo4");
 //        Category category5 = new Category("categoria5","codigo5");

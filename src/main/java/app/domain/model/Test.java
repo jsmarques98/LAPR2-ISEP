@@ -1,7 +1,7 @@
 package app.domain.model;
 
-//import jdk.internal.org.objectweb.asm.tree.analysis.Value;
-
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +18,10 @@ public class Test {
     private final ArrayList listParameterTestCode;
 
     private List<Sample> samples;
+    private LocalTime sampleLocalTime;
+    private LocalDate sampleLocalDate;
+
+
     private Map<Sample , Map <String, ValueRecords> > map ;
 
 
@@ -69,6 +73,14 @@ public class Test {
         return samples;
     }
 
+    public void setSampleLocalTime() {
+        this.sampleLocalTime = LocalTime.now();
+    }
+    public void setSampleLocalDate() {
+        this.sampleLocalDate = LocalDate.now();
+    }
+
+
     @Override
     public String toString() {
         return "Test{" +
@@ -80,6 +92,8 @@ public class Test {
                 ", listCodeCategory=" + listCodeCategory +
                 ", listParameterTestCode=" + listParameterTestCode +
                 ", samples=" + samples +
+                ", sampleLocalTime=" + sampleLocalTime +
+                ", sampleLocalDate=" + sampleLocalDate +
                 '}';
     }
 }

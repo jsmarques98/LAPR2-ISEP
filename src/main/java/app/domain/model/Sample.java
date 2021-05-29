@@ -18,7 +18,6 @@ public class Sample {
     private double ESR00; // Erythrocyte Sedimentation Rate (ESR)
 
     public Sample( String code ){
-        System.out.println(code);
         generateBarcode(code);
     }
 

@@ -84,6 +84,20 @@ public class App {
 
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);
 
+
+
+
+        //Apenas para testar
+        this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
+        this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
+        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
+//        nao esta a funcionar o registar empregados por isso criei manualmente
+        Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
+        Company.clientsList.add(c1);
+        Company.clientsList.add(c2);
+        Company.clientsList.add(c3);
         //Como não está implementado inserimos manualmente
         ParameterTest parameterTest1 = new ParameterTest("Code1", "name1", "descricao1");
         ParameterTest parameterTest2 = new ParameterTest("Code2", "name2", "descricao2");
@@ -91,18 +105,6 @@ public class App {
         Company.parameterList.add(parameterTest1);
         Company.parameterList.add(parameterTest2);
         Company.parameterList.add(parameterTest3);
-
-        //Apenas para testar
-        this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
-        this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
-        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
-
-        Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com","123456");
-        Company.clientsList.add(c1);
-        Company.clientsList.add(c2);
-        Company.clientsList.add(c3);
 //
 //        Category category1 = new Category("categoria1","codigo1");
 //        Category category2 = new Category("categoria2","codigo2");

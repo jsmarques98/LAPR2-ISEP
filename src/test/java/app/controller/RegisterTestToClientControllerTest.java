@@ -6,15 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RegisterTestToClientControllerTest {
 
-
+    private RegisterTestToClientController ctrl;
 
     public RegisterTestToClientControllerTest(){
-
-
+        ctrl = new RegisterTestToClientController();
     }
 
     @Test
     void createTest() {
+
     }
 
     @Test

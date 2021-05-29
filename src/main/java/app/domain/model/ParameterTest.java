@@ -2,9 +2,9 @@ package app.domain.model;
 
 public class ParameterTest {
 
-    private String code;
-    private String shortName;
-    private String designation;
+    private final String code;
+    private final String shortName;
+    private final String designation;
 
     public ParameterTest(String code, String shortName, String designation){
         this.code = code;

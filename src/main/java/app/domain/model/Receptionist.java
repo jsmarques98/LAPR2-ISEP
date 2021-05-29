@@ -7,7 +7,7 @@ public class Receptionist extends Employee{
         super(roleId, name, address, phoneNumber, email, socCode);
     }
 
-    private Client registeredClient = null;
+    private final Client registeredClient = null;
 
     //convert ClientDTO to Client and assign it to registeredClient
     public void createClient(ClientDTO clientDTO){

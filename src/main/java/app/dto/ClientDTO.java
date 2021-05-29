@@ -7,7 +7,6 @@ public class ClientDTO {
     String CCNumber;
     String NHSNumber;
     String birthdate;
-    String sex;
     String TINNumber;
     String phoneNumber;
     String email;
@@ -28,10 +27,6 @@ public class ClientDTO {
 
     public String getBirthdate() {
         return birthdate;
-    }
-
-    public String getSex() {
-        return sex;
     }
 
     public String getTINNumber() {
@@ -83,8 +78,7 @@ public class ClientDTO {
                 "name='" + name + '\'' +
                 ", CCNumber='" + CCNumber + '\'' +
                 ", NHSNumber='" + NHSNumber + '\'' +
-                ", birthdate='" + birthdate + '\'' +
-                ", sex='" + sex + '\'' +
+                ", birthdate='" + birthdate + '\'' + '\'' +
                 ", TINNumber='" + TINNumber + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +

@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class Test {
 
-    private final String testID;
+    private String testID;
     private final String tinNumber;
     private final String nhscode;
     private final String description;
@@ -23,7 +23,7 @@ public class Test {
 
 
     public Test(String tinNumber, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode) {
-        this.testID = String.valueOf(Company.tests.size()+1);
+        this.testID = generateID();
         this.tinNumber = tinNumber;
         this.nhscode = nhscode;
         this.description = description;
@@ -43,6 +43,10 @@ public class Test {
                 records.getRegisteredValue();
             }
         }*/
+    }
+
+    private String generateID() {
+        return String.valueOf(Company.tests.size()+1);
     }
 
     public String getTestID() {

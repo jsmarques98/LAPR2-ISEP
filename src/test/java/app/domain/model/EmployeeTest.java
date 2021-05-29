@@ -1,5 +1,6 @@
 package app.domain.model;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -68,5 +69,22 @@ public class EmployeeTest {
         String criada = e1.getEmail();
         assertEquals(mail, criada);
     }
+
+    @Test
+    void testToString() {
+        String result = String.format("Employee{" +
+                "id='" + e1.getId() + '\'' +
+                ", roleId='" + e1.getRoleId() + '\'' +
+                ", name='" + e1.getName() + '\'' +
+                ", address='" + "sad" + '\'' +
+                ", phoneNumber='" + "asd" + '\'' +
+                ", email='" + e1.getEmail() + '\'' +
+                ", socCode='" + "asd" + '\'' +
+                ", password='" + e1.getPassword() + '\'' +
+                '}');
+
+        Assertions.assertEquals(result, e1.toString());
+    }
+
 
 }

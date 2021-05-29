@@ -27,10 +27,6 @@ public class Employee {
         this.password = generatePasswordEmployee();
     }
 
-    public void setRole(String role) {
-        this.roleId = role;
-    }
-
     public String getName() {return name;}
 
     public String getId() {

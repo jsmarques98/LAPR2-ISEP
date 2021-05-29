@@ -104,8 +104,8 @@ public class App {
 //        Company.clientsList.add(c2);
 //        Company.clientsList.add(c3);
 //
-//        Category category1 = new Category("categoria1","codigo1");
-//        Category category2 = new Category("categoria2","codigo2");
+        Category category1 = new Category("categoria1","codigo1");
+        Category category2 = new Category("categoria2","codigo2");
 //        Category category3 = new Category("categoria3","codigo3");
 //        Category category4 = new Category("categoria4","codigo4");
 //        Category category5 = new Category("categoria5","codigo5");

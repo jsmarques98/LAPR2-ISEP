@@ -16,7 +16,9 @@ class TestTest {
     private final ArrayList listCat;
     private final ArrayList listPara;
 
+
     public TestTest() {
+
         Category category1 = new Category("categoria1","codigo1");
         Category category2 = new Category("categoria2","codigo2");
         ParameterTest parameterTest1 = new ParameterTest("c1","sangue","desc1");
@@ -34,7 +36,7 @@ class TestTest {
 
     @Test
     void getTestID() {
-        assertEquals("1", "1");
+        assertEquals("1",test1.getTestID());
     }
 
     @Test
@@ -47,10 +49,10 @@ class TestTest {
         assertEquals("sad",test1.getDescription());
     }
 
-    @Test
-    void getSamples() {
-        assertEquals("Samples","Samples");
-    }
+//    @Test
+//    void getSamples() {
+//
+//    }
 
     @Test
     void testToString() {

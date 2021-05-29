@@ -1,5 +1,6 @@
 package app.domain.model;
 
+import app.domain.shared.Constants;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -68,6 +69,26 @@ public class EmployeeTest {
         String mail = "maria@gmail.com";
         String criada = e1.getEmail();
         assertEquals(mail, criada);
+    }
+
+    @Test
+    public void constantes() {
+        String ROLE_ADMIN = "ADMINISTRATOR";
+        String ROLE_RECEPTIONIST = "RECEPTIONIST";
+        String ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST = "CLINICAL_CHEMESTRY_TECHNOLOGIST";
+        String ROLE_LABORATORY_COORDINATOR = "LABORATORY_COORDINATOR";
+        String ROLE_MEDICAL_LAB_TECHNICIAN = "MEDICAL_LAB_TECHNICIAN";
+        String ROLE_SEPECIALIST_DOCTOR = "SPECIALIST_DOCTOR";
+        String PARAMS_FILENAME = "config.properties";
+        String PARAMS_COMPANY_DESIGNATION = "Company.Designation";
+        assertEquals(ROLE_ADMIN, Constants.ROLE_ADMIN);
+        assertEquals(ROLE_RECEPTIONIST, Constants.ROLE_RECEPTIONIST);
+        assertEquals(ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST, Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
+        assertEquals(ROLE_LABORATORY_COORDINATOR, Constants.ROLE_LABORATORY_COORDINATOR);
+        assertEquals(ROLE_MEDICAL_LAB_TECHNICIAN, Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
+        assertEquals(ROLE_SEPECIALIST_DOCTOR, Constants.ROLE_SEPECIALIST_DOCTOR);
+        assertEquals(PARAMS_FILENAME, Constants.PARAMS_FILENAME);
+        assertEquals(PARAMS_COMPANY_DESIGNATION, Constants.PARAMS_COMPANY_DESIGNATION);
     }
 
     @Test

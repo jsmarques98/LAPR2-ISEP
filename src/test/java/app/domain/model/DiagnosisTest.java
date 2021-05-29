@@ -1,4 +1,4 @@
-/*
+
 package app.domain.model;
 
 import org.junit.Assert;
@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DiagnosisTest {
 
+    private app.domain.model.Test test;
     Diagnosis writeRep = new Diagnosis("TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
@@ -19,7 +20,7 @@ public class DiagnosisTest {
             "TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
-            "TelevisionTelevisionTelevisionTelevision");
+            "TelevisionTelevisionTelevisionTelevision", this.test);
 
     @Test
     public void testConstructor() {
@@ -34,7 +35,7 @@ public class DiagnosisTest {
                     "TelevisionTelevisionTelevisionTelevision" +
                     "TelevisionTelevisionTelevisionTelevision" +
                     "TelevisionTelevisionTelevisionTelevision" +
-                    "TelevisionTelevisionTelevisionTelevisionahah");
+                    "TelevisionTelevisionTelevisionTelevisionahah", this.test);
         });
     }
 
@@ -98,8 +99,8 @@ public class DiagnosisTest {
 
     @Test
     public void testToString() {
-        String result = String.format("Report: %s%n", writeRep.getReport());
+        String result = String.format("Report: %s%nTest: %s%n", writeRep.getReport(), this.test);
 
         Assert.assertEquals(result, writeRep.toString());
     }
-}*/
+}

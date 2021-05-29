@@ -20,7 +20,7 @@ public class Company {
     private AuthFacade authFacade;
 
 
-    public static List<Test> tests;
+    public static List<Test> tests = new ArrayList<>();
 
     public static List<Client> clientsList = new ArrayList<>();
 
@@ -237,8 +237,11 @@ public class Company {
 
     // US14
 
+   /* public List<Test> getTest(){
+        return this.tests;
+    }*/
 
-    public static List<Diagnosis> reportList = new ArrayList<>(1);
+    public static List<Diagnosis> reportedTestsList = new ArrayList<>(1);
 
     public Diagnosis createReport(String report, Test test){
         return new Diagnosis(report, test);
@@ -248,7 +251,7 @@ public class Company {
         if (writeRep == null){
             return false;
         }
-        return !this.reportList.contains(writeRep);
+        return !this.reportedTestsList.contains(writeRep);
     }
 
 
@@ -256,7 +259,7 @@ public class Company {
         if (!validateReport(writeRep)) {
             return false;
         }
-        return this.reportList.add(writeRep);
+        return this.reportedTestsList.add(writeRep);
     }
 
 

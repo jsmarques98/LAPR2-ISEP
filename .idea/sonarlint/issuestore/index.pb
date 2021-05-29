@@ -3,8 +3,6 @@
 src/ESOFT.iml,2/9/2920f160e195fadbac36c67b11ed4c88615db5d5
 ]
 -src/main/java/auth/domain/model/Password.java,b/7/b773d5fdb119e743004c97f14b9a7c8e06d2f0a3
-d
-4src/main/java/app/ui/console/SpecialistDoctorUI.java,8/e/8e4fde63a438f2762f80f6344f21beb4392e356f
 S
 #src/main/java/auth/UserSession.java,2/2/2237c94a7e643f378d31b665a583d8292b8db30c
 R
@@ -25,8 +23,6 @@ F
 0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
 Z
 *src/main/java/app/ui/console/MenuItem.java,7/4/740030e937298447c12c48a7f0a934b08c3819e9
-X
-(src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036
 N
 src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
 K
@@ -55,8 +51,6 @@ e
 5src/main/java/app/ui/console/RecordTestResultsUI.java,b/4/b4b6ce38ae73a5902b044455aed8c24e27fbafee
 ]
 -src/main/java/app/Adapter/BarcodeAdapter.java,7/f/7fcb80ef034a52ab1666595f738fa65a5efcc4c1
-Y
-)src/main/java/app/ui/console/AdminUI.java,0/a/0a9fb9c3271ce78061d523da4e5474691abf5009
 ]
 -src/main/java/app/ui/console/utils/Utils.java,0/b/0b7375dbea1ab3a7b99a2948cea2f45e61f6840d
 7
@@ -85,25 +79,17 @@ _
 /src/main/java/app/ui/console/RegisterLabUI.java,d/6/d6debc4d5e4b3d7be774ec81bec95f078661bbb3
 N
 docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
-h
-8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
 U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
-[
-+src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
 `
 0src/main/java/app/domain/model/ValueRecords.java,5/5/5546cb56d2512813025570520fd60de1ad4d89d4
 b
 2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
 m
 =src/main/java/app/controller/RecordTestResultsController.java,e/f/ef0bfe9556b0ceb984ab58d9e365e0f9c888f885
-`
-0src/main/java/app/ui/console/CreateReportUI.java,c/5/c5f967c75dc97d2f62bbe27e96d075ee002d5745
 \
 ,src/main/java/app/domain/model/TestType.java,2/4/2423c136bbc016d77dbe900fd13fca08fa27b56a
 d
 4src/main/java/app/domain/model/SpecialistDoctor.java,1/f/1fe2526cdf6f266c0d2cb8c4e936e3c475559125
 Z
 *src/main/java/app/domain/model/Sample.java,b/a/ba164b4c03f593dbc5a575d2806dae1ffe3dfe0c
-]
--src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4

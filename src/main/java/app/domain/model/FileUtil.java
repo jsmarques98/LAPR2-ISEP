@@ -4,12 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-public class CreateFile {
+public class FileUtil {
 
-    public void createFile (){
+    public void createFile(String s){
 
         try {
-            File myObj = new File("emailAndSMSMessages.txt");
+            File myObj = new File(s);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
@@ -22,9 +22,9 @@ public class CreateFile {
 
     }
 
-    public void writeFile(){
+    public void writeFile(String s){
         try {
-            FileWriter myWriter = new FileWriter("emailAndSMSMessages.txt");
+            FileWriter myWriter = new FileWriter(s);
             myWriter.write("Your tests are now available in the app!");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");

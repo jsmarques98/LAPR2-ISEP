@@ -58,9 +58,9 @@ NA
 | Interaction ID | Question: Which class is responsible for... | Answer  | Justification (with patterns)  |
 |:-------------  |:--------------------- |:------------|:---------------------------- |
 | Step 1  		 |	... creating a new record Sample?	 |   Test         |  Creator: Test records instances of Samples           |
-| Step 3  		 |	... saving the input data?		 |      Controller       |                           |
-| Step 5  		 |	... saving the created Samples?						 |    Company      |    IE: records all Test objects which contains Samples                         |
-| Step 6  		 |	... informing operation success?						 |       UI      |    IE: responsible for user interaction                         |              
+| Step 2 		 |	... saving the input data?		 |      Controller       |                           |
+| Step 3  		 |	... saving the created Samples?						 |    Company      |    IE: records all Test objects which contains Samples                         |
+| Step 4  		 |	... informing operation success?						 |       UI      |    IE: responsible for user interaction                         |              
 
 ### Systematization ##
 

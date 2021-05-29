@@ -64,8 +64,9 @@ class TestTest {
                 ", idTestType='" + "sdsad" + '\'' +
                 ", listCodeCategory=" + listCat +
                 ", listParameterTestCode=" + listPara +
-                ", samples=" + "[]" +
+                ", samples=" + "[]" + ", sampleLocalTime=null, sampleLocalDate=null" +
                 '}';
+        System.out.println(test1.toString());
         Assertions.assertEquals(result, test1.toString());
     }
 }

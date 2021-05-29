@@ -29,6 +29,9 @@ public class RecordSamplesController {
         Test test = company.getAvailableTests().get(index);
         for(int i = 0; i < numSamples; i++)
             test.getSamples().add(new Sample(test.getTestID()+(i+1)));
+        test.setSampleLocalTime();
+        test.setSampleLocalDate();
+        System.out.println(test.toString());
         company.getAvailableTests().set(index, test);
     }
 

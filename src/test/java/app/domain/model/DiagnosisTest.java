@@ -1,14 +1,14 @@
 
 package app.domain.model;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class DiagnosisTest {
+class DiagnosisTest {
 
     private app.domain.model.Test test;
     Diagnosis writeRep = new Diagnosis("TelevisionTelevisionTelevisionTelevision" +
@@ -23,7 +23,7 @@ public class DiagnosisTest {
             "TelevisionTelevisionTelevisionTelevision", this.test);
 
     @Test
-    public void testConstructor() {
+    void testConstructor() {
         assertThrows(IllegalArgumentException.class, () ->
         {
             new Diagnosis("TelevisionTelevisionTelevisionTelevision" +
@@ -40,8 +40,8 @@ public class DiagnosisTest {
     }
 
     @Test
-    public void getReport() {
-        Assert.assertEquals("TelevisionTelevisionTelevisionTelevision" +
+    void getReport() {
+        Assertions.assertEquals("TelevisionTelevisionTelevisionTelevision" +
                 "TelevisionTelevisionTelevisionTelevision" +
                 "TelevisionTelevisionTelevisionTelevision" +
                 "TelevisionTelevisionTelevisionTelevision" +
@@ -54,10 +54,10 @@ public class DiagnosisTest {
     }
 
     @Test
-    public void setReport() {
-        writeRep.setReport("Este é o report do teste");
+    void setReport() {
+        writeRep.setReport("TelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevision");
 
-        Assert.assertEquals("Este é o report do teste", writeRep.getReport());
+        Assertions.assertEquals("TelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevisionTelevision", writeRep.getReport());
 
         assertDoesNotThrow(() -> {
             writeRep.setReport("TelevisionTelevisionTelevisionTelevision" +
@@ -101,6 +101,6 @@ public class DiagnosisTest {
     public void testToString() {
         String result = String.format("Report: %s%nTest: %s%n", writeRep.getReport(), this.test);
 
-        Assert.assertEquals(result, writeRep.toString());
+        Assertions.assertEquals(result, writeRep.toString());
     }
 }

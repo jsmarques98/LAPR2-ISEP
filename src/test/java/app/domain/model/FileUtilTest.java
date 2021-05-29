@@ -1,5 +1,4 @@
-/*
-package app.domain.model;
+/*package app.domain.model;
 
 import org.junit.jupiter.api.Test;
 

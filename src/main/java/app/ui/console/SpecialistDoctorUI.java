@@ -1,19 +1,22 @@
 package app.ui.console;
 
 import app.ui.console.utils.Utils;
-
+import app.ui.console.CreateReportUI;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpecialistDoctorUI implements Runnable {
+
+    public SpecialistDoctorUI(){
+
+    }
 
 
     @Override
     public void run() {
 
         List<MenuItem> options = new ArrayList<MenuItem>();
-        //Para ja esta new employeeUI porque ainda nao criei o createReportUI
-        options.add(new MenuItem("Write the diagnosis report of a test",new EmployeeUI()));
+        options.add(new MenuItem("Write the diagnosis report of a test",new CreateReportUI()));
 
         int option = 0;
         do

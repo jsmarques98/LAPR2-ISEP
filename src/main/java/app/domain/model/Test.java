@@ -1,6 +1,6 @@
 package app.domain.model;
 
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+//import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,13 +9,13 @@ import java.util.Map;
 
 public class Test {
 
-    private String testID;
-    private String tinNumber;
-    private String nhscode;
-    private String description;
-    private String idTestType;
-    private ArrayList listCodeCategory;
-    private ArrayList listParameterTestCode;
+    private final String testID;
+    private final String tinNumber;
+    private final String nhscode;
+    private final String description;
+    private final String idTestType;
+    private final ArrayList listCodeCategory;
+    private final ArrayList listParameterTestCode;
 
     private List<Sample> samples;
     private Map<Sample , Map <String, ValueRecords> > map ;
@@ -33,7 +33,7 @@ public class Test {
         this.samples = new ArrayList<>();
         this.map = new HashMap<>();
 
-        /*for(Map.Entry <Sample, Map <String, ValueRecords> > e : map.entrySet()){
+       /* for(Map.Entry <Sample, Map <String, ValueRecords> > e : map.entrySet()){
             for(Map.Entry<String, ValueRecords> e1 : map.get(e.getKey()).entrySet()){
                 Sample sample = e.getKey();
                 String sigla = e1.getKey();

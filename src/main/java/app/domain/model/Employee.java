@@ -1,19 +1,19 @@
 package app.domain.model;
 
-import java.lang.*;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Employee {
 
-    private String id;
+    private final String id;
+    private final String name;
+    private final String address;
+    private final String phoneNumber;
+    private final String email;
+    private final String socCode;
+    private final String password;
     private String roleId;
-    private String name;
-    private String address;
-    private String phoneNumber;
-    private String email;
-    private String socCode;
-    private String password;
 
 
     public Employee (String roleId, String name, String address, String phoneNumber, String email, String socCode){

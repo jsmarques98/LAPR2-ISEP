@@ -1,3 +1,4 @@
+
 package app.domain.model;
 
 import org.junit.Assert;
@@ -7,9 +8,10 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class ReportTest {
+public class DiagnosisTest {
 
-    Report writeRep = new Report("TelevisionTelevisionTelevisionTelevision" +
+    private app.domain.model.Test test;
+    Diagnosis writeRep = new Diagnosis("TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
@@ -18,13 +20,13 @@ public class ReportTest {
             "TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
             "TelevisionTelevisionTelevisionTelevision" +
-            "TelevisionTelevisionTelevisionTelevision");
+            "TelevisionTelevisionTelevisionTelevision", this.test);
 
     @Test
     public void testConstructor() {
         assertThrows(IllegalArgumentException.class, () ->
         {
-            new Report("TelevisionTelevisionTelevisionTelevision" +
+            new Diagnosis("TelevisionTelevisionTelevisionTelevision" +
                     "TelevisionTelevisionTelevisionTelevision" +
                     "TelevisionTelevisionTelevisionTelevision" +
                     "TelevisionTelevisionTelevisionTelevision" +
@@ -33,7 +35,7 @@ public class ReportTest {
                     "TelevisionTelevisionTelevisionTelevision" +
                     "TelevisionTelevisionTelevisionTelevision" +
                     "TelevisionTelevisionTelevisionTelevision" +
-                    "TelevisionTelevisionTelevisionTelevisionahah");
+                    "TelevisionTelevisionTelevisionTelevisionahah", this.test);
         });
     }
 
@@ -97,7 +99,7 @@ public class ReportTest {
 
     @Test
     public void testToString() {
-        String result = String.format("Report: %s%n", writeRep.getReport());
+        String result = String.format("Report: %s%nTest: %s%n", writeRep.getReport(), this.test);
 
         Assert.assertEquals(result, writeRep.toString());
     }

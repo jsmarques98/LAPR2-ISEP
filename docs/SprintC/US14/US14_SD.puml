@@ -7,8 +7,8 @@ participant ":CreateReportUI" as UI
 participant ":CreateReportController" as CRC
 participant ":Company" as COM
 participant ":CreateReport" as CR
-participant "TestStore: testIdStore" as TS
-participant "rep : Report" as reporttt
+participant ":Diagnosis" as DIAG
+
 
 activate Spec
 
@@ -16,95 +16,86 @@ Spec -> UI : asks to access the tests already made
 
 activate UI
 
-UI --> Spec : shows the tests and asks to choose one to make the report (test)
+UI --> CRC : getTestsToReport()
 
 activate CRC
 
-UI -> CRC : selectTestId(testID)
-
-
-CRC -> TS : tID = getTestID(testID)
-
-activate TS
-
-deactivate TS
-
-create reporttt
-
-CRC -> reporttt : addT = addTestID(tID)
-
-CRC -> UI : ok
-
-deactivate CRC
-
-Spec <-- UI : shows testID and chemical analysis results and asks to confirm
-
-deactivate UI
-
-
-
-Spec -> UI : writes a diagnosis for that test
-
-activate UI
-
-
-UI -> CRC : createReport(diagnosis)
-
-activate CRC
-
-
-CRC -> COM : rep = createReport(diagnosis)
+CRC --> COM : getTestsToReport()
 
 activate COM
-
-COM -> reporttt : create(diagnosis)
-
-activate reporttt
-
-deactivate reporttt
-
-CRC -> COM : validateReport(rep)
 
 deactivate COM
 
 deactivate CRC
 
-UI --> Spec : shows report and asks to confirm
+UI --> Spec : shows the tests and asks to choose one to make the report (testcode)
 
 deactivate UI
 
-Spec -> UI : confirms report
+Spec --> UI : selects requested data (testcode)
 
 activate UI
 
-UI -> CRC : saveReport()
+UI -> Spec : shows the test and asks to confirm it
+
+deactivate UI
+
+Spec -> UI : wants to write a report for that test
+
+activate UI
+
+UI -> Spec : requests data to write the report(report)
+
+deactivate UI
+
+Spec -> UI : inserts requested data (report)
+
+activate UI
+
+UI -> CRC : createReport(report)
 
 activate CRC
 
-CRC -> COM : saveReport(rep)
+CRC -> COM : rep : createReport(report)
 
 activate COM
 
-COM -> COM : validateReport(rep)
+COM -> DIAG : createReport(report)
 
-activate COM
+activate DIAG
 
+deactivate DIAG
 deactivate COM
+deactivate CRC
+
+UI -> Spec : shows data and asks to confirm it
+
+deactivate UI
+
+Spec -> UI : confirms data
+
+activate UI
+
+UI -> CRC : createReport()
+
+activate CRC
+
+CRC -> COM : createReport(rep)
+
+activate COM
 
 COM -> COM : addReport(rep)
-
-activate COM
-
-deactivate COM
+COM -> COM : validateReport(rep)
 
 deactivate COM
-
 deactivate CRC
 
-UI --> Spec : informs success
+UI -> Spec : informs success or insuccess of the operation
+
+deactivate UI
+deactivate Spec
+
 @enduml
-
-
 
 
 

@@ -1,0 +1,18 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’±°Ùûÿÿÿÿ8ó…Ò©›/
+r	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎäËÂûÿÿÿÿ8ô…Ò©›/
+m	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÖŒ°8ô…Ò©›/
+m	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“şîÅ8ô…Ò©›/
+m	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¢Û8ô…Ò©›/
+r	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¶ä²úÿÿÿÿ8ô…Ò©›/
+m	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çêéƒ8ô…Ò©›/
+r	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Óôëúÿÿÿÿ8ô…Ò©›/
+q	java:S116"PRename this field "HB000" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óßŞÑûÿÿÿÿ8ø…Ò©›/
+k	java:S116"PRename this field "WBC00" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë½¼8ø…Ò©›/
+q	java:S116"PRename this field "PLT00" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š£§ßüÿÿÿÿ8ø…Ò©›/
+l	java:S116"PRename this field "RBC00" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…´Ÿ¯8ø…Ò©›/
+l	java:S116"PRename this field "MCV00" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê›è±8ø…Ò©›/
+q	java:S116"PRename this field "MCH00" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿîÊ¯ûÿÿÿÿ8ù…Ò©›/
+l	java:S116"PRename this field "MCHC0" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üğ’ç8ù…Ò©›/
+l	java:S116"PRename this field "ESR00" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªĞ¸ë8ù…Ò©›/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ç¥ì´øÿÿÿÿ8û…Ò©›/

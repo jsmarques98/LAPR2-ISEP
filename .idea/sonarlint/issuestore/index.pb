@@ -93,3 +93,11 @@ d
 4src/main/java/app/domain/model/SpecialistDoctor.java,1/f/1fe2526cdf6f266c0d2cb8c4e936e3c475559125
 Z
 *src/main/java/app/domain/model/Sample.java,b/a/ba164b4c03f593dbc5a575d2806dae1ffe3dfe0c
+^
+.src/test/java/app/domain/model/SampleTest.java,3/0/30a600e399b7ae013cc66d630992203751d9841b
+h
+8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
+`
+0src/test/java/app/domain/model/EmployeeTest.java,e/3/e3c8c18d9e7436b0c6e2317e0e84a55d7e796e7a
+]
+-src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4

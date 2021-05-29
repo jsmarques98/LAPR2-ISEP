@@ -99,6 +99,9 @@ public class RegisterTestToClientUI implements Runnable{
         while(!codeCategory.equals("0")){
             codeCategory = Utils.readLineFromConsole("Enter Code Category or 0 to exit: ");
             for(Category category : Company.categories) {
+
+                System.out.println(category.toString());
+
                 if(category.getCode().equals(codeCategory)){
                     if(!codeCategoryList.contains(codeCategory)){
                         codeCategoryList.add(category.getCode());

@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Paulo Maio <pam@isep.ipp.pt>
@@ -267,7 +268,7 @@ public class Company {
     //us4
 
 
-    public static Test createtest(String tinNumber, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
+    public static Test createtest(String tinNumber, String nhscode, String description, String idTestType , ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
         return new Test(tinNumber, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode);
     }
 

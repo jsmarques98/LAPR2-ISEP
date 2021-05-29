@@ -49,6 +49,9 @@ BarcodeAdapter -> Barcode : generateBarcode(code)
 activate Barcode
 Test -> Test : samples.add(Sample)
 end
+Test -> Test : setSampleDate(LocalDate.now())
+Test -> Test : setSampleTime(LocalTime.now())
+
 controller -> controller : List<SampleDTO> SamplesDTO = Samples.toDTO()
 
 controller -> ui : show(samplesDTO)

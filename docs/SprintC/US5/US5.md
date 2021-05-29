@@ -57,31 +57,30 @@ NA
 
 | Interaction ID | Question: Which class is responsible for... | Answer  | Justification (with patterns)  |
 |:-------------  |:--------------------- |:------------|:---------------------------- |
-| Step 1  		 |	... creating a new Sample?	 |   Receptionist          |  Creator: Receptionist records instances of Clients           |
-| Step 2  		 |		n/a					 |             |                              |
-| Step 3  		 |	... saving the input data?		 |      Client       | IE: The object created in step 1 has its own data                             |
-| Step 4.1  		 |	... validating the data locally?						 |    Client         | IE: knows its own data                             |
-| Step 4.2  		 |	... validating the data globally?						 |    Company         | IE: knows all Client objects                             |
-| Step 5  		 |	... saving the created Client?						 |    Company         |    IE: records all client objects                          |
+| Step 1  		 |	... creating a new record Sample?	 |   Test         |  Creator: Test records instances of Samples           |
+| Step 3  		 |	... saving the input data?		 |      Controller       |                           |
+| Step 5  		 |	... saving the created Samples?						 |    Company      |    IE: records all Test objects which contains Samples                         |
 | Step 6  		 |	... informing operation success?						 |       UI      |    IE: responsible for user interaction                         |              
 
 ### Systematization ##
 
 According to the taken rationale, the conceptual classes promoted to software classes are: 
 
- * Receptionist
- * Client
  * Company
+ * Test
+ * Sample
+ * Barcode
 
 Other software classes (i.e. Pure Fabrication) identified: 
 
- - RegisterClientUI  
- - RegisterClientController
- - MailAdapter
- - AuthFacade
+ - RecordSamplesUI
+ - RecordSamplesController
+ - TestDTO
+ - ReflectorUtility
+ - BarcodeInterface
+ - BarcodeAdapter
  
-MailAdapter is a software class that uses the software adapter in order to asbtract how the MailAPI, responsible for sending email messages (in this the User information to the client's email)
-Authfacade is the class responsible, in this case, for creating the User account.
+ReflectorUtility is used for instantiating objects which its class is only known in runtime - this is needed because the API to use is defined in the configuration file, so the only way to use the API is to run the program so that it can read the configuration file and create the class using reflection.
 
 ## 3.2. Sequence Diagram (SD)
 

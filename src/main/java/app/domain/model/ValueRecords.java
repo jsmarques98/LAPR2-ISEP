@@ -115,12 +115,9 @@ public class ValueRecords {
 
     @Override
     public String toString() {
-        return "ValueRecords{" +
-                "minValue=" + minValue +
-                ", maxValue=" + maxValue +
-                ", registeredValue=" + registeredValue +
-                ", id=" + id +
-                ", parametro=" + parametro +
-                '}';
+        return "Value Records{ Min. Value: " + minValue + " | Max. Value: " + maxValue + " | Registered Value: " + registeredValue
+                + " | ID: " + id + " | Parameter: " + parametro + " }";
+
     }
 }
+

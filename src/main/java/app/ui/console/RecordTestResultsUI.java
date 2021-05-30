@@ -87,10 +87,11 @@ public class RecordTestResultsUI implements Runnable {
             if (Utils.confirm()) {
 
                 if (controller.createValueRecords(id, min, max, registeredValue, parametro)) {
-                    System.out.println("Value Records successfully created with metrics: " + medida);
+                    System.out.println("Value records successfully created. Metric: " + medida);
+                    System.out.println("");
                     controller.saveValueRecords();
                 } else {
-                    System.out.println("Value Records not created");
+                    System.out.println("Value records not created");
                 }
             } else {
                 System.out.println("Operation canceled");

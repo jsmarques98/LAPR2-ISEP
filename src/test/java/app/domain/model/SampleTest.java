@@ -23,7 +23,7 @@ public class SampleTest {
 
         String arg = null;
         AtomicReference<Sample> sample = null;
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+        Assertions.assertThrows(NullPointerException.class, () -> {
             sample.set(new Sample(arg));
         });
     }

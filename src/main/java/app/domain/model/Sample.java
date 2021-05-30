@@ -8,8 +8,8 @@ import net.sourceforge.barbecue.Barcode;
 public class Sample {
 
     private Barcode barcode;
-    private double  HB000; // Haemoglobin (HB)
-    private double WBC00 ; // White Cell Count (WBC)
+    private double HB000; // Haemoglobin (HB)
+    private double WBC00; // White Cell Count (WBC)
     private double PLT00; // Platelet Count (PLT)
     private double RBC00; // Red Blood Count (RBC)
     private double MCV00; // Mean Cell Volume (MCV)

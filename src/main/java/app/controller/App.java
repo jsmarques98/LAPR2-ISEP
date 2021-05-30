@@ -74,7 +74,6 @@ public class App {
         Employee.roles.add(Constants.ROLE_LABORATORY_COORDINATOR);
         Employee.roles.add(Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
         Employee.roles.add(Constants.ROLE_SEPECIALIST_DOCTOR);
-
         this.authFacade.addUserRole(Constants.ROLE_ADMIN, Constants.ROLE_ADMIN);
         this.authFacade.addUserRole(Constants.ROLE_RECEPTIONIST, Constants.ROLE_RECEPTIONIST);
         this.authFacade.addUserRole(Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST, Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
@@ -94,7 +93,6 @@ public class App {
         ParameterTest parameterTest7 = new ParameterTest("MCHC0", "Mean Haemo Con.", "Mean Cell Haemoglobin Concentration (MCHC)");
         ParameterTest parameterTest8 = new ParameterTest("ESR00", "Eryth Sed. Rate", "Erythrocyte Sedimentation Rate (ESR)");
         ParameterTest parameterTest9 = new ParameterTest("IgGAN", "IgGAN", "IgGAN");
-
         Company.parameterList.add(parameterTest1);
         Company.parameterList.add(parameterTest2);
         Company.parameterList.add(parameterTest3);
@@ -105,14 +103,6 @@ public class App {
         Company.parameterList.add(parameterTest8);
         Company.parameterList.add(parameterTest9);
 
-
-
-        //Apenas para testar
-        this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
-        this.authFacade.addUserWithRole("Jose", "jose@gmail.com", "123456", Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
-        this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
-        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
-
         Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
@@ -120,18 +110,24 @@ public class App {
         Company.clientsList.add(c2);
         Company.clientsList.add(c3);
 
+        //Apenas para testar
+        this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
+        this.authFacade.addUserWithRole("Jose", "jose@gmail.com", "123456", Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
+        this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
+        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
 
-        ArrayList listCat;
-        ArrayList listPara;
-        Category category1 = new Category("categoria1","codigo1");
-        Category category2 = new Category("categoria2","codigo2");
-        listCat = new ArrayList<>();
-        listPara = new ArrayList<>();
-        listCat.add(category1);
-        listCat.add(category2);
-        listPara.add(parameterTest1);
-        listPara.add(parameterTest2);
 
+//        ArrayList listCat;
+//        ArrayList listPara;
+//        Category category1 = new Category("categoria1","codigo1");
+//        Category category2 = new Category("categoria2","codigo2");
+//        listCat = new ArrayList<>();
+//        listPara = new ArrayList<>();
+//        listCat.add(category1);
+//        listCat.add(category2);
+//        listPara.add(parameterTest1);
+//        listPara.add(parameterTest2);
+//
 //        Test test1 =  new Test("0000000000","0000","sad","sdsad1",  listCat, listPara);
 //        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
 //        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);

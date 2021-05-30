@@ -103,6 +103,18 @@ public class App {
         Company.parameterList.add(parameterTest8);
         Company.parameterList.add(parameterTest9);
 
+<<<<<<< HEAD
+=======
+
+
+        //Apenas para testar
+        this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
+        this.authFacade.addUserWithRole("Jose", "jose@gmail.com", "123456", Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
+        this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
+        this.authFacade.addUserWithRole("laboratory coordinator", "labcord@gmail.com", "123456", Constants.ROLE_LABORATORY_COORDINATOR);
+        this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
+
+>>>>>>> fbe20ff436cfbd7a2991e7398fbbee4d8b8f786c
         Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
@@ -117,6 +129,7 @@ public class App {
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
 
 
+<<<<<<< HEAD
 //        ArrayList listCat;
 //        ArrayList listPara;
 //        Category category1 = new Category("categoria1","codigo1");
@@ -151,6 +164,31 @@ public class App {
 //        company.getTests().add(test3);
 //        company.getTests().add(test4);
 //
+=======
+       Test test1 =  new Test("0000000000","0000","sad","sdsad1",  listCat, listPara);
+        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
+        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
+        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
+
+        String arg1 = "00000000001";
+        String arg2 = "00000000002";
+        String arg3 = "00000000003";
+        String arg4 = "00000000004";
+        test1.getSamples().add(new Sample(arg1, barcodeAdapter));
+        test1.getSamples().add(new Sample(arg2, barcodeAdapter));
+        test1.getSamples().add(new Sample(arg3, barcodeAdapter));
+        test1.setSampleLocalDate();
+        test1.setSampleLocalTime();
+        test2.getSamples().add(new Sample(arg4, barcodeAdapter));
+        test2.setSampleLocalDate();
+        test2.setSampleLocalTime();
+
+        company.getTests().add(test1);
+        company.getTests().add(test2);
+        company.getTests().add(test3);
+        company.getTests().add(test4);
+
+>>>>>>> fbe20ff436cfbd7a2991e7398fbbee4d8b8f786c
 //        company.getTests().add(test1);
 //        company.getTests().add(test2);
 //        company.getTests().add(test3);

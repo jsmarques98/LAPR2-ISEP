@@ -25,7 +25,7 @@ public class FileUtil {
     public void writeFile(String s){
         try {
             FileWriter myWriter = new FileWriter(s);
-            myWriter.write("Your tests are now available in the app!");
+            myWriter.write(s);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {

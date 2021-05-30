@@ -304,6 +304,18 @@ public class Company {
             return this.valueRecordsList.add(valueRecords);
         }
     }
+
+
+    //us15
+
+    public List<Test> getTestsWhitSamples() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getSamples().size() != 0)
+                availableTests.add(current);
+
+        return availableTests;
+    }
 }
 
 

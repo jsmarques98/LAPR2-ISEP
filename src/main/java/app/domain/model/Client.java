@@ -16,7 +16,7 @@ public class Client {
 
 
 
-    public Client(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email, String password) {
+    public Client(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email) {
 
         this.name = name;
         this.TINNumber = number;
@@ -25,8 +25,6 @@ public class Client {
         this.birthdate = date;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.Password = password;
-
     }
 
     @Override

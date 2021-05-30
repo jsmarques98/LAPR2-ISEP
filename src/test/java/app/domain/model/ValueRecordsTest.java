@@ -54,7 +54,7 @@ public class ValueRecordsTest {
         records.setRegisteredValue(9);
         assertEquals(9, records.getRegisteredValue());
     }
-    
+
 
     @Test
     void testToString() {

@@ -4,6 +4,7 @@ import app.controller.App;
 import app.controller.CreateReportController;
 import app.domain.model.Company;
 import app.domain.model.Test;
+import app.domain.model.ValueRecords;
 import app.ui.console.utils.Utils;
 
 public class CreateReportUI implements Runnable {
@@ -25,10 +26,11 @@ public class CreateReportUI implements Runnable {
    public void run() {
         showTests();
 
-        Test test = setTest();
+        String id = setTest();
 
         String report = selectReport();
 
+        Test test = grabTestId(id);
         if (controller.createReport(report, test)) {
             if (true) {
                 System.out.print("Report written with success and added to the test");
@@ -38,24 +40,34 @@ public class CreateReportUI implements Runnable {
             }
 
         }
+
         for(int i = 0; i< Company.reportedTestsList.size(); i++){
             System.out.println(Company.reportedTestsList.get(i));
         }
 
     }
 
+    private Test grabTestId(String id) {
+        for (Test test : company.getTests()){
+            if (test.getTestID().equals(id)){
+                return test;
+            }
+        }
+        throw new IllegalArgumentException("Id de teste não encontrado!");
+    }
+
     public void showTests() {
         System.out.println("Tests to make a report :");
-        for (Test test: company.getTests()) {
-            System.out.println(test.getNhscode());
+        for(int i = 0; i< Company.valueRecordsList.size(); i++){
+            System.out.println(Company.valueRecordsList.get(i));
         }
     }
 
-    public Test setTest() {
+    public String setTest() {
         String testToReport = Utils.readLineFromConsole("Choose the test you want to do the report for :");
-        for (Test test : company.getTests()) {
-            if (test.getNhscode().equals(testToReport)) {
-                return test;
+        for(int i = 0; i< Company.valueRecordsList.size(); i++){
+            if (ValueRecords.getId().equals(testToReport)) {
+                return ValueRecords.getId();
             }
         }
         System.out.println("There are no reports to show, exiting");

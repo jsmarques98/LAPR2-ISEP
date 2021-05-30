@@ -53,8 +53,6 @@ e
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 K
 docs/SprintC/US4/CD-US4.svg,b/0/b01ebf38c3928f18f0d6fc3e6eb68b6e1ae88e37
-_
-/src/main/java/app/ui/console/RegisterLabUI.java,d/6/d6debc4d5e4b3d7be774ec81bec95f078661bbb3
 U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 `
@@ -79,8 +77,6 @@ X
 (src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036
 a
 1src/test/java/app/domain/model/DiagnosisTest.java,4/6/46e3d99c804c6debe5c8f9fc88e72432ee1378fa
-[
-+src/test/java/app/domain/model/LabTest.java,9/a/9aa586d56dda01e0cc957829447f49a7f102d334
 `
 0src/test/java/app/domain/model/FileUtilTest.java,5/e/5eff9f112944b9b5a18da40c7265de859fd096f3
 \
@@ -89,16 +85,8 @@ L
 docs/SprintB/US8/US8_CD.puml,8/6/86d6df43adc67a350fa37589c9a0675dafaa3f75
 d
 4src/main/java/app/ui/console/SpecialistDoctorUI.java,8/e/8e4fde63a438f2762f80f6344f21beb4392e356f
-`
-0src/main/java/app/ui/console/CreateReportUI.java,c/5/c5f967c75dc97d2f62bbe27e96d075ee002d5745
-g
-7src/main/java/app/controller/RegisterLabController.java,7/b/7b44867c1af58063519159dc8d62c845b68530e3
-h
-8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
 W
 'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
-]
--src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4
 N
 docs/SprintC/US14/US14_SSD.svg,9/a/9ae189de9b55a2fa2afdd3912a9ca5cbcf55a203
 M
@@ -111,3 +99,19 @@ M
 docs/SprintC/US14/US14_DM.svg,3/5/3571beaacab9279bac74792a3605c1150e11757f
 K
 docs/SprintC/US5/US5-CD.svg,1/4/145271eb68a23d9f78b420d771241d855000e88b
+L
+docs/SprintC/US5/US5-CD.puml,b/f/bf22466a13101b9902046f69302643ddf2828761
+O
+docs/SprintC/US14/US14_SSD.puml,f/c/fc975f2ac25582a586d61c165934f286b71bde3b
+M
+docs/SprintC/US14/US14_CD.svg,3/7/37e31f1968cf967668d76698fd1edd0354fe1f79
+N
+docs/SprintC/US14/US14_CD.puml,c/a/cae576c614694800d0259bc6bbabaaf2622414ea
+N
+docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
+M
+docs/SprintC/US14/US14_SD.svg,d/b/dbdda941c0755f28ef3dd1b73a45d041ca8d9e62
+g
+7src/main/java/app/controller/RegisterLabController.java,7/b/7b44867c1af58063519159dc8d62c845b68530e3
+[
++src/test/java/app/domain/model/LabTest.java,9/a/9aa586d56dda01e0cc957829447f49a7f102d334

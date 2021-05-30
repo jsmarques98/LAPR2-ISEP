@@ -85,15 +85,27 @@ public class App {
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);
 
         //Como não está implementado inserimos manualmente
-        ParameterTest parameterTest1 = new ParameterTest("Code1", "name1", "descricao1");
-        ParameterTest parameterTest2 = new ParameterTest("Code2", "name2", "descricao2");
-        ParameterTest parameterTest3 = new ParameterTest("Code3", "name3", "descricao3");
+        ParameterTest parameterTest1 = new ParameterTest("HB000", "Haemo", "Haemoglobin (HB)");
+        ParameterTest parameterTest2 = new ParameterTest("WBC00", "White", "White Cell Count (WBC)");
+        ParameterTest parameterTest3 = new ParameterTest("PLT00", "Platelet", "Platelet Count (PLT)");
+        ParameterTest parameterTest4 = new ParameterTest("RBC00", "Red Blood", "Red Blood Count (RBC)");
+        ParameterTest parameterTest5 = new ParameterTest("MCV00", "Mean Cell", "Mean Cell Volume (MCV)");
+        ParameterTest parameterTest6 = new ParameterTest("MCH00", "Mean Haemo", "Mean Cell Haemoglobin (MCH)");
+        ParameterTest parameterTest7 = new ParameterTest("MCHC0", "Mean Haemo Con.", "Mean Cell Haemoglobin Concentration (MCHC)");
+        ParameterTest parameterTest8 = new ParameterTest("ESR00", "Eryth Sed. Rate", "Erythrocyte Sedimentation Rate (ESR)");
         Company.parameterList.add(parameterTest1);
         Company.parameterList.add(parameterTest2);
         Company.parameterList.add(parameterTest3);
+        Company.parameterList.add(parameterTest4);
+        Company.parameterList.add(parameterTest5);
+        Company.parameterList.add(parameterTest6);
+        Company.parameterList.add(parameterTest7);
+        Company.parameterList.add(parameterTest8);
+
 
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
+        this.authFacade.addUserWithRole("Jose", "jose@gmail.com", "123456", Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
 
@@ -129,6 +141,11 @@ public class App {
         test1.getSamples().add(new Sample(arg2));
         test1.getSamples().add(new Sample(arg3));
         test2.getSamples().add(new Sample(arg4));
+
+        company.getTests().add(test1);
+        company.getTests().add(test2);
+        company.getTests().add(test3);
+        company.getTests().add(test4);
 
         company.getTests().add(test1);
         company.getTests().add(test2);

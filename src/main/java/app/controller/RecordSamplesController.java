@@ -25,13 +25,13 @@ public class RecordSamplesController {
         return availableTestsDTO;
     }
 
-    public void generateSamples(int index, int numSamples){
+    public TestDTO generateSamples(int index, int numSamples){
         Test test = company.getAvailableTests().get(index);
         for(int i = 0; i < numSamples; i++)
             test.getSamples().add(new Sample(test.getTinNumber()+(i+1)));
         test.setSampleLocalTime();
         test.setSampleLocalDate();
-        company.getAvailableTests().set(index, test);
+        return new TestDTO(test);
     }
 
 }

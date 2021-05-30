@@ -1,6 +1,5 @@
 package app.domain.model;
 
-import app.controller.RecordSamplesController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

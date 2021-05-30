@@ -9,24 +9,24 @@ import java.util.Map;
 
 public class Test {
 
-    private String testID;
+    private final String testID;
     private final String tinNumber;
     private final String nhscode;
     private final String description;
     private final String idTestType;
-    private final ArrayList listCodeCategory;
-    private final ArrayList listParameterTestCode;
+    private final ArrayList<String> listCodeCategory;
+    private final ArrayList<String> listParameterTestCode;
 
-    private List<Sample> samples;
+    private final List<Sample> samples;
     private LocalTime sampleLocalTime;
     private LocalDate sampleLocalDate;
 
 
-    private Map<Sample , Map <String, ValueRecords> > map ;
+    private final Map<Sample , Map <String, ValueRecords> > map ;
 
 
 
-    public Test(String tinNumber, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode) {
+    public Test(String tinNumber, String nhscode, String description, String idTestType ,ArrayList<String> listCodeCategory, ArrayList<String> listParameterTestCode) {
         this.testID = generateID();
         this.tinNumber = tinNumber;
         this.nhscode = nhscode;

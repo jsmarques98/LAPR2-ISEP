@@ -18,7 +18,7 @@ public class App {
     private Company company;
     private AuthFacade authFacade;
 
-    private String barcodeAdapter;
+    private static String barcodeAdapter;
 
     private App() {
         Properties props = getProperties();
@@ -32,7 +32,7 @@ public class App {
         return this.company;
     }
 
-    public String getBarcodeAdapter(){
+    public static String getBarcodeAdapter(){
             return barcodeAdapter;
     }
 
@@ -121,12 +121,19 @@ public class App {
         Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
         Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
 
-        company.saveTest(test1);
-        company.saveTest(test2);
-        company.saveTest(test3);
-        company.saveTest(test4);
+        String arg1 = "00000000001";
+        String arg2 = "00000000002";
+        String arg3 = "00000000003";
+        String arg4 = "00000000004";
+        test1.getSamples().add(new Sample(arg1));
+        test1.getSamples().add(new Sample(arg2));
+        test1.getSamples().add(new Sample(arg3));
+        test2.getSamples().add(new Sample(arg4));
 
-
+        company.getTests().add(test1);
+        company.getTests().add(test2);
+        company.getTests().add(test3);
+        company.getTests().add(test4);
 //
 //        Category category1 = new Category("categoria1","codigo1");
 //        Category category2 = new Category("categoria2","codigo2");

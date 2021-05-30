@@ -6,13 +6,13 @@ import app.domain.model.Receptionist;
 import app.dto.ClientDTO;
 
 public class RegisterClientController {
-
     ClientDTO clientDTO;
+
 
     private Company company;
 
     //factory for class ClientDTO
-    public ClientDTO createClientDTO(Object args[]){
+    public ClientDTO createClientDTO(String args[]){
 
         clientDTO = new ClientDTO(args[0], args[1], args[2],args[3], args[4], args[5], args[6], args[7]);
 
@@ -32,6 +32,7 @@ public class RegisterClientController {
     }
 
     public Client clientdtoToClient(ClientDTO clientdto){
+
 
         Client cliente = new Client(clientdto.getName(), clientdto.getTINNumber(), clientdto.getCCNumber(), clientdto.getNHSNumber(), clientdto.getBirthdate(), clientdto.getPhoneNumber(), clientdto.getEmail());
 

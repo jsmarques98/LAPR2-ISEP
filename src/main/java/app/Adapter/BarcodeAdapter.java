@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 public class BarcodeAdapter implements BarcodeInterface {
+    private static final Logger LOGGER = Logger.getLogger(BarcodeAdapter.class.getName());
+
     @Override
     public Barcode generateBarcode(String filename) {
         Barcode barcode = null;
@@ -20,7 +22,6 @@ public class BarcodeAdapter implements BarcodeInterface {
             BarcodeImageHandler.savePNG(barcode,file);
 
         } catch (OutputException | BarcodeException | IOException e) {
-            Logger LOGGER = Logger.getLogger(BarcodeAdapter.class.getName());
             LOGGER.info(e.getMessage());
         }
         return barcode;

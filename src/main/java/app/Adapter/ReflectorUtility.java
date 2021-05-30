@@ -1,11 +1,18 @@
 package app.Adapter;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.logging.Logger;
 
 /**
  * Class responsible for constructing adapters using reflection
  */
 public class ReflectorUtility {
+
+    private static final Logger LOGGER = Logger.getLogger(ReflectorUtility.class.getName());
+
+    private ReflectorUtility() {
+        throw new IllegalStateException("Utility class");
+    }
 
     /**
      * Method that builds a Barcode Adapter
@@ -18,8 +25,7 @@ public class ReflectorUtility {
             return ( (BarcodeInterface) oClass.getDeclaredConstructor().newInstance());
 
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
-            e.printStackTrace();
-            System.out.println("Class " + adapterClass + " not found!");
+            LOGGER.info(e.getMessage());
             return null;
         }
     }

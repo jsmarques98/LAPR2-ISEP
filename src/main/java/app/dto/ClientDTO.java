@@ -10,6 +10,7 @@ public class ClientDTO {
     String TINNumber;
     String phoneNumber;
     String email;
+    String sex;
     String Password;
 
 
@@ -45,16 +46,17 @@ public class ClientDTO {
         return Password;
     }
 
-    public ClientDTO(Object name, Object number, Object cCard, Object nhs, Object date, Object phoneNumber, Object email, Object password) {
+    public ClientDTO(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email, String password) {
 
-        this.name = (String) name;
-        this.TINNumber = (String) number;
-        this.CCNumber = (String) cCard;
-        this.NHSNumber = (String) nhs;
-        this.birthdate = (String) date;
-        this.phoneNumber = (String) phoneNumber;
-        this.email = (String) email;
-        this.Password = (String) password;
+        this.name = name;
+        this.TINNumber = number;
+        this.CCNumber = cCard;
+        this.NHSNumber = nhs;
+        this.birthdate = date;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.sex = sex;
+        this.Password = password;
     }
 
 

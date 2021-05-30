@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicReference;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SampleTest {
 
@@ -26,6 +27,14 @@ public class SampleTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             sample.set(new Sample(arg));
         });
+    }
+
+    @Test
+    public void createInvalidSample(){
+
+        String arg = "12341234123412341234";
+        Sample sample = new Sample(arg);
+        assertNull(sample.getBarcode());
     }
 
     @Test

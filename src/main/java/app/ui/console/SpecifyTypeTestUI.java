@@ -20,13 +20,13 @@ public class SpecifyTypeTestUI implements Runnable {
     public void run() {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Insira o id do tipo de teste:");
+        System.out.println("Enter the test type id: ");
         String id = sc.nextLine();
-        System.out.println("Insira a descrição:");
+        System.out.println("Enter the description: ");
         String desc = sc.nextLine();
-        System.out.println("Insira o modo de coleta:");
+        System.out.println("Enter the collection method: ");
         String coll = sc.nextLine();
-        System.out.println("Lista de categorias:");
+        System.out.println("Categories list: ");
         //List<Category> lst = company.getCategories();
         List<Category> lst = new ArrayList<>();
         lst.add(new Category("categoria1","codigo1"));
@@ -41,7 +41,7 @@ public class SpecifyTypeTestUI implements Runnable {
                 System.out.printf("[%d] - %s\n", i, c.getName());
                 i++;
             }
-            System.out.println("Escolha a categoria desejada:\nNota: Escreva 0 para terminar.");
+            System.out.println("Choose the desired category:\nNote: Type 0 to finish.");
             Category c = null;
             option = sc.nextLine();
             if (!option.equals("0")) {
@@ -52,16 +52,16 @@ public class SpecifyTypeTestUI implements Runnable {
                 break;
             }
         }
-        System.out.println("A sua informação: ");
+        System.out.println("Your information: ");
         System.out.printf(" ID = %s | Description = %s | Collection method = %s | Categories List = %s\n "
                 , id, desc, coll, listCat);
-        System.out.println("Confirma a informação? (Y/N)");
+        System.out.println("Do you confirm the information? (Y/N)");
         String f = sc.nextLine();
         if (f.equalsIgnoreCase("Y")){
             controller.specifyTypeOfTest(id,desc,coll,listCat);
-            System.out.println("Tipo de teste criado.");
+            System.out.println("Test type created.");
         }else{
-            System.out.println("O tipo de teste não foi criado.");
+            System.out.println("The test type was not created.");
         }
         System.out.println(company.getTestTypes().getRecord());
     }

@@ -43,7 +43,7 @@ public class RecordTestResultsUI implements Runnable {
         boolean flag = false;
         while (!flag) {
 
-            id = Utils.readLineFromConsole("Escolha o teste desejado: ");
+            id = Utils.readLineFromConsole("Choose the desired test: ");
             for (Test t : company.getTests()) {
                 if (t.getTestID().equals(id)) {
                     lista = t.getListParameterTestCode();
@@ -51,7 +51,7 @@ public class RecordTestResultsUI implements Runnable {
                 }
             }
             if (!flag) {
-                System.out.println("O ID é inválido.");
+                System.out.println("The ID is invalid.");
             }
         }
 
@@ -71,7 +71,7 @@ public class RecordTestResultsUI implements Runnable {
                 parametro = (String) lista.get(j);
                 medida = apiBlood.usedMetric(String.valueOf(lista.get(j)), acessKey);
                 registeredValue = Utils.readDoubleFromConsole("Insert the result of " + lista.get(j) + ": ");
-                
+
             } else {
 
                 min = apiCovid.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);

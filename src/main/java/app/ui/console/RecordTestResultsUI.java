@@ -2,24 +2,25 @@ package app.ui.console;
 
 import app.controller.App;
 import app.controller.RecordTestResultsController;
-import app.controller.SpecifyTypeTestController;
-import app.domain.model.*;
-//import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+import app.domain.model.Company;
+import app.domain.model.Test;
+import app.ui.console.utils.Utils;
+import com.example1.ExternalModule3API;
 
-//import javax.xml.bind.ValidationEvent;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RecordTestResultsUI implements Runnable {
 
     private RecordTestResultsController controller;
+    private ExternalModule3API apiBlood;
 
     private Company company;
 
     public RecordTestResultsUI() {
         controller = new RecordTestResultsController();
         company = App.getInstance().getCompany();
+        apiBlood = new ExternalModule3API();
     }
 
     public void run() {
@@ -31,54 +32,58 @@ public class RecordTestResultsUI implements Runnable {
 
         int i = 1;
         for (Test t : company.getTests()) {
-            System.out.printf("[%d] - %s\n", i, t.getDescription());
+            System.out.printf("[%d] - %s\n", i, t.getTestID());
             i++;
         }
-        System.out.println("Escolha o teste desejado:");
 
-        option = sc.nextLine();
+        ArrayList lista = new ArrayList();
 
-        if(Integer.parseInt(option) <= 0 || Integer.parseInt(option) > company.getTests().size()){
-            System.out.println("O valor introduzido é inválido.");
-            return;
+        boolean flag = false;
+
+        while (!flag) {
+
+            String id = Utils.readLineFromConsole("Escolha o teste desejado: ");
+            for (Test t : company.getTests()) {
+                if (t.getTestID().equals(id)) {
+                    System.out.println(t.getTestID());
+                    lista = t.getListParameterTestCode();
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                System.out.println("O ID é inválido.");
+            }
         }
+            System.out.println(lista);
 
 
-        Test t = company.getTests().get(Integer.parseInt(option) - 1);
-        controller.setTest(t);
-        Map<String, ValueRecords> map = new HashMap<String, ValueRecords>() ;
+        int acessKey = 12345;
+        double min, max, registeredValue;
+        String medida;
 
-        for(Sample s : t.getSamples()){
-            System.out.println("Digite os valores da Hemoglobina");
-            double hemo = Double.parseDouble(sc.nextLine());
-            s.setHB000(hemo);
-            controller.putRecord(s,"HB000", 0, 1, hemo);
-            System.out.println("Digite os valores da Glóbulos Brancos");
-            double globb = Double.parseDouble(sc.nextLine());
-            s.setWBC00(globb);
-            System.out.println("Digite os valores das Plaquetas");
-            double plaq = Double.parseDouble(sc.nextLine());
-            s.setPLT00(plaq);
-            System.out.println("Digite os valores dos Glóbulos Vermelhos");
-            double globv = Double.parseDouble(sc.nextLine());
-            s.setRBC00(globv);
-            System.out.println("Digite os valores do volume das Mean Cells");
-            double meanc = Double.parseDouble(sc.nextLine());
-            s.setMCV00(meanc);
-            System.out.println("Digite os valores da Mean Cells de Hemoglobina");
-            double meanch = Double.parseDouble(sc.nextLine());
-            s.setMCH00(meanch);
-            System.out.println("Digite os valores das Mean Cells da Concentração de Hemoglobina");
-            double meanchcon = Double.parseDouble(sc.nextLine());
-            s.setMCHC0(meanchcon);
-            System.out.println("Digite os valores da Erythrocyte Sedimentation Rate");
-            double erySedRate = Double.parseDouble(sc.nextLine());
-            s.setESR00(erySedRate);
 
+        for (int j = 0; j < lista.size(); j++) {
+
+            System.out.println(lista.get(j));
+
+            min = apiBlood.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);
+            max = apiBlood.getMaxReferenceValue(String.valueOf(lista.get(j)), acessKey);
+            medida = apiBlood.usedMetric(String.valueOf(lista.get(j)), acessKey);
+
+            registeredValue = Utils.readDoubleFromConsole("Insert the result: ");
+
+            if (Utils.confirm()) {
+
+                if (controller.createValueRecords(min, max, registeredValue)) {
+                    System.out.println("Value Records successfully created with metrics: " + medida);
+                    controller.saveValueRecords();
+                } else {
+                    System.out.println("Value Records not created");
+                }
+            } else {
+                System.out.println("Operation canceled");
+            }
         }
-
-
-
     }
 
 }

@@ -38,4 +38,13 @@ public class ValueRecords {
     public void setRegisteredValue(double registeredValue) {
         this.registeredValue = registeredValue;
     }
+
+    @Override
+    public String toString() {
+        return "ValueRecords{" +
+                "minValue=" + minValue +
+                ", maxValue=" + maxValue +
+                ", registeredValue=" + registeredValue +
+                '}';
+    }
 }

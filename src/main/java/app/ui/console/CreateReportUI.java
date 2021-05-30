@@ -38,6 +38,9 @@ public class CreateReportUI implements Runnable {
             }
 
         }
+        for(int i = 0; i< Company.reportedTestsList.size(); i++){
+            System.out.println(Company.reportedTestsList.get(i));
+        }
 
     }
 

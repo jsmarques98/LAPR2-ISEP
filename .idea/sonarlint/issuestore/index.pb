@@ -53,8 +53,6 @@ e
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 K
 docs/SprintC/US4/CD-US4.svg,b/0/b01ebf38c3928f18f0d6fc3e6eb68b6e1ae88e37
-_
-/src/main/java/app/ui/console/RegisterLabUI.java,d/6/d6debc4d5e4b3d7be774ec81bec95f078661bbb3
 U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 `
@@ -89,10 +87,6 @@ L
 docs/SprintB/US8/US8_CD.puml,8/6/86d6df43adc67a350fa37589c9a0675dafaa3f75
 d
 4src/main/java/app/ui/console/SpecialistDoctorUI.java,8/e/8e4fde63a438f2762f80f6344f21beb4392e356f
-`
-0src/main/java/app/ui/console/CreateReportUI.java,c/5/c5f967c75dc97d2f62bbe27e96d075ee002d5745
-g
-7src/main/java/app/controller/RegisterLabController.java,7/b/7b44867c1af58063519159dc8d62c845b68530e3
 h
 8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
 W

@@ -6,6 +6,7 @@ import app.controller.RegisterLabController;
 import app.controller.ValidationController;
 import app.controller.utils.FileUtil;
 import app.domain.model.Company;
+import app.ui.console.utils.Utils;
 
 import java.util.Scanner;
 
@@ -30,9 +31,9 @@ public class ValidationUI implements Runnable{
         }
 
         System.out.println("Do you validate the reports and the values of tests?(yes/no)");
-        Scanner scanner = new Scanner(System.in);
 
-        if(scanner.nextBoolean()==true) {
+
+        if(Utils.confirm()) {
             fileutil.createFile("./results/emailAndSMSMessages.txt");
             fileutil.writeFile("Your tests are now available in the app!");
         } else {

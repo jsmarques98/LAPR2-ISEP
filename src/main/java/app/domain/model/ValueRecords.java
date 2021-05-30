@@ -2,6 +2,7 @@ package app.domain.model;
 
 public class ValueRecords {
 
+    private String id;
     private double minValue;
     private double maxValue;
     private double registeredValue;
@@ -9,7 +10,8 @@ public class ValueRecords {
     public ValueRecords() {
     }
 
-    public ValueRecords(double minValue, double maxValue, double registeredValue) {
+    public ValueRecords(String id, double minValue, double maxValue, double registeredValue) {
+        this.id = id;
         this.minValue = minValue;
         this.maxValue = maxValue;
         this.registeredValue = registeredValue;

@@ -24,6 +24,7 @@ public class RecordTestResultsUI implements Runnable {
     }
 
     public void run() {
+        String id = null;
         System.out.println(company.getTests().get(0).getSamples());
 
         Scanner sc = new Scanner(System.in);
@@ -42,10 +43,9 @@ public class RecordTestResultsUI implements Runnable {
 
         while (!flag) {
 
-            String id = Utils.readLineFromConsole("Escolha o teste desejado: ");
+            id = Utils.readLineFromConsole("Escolha o teste desejado: ");
             for (Test t : company.getTests()) {
                 if (t.getTestID().equals(id)) {
-                    System.out.println(t.getTestID());
                     lista = t.getListParameterTestCode();
                     flag = true;
                 }
@@ -64,17 +64,15 @@ public class RecordTestResultsUI implements Runnable {
 
         for (int j = 0; j < lista.size(); j++) {
 
-            System.out.println(lista.get(j));
-
             min = apiBlood.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);
             max = apiBlood.getMaxReferenceValue(String.valueOf(lista.get(j)), acessKey);
             medida = apiBlood.usedMetric(String.valueOf(lista.get(j)), acessKey);
 
-            registeredValue = Utils.readDoubleFromConsole("Insert the result: ");
+            registeredValue = Utils.readDoubleFromConsole("Insert the result of " + lista.get(j) + ": ");
 
             if (Utils.confirm()) {
 
-                if (controller.createValueRecords(min, max, registeredValue)) {
+                if (controller.createValueRecords(id, min, max, registeredValue)) {
                     System.out.println("Value Records successfully created with metrics: " + medida);
                     controller.saveValueRecords();
                 } else {
@@ -85,7 +83,6 @@ public class RecordTestResultsUI implements Runnable {
             }
         }
     }
-
 }
 
 

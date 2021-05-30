@@ -27,8 +27,8 @@ public class RecordTestResultsController {
         this.valueRecords = null;
     }
 
-    public boolean createValueRecords( double min, double max, double registeredValue) {
-        this.valueRecords = this.company.createValueRecords(min, max, registeredValue);
+    public boolean createValueRecords( String id, double min, double max, double registeredValue) {
+        this.valueRecords = this.company.createValueRecords(id, min, max, registeredValue);
         return this.company.validateValueRecords(valueRecords);
     }
 

@@ -53,8 +53,6 @@ e
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 K
 docs/SprintC/US4/CD-US4.svg,b/0/b01ebf38c3928f18f0d6fc3e6eb68b6e1ae88e37
-G
-docs/SprintC/US4/US4.md,e/b/eb8449dbd51337621caded84a8b25cddbf573607
 _
 /src/main/java/app/ui/console/RegisterLabUI.java,d/6/d6debc4d5e4b3d7be774ec81bec95f078661bbb3
 U
@@ -75,8 +73,6 @@ Z
 .src/test/java/app/domain/model/SampleTest.java,3/0/30a600e399b7ae013cc66d630992203751d9841b
 `
 0src/test/java/app/domain/model/EmployeeTest.java,e/3/e3c8c18d9e7436b0c6e2317e0e84a55d7e796e7a
-X
-(src/main/java/app/domain/model/Test.java,0/3/0346ca7efc8246aba1bce2abd18994f1118a0b11
 Y
 )src/main/java/app/ui/console/AdminUI.java,0/a/0a9fb9c3271ce78061d523da4e5474691abf5009
 X
@@ -113,21 +109,5 @@ N
 docs/SprintC/US14/US14_DM.puml,5/f/5f56078aa1241aeeacd18bb63884f5c099aba38e
 M
 docs/SprintC/US14/US14_DM.svg,3/5/3571beaacab9279bac74792a3605c1150e11757f
-M
-docs/SprintC/US14/US14_SD.svg,d/b/dbdda941c0755f28ef3dd1b73a45d041ca8d9e62
-O
-docs/SprintC/US14/US14_SSD.puml,f/c/fc975f2ac25582a586d61c165934f286b71bde3b
-I
-docs/SprintC/US14/US14.md,6/f/6f96408c492c73eec23f503267589633c522eb76
 K
 docs/SprintC/US5/US5-CD.svg,1/4/145271eb68a23d9f78b420d771241d855000e88b
-L
-docs/SprintC/US5/US5-CD.puml,b/f/bf22466a13101b9902046f69302643ddf2828761
-N
-docs/SprintC/US14/US14_CD.puml,c/a/cae576c614694800d0259bc6bbabaaf2622414ea
-M
-docs/SprintC/US14/US14_CD.svg,3/7/37e31f1968cf967668d76698fd1edd0354fe1f79
-[
-+src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
-N
-docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9

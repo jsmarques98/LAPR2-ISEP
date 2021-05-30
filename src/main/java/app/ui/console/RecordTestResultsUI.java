@@ -7,7 +7,6 @@ import app.domain.model.Test;
 import app.ui.console.utils.Utils;
 import com.example1.ExternalModule3API;
 import com.example3.CovidReferenceValues1API;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -33,7 +32,6 @@ public class RecordTestResultsUI implements Runnable {
         Scanner sc = new Scanner(System.in);
         String option = "";
 
-
         int i = 1;
         for (Test t : company.getTests()) {
             System.out.printf("[%d] - %s\n", i, t.getTestID());
@@ -43,7 +41,6 @@ public class RecordTestResultsUI implements Runnable {
         ArrayList lista = new ArrayList();
 
         boolean flag = false;
-
         while (!flag) {
 
             id = Utils.readLineFromConsole("Escolha o teste desejado: ");
@@ -57,14 +54,13 @@ public class RecordTestResultsUI implements Runnable {
                 System.out.println("O ID é inválido.");
             }
         }
-        System.out.println(lista);
 
+        System.out.println(lista);
 
         int acessKey = 12345;
         double min = 0, max = 0, registeredValue = 0;
         String medida = null;
-        String parametro ;
-
+        String parametro;
 
         for (int j = 0; j < lista.size(); j++) {
 
@@ -75,6 +71,7 @@ public class RecordTestResultsUI implements Runnable {
                 parametro = (String) lista.get(j);
                 medida = apiBlood.usedMetric(String.valueOf(lista.get(j)), acessKey);
                 registeredValue = Utils.readDoubleFromConsole("Insert the result of " + lista.get(j) + ": ");
+                
             } else {
 
                 min = apiCovid.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);
@@ -88,10 +85,11 @@ public class RecordTestResultsUI implements Runnable {
             if (Utils.confirm()) {
 
                 if (controller.createValueRecords(id, min, max, registeredValue, parametro)) {
-                    System.out.println("Value Records successfully created with metrics: " + medida);
+                    System.out.println("Value records successfully created. Metric: " + medida);
+                    System.out.println("");
                     controller.saveValueRecords();
                 } else {
-                    System.out.println("Value Records not created");
+                    System.out.println("Value records not created");
                 }
             } else {
                 System.out.println("Operation canceled");

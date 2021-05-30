@@ -29,11 +29,11 @@ deactivate COM
 
 deactivate CRC
 
-UI --> Spec : shows the tests and asks to choose one to make the report (testcode)
+UI --> Spec : shows the tests and asks to choose one to make the report (test)
 
 deactivate UI
 
-Spec --> UI : selects requested data (testcode)
+Spec --> UI : selects requested data (test)
 
 activate UI
 

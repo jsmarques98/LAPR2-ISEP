@@ -71,8 +71,6 @@ Y
 )src/main/java/app/ui/console/AdminUI.java,0/a/0a9fb9c3271ce78061d523da4e5474691abf5009
 X
 (src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036
-a
-1src/test/java/app/domain/model/DiagnosisTest.java,4/6/46e3d99c804c6debe5c8f9fc88e72432ee1378fa
 `
 0src/test/java/app/domain/model/FileUtilTest.java,5/e/5eff9f112944b9b5a18da40c7265de859fd096f3
 \
@@ -103,11 +101,39 @@ M
 docs/SprintC/US14/US14_CD.svg,3/7/37e31f1968cf967668d76698fd1edd0354fe1f79
 N
 docs/SprintC/US14/US14_CD.puml,c/a/cae576c614694800d0259bc6bbabaaf2622414ea
-N
-docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
 M
 docs/SprintC/US14/US14_SD.svg,d/b/dbdda941c0755f28ef3dd1b73a45d041ca8d9e62
 g
 7src/main/java/app/controller/RegisterLabController.java,7/b/7b44867c1af58063519159dc8d62c845b68530e3
 [
 +src/test/java/app/domain/model/LabTest.java,9/a/9aa586d56dda01e0cc957829447f49a7f102d334
+_
+/src/main/java/app/ui/console/RegisterLabUI.java,d/6/d6debc4d5e4b3d7be774ec81bec95f078661bbb3
+G
+docs/SprintC/US8/US8.md,0/2/02cab1d3aa2d0cf240e2dda9595bc8f638d5ba5a
+q
+Asrc/main/java/app/domain/model/ClinicalChemestryTechnologist.java,8/f/8f6b8d168e2a0ba7ba2026c264df47159bad3649
+]
+-src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4
+h
+8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
+`
+0src/main/java/app/ui/console/CreateReportUI.java,c/5/c5f967c75dc97d2f62bbe27e96d075ee002d5745
+X
+(src/main/java/app/domain/model/Test.java,0/3/0346ca7efc8246aba1bce2abd18994f1118a0b11
+`
+0src/main/java/app/domain/model/ValueRecords.java,5/5/5546cb56d2512813025570520fd60de1ad4d89d4
+U
+%src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
+[
++src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
+N
+docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
+a
+1src/test/java/app/domain/model/DiagnosisTest.java,4/6/46e3d99c804c6debe5c8f9fc88e72432ee1378fa
+G
+docs/SprintC/US4/US4.md,e/b/eb8449dbd51337621caded84a8b25cddbf573607
+O
+docs/SprintC/US14/US14_SD2.puml,7/e/7edb8a76475f74134f31744c8777aa6280fa8936
+I
+docs/SprintC/US14/US14.md,6/f/6f96408c492c73eec23f503267589633c522eb76

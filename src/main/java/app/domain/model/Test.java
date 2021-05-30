@@ -22,15 +22,6 @@ public class Test {
     private LocalDate sampleLocalDate;
 
 
-//    public Test(String tinNumber, String nhscode, String description, String idTestType ,ArrayList listCodeCategory, ArrayList listParameterTestCode) {
-//    private final Map<Sample , Map <String, ValueRecords> > map ;
-//
-//
-//
-//
-//
-//
-//    }
     public Test(String tinNumber, String nhscode, String description, String idTestType ,ArrayList<String> listCodeCategory, ArrayList<String> listParameterTestCode) {
         this.testID = generateID();
         this.tinNumber = tinNumber;
@@ -59,6 +50,10 @@ public class Test {
 
     public ArrayList getListParameterTestCode() {
         return listParameterTestCode;
+    }
+
+    public ArrayList<String> getListCodeCategory() {
+        return listCodeCategory;
     }
 
     public String getDescription() {

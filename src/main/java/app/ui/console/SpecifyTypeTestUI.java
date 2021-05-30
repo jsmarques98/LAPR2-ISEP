@@ -29,10 +29,9 @@ public class SpecifyTypeTestUI implements Runnable {
         System.out.println("Lista de categorias:");
         //List<Category> lst = company.getCategories();
         List<Category> lst = new ArrayList<>();
-        lst.add(new Category("categoria1","codigo1"));
-        lst.add(new Category("categoria2","codigo2"));
-        lst.add(new Category("categoria3","codigo3"));
-        lst.add(new Category("categoria4","codigo4"));
+        lst.add(new Category("categoria1","sangue"));
+        lst.add(new Category("categoria2","covid"));
+        lst.add(new Category("categoria3","urina"));
         Set<Category> listCat = new TreeSet<Category>();
         String option = "";
         while (true) {

@@ -6,6 +6,7 @@ import app.domain.model.Company;
 import app.domain.model.Test;
 import app.ui.console.utils.Utils;
 import com.example1.ExternalModule3API;
+import com.example3.CovidReferenceValues1API;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,6 +15,7 @@ public class RecordTestResultsUI implements Runnable {
 
     private RecordTestResultsController controller;
     private ExternalModule3API apiBlood;
+    private CovidReferenceValues1API apiCovid;
 
     private Company company;
 
@@ -21,6 +23,7 @@ public class RecordTestResultsUI implements Runnable {
         controller = new RecordTestResultsController();
         company = App.getInstance().getCompany();
         apiBlood = new ExternalModule3API();
+        apiCovid = new CovidReferenceValues1API();
     }
 
     public void run() {
@@ -54,25 +57,39 @@ public class RecordTestResultsUI implements Runnable {
                 System.out.println("O ID é inválido.");
             }
         }
-            System.out.println(lista);
+        System.out.println(lista);
 
 
         int acessKey = 12345;
-        double min, max, registeredValue;
-        String medida;
+        double min = 0, max = 0, registeredValue = 0;
+        String medida = null;
+        String parametro ;
 
 
         for (int j = 0; j < lista.size(); j++) {
 
-            min = apiBlood.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);
-            max = apiBlood.getMaxReferenceValue(String.valueOf(lista.get(j)), acessKey);
-            medida = apiBlood.usedMetric(String.valueOf(lista.get(j)), acessKey);
+            if (!lista.get(j).equals("IgGAN")) {
 
-            registeredValue = Utils.readDoubleFromConsole("Insert the result of " + lista.get(j) + ": ");
+                System.out.println("aqui tambem" + lista.get(j));
+
+                min = apiBlood.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);
+                max = apiBlood.getMaxReferenceValue(String.valueOf(lista.get(j)), acessKey);
+                parametro = (String) lista.get(j);
+                medida = apiBlood.usedMetric(String.valueOf(lista.get(j)), acessKey);
+                registeredValue = Utils.readDoubleFromConsole("Insert the result of " + lista.get(j) + ": ");
+            } else {
+
+                min = apiCovid.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);
+                max = apiCovid.getMaxReferenceValue(String.valueOf(lista.get(j)), acessKey);
+                parametro = (String) lista.get(j);
+                medida = apiCovid.usedMetric(String.valueOf(lista.get(j)), acessKey);
+                registeredValue = Utils.readDoubleFromConsole("Insert the result of " + lista.get(j) + ": ");
+
+            }
 
             if (Utils.confirm()) {
 
-                if (controller.createValueRecords(id, min, max, registeredValue)) {
+                if (controller.createValueRecords(id, min, max, registeredValue, parametro)) {
                     System.out.println("Value Records successfully created with metrics: " + medida);
                     controller.saveValueRecords();
                 } else {
@@ -83,6 +100,8 @@ public class RecordTestResultsUI implements Runnable {
             }
         }
     }
+
+
 }
 
 

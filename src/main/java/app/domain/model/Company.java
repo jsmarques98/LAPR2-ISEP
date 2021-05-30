@@ -285,9 +285,9 @@ public class Company {
 
     //us12
 
-    public ValueRecords createValueRecords(String id, double min, double max, double registeredValue) {
+    public ValueRecords createValueRecords(String id, double min, double max, double registeredValue, String parametro) {
 
-        return new ValueRecords(id, min, max, registeredValue);
+        return new ValueRecords(id, min, max, registeredValue, parametro);
     }
 
 

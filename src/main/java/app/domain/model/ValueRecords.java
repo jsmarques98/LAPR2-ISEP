@@ -6,15 +6,17 @@ public class ValueRecords {
     private double minValue;
     private double maxValue;
     private double registeredValue;
+    private String parametro;
 
     public ValueRecords() {
     }
 
-    public ValueRecords(String id, double minValue, double maxValue, double registeredValue) {
+    public ValueRecords(String id, double minValue, double maxValue, double registeredValue, String parametro ) {
         this.id = id;
         this.minValue = minValue;
         this.maxValue = maxValue;
         this.registeredValue = registeredValue;
+        this.parametro = parametro;
     }
 
     public double getMinValue() {
@@ -45,12 +47,15 @@ public class ValueRecords {
         return id;
     }
 
+
     @Override
     public String toString() {
         return "ValueRecords{" +
                 "minValue=" + minValue +
                 ", maxValue=" + maxValue +
                 ", registeredValue=" + registeredValue +
+                ", id=" + id+
+                ", parametro=" + parametro+
                 '}';
     }
 }

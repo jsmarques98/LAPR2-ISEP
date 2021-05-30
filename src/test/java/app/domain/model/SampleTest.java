@@ -18,15 +18,6 @@ public class SampleTest {
         assertEquals(arg, sample.getBarcode().toString(), arg);
     }
 
-    @Test
-    public void createNullSample(){
-
-        String arg = null;
-        AtomicReference<Sample> sample = null;
-        Assertions.assertThrows(NullPointerException.class, () -> {
-            sample.set(new Sample(arg));
-        });
-    }
 
     @Test
     public void createInvalidSample(){

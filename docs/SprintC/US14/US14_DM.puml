@@ -10,11 +10,23 @@ class Company {
 class Test {
 - testID
 - nhscode
-- description
-- dateDiagnosis
-- timeDiagnosis
-- dateValidation
-- timeValidation
+}
+
+class TestType {
+- testType
+- designation
+}
+
+class Category {
+- name
+- code
+}
+
+class Parameter{
+- code
+- shortName
+- designation
+
 }
 
 class Diagnosis {
@@ -28,7 +40,9 @@ class SpecialistDoctor {
 Company "1" --> "*" Test : performs
 Test "1" --> "1" Diagnosis : has
 Diagnosis "*" --> "1" SpecialistDoctor : is made by
-
+TestType "1" --> "1" Test : is of
+TestType "1" --> "*" Category : has
+Category "1" --> "*" Parameter : has
 
 
 @enduml

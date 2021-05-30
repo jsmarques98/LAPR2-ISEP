@@ -1,5 +1,6 @@
-/*package app.domain.model;
+package app.domain.model;
 
+import app.controller.utils.FileUtil;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
@@ -25,4 +26,4 @@ class FileUtilTest {
         assertEquals("Your tests are now available in the app!", objReader.readLine());
     }
 
-}*/
+}

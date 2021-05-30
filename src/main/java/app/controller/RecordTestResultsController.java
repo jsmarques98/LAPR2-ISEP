@@ -1,31 +1,40 @@
 package app.controller;
 
-import app.domain.model.Sample;
+import app.domain.model.Company;
 import app.domain.model.Test;
 import app.domain.model.ValueRecords;
 import com.example1.ExternalModule3API;
 
 
-import java.util.HashMap;
-
 public class RecordTestResultsController {
 
-    private ExternalModule3API apiBlood = new ExternalModule3API();
-
     private Test test;
+
+    private Company company;
+
+    private ValueRecords valueRecords;
 
     public void setTest(Test test) {
         this.test = test;
     }
 
     public RecordTestResultsController() {
+        this(App.getInstance().getCompany());
     }
 
-    public void putRecord(Sample s, String str, int min, int max, double registeredValue) {
-        if(!test.getMap().containsKey(s))
-        test.getMap().put(s,new HashMap<String, ValueRecords>(){{put( str , new ValueRecords(min, max, registeredValue));}});
-        else
-            test.getMap().get(s).put(str, new ValueRecords(min, max, registeredValue));
+    public RecordTestResultsController(Company company) {
+        this.company = company;
+        this.valueRecords = null;
+    }
+
+    public boolean createValueRecords( String id, double min, double max, double registeredValue) {
+        this.valueRecords = this.company.createValueRecords(id, min, max, registeredValue);
+        return this.company.validateValueRecords(valueRecords);
+    }
+
+    public boolean saveValueRecords() {
+        System.out.println(valueRecords);
+        return this.company.saveValueRecords(valueRecords);
     }
 
 }

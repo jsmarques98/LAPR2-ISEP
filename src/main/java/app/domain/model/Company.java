@@ -23,6 +23,8 @@ public class Company {
 
     public static List<Test> tests = new ArrayList<>();
 
+    public static List<ValueRecords> valueRecordsList = new ArrayList<>();
+
     public static List<Client> clientsList = new ArrayList<>();
 
     public static List<ParameterTest> parameterList = new ArrayList<>();
@@ -278,6 +280,41 @@ public class Company {
         } else {
             return this.tests.add(t);
         }
+    }
+
+
+    //us12
+
+    public ValueRecords createValueRecords(String id, double min, double max, double registeredValue) {
+
+        return new ValueRecords(id, min, max, registeredValue);
+    }
+
+
+    public boolean validateValueRecords(ValueRecords valueRecords) {
+        if (valueRecords == null)
+            return false;
+        return !this.valueRecordsList.contains(valueRecords);
+    }
+
+    public boolean saveValueRecords(ValueRecords valueRecords) {
+        if (!validateValueRecords(valueRecords)) {
+            return false;
+        } else {
+            return this.valueRecordsList.add(valueRecords);
+        }
+    }
+
+
+    //us15
+
+    public List<Test> getTestsWhitSamples() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getSamples().size() != 0)
+                availableTests.add(current);
+
+        return availableTests;
     }
 }
 

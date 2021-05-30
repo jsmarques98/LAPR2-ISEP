@@ -1,4 +1,4 @@
-package app.domain.model;
+package app.controller.utils;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

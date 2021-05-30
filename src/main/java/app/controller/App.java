@@ -133,29 +133,29 @@ public class App {
         listPara.add(parameterTest1);
         listPara.add(parameterTest2);
 
-//        Test test1 =  new Test("0000000000","0000","sad","sdsad1",  listCat, listPara);
-//        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
-//        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
-//        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
+       Test test1 =  new Test("0000000000","0000","sad","sdsad1",  listCat, listPara);
+        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
+        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
+        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
 
-//        String arg1 = "00000000001";
-//        String arg2 = "00000000002";
-//        String arg3 = "00000000003";
-//        String arg4 = "00000000004";
-//        test1.getSamples().add(new Sample(arg1, barcodeAdapter));
-//        test1.getSamples().add(new Sample(arg2, barcodeAdapter));
-//        test1.getSamples().add(new Sample(arg3, barcodeAdapter));
-//        test1.setSampleLocalDate();
-//        test1.setSampleLocalTime();
-//        test2.getSamples().add(new Sample(arg4, barcodeAdapter));
-//        test2.setSampleLocalDate();
-//        test2.setSampleLocalTime();
-//
-//        company.getTests().add(test1);
-//        company.getTests().add(test2);
-//        company.getTests().add(test3);
-//        company.getTests().add(test4);
-//
+        String arg1 = "00000000001";
+        String arg2 = "00000000002";
+        String arg3 = "00000000003";
+        String arg4 = "00000000004";
+        test1.getSamples().add(new Sample(arg1, barcodeAdapter));
+        test1.getSamples().add(new Sample(arg2, barcodeAdapter));
+        test1.getSamples().add(new Sample(arg3, barcodeAdapter));
+        test1.setSampleLocalDate();
+        test1.setSampleLocalTime();
+        test2.getSamples().add(new Sample(arg4, barcodeAdapter));
+        test2.setSampleLocalDate();
+        test2.setSampleLocalTime();
+
+        company.getTests().add(test1);
+        company.getTests().add(test2);
+        company.getTests().add(test3);
+        company.getTests().add(test4);
+
 //        company.getTests().add(test1);
 //        company.getTests().add(test2);
 //        company.getTests().add(test3);

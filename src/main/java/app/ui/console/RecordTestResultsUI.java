@@ -70,8 +70,6 @@ public class RecordTestResultsUI implements Runnable {
 
             if (!lista.get(j).equals("IgGAN")) {
 
-                System.out.println("aqui tambem" + lista.get(j));
-
                 min = apiBlood.getMinReferenceValue(String.valueOf(lista.get(j)), acessKey);
                 max = apiBlood.getMaxReferenceValue(String.valueOf(lista.get(j)), acessKey);
                 parametro = (String) lista.get(j);

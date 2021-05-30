@@ -111,6 +111,7 @@ public class App {
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
         this.authFacade.addUserWithRole("Jose", "jose@gmail.com", "123456", Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
+        this.authFacade.addUserWithRole("laboratory coordinator", "labcord@gmail.com", "123456", Constants.ROLE_LABORATORY_COORDINATOR);
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
 
         Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com");

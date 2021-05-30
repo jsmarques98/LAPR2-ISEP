@@ -20,6 +20,10 @@ public class Sample {
     public Sample( String code ){
         generateBarcode(code);
     }
+    public Sample( String code, String adapter){
+        generateBarcode(code, adapter);
+    }
+
 
     public double getHB000() {
         return HB000;
@@ -86,7 +90,13 @@ public class Sample {
     }
 
     private void generateBarcode(String code ){
-        BarcodeInterface imp = ReflectorUtility.adapterReflection(App.getBarcodeAdapter());
+        BarcodeInterface imp = ReflectorUtility.adapterReflection(App.getInstance().getBarcodeAdapter());
+        if (imp != null)
+            barcode = imp.generateBarcode(code);
+    }
+
+    private void generateBarcode(String code, String adapter ){
+        BarcodeInterface imp = ReflectorUtility.adapterReflection(adapter);
         if (imp != null)
             barcode = imp.generateBarcode(code);
     }

@@ -18,11 +18,11 @@ public class App {
     private Company company;
     private AuthFacade authFacade;
 
-    private static String barcodeAdapter;
+    private String barcodeAdapter;
 
     private App() {
         Properties props = getProperties();
-        this.barcodeAdapter = props.getProperty("BarcodeAdapter");
+        barcodeAdapter = props.getProperty("BarcodeAdapter");
         this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
         this.authFacade = this.company.getAuthFacade();
         bootstrap();
@@ -32,8 +32,8 @@ public class App {
         return this.company;
     }
 
-    public static String getBarcodeAdapter(){
-            return barcodeAdapter;
+    public String getBarcodeAdapter(){
+        return barcodeAdapter;
     }
 
     public UserSession getCurrentUserSession() {
@@ -137,10 +137,14 @@ public class App {
         String arg2 = "00000000002";
         String arg3 = "00000000003";
         String arg4 = "00000000004";
-        test1.getSamples().add(new Sample(arg1));
-        test1.getSamples().add(new Sample(arg2));
-        test1.getSamples().add(new Sample(arg3));
-        test2.getSamples().add(new Sample(arg4));
+        test1.getSamples().add(new Sample(arg1, barcodeAdapter));
+        test1.getSamples().add(new Sample(arg2, barcodeAdapter));
+        test1.getSamples().add(new Sample(arg3, barcodeAdapter));
+        test1.setSampleLocalDate();
+        test1.setSampleLocalTime();
+        test2.getSamples().add(new Sample(arg4, barcodeAdapter));
+        test2.setSampleLocalDate();
+        test2.setSampleLocalTime();
 
         company.getTests().add(test1);
         company.getTests().add(test2);

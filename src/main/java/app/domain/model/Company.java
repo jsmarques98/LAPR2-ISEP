@@ -102,12 +102,6 @@ public class Company {
 
     }
 
-    public Receptionist getReceptionist(String username) {
-
-        return null;
-    }
-
-
     public Company(String designation) {
         if (designation.length() < 1)
             throw new IllegalArgumentException("Designation cannot be blank.");

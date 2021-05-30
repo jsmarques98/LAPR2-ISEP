@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicReference;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SampleTest {
 
@@ -28,6 +29,14 @@ public class SampleTest {
     }
 
     @Test
+    public void createInvalidSample(){
+
+        String arg = "12341234123412341234";
+        Sample sample = new Sample(arg);
+        assertNull(sample.getBarcode());
+    }
+
+    @Test
     public void testSettersGetters(){
         String arg = "42100005264";
         Sample sample = new Sample(arg);
@@ -47,8 +56,6 @@ public class SampleTest {
         assertEquals(val, sample.getMCH00(), val);
         assertEquals(val, sample.getHB000(), val);
         assertEquals(val, sample.getESR00(), val);
-
-
     }
 
 }

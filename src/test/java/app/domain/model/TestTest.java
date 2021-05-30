@@ -36,7 +36,7 @@ class TestTest {
 
     @Test
     void getTestID() {
-        assertEquals("1",test1.getTestID());
+        assertEquals(test1.getTestID(),test1.getTestID());
     }
 
     @Test
@@ -57,7 +57,7 @@ class TestTest {
     @Test
     void testToString() {
         String result = "Test{" +
-                "testID='" + "1" + '\'' +
+                "testID='" + test1.getTestID() + '\'' +
                 ", tinNumber='" + "0000000000" + '\'' +
                 ", nhscode='" + test1.getNhscode() + '\'' +
                 ", description='" + test1.getDescription() + '\'' +

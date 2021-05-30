@@ -86,8 +86,9 @@ public class Sample {
     }
 
     private void generateBarcode(String code ){
-        BarcodeInterface imp = ReflectorUtility.adapterReflection(App.getInstance().getBarcodeAdapter());
-        barcode = imp.generateBarcode(code);
+        BarcodeInterface imp = ReflectorUtility.adapterReflection(App.getBarcodeAdapter());
+        if (imp != null)
+            barcode = imp.generateBarcode(code);
     }
 
 

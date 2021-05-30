@@ -11,18 +11,25 @@ class RecordSamplesController {
 }
 
 
-
+package "Domain" #DDDDDD {
 class Company {
   +List<Test> getTests()
 }
-
-RecordSamplesController ..> Company
-
 class Test {
 -LocalDate sampleDate
 -LocalTime sampleTime
+}
+class Sample {
 
 }
+class Barcode {
+ -generateBarcode(code)
+}
+
+}
+RecordSamplesController ..> Company
+
+
 
 
 class TestDTO {
@@ -37,23 +44,20 @@ TestDTO ..> Test
 
 Company "1" --> "*" Test
 
-class Sample {
 
-}
 
 Test "1" --> "*" Sample
 
-class Barcode {
- -generateBarcode(code)
-}
 
 Sample "1" --> "1" Barcode
 
+package "BarcodeAPI" #DDDDDD {
 interface BarcodeInterface
 
 class ReflectorUtility
 
 class BarcodeAdapter
+}
 
 BarcodeAdapter -|> BarcodeInterface
 

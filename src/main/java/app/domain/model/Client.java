@@ -7,16 +7,15 @@ public class Client {
     String CCNumber;
     String NHSNumber;
     String birthdate;
-    String sex;
     String TINNumber;
     String phoneNumber;
     String email;
-    String Password;
+    String password;
 
 
 
 
-    public Client(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email, String password) {
+    public Client(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email) {
 
         this.name = name;
         this.TINNumber = number;
@@ -25,8 +24,7 @@ public class Client {
         this.birthdate = date;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.Password = password;
-
+        this.password = "";
     }
 
     @Override
@@ -38,22 +36,16 @@ public class Client {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(phoneNumber, email);
-    }
-
-    @Override
     public String toString() {
         return "Client{" +
                 "name='" + name + '\'' +
                 ", CCNumber='" + CCNumber + '\'' +
                 ", NHSNumber='" + NHSNumber + '\'' +
                 ", birthdate='" + birthdate + '\'' +
-                ", sex='" + sex + '\'' +
                 ", TINNumber='" + TINNumber + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
-                ", Password='" + Password + '\'' +
+                ", Password='" + password + '\'' +
                 '}';
     }
 

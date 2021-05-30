@@ -1,7 +1,5 @@
 package app.dto;
 
-import java.util.Objects;
-
 public class ClientDTO {
     String name;
     String CCNumber;
@@ -45,44 +43,16 @@ public class ClientDTO {
         return Password;
     }
 
-    public ClientDTO(Object name, Object number, Object cCard, Object nhs, Object date, Object phoneNumber, Object email, Object password) {
+    public ClientDTO(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email, String password) {
 
-        this.name = (String) name;
-        this.TINNumber = (String) number;
-        this.CCNumber = (String) cCard;
-        this.NHSNumber = (String) nhs;
-        this.birthdate = (String) date;
-        this.phoneNumber = (String) phoneNumber;
-        this.email = (String) email;
-        this.Password = (String) password;
+        this.name = name;
+        this.TINNumber = number;
+        this.CCNumber = cCard;
+        this.NHSNumber = nhs;
+        this.birthdate = date;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.Password = password;
     }
 
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ClientDTO clientDTO = (ClientDTO) o;
-        return Objects.equals(phoneNumber, clientDTO.phoneNumber) && Objects.equals(email, clientDTO.email);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(phoneNumber, email);
-    }
-
-    @Override
-    public String toString() {
-        return "ClientDTO{" +
-                "name='" + name + '\'' +
-                ", CCNumber='" + CCNumber + '\'' +
-                ", NHSNumber='" + NHSNumber + '\'' +
-                ", birthdate='" + birthdate + '\'' + '\'' +
-                ", TINNumber='" + TINNumber + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", Password='" + Password + '\'' +
-                '}';
-    }
 }

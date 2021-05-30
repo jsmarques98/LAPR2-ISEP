@@ -1,5 +1,6 @@
 package app.domain.model;
 
+import app.controller.RecordSamplesController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -47,8 +48,6 @@ public class SampleTest {
         assertEquals(val, sample.getMCH00(), val);
         assertEquals(val, sample.getHB000(), val);
         assertEquals(val, sample.getESR00(), val);
-
-
     }
 
 }

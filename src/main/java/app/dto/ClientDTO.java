@@ -1,7 +1,5 @@
 package app.dto;
 
-import java.util.Objects;
-
 public class ClientDTO {
     String name;
     String CCNumber;
@@ -10,7 +8,6 @@ public class ClientDTO {
     String TINNumber;
     String phoneNumber;
     String email;
-    String sex;
     String Password;
 
 
@@ -55,36 +52,7 @@ public class ClientDTO {
         this.birthdate = date;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.sex = sex;
         this.Password = password;
     }
 
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ClientDTO clientDTO = (ClientDTO) o;
-        return Objects.equals(phoneNumber, clientDTO.phoneNumber) && Objects.equals(email, clientDTO.email);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(phoneNumber, email);
-    }
-
-    @Override
-    public String toString() {
-        return "ClientDTO{" +
-                "name='" + name + '\'' +
-                ", CCNumber='" + CCNumber + '\'' +
-                ", NHSNumber='" + NHSNumber + '\'' +
-                ", birthdate='" + birthdate + '\'' + '\'' +
-                ", TINNumber='" + TINNumber + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", Password='" + Password + '\'' +
-                '}';
-    }
 }

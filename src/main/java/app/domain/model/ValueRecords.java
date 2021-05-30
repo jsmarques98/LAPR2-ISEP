@@ -2,7 +2,7 @@ package app.domain.model;
 
 public class ValueRecords {
 
-    private String id;
+    private static String id;
     private double minValue;
     private double maxValue;
     private double registeredValue;
@@ -39,6 +39,10 @@ public class ValueRecords {
 
     public void setRegisteredValue(double registeredValue) {
         this.registeredValue = registeredValue;
+    }
+
+    public static String getId() {
+        return id;
     }
 
     @Override

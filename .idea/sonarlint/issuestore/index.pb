@@ -53,10 +53,6 @@ e
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 K
 docs/SprintC/US4/CD-US4.svg,b/0/b01ebf38c3928f18f0d6fc3e6eb68b6e1ae88e37
-U
-%src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
-`
-0src/main/java/app/domain/model/ValueRecords.java,5/5/5546cb56d2512813025570520fd60de1ad4d89d4
 b
 2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
 m

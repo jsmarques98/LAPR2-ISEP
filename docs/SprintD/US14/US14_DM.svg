@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="546px" preserveAspectRatio="none" style="width:287px;height:546px;" version="1.1" viewBox="0 0 287 546" width="287px" zoomAndPan="magnify"><defs><filter height="300%" id="fyj93dr49vja4" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="4" fill="#FEFECE" filter="url(#fyj93dr49vja4)" height="73.6094" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="92" x="10.5" y="7"/><ellipse cx="26.85" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M29.8188,28.6406 Q29.2406,28.9375 28.6,29.0781 Q27.9594,29.2344 27.2563,29.2344 Q24.7563,29.2344 23.4281,27.5938 Q22.1156,25.9375 22.1156,22.8125 Q22.1156,19.6875 23.4281,18.0313 Q24.7563,16.375 27.2563,16.375 Q27.9594,16.375 28.6,16.5313 Q29.2563,16.6875 29.8188,16.9844 L29.8188,19.7031 Q29.1938,19.125 28.6,18.8594 Q28.0063,18.5781 27.3813,18.5781 Q26.0375,18.5781 25.35,19.6563 Q24.6625,20.7188 24.6625,22.8125 Q24.6625,24.9063 25.35,25.9844 Q26.0375,27.0469 27.3813,27.0469 Q28.0063,27.0469 28.6,26.7813 Q29.1938,26.5 29.8188,25.9219 L29.8188,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="57" x="41.15" y="27.1543">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="11.5" x2="101.5" y1="39" y2="39"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18.5" y="47"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="30.5" y="53.2104">designation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18.5" y="59.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="30.5" y="66.0151">address</text><line style="stroke:#A80036;stroke-width:1.5;" x1="11.5" x2="101.5" y1="72.6094" y2="72.6094"/><!--MD5=[df38be88ccee13e832d6fafd6288a4ca]
+class Test--><rect codeLine="9" fill="#FEFECE" filter="url(#fyj93dr49vja4)" height="73.6094" id="Test" style="stroke:#A80036;stroke-width:1.5;" width="74" x="38.5" y="158"/><ellipse cx="60.25" cy="174" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M63.2188,179.6406 Q62.6406,179.9375 62,180.0781 Q61.3594,180.2344 60.6563,180.2344 Q58.1563,180.2344 56.8281,178.5938 Q55.5156,176.9375 55.5156,173.8125 Q55.5156,170.6875 56.8281,169.0313 Q58.1563,167.375 60.6563,167.375 Q61.3594,167.375 62,167.5313 Q62.6563,167.6875 63.2188,167.9844 L63.2188,170.7031 Q62.5938,170.125 62,169.8594 Q61.4063,169.5781 60.7813,169.5781 Q59.4375,169.5781 58.75,170.6563 Q58.0625,171.7188 58.0625,173.8125 Q58.0625,175.9063 58.75,176.9844 Q59.4375,178.0469 60.7813,178.0469 Q61.4063,178.0469 62,177.7813 Q62.5938,177.5 63.2188,176.9219 L63.2188,179.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="75.75" y="178.1543">Test</text><line style="stroke:#A80036;stroke-width:1.5;" x1="39.5" x2="111.5" y1="190" y2="190"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="46.5" y="198"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="58.5" y="204.2104">testID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="46.5" y="210.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="58.5" y="217.0151">nhscode</text><line style="stroke:#A80036;stroke-width:1.5;" x1="39.5" x2="111.5" y1="223.6094" y2="223.6094"/><!--MD5=[aeb3272166074d8737a70b61b1e71682]
+class TestType--><rect codeLine="14" fill="#FEFECE" filter="url(#fyj93dr49vja4)" height="73.6094" id="TestType" style="stroke:#A80036;stroke-width:1.5;" width="92" x="157.5" y="7"/><ellipse cx="174.3" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M177.2688,28.6406 Q176.6906,28.9375 176.05,29.0781 Q175.4094,29.2344 174.7063,29.2344 Q172.2063,29.2344 170.8781,27.5938 Q169.5656,25.9375 169.5656,22.8125 Q169.5656,19.6875 170.8781,18.0313 Q172.2063,16.375 174.7063,16.375 Q175.4094,16.375 176.05,16.5313 Q176.7063,16.6875 177.2688,16.9844 L177.2688,19.7031 Q176.6438,19.125 176.05,18.8594 Q175.4563,18.5781 174.8313,18.5781 Q173.4875,18.5781 172.8,19.6563 Q172.1125,20.7188 172.1125,22.8125 Q172.1125,24.9063 172.8,25.9844 Q173.4875,27.0469 174.8313,27.0469 Q175.4563,27.0469 176.05,26.7813 Q176.6438,26.5 177.2688,25.9219 L177.2688,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="188.7" y="27.1543">TestType</text><line style="stroke:#A80036;stroke-width:1.5;" x1="158.5" x2="248.5" y1="39" y2="39"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="165.5" y="47"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="49" x="177.5" y="53.2104">testType</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="165.5" y="59.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="177.5" y="66.0151">designation</text><line style="stroke:#A80036;stroke-width:1.5;" x1="158.5" x2="248.5" y1="72.6094" y2="72.6094"/><!--MD5=[a96594a83e2ecdc78cbf17c2ddf01934]
+class Category--><rect codeLine="19" fill="#FEFECE" filter="url(#fyj93dr49vja4)" height="73.6094" id="Category" style="stroke:#A80036;stroke-width:1.5;" width="88" x="180.5" y="158"/><ellipse cx="195.5" cy="174" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M198.4688,179.6406 Q197.8906,179.9375 197.25,180.0781 Q196.6094,180.2344 195.9063,180.2344 Q193.4063,180.2344 192.0781,178.5938 Q190.7656,176.9375 190.7656,173.8125 Q190.7656,170.6875 192.0781,169.0313 Q193.4063,167.375 195.9063,167.375 Q196.6094,167.375 197.25,167.5313 Q197.9063,167.6875 198.4688,167.9844 L198.4688,170.7031 Q197.8438,170.125 197.25,169.8594 Q196.6563,169.5781 196.0313,169.5781 Q194.6875,169.5781 194,170.6563 Q193.3125,171.7188 193.3125,173.8125 Q193.3125,175.9063 194,176.9844 Q194.6875,178.0469 196.0313,178.0469 Q196.6563,178.0469 197.25,177.7813 Q197.8438,177.5 198.4688,176.9219 L198.4688,179.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="209.5" y="178.1543">Category</text><line style="stroke:#A80036;stroke-width:1.5;" x1="181.5" x2="267.5" y1="190" y2="190"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="188.5" y="198"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="200.5" y="204.2104">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="188.5" y="210.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="27" x="200.5" y="217.0151">code</text><line style="stroke:#A80036;stroke-width:1.5;" x1="181.5" x2="267.5" y1="223.6094" y2="223.6094"/><!--MD5=[1f6362a5c8f21d8d6a0fce68f3a92a4e]
+class Parameter--><rect codeLine="24" fill="#FEFECE" filter="url(#fyj93dr49vja4)" height="86.4141" id="Parameter" style="stroke:#A80036;stroke-width:1.5;" width="98" x="175.5" y="309"/><ellipse cx="190.5" cy="325" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M193.4688,330.6406 Q192.8906,330.9375 192.25,331.0781 Q191.6094,331.2344 190.9063,331.2344 Q188.4063,331.2344 187.0781,329.5938 Q185.7656,327.9375 185.7656,324.8125 Q185.7656,321.6875 187.0781,320.0313 Q188.4063,318.375 190.9063,318.375 Q191.6094,318.375 192.25,318.5313 Q192.9063,318.6875 193.4688,318.9844 L193.4688,321.7031 Q192.8438,321.125 192.25,320.8594 Q191.6563,320.5781 191.0313,320.5781 Q189.6875,320.5781 189,321.6563 Q188.3125,322.7188 188.3125,324.8125 Q188.3125,326.9063 189,327.9844 Q189.6875,329.0469 191.0313,329.0469 Q191.6563,329.0469 192.25,328.7813 Q192.8438,328.5 193.4688,327.9219 L193.4688,330.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="66" x="204.5" y="329.1543">Parameter</text><line style="stroke:#A80036;stroke-width:1.5;" x1="176.5" x2="272.5" y1="341" y2="341"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="183.5" y="349"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="27" x="195.5" y="355.2104">code</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="183.5" y="361.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="63" x="195.5" y="368.0151">shortName</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="183.5" y="374.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="195.5" y="380.8198">designation</text><line style="stroke:#A80036;stroke-width:1.5;" x1="176.5" x2="272.5" y1="387.4141" y2="387.4141"/><!--MD5=[10d06bcee75aaf74ab8f6040820ceef2]
+class Diagnosis--><rect codeLine="31" fill="#FEFECE" filter="url(#fyj93dr49vja4)" height="60.8047" id="Diagnosis" style="stroke:#A80036;stroke-width:1.5;" width="93" x="29" y="321.5"/><ellipse cx="44" cy="337.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M46.9688,343.1406 Q46.3906,343.4375 45.75,343.5781 Q45.1094,343.7344 44.4063,343.7344 Q41.9063,343.7344 40.5781,342.0938 Q39.2656,340.4375 39.2656,337.3125 Q39.2656,334.1875 40.5781,332.5313 Q41.9063,330.875 44.4063,330.875 Q45.1094,330.875 45.75,331.0313 Q46.4063,331.1875 46.9688,331.4844 L46.9688,334.2031 Q46.3438,333.625 45.75,333.3594 Q45.1563,333.0781 44.5313,333.0781 Q43.1875,333.0781 42.5,334.1563 Q41.8125,335.2188 41.8125,337.3125 Q41.8125,339.4063 42.5,340.4844 Q43.1875,341.5469 44.5313,341.5469 Q45.1563,341.5469 45.75,341.2813 Q46.3438,341 46.9688,340.4219 L46.9688,343.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="61" x="58" y="341.6543">Diagnosis</text><line style="stroke:#A80036;stroke-width:1.5;" x1="30" x2="121" y1="353.5" y2="353.5"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="37" y="361.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="35" x="49" y="367.7104">report</text><line style="stroke:#A80036;stroke-width:1.5;" x1="30" x2="121" y1="374.3047" y2="374.3047"/><!--MD5=[7d96fd15f3014691d2fcaf89c5791e2a]
+class SpecialistDoctor--><rect codeLine="35" fill="#FEFECE" filter="url(#fyj93dr49vja4)" height="60.8047" id="SpecialistDoctor" style="stroke:#A80036;stroke-width:1.5;" width="137" x="7" y="472"/><ellipse cx="23.35" cy="488" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M26.3188,493.6406 Q25.7406,493.9375 25.1,494.0781 Q24.4594,494.2344 23.7563,494.2344 Q21.2563,494.2344 19.9281,492.5938 Q18.6156,490.9375 18.6156,487.8125 Q18.6156,484.6875 19.9281,483.0313 Q21.2563,481.375 23.7563,481.375 Q24.4594,481.375 25.1,481.5313 Q25.7563,481.6875 26.3188,481.9844 L26.3188,484.7031 Q25.6938,484.125 25.1,483.8594 Q24.5063,483.5781 23.8813,483.5781 Q22.5375,483.5781 21.85,484.6563 Q21.1625,485.7188 21.1625,487.8125 Q21.1625,489.9063 21.85,490.9844 Q22.5375,492.0469 23.8813,492.0469 Q24.5063,492.0469 25.1,491.7813 Q25.6938,491.5 26.3188,490.9219 L26.3188,493.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="102" x="37.65" y="492.1543">SpecialistDoctor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="143" y1="504" y2="504"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="512"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="27" y="518.2104">doctorIndexNumber</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="143" y1="524.8047" y2="524.8047"/><!--MD5=[7e4bc624457760b649895ff2ead938fa]
+link Company to Test--><path codeLine="39" d="M52.0737,81.4067 C51.1493,96.0203 51.0796,112.8701 53.5,128 C54.8133,136.2094 56.9779,144.7778 59.4496,152.9371 " fill="none" id="Company-to-Test" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="61.0235,157.9578,62.1481,148.1734,59.5278,153.1867,54.5144,150.5665,61.0235,157.9578" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="58" x="54.5" y="124.0669">performs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="42.7308" y="100.6723">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="50.7091" y="146.8605">*</text><!--MD5=[c589a96ea5b3e7b46913d69cfe3024d4]
+link Test to Diagnosis--><path codeLine="40" d="M75.5,232.2068 C75.5,257.6037 75.5,291.0618 75.5,316.162 " fill="none" id="Test-to-Diagnosis" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="75.5,321.3853,79.5,312.3853,75.5,316.3853,71.5,312.3853,75.5,321.3853" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="76.5" y="275.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="66.8375" y="251.7216">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="66.675" y="310.6249">1</text><!--MD5=[fd5f5b962c28af1c88b5bc5c4cfdb2d8]
+link Diagnosis to SpecialistDoctor--><path codeLine="41" d="M75.5,382.8191 C75.5,407.146 75.5,441.1248 75.5,466.6644 " fill="none" id="Diagnosis-to-SpecialistDoctor" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="75.5,471.9796,79.5,462.9796,75.5,466.9796,71.5,462.9796,75.5,471.9796" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="70" x="76.5" y="438.0669">is made by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="67.8109" y="402.4624">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="66.625" y="460.7654">1</text><!--MD5=[c2c6b28b052a3fe86d789b83a09b2815]
+link TestType to Test--><path codeLine="42" d="M171.8595,81.3259 C153.1739,103.369 129.4942,131.3037 110.2851,153.9644 " fill="none" id="TestType-to-Test" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="106.9981,157.8421,115.869,153.5634,110.2313,154.0281,109.7666,148.3903,106.9981,157.8421" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="26" x="144.5" y="124.0669">is of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="158.1793" y="100.5786">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="103.8962" y="147.0009">1</text><!--MD5=[2148a3300dad30af455fcbe81ca204c2]
+link TestType to Category--><path codeLine="43" d="M208.691,81.3259 C211.7059,103.0047 215.5134,130.3818 218.6362,152.8365 " fill="none" id="TestType-to-Category" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="219.3324,157.8421,222.0543,148.3768,218.6435,152.8898,214.1306,149.479,219.3324,157.8421" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="216.5" y="124.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="200.8808" y="100.5786">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="210.7885" y="147.0009">*</text><!--MD5=[9e2b536d5f14dafa66c4d5113ebdcad2]
+link Category to Parameter--><path codeLine="44" d="M224.5,232.2068 C224.5,253.6195 224.5,280.7626 224.5,303.7954 " fill="none" id="Category-to-Parameter" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="224.5,308.9466,228.5,299.9466,224.5,303.9466,220.5,299.9466,224.5,308.9466" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="225.5" y="275.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="215.8375" y="251.7216">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="216.9422" y="297.9341">*</text><!--MD5=[50c63c9fb33d7ec8f305636fc2de1c8d]
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Company {
+- designation
+- address
+}
+
+class Test {
+- testID
+- nhscode
+}
+
+class TestType {
+- testType
+- designation
+}
+
+class Category {
+- name
+- code
+}
+
+class Parameter{
+- code
+- shortName
+- designation
+
+}
+
+class Diagnosis {
+- report
+}
+
+class SpecialistDoctor {
+- doctorIndexNumber
+}
+
+Company "1" - -> "*" Test : performs
+Test "1" - -> "1" Diagnosis : has
+Diagnosis "*" - -> "1" SpecialistDoctor : is made by
+TestType "1" - -> "1" Test : is of
+TestType "1" - -> "*" Category : has
+Category "1" - -> "*" Parameter : has
+@enduml
+
+@startuml
+
+
+class Company {
+- designation
+- address
+}
+
+class Test {
+- testID
+- nhscode
+}
+
+class TestType {
+- testType
+- designation
+}
+
+class Category {
+- name
+- code
+}
+
+class Parameter{
+- code
+- shortName
+- designation
+
+}
+
+class Diagnosis {
+- report
+}
+
+class SpecialistDoctor {
+- doctorIndexNumber
+}
+
+Company "1" - -> "*" Test : performs
+Test "1" - -> "1" Diagnosis : has
+Diagnosis "*" - -> "1" SpecialistDoctor : is made by
+TestType "1" - -> "1" Test : is of
+TestType "1" - -> "*" Category : has
+Category "1" - -> "*" Parameter : has
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 09:36:27 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,42 @@
+@startuml
+
+skinparam classAtributionIconSize 0
+
+
+class CreateReportUI {
+    +showTests()
+    +setTest()
+}
+
+class CreateReportController {
+    +CreateReportController(company)
+    +createReport(report, test)
+    +addReport(testReport)
+}
+
+package "Domain" #DDDDDD {
+class Diagnosis {
+    +createReport(report, test)
+  }
+
+class Company {
+    +List<Test> getTests()
+    +createReport(report, test)
+    +validateReport(diagnosis)
+    +addReport(diagnosis)
+}
+
+class Employee {
+}
+
+class SpecialistDoctor {
+}
+}
+
+CreateReportUI ..> CreateReportController
+CreateReportController "*" ..> "1" Company : belongs to
+Company "1" --> "*" Diagnosis : has
+SpecialistDoctor "1" --> "*" Diagnosis : writes
+class SpecialistDoctor extends Employee
+
+@enduml

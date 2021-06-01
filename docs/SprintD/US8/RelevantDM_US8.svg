@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="434px" preserveAspectRatio="none" style="width:147px;height:434px;" version="1.1" viewBox="0 0 147 434" width="147px" zoomAndPan="magnify"><defs><filter height="300%" id="f1rc6o7l6gxxre" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="8" fill="#FEFECE" filter="url(#f1rc6o7l6gxxre)" height="73.6094" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="92" x="7" y="7"/><ellipse cx="23.35" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M26.3188,28.6406 Q25.7406,28.9375 25.1,29.0781 Q24.4594,29.2344 23.7563,29.2344 Q21.2563,29.2344 19.9281,27.5938 Q18.6156,25.9375 18.6156,22.8125 Q18.6156,19.6875 19.9281,18.0313 Q21.2563,16.375 23.7563,16.375 Q24.4594,16.375 25.1,16.5313 Q25.7563,16.6875 26.3188,16.9844 L26.3188,19.7031 Q25.6938,19.125 25.1,18.8594 Q24.5063,18.5781 23.8813,18.5781 Q22.5375,18.5781 21.85,19.6563 Q21.1625,20.7188 21.1625,22.8125 Q21.1625,24.9063 21.85,25.9844 Q22.5375,27.0469 23.8813,27.0469 Q24.5063,27.0469 25.1,26.7813 Q25.6938,26.5 26.3188,25.9219 L26.3188,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="57" x="37.65" y="27.1543">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="98" y1="39" y2="39"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="47"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="27" y="53.2104">designation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="59.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="27" y="66.0151">address</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="98" y1="72.6094" y2="72.6094"/><!--MD5=[ca9d99efa02e66bc16d27330652d1b85]
+class Clinic--><rect codeLine="18" fill="#FEFECE" filter="url(#f1rc6o7l6gxxre)" height="112.0234" id="Clinic" style="stroke:#A80036;stroke-width:1.5;" width="74" x="16" y="158"/><ellipse cx="35.5" cy="174" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M38.4688,179.6406 Q37.8906,179.9375 37.25,180.0781 Q36.6094,180.2344 35.9063,180.2344 Q33.4063,180.2344 32.0781,178.5938 Q30.7656,176.9375 30.7656,173.8125 Q30.7656,170.6875 32.0781,169.0313 Q33.4063,167.375 35.9063,167.375 Q36.6094,167.375 37.25,167.5313 Q37.9063,167.6875 38.4688,167.9844 L38.4688,170.7031 Q37.8438,170.125 37.25,169.8594 Q36.6563,169.5781 36.0313,169.5781 Q34.6875,169.5781 34,170.6563 Q33.3125,171.7188 33.3125,173.8125 Q33.3125,175.9063 34,176.9844 Q34.6875,178.0469 36.0313,178.0469 Q36.6563,178.0469 37.25,177.7813 Q37.8438,177.5 38.4688,176.9219 L38.4688,179.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="50.5" y="178.1543">Clinic</text><line style="stroke:#A80036;stroke-width:1.5;" x1="17" x2="89" y1="190" y2="190"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="24" y="198"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="28" x="36" y="204.2104">labID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="24" y="210.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="36" y="217.0151">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="24" y="223.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="36" y="229.8198">address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="24" y="236.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="36" y="242.6245">phoneNr</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="24" y="249.2188"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="18" x="36" y="255.4292">TIN</text><line style="stroke:#A80036;stroke-width:1.5;" x1="17" x2="89" y1="262.0234" y2="262.0234"/><!--MD5=[aeb3272166074d8737a70b61b1e71682]
+class TestType--><rect codeLine="13" fill="#FEFECE" filter="url(#f1rc6o7l6gxxre)" height="73.6094" id="TestType" style="stroke:#A80036;stroke-width:1.5;" width="92" x="7" y="347"/><ellipse cx="23.8" cy="363" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M26.7688,368.6406 Q26.1906,368.9375 25.55,369.0781 Q24.9094,369.2344 24.2063,369.2344 Q21.7063,369.2344 20.3781,367.5938 Q19.0656,365.9375 19.0656,362.8125 Q19.0656,359.6875 20.3781,358.0313 Q21.7063,356.375 24.2063,356.375 Q24.9094,356.375 25.55,356.5313 Q26.2063,356.6875 26.7688,356.9844 L26.7688,359.7031 Q26.1438,359.125 25.55,358.8594 Q24.9563,358.5781 24.3313,358.5781 Q22.9875,358.5781 22.3,359.6563 Q21.6125,360.7188 21.6125,362.8125 Q21.6125,364.9063 22.3,365.9844 Q22.9875,367.0469 24.3313,367.0469 Q24.9563,367.0469 25.55,366.7813 Q26.1438,366.5 26.7688,365.9219 L26.7688,368.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="38.2" y="367.1543">TestType</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="98" y1="379" y2="379"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="387"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="27" y="393.2104">testTypeID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="399.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="27" y="406.0151">designation</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="98" y1="412.6094" y2="412.6094"/><!--MD5=[196bcb1a5e107afd614f248cc96d54e7]
+link Company to Clinic--><path codeLine="3" d="M53,81.3072 C53,102.2031 53,128.7845 53,152.66 " fill="none" id="Company-to-Clinic" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="53,157.7106,57,148.7106,53,152.7106,49,148.7106,53,157.7106" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="54" y="124.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="44.3625" y="100.557">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="45.5734" y="147.0098">*</text><!--MD5=[5c4f892e14f001496f5a62cc279bd365]
+link Clinic to TestType--><path codeLine="4" d="M53,270.1355 C53,293.5042 53,320.1759 53,341.8283 " fill="none" id="Clinic-to-TestType" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="53,346.9348,57,337.9348,53,341.9348,49,337.9348,53,346.9348" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="85" x="54" y="313.0669">has/performs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="44.5125" y="289.9646">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="45.3547" y="335.8332">*</text><!--MD5=[d0480c58a267e05f568a6eb7464c0994]
+@startuml
+'https://plantuml.com/class-diagram
+
+Company "1" - -> "*" Clinic : has
+Clinic "1" - -> "*" TestType : has/performs
+
+
+
+class Company {
+- designation
+- address
+}
+
+class TestType {
+- testTypeID
+- designation
+}
+
+class Clinic{
+- labID
+- name
+- address
+- phoneNr
+- TIN
+}
+@enduml
+
+@startuml
+
+Company "1" - -> "*" Clinic : has
+Clinic "1" - -> "*" TestType : has/performs
+
+
+
+class Company {
+- designation
+- address
+}
+
+class TestType {
+- testTypeID
+- designation
+}
+
+class Clinic{
+- labID
+- name
+- address
+- phoneNr
+- TIN
+}
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 09:36:27 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

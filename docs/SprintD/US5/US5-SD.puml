@@ -1,0 +1,62 @@
+@startuml
+autonumber
+
+actor "MedicalLabTechnician" as MLT
+participant "RecordSamplesUI" as ui
+participant "RecordSamplesController" as controller
+participant "Company"
+participant "ReflectorUtility"
+
+activate MLT
+activate ReflectorUtility
+
+MLT -> ui : initiates the record of a sample
+activate ui
+ui -> controller ** : create
+activate controller
+
+controller -> Company ** : create
+controller -> controller : Company = App.getInstance(Company)
+activate Company
+
+controller -> Company : List<Test> freeTests = getTests()
+controller -> controller : List<TestDTO> freeTestsDTO = freeTests.toDTO()
+
+controller -> ui : show(freeTestsDTO)
+ui -> MLT : shows a list of available tests
+
+
+deactivate ui
+
+MLT ->ui : selects a test and specifies the number of samples
+activate ui
+
+ui -> controller : generateSamples(int testIndex, int numSamples)
+controller -> Test ** : freeTests.get(testIndex)
+activate Test
+
+
+loop numSamples
+Test -> Sample ** : create
+activate Sample
+Sample -> Barcode ** : create
+Barcode -> BarcodeInterface ** : Barcode = generateBarcode(code)
+activate BarcodeInterface
+BarcodeInterface -> ReflectorUtility : adapterReflection(App.getInstance().getBarcodeAdapter())
+ReflectorUtility -> BarcodeAdapter ** : create
+activate BarcodeAdapter
+BarcodeAdapter -> Barcode : generateBarcode(code)
+activate Barcode
+Test -> Test : samples.add(Sample)
+end
+Test -> Test : setSampleDate(LocalDate.now())
+Test -> Test : setSampleTime(LocalTime.now())
+
+controller -> controller : List<SampleDTO> SamplesDTO = Samples.toDTO()
+
+controller -> ui : show(samplesDTO)
+
+ui -> MLT : shows the generated barcode of each sample
+deactivate ui
+
+@enduml

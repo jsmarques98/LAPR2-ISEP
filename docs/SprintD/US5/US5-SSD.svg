@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="311px" preserveAspectRatio="none" style="width:481px;height:311px;" version="1.1" viewBox="0 0 481 311" width="481px" zoomAndPan="magnify"><defs><filter height="300%" id="foqi8ihc0t2st" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#foqi8ihc0t2st)" height="119.4001" style="stroke:#A80036;stroke-width:1.0;" width="10" x="74" y="98.7999"/><rect fill="#FFFFFF" filter="url(#foqi8ihc0t2st)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="434" y="120.3999"/><rect fill="#FFFFFF" filter="url(#foqi8ihc0t2st)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="434" y="179.6"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="79" x2="79" y1="88.7999" y2="227.2"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="438.5" x2="438.5" y1="88.7999" y2="227.2"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="5" y="85.0059">MedicalLabTechnician</text><ellipse cx="79" cy="15" fill="#FEFECE" filter="url(#foqi8ihc0t2st)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M79,23 L79,50 M66,31 L92,31 M79,50 L66,65 M79,50 L92,65 " fill="none" filter="url(#foqi8ihc0t2st)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="5" y="239.2059">MedicalLabTechnician</text><ellipse cx="79" cy="252.9999" fill="#FEFECE" filter="url(#foqi8ihc0t2st)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M79,260.9999 L79,287.9999 M66,268.9999 L92,268.9999 M79,287.9999 L66,302.9999 M79,287.9999 L92,302.9999 " fill="none" filter="url(#foqi8ihc0t2st)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#foqi8ihc0t2st)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="61" x="406.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="413.5" y="73.0059">System</text><rect fill="#FEFECE" filter="url(#foqi8ihc0t2st)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="61" x="406.5" y="226.2"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="413.5" y="246.2059">System</text><rect fill="#FFFFFF" filter="url(#foqi8ihc0t2st)" height="119.4001" style="stroke:#A80036;stroke-width:1.0;" width="10" x="74" y="98.7999"/><rect fill="#FFFFFF" filter="url(#foqi8ihc0t2st)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="434" y="120.3999"/><rect fill="#FFFFFF" filter="url(#foqi8ihc0t2st)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="434" y="179.6"/><polygon fill="#A80036" points="422,116.3999,432,120.3999,422,124.3999,426,120.3999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="84" x2="428" y1="120.3999" y2="120.3999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="91" y="114.8769">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179" x="102" y="114.8769">initiates the record of a sample</text><polygon fill="#A80036" points="95,146,85,150,95,154,91,150" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="89" x2="438" y1="150" y2="150"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="101" y="144.477">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="315" x="112" y="144.477">shows a list of tests that have samples to be recorded</text><polygon fill="#A80036" points="422,175.6,432,179.6,422,183.6,426,179.6" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="84" x2="428" y1="179.6" y2="179.6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="91" y="174.077">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="297" x="102" y="174.077">selects a test and specifies the number of samples</text><polygon fill="#A80036" points="95,205.2,85,209.2,95,213.2,91,209.2" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="89" x2="438" y1="209.2" y2="209.2"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="101" y="203.677">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="263" x="112" y="203.677">shows the generated barcode of each sample</text><!--MD5=[abc9e92ee402400ecc957c02cdb5a842]
+@startuml
+autonumber
+
+actor "MedicalLabTechnician" as MLT
+participant "System" as SYS
+
+activate MLT
+
+MLT -> SYS : initiates the record of a sample
+activate SYS
+
+SYS -> MLT : shows a list of tests that have samples to be recorded
+deactivate SYS
+
+MLT -> SYS : selects a test and specifies the number of samples
+activate SYS
+
+SYS -> MLT : shows the generated barcode of each sample
+deactivate SYS
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,42 @@
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object Sample{
+
+}
+
+object BarCode{
+
+}
+
+Sample "1" -- "1" BarCode : has a
+
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+object BarCodeAPI{
+}
+
+
+Company "1" -- "*" Test : performs
+
+Sample "*" -- "1" Test : is based on
+
+package "BarCodeAPI" #DDDDDD{
+	BarCodeAPI "1" -- "*" BarCode : generates barCode
+}
+
+
+@enduml

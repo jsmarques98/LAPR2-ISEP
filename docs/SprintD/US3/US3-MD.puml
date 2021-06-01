@@ -1,0 +1,69 @@
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object LabOrder{
+}
+
+object Clinic{
+-laboratoryID
+-name
+-address
+-phoneNumber
+-TINNumber
+}
+
+object Employee{
+-employeeID
+-organizationRole
+-name
+-address
+-phoneNumber
+-email
+-SOCCode
+
+}
+
+
+object Client{
+-name
+-citizenCardNumber
+-nationalHealthcareServiceNumber
+-birthdate
+-sex
+-taxIdentificationNumber
+-phoneNumber
+-email
+}
+
+object Receptionist{
+}
+
+
+Company "1" -- "*" Clinic : has
+
+Company "1" -- "*" Client : provides a service to
+
+Receptionist "1" -- "*" Client : registers
+
+LabOrder "1" -- "1" Client : belongs to
+
+Receptionist "*" -- "1" Clinic : works in
+
+Receptionist "*" -- "1" Employee : is a
+
+Employee "*" -- "1" Company : works for
+
+ 
+
+@enduml
+Administrator "1"-- "1" Pharmacy : creates
+Courier "1"--"0..1" ParkingSpace : can reserve - um courier pode reservar ponto de abastecimento????
+ParkingSpace "1"--"*" Courier : sends notifications
+RegisteredUser "1"--"*" Product : views
+object NonRegisteredUser
+NonRegisteredUser "1"--"1" RegisteredUser : registers as
+NonRegisteredUser "1"--"*" Product : views

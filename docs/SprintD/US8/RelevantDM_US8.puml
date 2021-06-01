@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Company "1" --> "*" Clinic : has
+Clinic "1" --> "*" TestType : has/performs
+
+
+
+class Company {
+- designation
+- address
+}
+
+class TestType {
+- testTypeID
+- designation
+}
+
+class Clinic{
+- labID
+- name
+- address
+- phoneNr
+- TIN
+}
+
+
+@enduml

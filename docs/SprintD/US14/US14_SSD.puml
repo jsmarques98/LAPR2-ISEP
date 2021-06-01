@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Specialist Doctor" as Spec
+
+participant ":System" as System
+
+activate Spec
+Spec -> System: asks to access the tests already made
+
+loop for any/every intended test
+activate System
+System -> Spec: shows the tests and asks to choose one to make the report
+deactivate System
+
+Spec -> System: chooses the test that he wants to do the report for (testCode)
+
+activate System
+System -> Spec: asks to confirm the test chosen
+deactivate System
+
+Spec -> System: confirms the test and wants to write the report for that test (report)
+
+activate System
+System -> Spec: asks for data to write the report (report)
+deactivate System
+
+Spec -> System: types requested data(report)
+
+activate System
+System -> Spec: asks to confirm data (report)
+deactivate System
+
+Spec -> System: Confirms data (report)
+
+activate System
+System -> Spec: informs success or insuccess of the operation
+deactivate System
+end
+@enduml

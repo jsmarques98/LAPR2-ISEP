@@ -1,0 +1,14 @@
+@startuml
+autonumber
+
+actor  "Administrator" as Admin
+
+Admin -> System: starts to register new laboratory
+System -> Admin: requests data (labID, name, address, phoneNR, TINnr, testType)
+
+Admin -> System: types/selects requested data
+System  -> Admin: shows the data and requests confirmation
+
+Admin -> System: confirms data
+System -> Admin: Informs success
+@enduml

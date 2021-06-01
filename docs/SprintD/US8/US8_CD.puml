@@ -1,0 +1,35 @@
+@startuml
+
+skinparam classAtributionIconSize 0
+
+class RegisterLaboratoryIU
+
+class RegisterLaboratoryController {
+    +registerLab(labID, address, phoneNumber, TINnr)
+    +saveLab(lab)
+    +registerTest(sample, testName)
+    +saveTest(labTest)
+}
+
+class Clinic {
+    +registerTest(sample, testName)
+    +saveTest(labTest)
+    +validateTest(labTest)
+    +addTest(labTest)
+  }
+
+class Company {
+    +registerLab(labID, address, phoneNumber, TINnr)
+    +registerTest(testName, sample)
+    +validateTest(labTest)
+    +validateLab(lab)
+    +addLab(lab)
+    +addTest(labTest)
+
+}
+
+RegisterLaboratoryIU ..> RegisterLaboratoryController
+Company "1" --> "*" Clinic : has
+RegisterLaboratoryController "*" ..> "1" Company : belongs to
+
+@enduml

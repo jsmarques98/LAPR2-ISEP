@@ -1,0 +1,73 @@
+@startuml
+class RecordSamplesUI {
+ -show(freeTestsDTO)
+ -show(samplesDTO)
+}
+
+class RecordSamplesController {
+  +List<Test> freeTests
+  +List<TestDTO> freeTestsDTO
+  +generateSamples(int testIndex, int numSamples)
+}
+
+
+package "Domain" #DDDDDD {
+class Company {
+  +List<Test> getTests()
+}
+class Test {
+-LocalDate sampleDate
+-LocalTime sampleTime
+}
+class Sample {
+
+}
+class Barcode {
+ -generateBarcode(code)
+}
+
+}
+RecordSamplesController ..> Company
+
+
+
+
+class TestDTO {
+-LocalDate sampleDate
+-LocalTime sampleTime
+
+}
+
+RecordSamplesController ..> TestDTO
+RecordSamplesUI ..> TestDTO
+TestDTO ..> Test
+
+Company "1" --> "*" Test
+
+
+
+Test "1" --> "*" Sample
+
+
+Sample "1" --> "1" Barcode
+
+package "BarcodeAPI" #DDDDDD {
+interface BarcodeInterface
+
+class ReflectorUtility
+
+class BarcodeAdapter
+}
+
+BarcodeAdapter -|> BarcodeInterface
+
+ReflectorUtility ..> BarcodeAdapter : creates using reflection
+
+RecordSamplesUI ..> RecordSamplesController
+
+Barcode --> BarcodeInterface
+
+Barcode ..> ReflectorUtility
+
+@enduml
+

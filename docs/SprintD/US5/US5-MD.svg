@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="292px" preserveAspectRatio="none" style="width:421px;height:292px;" version="1.1" viewBox="0 0 421 292" width="421px" zoomAndPan="magnify"><defs><filter height="300%" id="fspzizu6jm4im" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[9ef9c9606c83dc111e7571bed1bb09a3]
+cluster BarCodeAPI--><polygon fill="#DDDDDD" filter="url(#fspzizu6jm4im)" points="257,6.294,345,6.294,352,29.0939,389,29.0939,389,105.294,257,105.294,257,6.294" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="257" x2="352" y1="29.0939" y2="29.0939"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="261" y="21.2999">BarCodeAPI</text><!--MD5=[9d174528ebd498af808f6357775d0285]
+class BarCodeAPI--><rect fill="#FEFECE" filter="url(#fspzizu6jm4im)" height="48" id="BarCodeAPI" style="stroke:#A80036;stroke-width:1.5;" width="100" x="273" y="41.294"/><ellipse cx="288" cy="57.294" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M283,58.4502 C283,60.9502 285.1406,62.7627 288.0625,62.7627 C289.2969,62.7627 290.4688,62.4659 291.2188,61.9502 C291.8281,61.5284 292.1563,61.1065 292.1563,60.7002 C292.1563,60.2315 291.7344,59.8252 291.2344,59.8252 C291,59.8252 290.7813,59.9034 290.5781,60.1065 C290.1406,60.544 290.1406,60.544 289.9688,60.6377 C289.5156,60.8721 288.875,61.0127 288.1094,61.0127 C286.1094,61.0127 284.8281,59.9971 284.8281,58.419 L284.8281,57.3721 C284.8281,55.669 286.0469,54.4659 287.75,54.4659 C288.3281,54.4659 288.9063,54.6065 289.375,54.8565 C289.8438,55.1221 290.0156,55.3096 290.0781,55.669 C290.2031,56.3409 290.4531,56.5909 290.9844,56.5909 C291.2656,56.5909 291.5469,56.4502 291.7344,56.2315 C291.8594,56.0596 291.9063,55.8877 291.9063,55.4502 L291.9063,54.0909 C291.9063,53.669 291.8906,53.5284 291.7656,53.3565 C291.5938,53.1065 291.3125,52.9502 290.9844,52.9502 C290.6719,52.9502 290.4688,53.0596 290.25,53.3252 C289.0781,52.8252 288.6406,52.7159 287.6875,52.7159 C285.0156,52.7159 283,54.7315 283,57.3565 L283,58.4502 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="302" y="61.242">BarCodeAPI</text><line style="stroke:#A80036;stroke-width:1.5;" x1="274" x2="372" y1="73.294" y2="73.294"/><line style="stroke:#A80036;stroke-width:1.5;" x1="274" x2="372" y1="81.294" y2="81.294"/><rect fill="#FEFECE" filter="url(#fspzizu6jm4im)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="80" x="7" y="40.294"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="20.5" y="53.4421">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="86" y1="58.6941" y2="58.6941"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="66.6941"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="54" x="27" y="71.9841">designation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="78.6941"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="37" x="27" y="83.9841">address</text><rect fill="#FEFECE" filter="url(#fspzizu6jm4im)" height="34.4001" style="stroke:#A80036;stroke-width:1.5;" width="56" x="152" y="48.294"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="42" x="159" y="61.4421">Sample</text><line style="stroke:#A80036;stroke-width:1.5;" x1="153" x2="207" y1="66.6941" y2="66.6941"/><rect fill="#FEFECE" filter="url(#fspzizu6jm4im)" height="34.4001" style="stroke:#A80036;stroke-width:1.5;" width="63" x="241.5" y="206.294"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="49" x="248.5" y="219.4421">BarCode</text><line style="stroke:#A80036;stroke-width:1.5;" x1="242.5" x2="303.5" y1="224.6941" y2="224.6941"/><rect fill="#FEFECE" filter="url(#fspzizu6jm4im)" height="110.4" style="stroke:#A80036;stroke-width:1.5;" width="93" x="69.5" y="168.294"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="23" x="104.5" y="181.4421">Test</text><line style="stroke:#A80036;stroke-width:1.5;" x1="70.5" x2="161.5" y1="186.6941" y2="186.6941"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="77.5" y="194.6941"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="27" x="89.5" y="199.9841">testID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="77.5" y="206.6941"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="40" x="89.5" y="211.9841">nhscode</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="77.5" y="218.6941"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="50" x="89.5" y="223.9841">description</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="77.5" y="230.694"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="66" x="89.5" y="235.984">dateDiagnosis</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="77.5" y="242.694"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="64" x="89.5" y="247.984">timeDiagnosis</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="77.5" y="254.694"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="67" x="89.5" y="259.984">dateValidation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="77.5" y="266.694"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="65" x="89.5" y="271.984">timeValidation</text><!--MD5=[2fba4eef0cf1915502918731bf15a606]
+link Sample to BarCode--><path codeLine="15" d="M189.6,82.404 C207.42,112.294 245.42,176.034 263.31,206.044 " fill="none" id="Sample-BarCode" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="222" y="134.371">has a</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="184.6206" y="102.6662">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="251.7759" y="194.6475">1</text><!--MD5=[7e4bc624457760b649895ff2ead938fa]
+link Company to Test--><path codeLine="32" d="M53.44,90.384 C57.54,104.574 63.33,122.734 70,138.294 C74.19,148.074 79.17,158.214 84.26,167.924 " fill="none" id="Company-Test" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="71" y="134.371">performs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="47.1934" y="110.8378">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="74.873" y="156.9586">*</text><!--MD5=[1ae83efc6d1967ce5bc17dfe294d00c2]
+link Sample to Test--><path codeLine="34" d="M163.82,82.764 C154.61,93.044 143.63,107.004 137,121.294 C130.26,135.834 125.66,152.554 122.54,168.154 " fill="none" id="Sample-Test" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="138" y="134.371">is based on</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="152.8658" y="102.832">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="115.9485" y="156.8272">1</text><!--MD5=[0cde9d6a5fd361d5912892b29531d65d]
+link BarCodeAPI to BarCode--><path codeLine="37" d="M315.62,89.314 C305.41,121.184 287.21,177.964 278.26,205.874 " fill="none" id="BarCodeAPI-BarCode" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="304" y="134.371">generates barCode</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="305.832" y="109.5449">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="274.1743" y="194.7294">*</text><!--MD5=[7d60434d72f3dabb7047901740202303]
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object Sample{
+
+}
+
+object BarCode{
+
+}
+
+Sample "1" - - "1" BarCode : has a
+
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+object BarCodeAPI{
+}
+
+
+Company "1" - - "*" Test : performs
+
+Sample "*" - - "1" Test : is based on
+
+package "BarCodeAPI" #DDDDDD{
+	BarCodeAPI "1" - - "*" BarCode : generates barCode
+}
+
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,70 @@
+@startuml
+autonumber
+
+actor "Administrator" as Admin
+
+participant ":RegisterLaboratoryIU" as IU
+participant ":RegisterLaboratoryController" as RLC
+participant ":Company" as COM
+participant ":LAB" as LAB
+
+activate Admin
+
+Admin -> IU : starts the registry of a new Clinical Analysis Laboratory and tests
+IU --> Admin : request data (labID, name, address, phoneNr, TINnr)
+
+Admin -> IU : types requested data
+
+activate IU
+activate RLC
+
+IU -> RLC : registerLab(labID,name, address, phoneNr, TINnr, testName, sample)
+
+activate COM
+
+RLC -> COM : lab = registerLab(labID, name, address, phoneNr, TINnr)
+RLC -> COM : labTest = registerTest(testName, sample)
+
+activate LAB
+
+COM -> LAB : registerLab(labID, name, address, phoneNumber, TINnr)
+COM -> LAB : registerTest(testName, sample)
+
+deactivate LAB
+
+IU --> ADMIN : shows data and asks for confirmation
+
+deactivate IU
+deactivate RLC
+deactivate COM
+
+Admin -> IU : confirms the data
+
+activate IU
+activate RLC
+
+IU -> RLC : saveLab()
+IU -> RLC : saveTest()
+
+activate COM
+
+RLC -> COM : saveLab(lab)
+RLC -> COM : saveTest(labTest)
+
+COM -> COM : validateTest(labTest)
+
+COM -> COM : validateLab(lab)
+
+COM -> COM : addLab(lab)
+
+COM -> COM : addTest(labTest)
+
+deactivate COM
+deactivate RLC
+
+IU --> Admin : informs operation sucess
+
+deactivate IU
+deactivate Admin
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant ":System" as System
+
+
+activate LC
+
+loop
+LC -> System: wants to import clinical tests from CSV file
+
+activate System
+
+System -> LC: asks to introduce the path of the CSV file
+
+deactivate System
+
+LC -> System:  inserts the requested data
+
+activate System
+
+System -> LC: validates the path and informs success or insuccess of the operation
+
+deactivate System
+
+
+
+@enduml

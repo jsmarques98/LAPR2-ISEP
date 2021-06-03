@@ -1,0 +1,46 @@
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object User{
+- name
+- email
+- password
+}
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+object TestType{
+- testType
+- designation
+}
+
+object Category{
+- name
+- code
+}
+
+object Parameter{
+- code
+- shortName
+- designation
+}
+
+Company "1" --> "*" Test : performs
+Test "1" --> "1" TestType : is of
+TestType "1" --> "*" Category: has
+Category "1" --> "*" Parameter: has
+User "1" --> "*" Test : registers
+
+@enduml

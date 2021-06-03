@@ -1,0 +1,11 @@
+
+Ш
+java:S1319"{The type of the "listCodeCategory" object should be an interface such as "List" rather than the implementation "ArrayList".(ЎэїК8╧ТеёЫ/
+Ю
+java:S1319"АThe type of the "listParameterTestCode" object should be an interface such as "List" rather than the implementation "ArrayList".(ЎэїК8╧ТеёЫ/
+Н
+java:S13191"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(╤Ж╚Ж8╧ТеёЫ/
+Т
+java:S13195"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Р№з╩°    8ж┌╨ўЫ/
+L
+java:S37401"/Provide the parametrized type for this generic.(╤Ж╚Ж8╨ТеёЫ/

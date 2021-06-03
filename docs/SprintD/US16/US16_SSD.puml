@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant ":System" as System
+
+loop
+activate LC
+
+loop
+LC -> System: wants to have an overview of the tests performed
+
+activate System
+
+System -> LC: shows all the tests that were perfomed
+
+deactivate System
+
+LC -> System:  wants to analyse the overall perfomance of the company
+
+activate System
+
+System -> LC: asks to know which Graphs and Statistics that he wants to see
+
+deactivate System
+
+LC -> System: selects the requested data
+
+activate System
+
+System -> LC: asks to confirm the data
+
+deactivate System
+
+LC -> System: confirms data
+
+activate System
+
+System -> LC: informs success or insuccess of the operation
+
+deactivate System
+end
+@enduml

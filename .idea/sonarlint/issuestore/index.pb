@@ -123,8 +123,6 @@ O
 docs/SprintC/US14/US14_SD2.puml,7/e/7edb8a76475f74134f31744c8777aa6280fa8936
 a
 1src/test/java/app/domain/model/DiagnosisTest.java,4/6/46e3d99c804c6debe5c8f9fc88e72432ee1378fa
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 G
 docs/SprintC/US4/US4.md,e/b/eb8449dbd51337621caded84a8b25cddbf573607
 X
@@ -137,3 +135,5 @@ K
 docs/SprintD/US5/US5-MD.svg,0/f/0f09e3a7a915a5e152da58b8053deb7c0123ad64
 N
 docs/SprintD/US17/US17_SSD.svg,a/f/afb73e286ccca16e3a05df073241c4847707ad3e
+G
+docs/SprintD/US4/US4.md,c/5/c5d01c52a6f7d9191769bad33015ea3674ddd5e2

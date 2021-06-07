@@ -24,6 +24,13 @@
             <version>3.5</version>
         </dependency>
         <dependency>
+            <groupId>com.nhs.report</groupId>
+            <artifactId>Report2NHS</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${path}/lib/Report2NHS-1.0.0.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>at.favre.lib</groupId>
             <artifactId>bcrypt</artifactId>
             <version>0.9.0</version>

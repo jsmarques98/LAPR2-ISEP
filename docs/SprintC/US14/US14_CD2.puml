@@ -1,0 +1,60 @@
+@startuml
+
+skinparam classAtributionIconSize 0
+
+
+class CreateReportUI {
+}
+
+class CreateReportController {
+    +createReport(diagnosis)
+    +saveReport()
+}
+
+class Company {
+    +designation
+    +getTestStore()
+}
+
+class Employee {
+}
+
+class SpecialistDoctor {
+}
+
+class TestParameters {
+    +getTestParameters()
+}
+
+class TestStore {
+    +getTestID()
+}
+
+class TestResult {
+    +getTestResult()
+}
+
+class Report {
+    + (diagnosis)
+    + create(diagnosis)
+}
+
+class repStore {
+    +createReport(diagnosis)
+    +validateReport(rep)
+    +saveReport(rep)
+    +addReport(rep)
+}
+
+CreateReportUI ..> CreateReportController
+CreateReportController "*" ..> "1" Company : belongs to
+Company "1" --> "1..*" TestParameters : requests analysis of
+Company "1" --> "1" TestStore : has access to
+TestParameters "1..*" --> "1..*" TestResult : serve as base for
+TestParameters "1..*" --> "1" Report : are contained in
+TestResult "1..*" --> "1" Report : are contained in
+repStore "1" --> "*" Report : contains
+SpecialistDoctor "1" --> "*" Report : writes
+class SpecialistDoctor extends Employee
+
+@enduml

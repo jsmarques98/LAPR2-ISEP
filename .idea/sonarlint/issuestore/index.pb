@@ -117,8 +117,6 @@ U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 N
 docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
-I
-docs/SprintC/US14/US14.md,6/f/6f96408c492c73eec23f503267589633c522eb76
 O
 docs/SprintC/US14/US14_SD2.puml,7/e/7edb8a76475f74134f31744c8777aa6280fa8936
 a
@@ -137,3 +135,7 @@ N
 docs/SprintD/US17/US17_SSD.svg,a/f/afb73e286ccca16e3a05df073241c4847707ad3e
 G
 docs/SprintD/US4/US4.md,c/5/c5d01c52a6f7d9191769bad33015ea3674ddd5e2
+]
+-src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4
+h
+8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6

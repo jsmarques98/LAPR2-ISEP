@@ -5,9 +5,9 @@ import app.domain.shared.Constants;
 import auth.AuthFacade;
 import auth.UserSession;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -23,10 +23,53 @@ public class App {
     private App() {
         Properties props = getProperties();
         barcodeAdapter = props.getProperty("BarcodeAdapter");
-        this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
+        //this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
         this.authFacade = this.company.getAuthFacade();
-        bootstrap();
+
+        if(!load()) {
+            System.out.println("data/company.ser not found! Running bootstrap!");
+            bootstrap();
+        }
+        save();
+        //lets serialize company
+
+        //company = null;
     }
+
+    public boolean save() {
+        try {
+            FileOutputStream fileOut =
+                    new FileOutputStream("data/company.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(company);
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized data is saved in data/company.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+        return true;
+    }
+
+    public boolean load(){
+
+        try {
+            FileInputStream fileIn = new FileInputStream("data/company.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            this.company = (Company) in.readObject();
+            in.close();
+            fileIn.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+            return false;
+        } catch (ClassNotFoundException c) {
+            System.out.println("Company class not found");
+            c.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
 
     public Company getCompany() {
         return this.company;
@@ -103,6 +146,7 @@ public class App {
         Company.parameterList.add(parameterTest8);
         Company.parameterList.add(parameterTest9);
 
+        /*
         Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
@@ -206,7 +250,7 @@ public class App {
 //        Company.record.add(t1);
 //        Company.record.add(t2);
 
-
+    */
     }
 
     // Extracted from https://www.javaworld.com/article/2073352/core-java/core-java-simply-singleton.html?page=2

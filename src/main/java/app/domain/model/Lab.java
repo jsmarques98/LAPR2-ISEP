@@ -1,8 +1,9 @@
 package app.domain.model;
 
+import java.io.Serializable;
 import java.util.regex.Pattern;
 
-public class Lab {
+public class Lab implements Serializable {
 
     /**
      * The id of the lab to be registered

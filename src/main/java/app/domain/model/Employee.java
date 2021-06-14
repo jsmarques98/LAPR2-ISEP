@@ -1,10 +1,11 @@
 package app.domain.model;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Employee {
+public class Employee implements Serializable {
 
     private final String id;
     private final String name;

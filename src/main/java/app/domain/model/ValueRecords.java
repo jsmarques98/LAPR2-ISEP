@@ -1,6 +1,8 @@
 package app.domain.model;
 
-public class ValueRecords {
+import java.io.Serializable;
+
+public class ValueRecords implements Serializable {
 
     /**
      * The id of value records.

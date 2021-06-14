@@ -1,5 +1,6 @@
 package app.domain.model;
 
+import app.controller.App;
 import app.controller.TestTypeRecord;
 import auth.AuthFacade;
 
@@ -8,6 +9,7 @@ import auth.AuthFacade;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -15,7 +17,7 @@ import java.util.Set;
 /**
  * @author Paulo Maio <pam@isep.ipp.pt>
  */
-public class Company {
+public class Company implements Serializable {
 
     private String designation;
     private AuthFacade authFacade;
@@ -240,9 +242,9 @@ public class Company {
 
     // US14
 
-   /* public List<Test> getTest(){
+   public List<Test> getTest(){
         return this.tests;
-    }*/
+    }
 
     public static List<Diagnosis> reportedTestsList = new ArrayList<>(1);
 

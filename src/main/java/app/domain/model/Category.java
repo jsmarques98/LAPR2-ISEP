@@ -1,6 +1,8 @@
 package app.domain.model;
 
-public class Category implements Comparable {
+import java.io.Serializable;
+
+public class Category implements Comparable, Serializable {
     private String name;
     private String code;
 

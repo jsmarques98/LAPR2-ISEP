@@ -1,6 +1,8 @@
 package app.domain.model;
 
-public class ParameterTest {
+import java.io.Serializable;
+
+public class ParameterTest implements Serializable {
 
     private final String code;
     private final String shortName;

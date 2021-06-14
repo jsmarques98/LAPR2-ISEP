@@ -1,8 +1,9 @@
 package app.domain.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Client {
+public class Client implements Serializable {
     String name;
     String CCNumber;
     String NHSNumber;

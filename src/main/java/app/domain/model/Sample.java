@@ -5,7 +5,9 @@ import app.Adapter.ReflectorUtility;
 import app.controller.App;
 import net.sourceforge.barbecue.Barcode;
 
-public class Sample {
+import java.io.Serializable;
+
+public class Sample implements Serializable {
 
     private Barcode barcode;
 

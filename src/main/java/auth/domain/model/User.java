@@ -1,5 +1,6 @@
 package auth.domain.model;
 
+import java.io.Serializable;
 import java.util.*;
 import java.util.Objects;
 
@@ -7,7 +8,7 @@ import java.util.Objects;
  *
  * @author Paulo Maio <pam@isep.ipp.pt>
  */
-public class User {
+public class User implements Serializable {
 
     private Email id;
     private Password password;

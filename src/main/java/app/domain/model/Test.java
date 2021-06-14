@@ -1,10 +1,12 @@
 package app.domain.model;
+import java.io.Serializable;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Test {
+public class Test implements Serializable {
 
     private String testID;
     private final String tinNumber;

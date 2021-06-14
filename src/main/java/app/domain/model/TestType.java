@@ -1,8 +1,9 @@
 package app.domain.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
-public class TestType {
+public class TestType implements Serializable {
 
 
     /**

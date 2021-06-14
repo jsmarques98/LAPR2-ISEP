@@ -149,7 +149,3 @@ N
 docs/SprintD/US16/US16_SD.puml,0/1/01e643fff54b0ff596a068cfa7172ed3fdc40f8e
 N
 docs/SprintD/US14/US14_CD.puml,3/e/3ed373f3b7443d7a88c7855b3e9fb6287f1e96cf
-N
-docs/SprintD/US17/US17_CD.puml,6/4/64cb24590ed1291900a8a9705be3d8329faf862f
-N
-docs/SprintD/US17/US17_SD.puml,c/a/cabdb60b3174f791f2bb6f2dfc6c2be61bae965f

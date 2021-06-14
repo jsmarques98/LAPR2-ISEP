@@ -4,17 +4,23 @@ skinparam classAtributionIconSize 0
 
 
 class ImportTestsUI {
+  +AskPath(pathname)
+  +show(args)
 }
 
 class ImportTestsController {
     +ImportTestsController(company)
+    +App.getImporterAdapter()
 }
 
 class ReflectorUtility {
+    +ImporterReflection(adapterClass)
 
   }
 
 class Company {
+    +App.getInstance().getCompany()
+    +save(args)
 }
 
 class Employee {
@@ -23,7 +29,24 @@ class Employee {
 class LaboratoryCoordinator {
 }
 
+interface ImporterInterface {
+    +importFrom(pathname)
+}
 
+class Client {
+  }
+
+class Test {
+  }
+
+class Lab {
+  }
+
+class Parameters {
+  }
+
+class TestType{
+  }
 
 ImportTestsController "*" ..> "1" Company : belongs to
 class LaboratoryCoordinator extends Employee

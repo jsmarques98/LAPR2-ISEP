@@ -137,3 +137,19 @@ G
 -src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4
 h
 8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
+O
+docs/SprintC/US14/US14_CD2.puml,9/b/9b74364650b8e4f84128b1b4f8710d3680d068f2
+O
+docs/SprintD/US14/US14_CD2.puml,2/f/2f7710504e95f13056004c2f0e9255ff140fbc63
+M
+docs/SprintD/US17/US17_SD.svg,1/e/1ecf52d45870d097d4ec5f04acb3f85f71f642a6
+O
+docs/SprintD/US17/US17_SSD.puml,e/9/e9e59134129d819cbcaed58f1b5cb2da38e89429
+N
+docs/SprintD/US16/US16_SD.puml,0/1/01e643fff54b0ff596a068cfa7172ed3fdc40f8e
+N
+docs/SprintD/US14/US14_CD.puml,3/e/3ed373f3b7443d7a88c7855b3e9fb6287f1e96cf
+N
+docs/SprintD/US17/US17_CD.puml,6/4/64cb24590ed1291900a8a9705be3d8329faf862f
+N
+docs/SprintD/US17/US17_SD.puml,c/a/cabdb60b3174f791f2bb6f2dfc6c2be61bae965f

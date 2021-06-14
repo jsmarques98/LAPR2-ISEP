@@ -117,15 +117,31 @@ U
 %src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 N
 docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
-I
-docs/SprintC/US14/US14.md,6/f/6f96408c492c73eec23f503267589633c522eb76
 O
 docs/SprintC/US14/US14_SD2.puml,7/e/7edb8a76475f74134f31744c8777aa6280fa8936
 a
 1src/test/java/app/domain/model/DiagnosisTest.java,4/6/46e3d99c804c6debe5c8f9fc88e72432ee1378fa
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 G
 docs/SprintC/US4/US4.md,e/b/eb8449dbd51337621caded84a8b25cddbf573607
 X
 (src/main/java/app/domain/model/Test.java,0/3/0346ca7efc8246aba1bce2abd18994f1118a0b11
+O
+docs/SprintD/US16/US16_SSD.puml,7/e/7e572fea438d66567391f4a507ba8a6fdd85eac1
+O
+docs/SprintD/US17/US17_SSD.puml,e/9/e9e59134129d819cbcaed58f1b5cb2da38e89429
+K
+docs/SprintD/US5/US5-MD.svg,0/f/0f09e3a7a915a5e152da58b8053deb7c0123ad64
+N
+docs/SprintD/US17/US17_SSD.svg,a/f/afb73e286ccca16e3a05df073241c4847707ad3e
+G
+docs/SprintD/US4/US4.md,c/5/c5d01c52a6f7d9191769bad33015ea3674ddd5e2
+]
+-src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4
+h
+8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
+O
+docs/SprintD/US14/US14_CD2.puml,2/f/2f7710504e95f13056004c2f0e9255ff140fbc63
+N
+docs/SprintD/US14/US14_CD.puml,3/e/3ed373f3b7443d7a88c7855b3e9fb6287f1e96cf
+O
+docs/SprintC/US14/US14_CD2.puml,9/b/9b74364650b8e4f84128b1b4f8710d3680d068f2

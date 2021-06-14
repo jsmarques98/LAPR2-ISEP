@@ -57,6 +57,8 @@ public class Client {
     public String getTINNumber() {
         return TINNumber;
     }
+
+    public String getEmail() { return email; }
 }
 
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="486px" preserveAspectRatio="none" style="width:572px;height:486px;" version="1.1" viewBox="0 0 572 486" width="572px" zoomAndPan="magnify"><defs><filter height="300%" id="f56smwpvb80zc" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="294.0001" style="stroke:#A80036;stroke-width:1.0;" width="10" x="98" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="169.6"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="228.8"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="288"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="347.2001"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="254.4001" style="stroke:#000000;stroke-width:2.0;" width="538.5" x="20" y="130.3999"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="103" x2="103" y1="88.7999" y2="401.8001"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="513.5" x2="513.5" y1="88.7999" y2="401.8001"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="30" y="85.0059">Laboratory Cordinator</text><ellipse cx="103" cy="15" fill="#FEFECE" filter="url(#f56smwpvb80zc)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M103,23 L103,50 M90,31 L116,31 M103,50 L90,65 M103,50 L116,65 " fill="none" filter="url(#f56smwpvb80zc)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="30" y="413.806">Laboratory Cordinator</text><ellipse cx="103" cy="427.6" fill="#FEFECE" filter="url(#f56smwpvb80zc)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M103,435.6 L103,462.6 M90,443.6 L116,443.6 M103,462.6 L90,477.6 M103,462.6 L116,477.6 " fill="none" filter="url(#f56smwpvb80zc)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f56smwpvb80zc)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="65" x="479.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="486.5" y="73.0059">:System</text><rect fill="#FEFECE" filter="url(#f56smwpvb80zc)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="65" x="479.5" y="400.8001"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="486.5" y="420.806">:System</text><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="294.0001" style="stroke:#A80036;stroke-width:1.0;" width="10" x="98" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="169.6"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="228.8"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="288"/><rect fill="#FFFFFF" filter="url(#f56smwpvb80zc)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="509" y="347.2001"/><path d="M20,130.3999 L93,130.3999 L93,137.3999 L83,147.3999 L20,147.3999 L20,130.3999 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="254.4001" style="stroke:#000000;stroke-width:2.0;" width="538.5" x="20" y="130.3999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="35" y="143.477">loop</text><polygon fill="#A80036" points="497,165.6,507,169.6,497,173.6,501,169.6" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="108" x2="503" y1="169.6" y2="169.6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="115" y="164.077">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="286" x="126" y="164.077">wants to have an overview of the tests performed</text><polygon fill="#A80036" points="119,195.2,109,199.2,119,203.2,115,199.2" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="113" x2="513" y1="199.2" y2="199.2"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="125" y="193.677">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="224" x="136" y="193.677">shows all the tests that were perfomed</text><polygon fill="#A80036" points="497,224.8,507,228.8,497,232.8,501,228.8" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="108" x2="503" y1="228.8" y2="228.8"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="115" y="223.277">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="328" x="126" y="223.277">wants to analyse the overall perfomance of the company</text><polygon fill="#A80036" points="119,254.4,109,258.4,119,262.4,115,258.4" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="113" x2="513" y1="258.4" y2="258.4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="125" y="252.877">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="366" x="136" y="252.877">asks to know which Graphs and Statistics that he wants to see</text><polygon fill="#A80036" points="497,284,507,288,497,292,501,288" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="108" x2="503" y1="288" y2="288"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="115" y="282.477">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="154" x="126" y="282.477">selects the requested data</text><polygon fill="#A80036" points="119,313.6,109,317.6,119,321.6,115,317.6" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="113" x2="513" y1="317.6" y2="317.6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="125" y="312.077">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="136" y="312.077">asks to confirm the data</text><polygon fill="#A80036" points="497,343.2001,507,347.2001,497,351.2001,501,347.2001" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="108" x2="503" y1="347.2001" y2="347.2001"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="115" y="341.677">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="126" y="341.677">confirms data</text><polygon fill="#A80036" points="119,372.8001,109,376.8001,119,380.8001,115,376.8001" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="113" x2="513" y1="376.8001" y2="376.8001"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="125" y="371.2771">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="136" y="371.2771">informs success or insuccess of the operation</text><!--MD5=[ead7c7b2005c0d854e3a71c159c46c21]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant ":System" as System
+
+loop
+activate LC
+
+loop
+LC -> System: wants to have an overview of the tests performed
+
+activate System
+
+System -> LC: shows all the tests that were perfomed
+
+deactivate System
+
+LC -> System:  wants to analyse the overall perfomance of the company
+
+activate System
+
+System -> LC: asks to know which Graphs and Statistics that he wants to see
+
+deactivate System
+
+LC -> System: selects the requested data
+
+activate System
+
+System -> LC: asks to confirm the data
+
+deactivate System
+
+LC -> System: confirms data
+
+activate System
+
+System -> LC: informs success or insuccess of the operation
+
+deactivate System
+end
+@enduml
+
+@startuml
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant ":System" as System
+
+loop
+activate LC
+
+loop
+LC -> System: wants to have an overview of the tests performed
+
+activate System
+
+System -> LC: shows all the tests that were perfomed
+
+deactivate System
+
+LC -> System:  wants to analyse the overall perfomance of the company
+
+activate System
+
+System -> LC: asks to know which Graphs and Statistics that he wants to see
+
+deactivate System
+
+LC -> System: selects the requested data
+
+activate System
+
+System -> LC: asks to confirm the data
+
+deactivate System
+
+LC -> System: confirms data
+
+activate System
+
+System -> LC: informs success or insuccess of the operation
+
+deactivate System
+end
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

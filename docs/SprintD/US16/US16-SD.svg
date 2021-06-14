@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="830px" preserveAspectRatio="none" style="width:2091px;height:830px;" version="1.1" viewBox="0 0 2091 830" width="2091px" zoomAndPan="magnify"><defs><filter height="300%" id="f19nneow69s0n1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="637.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="73" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="222.9999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="741" y="120.3999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="72.2" style="stroke:#A80036;stroke-width:1.0;" width="10" x="741" y="372.9999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="252.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="741" y="474.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="576.3999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="949" y="160"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="530.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1285.5" y="205.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="637.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1429.5" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="192.3999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1823.5" y="543.9999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="117" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1964.5" y="619.3999"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="78" x2="78" y1="88.7999" y2="745.3998"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="746" x2="746" y1="88.7999" y2="745.3998"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="954" x2="954" y1="161.2999" y2="745.3998"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1290" x2="1290" y1="207.0998" y2="745.3998"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1434" x2="1434" y1="88.7999" y2="745.3998"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1828.5" x2="1828.5" y1="545.2999" y2="745.3998"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1969.5" x2="1969.5" y1="620.6998" y2="745.3998"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="5" y="85.0059">Laboratory Cordinator</text><ellipse cx="78" cy="15" fill="#FEFECE" filter="url(#f19nneow69s0n1)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M78,23 L78,50 M65,31 L91,31 M78,50 L65,65 M78,50 L91,65 " fill="none" filter="url(#f19nneow69s0n1)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="5" y="757.4058">Laboratory Cordinator</text><ellipse cx="78" cy="771.1998" fill="#FEFECE" filter="url(#f19nneow69s0n1)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M78,779.1998 L78,806.1998 M65,787.1998 L91,787.1998 M78,806.1998 L65,821.1998 M78,806.1998 L91,821.1998 " fill="none" filter="url(#f19nneow69s0n1)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="122" x="683" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="690" y="73.0059">OverviewTestsUI</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="122" x="683" y="744.3998"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="690" y="764.4058">OverviewTestsUI</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="170" x="867" y="744.3998"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="874" y="764.4058">OverviewTestsController</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="75" x="1251" y="744.3998"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="1258" y="764.4058">Company</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="105" x="1380" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="1387" y="73.0059">ReflectorUtility</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="105" x="1380" y="744.3998"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="1387" y="764.4058">ReflectorUtility</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="130" x="1761.5" y="744.3998"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="1768.5" y="764.4058">AlgorithmInterface</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="124" x="1905.5" y="744.3998"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="1912.5" y="764.4058">AlgorithmAdapter</text><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="637.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="73" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="222.9999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="741" y="120.3999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="72.2" style="stroke:#A80036;stroke-width:1.0;" width="10" x="741" y="372.9999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="252.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="741" y="474.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="576.3999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="949" y="160"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="530.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1285.5" y="205.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="637.5999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1429.5" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="192.3999" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1823.5" y="543.9999"/><rect fill="#FFFFFF" filter="url(#f19nneow69s0n1)" height="117" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1964.5" y="619.3999"/><polygon fill="#A80036" points="729,116.3999,739,120.3999,729,124.3999,733,120.3999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="83" x2="735" y1="120.3999" y2="120.3999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="90" y="114.8769">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="286" x="101" y="114.8769">wants to have an overview of the tests performed</text><polygon fill="#A80036" points="855,146,865,150,855,154,859,150" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="751" x2="861" y1="150" y2="150"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="758" y="144.477">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="769" y="144.477">create</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="170" x="867" y="128.3999"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="874" y="148.4059">OverviewTestsController</text><polygon fill="#A80036" points="1239,191.7999,1249,195.7999,1239,199.7999,1243,195.7999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="959" x2="1245" y1="195.7999" y2="195.7999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="966" y="190.2769">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="257" x="977" y="190.2769">company = App.getInstance().getCompany()</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="75" x="1251" y="174.1999"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="1258" y="194.2058">Company</text><polygon fill="#A80036" points="1273.5,237.5998,1283.5,241.5998,1273.5,245.5998,1277.5,241.5998" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="959" x2="1279.5" y1="241.5998" y2="241.5998"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="966" y="236.0768">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="252" x="977" y="236.0768">tests = ArrayList&lt;Test&gt; getRealizedTests()</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1295.5" x2="1337.5" y1="271.1998" y2="271.1998"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1337.5" x2="1337.5" y1="271.1998" y2="284.1998"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1296.5" x2="1337.5" y1="284.1998" y2="284.1998"/><polygon fill="#A80036" points="1306.5,280.1998,1296.5,284.1998,1306.5,288.1998,1302.5,284.1998" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1302.5" y="265.6768">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="1313.5" y="265.6768">getRealizedTests()</text><polygon fill="#A80036" points="762,309.7998,752,313.7998,762,317.7998,758,313.7998" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="756" x2="948" y1="313.7998" y2="313.7998"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="768" y="308.2768">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="779" y="308.2768">show(tests)</text><polygon fill="#A80036" points="94,339.3998,84,343.3998,94,347.3998,90,343.3998" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="88" x2="745" y1="343.3998" y2="343.3998"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="100" y="337.8768">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="623" x="111" y="337.8768">shows all the tests that were performed and asks to know which Graphs and Statistics that he wants to see</text><polygon fill="#A80036" points="729,368.9999,739,372.9999,729,376.9999,733,372.9999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="83" x2="735" y1="372.9999" y2="372.9999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="90" y="367.4769">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="154" x="101" y="367.4769">selects the requested data</text><line style="stroke:#A80036;stroke-width:1.0;" x1="751" x2="793" y1="402.5999" y2="402.5999"/><line style="stroke:#A80036;stroke-width:1.0;" x1="793" x2="793" y1="402.5999" y2="415.5999"/><line style="stroke:#A80036;stroke-width:1.0;" x1="752" x2="793" y1="415.5999" y2="415.5999"/><polygon fill="#A80036" points="762,411.5999,752,415.5999,762,419.5999,758,415.5999" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="758" y="397.0769">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="173" x="769" y="397.0769">showAndSelectIndex(params)</text><polygon fill="#A80036" points="94,441.1999,84,445.1999,94,449.1999,90,445.1999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="88" x2="745" y1="445.1999" y2="445.1999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="100" y="439.6769">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="118" y="439.6769">asks to confirm the data</text><polygon fill="#A80036" points="729,470.7999,739,474.7999,729,478.7999,733,474.7999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="83" x2="735" y1="474.7999" y2="474.7999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="90" y="469.2769">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="108" y="469.2769">confirms data</text><polygon fill="#A80036" points="937,500.3999,947,504.3999,937,508.3999,941,504.3999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="751" x2="943" y1="504.3999" y2="504.3999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="758" y="498.8769">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="0" x="780" y="498.8769"/><polygon fill="#A80036" points="1749.5,529.9999,1759.5,533.9999,1749.5,537.9999,1753.5,533.9999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="959" x2="1755.5" y1="533.9999" y2="533.9999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="966" y="528.4769">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="984" y="528.4769">create()</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="130" x="1761.5" y="512.3999"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="1768.5" y="532.4059">AlgorithmInterface</text><polygon fill="#A80036" points="1450.5,575.7999,1440.5,579.7999,1450.5,583.7999,1446.5,579.7999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1444.5" x2="1822.5" y1="579.7999" y2="579.7999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1456.5" y="574.2769">14</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="342" x="1474.5" y="574.2769">adapterReflection(App.getInstance().getAlgorithmAdapter())</text><polygon fill="#A80036" points="1893.5,605.3999,1903.5,609.3999,1893.5,613.3999,1897.5,609.3999" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1439.5" x2="1899.5" y1="609.3999" y2="609.3999"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1446.5" y="603.8769">15</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="1464.5" y="603.8769">create</text><rect fill="#FEFECE" filter="url(#f19nneow69s0n1)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="124" x="1905.5" y="587.7999"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="1912.5" y="607.8058">AlgorithmAdapter</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1974.5" x2="2016.5" y1="655.1998" y2="655.1998"/><line style="stroke:#A80036;stroke-width:1.0;" x1="2016.5" x2="2016.5" y1="655.1998" y2="668.1998"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1975.5" x2="2016.5" y1="668.1998" y2="668.1998"/><polygon fill="#A80036" points="1985.5,664.1998,1975.5,668.1998,1985.5,672.1998,1981.5,668.1998" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1981.5" y="649.6768">16</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="85" x="1999.5" y="649.6768">calculate(data)</text><polygon fill="#A80036" points="762,693.7998,752,697.7998,762,701.7998,758,697.7998" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="756" x2="948" y1="697.7998" y2="697.7998"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="768" y="692.2768">17</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144" x="786" y="692.2768">javaFX.Draw(GraphData)</text><polygon fill="#A80036" points="94,723.3998,84,727.3998,94,731.3998,90,727.3998" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="88" x2="745" y1="727.3998" y2="727.3998"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="100" y="721.8768">18</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="268" x="118" y="721.8768">informs success or insuccess of the operation</text><!--MD5=[15c324eb2169ab8046604a9559fabac3]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant OverviewTestsUI
+
+participant OverviewTestsController
+participant Company
+participant ReflectorUtility
+activate ReflectorUtility
+
+activate LC
+
+
+LC -> OverviewTestsUI: wants to have an overview of the tests performed
+activate OverviewTestsUI
+
+OverviewTestsUI -> OverviewTestsController ** : create
+activate OverviewTestsController
+
+OverviewTestsController -> Company ** : company = App.getInstance().getCompany()
+activate Company
+
+OverviewTestsController -> Company : tests = ArrayList<Test> getRealizedTests()
+Company -> Company : getRealizedTests()
+
+
+OverviewTestsUI <- OverviewTestsController : show(tests)
+
+OverviewTestsUI -> LC: shows all the tests that were performed and asks to know which Graphs and Statistics that he wants to see
+
+
+deactivate OverviewTestsUI
+
+LC -> OverviewTestsUI: selects the requested data
+
+activate OverviewTestsUI
+
+OverviewTestsUI -> OverviewTestsUI : showAndSelectIndex(params)
+
+OverviewTestsUI -> LC: asks to confirm the data
+
+deactivate OverviewTestsUI
+
+LC -> OverviewTestsUI: confirms data
+
+activate OverviewTestsUI
+OverviewTestsUI -> OverviewTestsController
+
+OverviewTestsController -> AlgorithmInterface ** : create()
+activate AlgorithmInterface
+AlgorithmInterface -> ReflectorUtility : adapterReflection(App.getInstance().getAlgorithmAdapter())
+ReflectorUtility -> AlgorithmAdapter ** : create
+activate AlgorithmAdapter
+AlgorithmAdapter -> AlgorithmAdapter : calculate(data)
+OverviewTestsUI <- OverviewTestsController : javaFX.Draw(GraphData)
+OverviewTestsUI -> LC: informs success or insuccess of the operation
+
+deactivate OverviewTestsUI
+
+@enduml
+
+@startuml
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant OverviewTestsUI
+
+participant OverviewTestsController
+participant Company
+participant ReflectorUtility
+activate ReflectorUtility
+
+activate LC
+
+
+LC -> OverviewTestsUI: wants to have an overview of the tests performed
+activate OverviewTestsUI
+
+OverviewTestsUI -> OverviewTestsController ** : create
+activate OverviewTestsController
+
+OverviewTestsController -> Company ** : company = App.getInstance().getCompany()
+activate Company
+
+OverviewTestsController -> Company : tests = ArrayList<Test> getRealizedTests()
+Company -> Company : getRealizedTests()
+
+
+OverviewTestsUI <- OverviewTestsController : show(tests)
+
+OverviewTestsUI -> LC: shows all the tests that were performed and asks to know which Graphs and Statistics that he wants to see
+
+
+deactivate OverviewTestsUI
+
+LC -> OverviewTestsUI: selects the requested data
+
+activate OverviewTestsUI
+
+OverviewTestsUI -> OverviewTestsUI : showAndSelectIndex(params)
+
+OverviewTestsUI -> LC: asks to confirm the data
+
+deactivate OverviewTestsUI
+
+LC -> OverviewTestsUI: confirms data
+
+activate OverviewTestsUI
+OverviewTestsUI -> OverviewTestsController
+
+OverviewTestsController -> AlgorithmInterface ** : create()
+activate AlgorithmInterface
+AlgorithmInterface -> ReflectorUtility : adapterReflection(App.getInstance().getAlgorithmAdapter())
+ReflectorUtility -> AlgorithmAdapter ** : create
+activate AlgorithmAdapter
+AlgorithmAdapter -> AlgorithmAdapter : calculate(data)
+OverviewTestsUI <- OverviewTestsController : javaFX.Draw(GraphData)
+OverviewTestsUI -> LC: informs success or insuccess of the operation
+
+deactivate OverviewTestsUI
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

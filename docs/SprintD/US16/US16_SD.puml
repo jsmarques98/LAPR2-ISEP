@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant OverviewTestsUI
+
+participant OverviewTestsController
+participant Company
+participant ReflectorUtility
+activate ReflectorUtility
+
+activate LC
+
+
+LC -> OverviewTestsUI: wants to have an overview of the tests performed
+activate OverviewTestsUI
+
+OverviewTestsUI -> OverviewTestsController ** : create
+activate OverviewTestsController
+
+OverviewTestsController -> Company ** : company = App.getInstance().getCompany()
+activate Company
+
+OverviewTestsController -> Company : tests = ArrayList<Test> getRealizedTests()
+Company -> Company : getRealizedTests()
+
+
+OverviewTestsUI <- OverviewTestsController : show(tests)
+
+OverviewTestsUI -> LC: shows all the tests that were performed and asks to know which Graphs and Statistics that he wants to see
+
+
+deactivate OverviewTestsUI
+
+LC -> OverviewTestsUI: selects the requested data
+
+activate OverviewTestsUI
+
+OverviewTestsUI -> OverviewTestsUI : showAndSelectIndex(params)
+
+OverviewTestsUI -> LC: asks to confirm the data
+
+deactivate OverviewTestsUI
+
+LC -> OverviewTestsUI: confirms data
+
+activate OverviewTestsUI
+OverviewTestsUI -> OverviewTestsController
+
+OverviewTestsController -> AlgorithmInterface ** : create()
+activate AlgorithmInterface
+AlgorithmInterface -> ReflectorUtility : adapterReflection(App.getInstance().getAlgorithmAdapter())
+ReflectorUtility -> AlgorithmAdapter ** : create
+activate AlgorithmAdapter
+AlgorithmAdapter -> AlgorithmAdapter : calculate(data)
+OverviewTestsUI <- OverviewTestsController : javaFX.Draw(GraphData)
+OverviewTestsUI -> LC: informs success or insuccess of the operation
+
+deactivate OverviewTestsUI
+
+@enduml

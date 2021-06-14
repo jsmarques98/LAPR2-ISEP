@@ -12,10 +12,6 @@ public class Client {
     String email;
     String password;
 
-    public String getEmail() {
-        return email;
-    }
-
     public Client(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
 
         this.name = name;

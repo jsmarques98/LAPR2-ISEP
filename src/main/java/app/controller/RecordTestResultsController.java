@@ -4,6 +4,8 @@ import app.domain.model.Company;
 import app.domain.model.Test;
 import app.domain.model.ValueRecords;
 
+import java.util.Date;
+
 
 public class RecordTestResultsController {
 
@@ -70,6 +72,7 @@ public class RecordTestResultsController {
      */
     public boolean saveValueRecords() {
         System.out.println(valueRecords);
+        this.test.setTest_Chemical_DateHour(new Date());
         return this.company.saveValueRecords(valueRecords);
     }
 

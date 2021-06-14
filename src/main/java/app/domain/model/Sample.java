@@ -9,7 +9,6 @@ public class Sample {
 
     private Barcode barcode;
 
-
     public Sample( String code ){
         generateBarcode(code);
     }

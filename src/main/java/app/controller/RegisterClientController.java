@@ -19,6 +19,13 @@ public class RegisterClientController {
         return clientDTO;
     }
 
+    //factory for class Client, goes from args -> clientDTO -> client
+    public Client createClient(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email){
+
+        return new Client(name, number, cCard, nhs, date, phoneNumber, email);
+    }
+
+
 
     //register ClientDTO to the object company
     public boolean registerClient(ClientDTO clientDTO){

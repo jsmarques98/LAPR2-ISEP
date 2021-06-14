@@ -12,13 +12,14 @@ public class Client {
     String email;
     String password;
 
+    public String getEmail() {
+        return email;
+    }
 
-
-
-    public Client(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email) {
+    public Client(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
 
         this.name = name;
-        this.TINNumber = number;
+        this.TINNumber = TINNumber;
         this.CCNumber = cCard;
         this.NHSNumber = nhs;
         this.birthdate = date;

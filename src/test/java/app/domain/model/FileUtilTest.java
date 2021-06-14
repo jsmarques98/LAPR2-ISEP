@@ -23,7 +23,7 @@ class FileUtilTest {
         FileUtil file = new FileUtil();
         file.writeFile("./results/emailAndSMSMessages.txt");
         BufferedReader objReader = new BufferedReader(new FileReader("./results/emailAndSMSMessages.txt"));
-        assertEquals("Your tests are now available in the app!", objReader.readLine());
+        assertEquals("./results/emailAndSMSMessages.txt", objReader.readLine());
     }
 
 }

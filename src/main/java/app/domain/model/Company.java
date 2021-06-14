@@ -27,6 +27,14 @@ public class Company {
 
     public static List<Client> clientsList = new ArrayList<>();
 
+    public Client getClient(String email){
+        for( Client client : clientsList )
+            if( client.email.equals(email) )
+                return client;
+        return null;
+    }
+
+
     public static List<ParameterTest> parameterList = new ArrayList<>();
 
     public static List<TestType> record;
@@ -91,12 +99,10 @@ public class Company {
         //return false if already exists
         if(clientsList.contains(client)){
             return false;
-
         }
         else{
 
             clientsList.add(client);
-            System.out.println(clientsList);
             return true;
         }
 

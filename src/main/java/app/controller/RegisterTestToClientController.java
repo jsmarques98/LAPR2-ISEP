@@ -3,6 +3,7 @@ package app.controller;
 import app.domain.model.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class RegisterTestToClientController {
     private Company company;
@@ -21,7 +22,14 @@ public class RegisterTestToClientController {
         this.test = this.company.createtest(tinNumber, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode) ;
         return this.company.validateTest(test);
     }
+
     public boolean saveTest() {
+        test.setTest_Reg_DateHour(new Date());
+        return this.company.saveTest(test);
+    }
+
+    public boolean saveTest( Test test ) {
+        test.setTest_Reg_DateHour(new Date());
         return this.company.saveTest(test);
     }
 }

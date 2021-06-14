@@ -23,17 +23,22 @@ public class ValidationUI implements Runnable{
     }
 
     public void run(){
-        for(int i = 0; i< Company.reportedTestsList.size(); i++){
+        int i;
+        for(i = 0; i< Company.reportedTestsList.size(); i++){
             System.out.println(Company.reportedTestsList.get(i));
         }
-        for(int i = 0; i< Company.valueRecordsList.size(); i++){
+
+        int j;
+        for( j = 0; j< Company.valueRecordsList.size(); j++){
             System.out.println(Company.valueRecordsList.get(i));
         }
+
 
         System.out.println("Do you validate the reports and the values of tests?(yes/no)");
 
 
         if(Utils.confirm()) {
+            controller.validate(Company.reportedTestsList.get(i).getTest());
             fileutil.createFile("./results/emailAndSMSMessages.txt");
             fileutil.writeFile("Your tests are now available in the app!");
         } else {

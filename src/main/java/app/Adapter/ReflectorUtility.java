@@ -29,4 +29,15 @@ public class ReflectorUtility {
             return null;
         }
     }
+
+    public static AlgorithmInterface AlgorithmReflection(String adapterClass) {
+        try {
+            Class<?> oClass = Class.forName(adapterClass);
+            return ( (AlgorithmInterface) oClass.getDeclaredConstructor().newInstance());
+
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
+            LOGGER.info(e.getMessage());
+            return null;
+        }
+    }
 }

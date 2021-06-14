@@ -14,6 +14,10 @@ public class Diagnosis implements Serializable {
      */
     private final transient Test test;
 
+    public Test getTest() {
+        return test;
+    }
+
     /**
      * Receives the information necessary to make the diagnosis
      * @param report the report of the test result

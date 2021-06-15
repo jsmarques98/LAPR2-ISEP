@@ -10,7 +10,9 @@ import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /**
  * @author Paulo Maio <pam@isep.ipp.pt>
@@ -22,9 +24,32 @@ public class App {
 
     private String barcodeAdapter;
 
-    private static final Logger LOGGER = Logger.getLogger(App.class.getName());
+    private static Logger LOGGER;
+
+    //change this to false in release version
+    private static final boolean DEBUG_MODE = true;
 
     private App() {
+        LOGGER = Logger.getLogger(App.class.getName());
+
+        FileHandler fh;
+
+        try {
+            // This block configure the logger with handler and formatter
+            fh = new FileHandler("serializationLogger.log");
+            LOGGER.addHandler(fh);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if(!DEBUG_MODE)
+            LOGGER.setUseParentHandlers(false);
+
 
         Properties props = null;
 
@@ -71,11 +96,10 @@ public class App {
             fileIn.close();
             LOGGER.info("Serialized data is loaded from data/company.ser");
         } catch (IOException i) {
-            LOGGER.info("data/company.ser not found! Running bootstrap!");
+            LOGGER.warning("Company in data/company.ser not found! Running bootstrap!");
             return false;
         } catch (ClassNotFoundException c) {
-            LOGGER.info("Company class not found");
-            c.printStackTrace();
+            LOGGER.warning("Company class not found");
             return false;
         }
         return true;

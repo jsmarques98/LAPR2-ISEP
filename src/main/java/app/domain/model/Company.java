@@ -3,7 +3,7 @@ package app.domain.model;
 import app.controller.App;
 import app.controller.TestTypeRecord;
 import auth.AuthFacade;
-
+import auth.domain.store.UserRoleStore;
 
 
 import java.io.File;
@@ -28,6 +28,7 @@ public class Company implements Serializable {
     public static List<ValueRecords> valueRecordsList = new ArrayList<>();
 
     public static List<Client> clientsList = new ArrayList<>();
+
 
     public Client getClient(String email){
         for( Client client : clientsList )
@@ -159,7 +160,7 @@ public class Company implements Serializable {
         }
     }
 
-    public void sendEmailWithPassword(String idParaONome, String textoAEnviar) {
+    public static void sendEmailWithPassword(String idParaONome, String textoAEnviar) {
         try {
             File myObj = new File(idParaONome);
             if (myObj.createNewFile()) {
@@ -186,6 +187,30 @@ public class Company implements Serializable {
             e.printStackTrace();
         }
     }
+
+    //us3
+    public static Client createClient(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
+
+        return new Client(name, TINNumber, cCard, nhs, date, phoneNumber, email);
+    }
+        public boolean validateClient(Client e) {
+            if (e == null)
+                return false;
+            return !this.clientslist.contains(e);
+        }
+
+        public boolean saveClient(Client e) {
+            if (!validateClient(e)) {
+                return false;
+            } else {
+                sendEmailWithPassword(e.getRoleID(), e.getPassword());
+                authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleID());
+                return this.clientslist.add(e);
+            }
+        }
+
+
+
 
 
 //    us8

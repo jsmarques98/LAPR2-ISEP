@@ -9,6 +9,7 @@ public class ClientDTO {
     String phoneNumber;
     String email;
     String Password;
+    String roleID = "Client";
 
 
     public String getName() {
@@ -43,6 +44,10 @@ public class ClientDTO {
         return Password;
     }
 
+    public String getRoleID() {
+        return roleID;
+    }
+
     public ClientDTO(String name, String number, String cCard, String nhs, String date, String phoneNumber, String email, String password) {
 
         this.name = name;
@@ -53,6 +58,7 @@ public class ClientDTO {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.Password = password;
+        this.roleID = roleID;
     }
 
 }

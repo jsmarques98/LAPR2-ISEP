@@ -56,6 +56,7 @@ public class ImportTestsCSV {
             final int Email = 9; //to note that text representation differs from csv to csv
             final int Address = 10;
 
+
             //test
             final int TestType = 11;
             final int Category = 12;
@@ -79,6 +80,7 @@ public class ImportTestsCSV {
         String clientPhoneNumber = args[PhoneNumber];
         String clientName = args[Name];
         String clientEmail = args[Email];
+
 
         //not a client address, lab address maybe
         String clientAddress = args[Address];

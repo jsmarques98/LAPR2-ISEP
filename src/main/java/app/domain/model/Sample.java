@@ -6,6 +6,7 @@ import app.controller.App;
 import net.sourceforge.barbecue.Barcode;
 
 import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
 
 public class Sample implements Serializable {
 
@@ -20,13 +21,21 @@ public class Sample implements Serializable {
 
 
     private void generateBarcode(String code ){
-        BarcodeInterface imp = ReflectorUtility.adapterReflection(App.getInstance().getBarcodeAdapter());
+        BarcodeInterface imp = null;
+        try {
+            imp = ReflectorUtility.adapterReflection(App.getInstance().getBarcodeAdapter());
+       }
+       catch(NullPointerException e){};
         if (imp != null)
             barcode = imp.generateBarcode(code);
     }
 
     private void generateBarcode(String code, String adapter ){
-        BarcodeInterface imp = ReflectorUtility.adapterReflection(adapter);
+        BarcodeInterface imp = null;
+        try {
+            imp = ReflectorUtility.adapterReflection(App.getInstance().getBarcodeAdapter());
+        }
+        catch(NullPointerException e){};
         if (imp != null)
             barcode = imp.generateBarcode(code);
     }

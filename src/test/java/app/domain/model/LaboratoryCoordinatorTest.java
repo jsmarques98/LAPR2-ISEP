@@ -9,10 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LaboratoryCoordinatorTest {
     public final LaboratoryCoordinator lc1;
+    public final Lab lab1;
     public final List<Employee> employeeList;
 
     public LaboratoryCoordinatorTest() {
-        lc1 = new LaboratoryCoordinator("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd");
+        lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
+        lc1 = new LaboratoryCoordinator("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd", lab1);
         employeeList = new ArrayList<>();
         employeeList.add(lc1);
     }

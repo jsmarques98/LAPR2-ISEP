@@ -11,9 +11,11 @@ class SpecialistDoctorTest {
 
     public final SpecialistDoctor sd1;
     public final List<Employee> employeeList;
+    public final Lab lab1;
 
     public SpecialistDoctorTest() {
-        sd1 = new SpecialistDoctor("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd", "1111");
+        lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
+        sd1 = new SpecialistDoctor("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd", lab1,"1111");
         employeeList = new ArrayList<>();
         employeeList.add(sd1);
     }

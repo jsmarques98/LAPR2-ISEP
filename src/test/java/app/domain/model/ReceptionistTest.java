@@ -11,9 +11,11 @@ class ReceptionistTest {
 
     public final Receptionist r1;
     public final List<Employee> employeeList;
+    public final Lab lab1;
 
     public ReceptionistTest() {
-        r1 = new Receptionist("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd");
+        lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
+        r1 = new Receptionist("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd", lab1);
         employeeList = new ArrayList<>();
         employeeList.add(r1);
     }

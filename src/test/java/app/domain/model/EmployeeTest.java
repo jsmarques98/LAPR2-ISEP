@@ -13,9 +13,11 @@ public class EmployeeTest {
 
     private final Employee e1;
     private final List<Employee> employeeList;
+    public final Lab lab1;
 
     public EmployeeTest() {
-        e1 = new Employee("ADMINISTRATOR","Maria Alegre","sad","asd","maria@gmail.com","asd");
+        lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
+        e1 = new Employee("ADMINISTRATOR","Maria Alegre","sad","asd","maria@gmail.com","asd", lab1);
         employeeList = new ArrayList<>();
         employeeList.add(e1);
     }
@@ -101,6 +103,7 @@ public class EmployeeTest {
                 ", phoneNumber='" + "asd" + '\'' +
                 ", email='" + e1.getEmail() + '\'' +
                 ", socCode='" + "asd" + '\'' +
+                ", labId='" + " 11111"+ '\''+
                 ", password='" + e1.getPassword() + '\'' +
                 '}');
 

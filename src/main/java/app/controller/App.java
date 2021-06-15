@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.Adapter.BarcodeAdapter;
 import app.domain.model.*;
 import app.domain.shared.Constants;
 import auth.AuthFacade;
@@ -9,6 +10,7 @@ import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.logging.Logger;
 
 /**
  * @author Paulo Maio <pam@isep.ipp.pt>
@@ -20,23 +22,30 @@ public class App {
 
     private String barcodeAdapter;
 
+    private static final Logger LOGGER = Logger.getLogger(App.class.getName());
+
     private App() {
-        Properties props = getProperties();
-        barcodeAdapter = props.getProperty("BarcodeAdapter");
-        //this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
-        this.authFacade = this.company.getAuthFacade();
+
+        Properties props = null;
 
         if(!load()) {
-            System.out.println("data/company.ser not found! Running bootstrap!");
+            props = getProperties();
+            this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
+            this.authFacade = this.company.getAuthFacade();
             bootstrap();
         }
-        save();
-        //lets serialize company
+        save(this.company);
 
-        //company = null;
+        props = getProperties();
+        barcodeAdapter = props.getProperty("BarcodeAdapter");
+        this.authFacade = this.company.getAuthFacade();
+
+
     }
 
-    public boolean save() {
+    public boolean save(Object o){
+        String className = o.getClass().getName();
+        int classHash = o.hashCode();
         try {
             FileOutputStream fileOut =
                     new FileOutputStream("data/company.ser");
@@ -44,7 +53,8 @@ public class App {
             out.writeObject(company);
             out.close();
             fileOut.close();
-            System.out.println("Serialized data is saved in data/company.ser");
+            LOGGER.info("Saving " + className + " with HashCode: " + classHash);
+            LOGGER.info("Serialized data is saved in data/company.ser");
         } catch (IOException i) {
             i.printStackTrace();
         }
@@ -59,11 +69,12 @@ public class App {
             this.company = (Company) in.readObject();
             in.close();
             fileIn.close();
+            LOGGER.info("Serialized data is loaded from data/company.ser");
         } catch (IOException i) {
-            i.printStackTrace();
+            LOGGER.info("data/company.ser not found! Running bootstrap!");
             return false;
         } catch (ClassNotFoundException c) {
-            System.out.println("Company class not found");
+            LOGGER.info("Company class not found");
             c.printStackTrace();
             return false;
         }

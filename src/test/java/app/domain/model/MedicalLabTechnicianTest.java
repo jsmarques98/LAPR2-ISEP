@@ -14,7 +14,7 @@ class MedicalLabTechnicianTest {
     public final Lab lab1;
 
     public MedicalLabTechnicianTest() {
-        lab1 = new Lab("11111","laboratorio1","porto","99999999999","999999999");
+        lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
         ml1 = new MedicalLabTechnician("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd", lab1);
         employeeList = new ArrayList<>();
         employeeList.add(ml1);

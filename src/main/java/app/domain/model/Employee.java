@@ -87,7 +87,7 @@ public class Employee implements Serializable {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", socCode='" + socCode + '\'' +
-                ", labId=' " + lab.getLabId() +'\''+
+                ", labId=' "+ lab.getLabId() +'\''+
                 ", password='" + password + '\'' +
                 '}';
     }

@@ -14,7 +14,7 @@ class ReceptionistTest {
     public final Lab lab1;
 
     public ReceptionistTest() {
-        lab1 = new Lab("11111","laboratorio1","porto","99999999999","999999999");
+        lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
         r1 = new Receptionist("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd", lab1);
         employeeList = new ArrayList<>();
         employeeList.add(r1);

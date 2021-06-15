@@ -29,7 +29,7 @@ class RegisterEmployeeControllerTest {
         ctrl = new RegisterEmployeeController();
 
         try {
-            lab1 = new Lab("11111","laboratorio1","porto","99999999999","999999999");
+            lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
             ctrl.createEmloyee("ADMINISTRATOR", "maria","dsad", "77777777777","maria@gmail.com", "1111", lab1);
 
 
@@ -37,7 +37,7 @@ class RegisterEmployeeControllerTest {
             fail();
         }
         try {
-            lab1 = new Lab("11111","laboratorio1","porto","99999999999","999999999");
+            lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
             ctrl.createEmloyee("ADMINISTRATOR", "maria", "dsad", "77777777777","maria@gmail.com", "1111", lab1);
 
 
@@ -51,14 +51,14 @@ class RegisterEmployeeControllerTest {
         ctrl = new RegisterEmployeeController();
 
         try {
-            lab1 = new Lab("11111","laboratorio1","porto","99999999999","999999999");
+            lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
             ctrl.createSpecialistDoctor("SPECIALIST_DOCTOR", "maria", "dsad", "77777777777","maria@gmail.com", "1111", lab1, "1111");
 
         } catch (IllegalArgumentException e) {
             fail();
         }
         try {
-            lab1 = new Lab("11111","laboratorio1","porto","99999999999","999999999");
+            lab1 = new Lab("11111","laboratorio1","porto","99999999999","9999999999");
             ctrl.createSpecialistDoctor("ADMINISTRATOR", "maria", "dsad", "77777777777","maria@gmail.com", "1111", lab1,"1111");
 
 

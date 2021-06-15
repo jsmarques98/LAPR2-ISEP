@@ -1,6 +1,7 @@
 package app.domain.model;
 
 
+import app.domain.shared.Constants;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -65,7 +66,7 @@ class ClientTest {
 
     @Test
     void getroleId() {
-        String id = "Client";
-        assertEquals(id, c1.getRoleID());
+        String id = "CLIENT";
+        assertEquals(id, Constants.ROLE_CLIENT);
     }
 }

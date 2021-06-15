@@ -152,13 +152,14 @@ public class App {
         Employee.roles.add(Constants.ROLE_LABORATORY_COORDINATOR);
         Employee.roles.add(Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
         Employee.roles.add(Constants.ROLE_SEPECIALIST_DOCTOR);
+
         this.authFacade.addUserRole(Constants.ROLE_ADMIN, Constants.ROLE_ADMIN);
         this.authFacade.addUserRole(Constants.ROLE_RECEPTIONIST, Constants.ROLE_RECEPTIONIST);
         this.authFacade.addUserRole(Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST, Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
         this.authFacade.addUserRole(Constants.ROLE_LABORATORY_COORDINATOR, Constants.ROLE_LABORATORY_COORDINATOR);
         this.authFacade.addUserRole(Constants.ROLE_MEDICAL_LAB_TECHNICIAN, Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
         this.authFacade.addUserRole(Constants.ROLE_SEPECIALIST_DOCTOR, Constants.ROLE_SEPECIALIST_DOCTOR);
-
+        this.authFacade.addUserRole(Constants.ROLE_CLIENT, Constants.ROLE_CLIENT);
         this.authFacade.addUserWithRole("Main Administrator", "admin@lei.sem2.pt", "123456", Constants.ROLE_ADMIN);
 
         //Como não está implementado inserimos manualmente
@@ -182,20 +183,20 @@ public class App {
         Company.parameterList.add(parameterTest9);
 
 
-//        Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com");
-//        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
-//        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
-//        Company.clientsList.add(c1);
-//        Company.clientsList.add(c2);
-//        Company.clientsList.add(c3);
+        Client c1 = new Client("Pedro","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","pedro@gmail.com");
+        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
+        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
+        Company.clientsList.add(c1);
+        Company.clientsList.add(c2);
+        Company.clientsList.add(c3);
 
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
+        this.authFacade.addUserWithRole("Pedro", "pedro@gmail.com", "123456", Constants.ROLE_CLIENT);
         this.authFacade.addUserWithRole("Jose", "jose@gmail.com", "123456", Constants.ROLE_CLINCAL_CHEMISTRY_TECHNOLOGIST);
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
         this.authFacade.addUserWithRole("laboratory coordinator", "labcord@gmail.com", "123456", Constants.ROLE_LABORATORY_COORDINATOR);
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
-
 
 
 //        ArrayList listCat;

@@ -2,6 +2,7 @@ package app.domain.model;
 
 import app.controller.App;
 import app.controller.TestTypeRecord;
+import app.domain.shared.Constants;
 import auth.AuthFacade;
 
 
@@ -103,7 +104,7 @@ public class Company implements Serializable {
             return false;
         }
         else{
-            authFacade.addUserWithRole(client.getName(),client.getEmail(),client.getPassword(),client.roleID);
+            authFacade.addUserWithRole(client.getName(),client.getEmail(),client.getPassword(), Constants.ROLE_CLIENT);
             clientsList.add(client);
             return true;
         }
@@ -153,7 +154,8 @@ public class Company implements Serializable {
         if (!validateEmployee(e)) {
             return false;
         } else {
-            sendEmailWithPassword(e.getId(), e.getPassword());
+            String text = "Email: " + e.getEmail() + "\nPassword: " + e.getPassword();
+            sendEmailWithPassword(e.getId(), text);
             authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleId());
             return this.employeeList.add(e);
         }

@@ -11,9 +11,11 @@ class MedicalLabTechnicianTest {
 
     public final MedicalLabTechnician ml1;
     public final List<Employee> employeeList;
+    public final Lab lab1;
 
     public MedicalLabTechnicianTest() {
-        ml1 = new MedicalLabTechnician("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd");
+        lab1 = new Lab("11111","laboratorio1","porto","99999999999","999999999");
+        ml1 = new MedicalLabTechnician("ADMINISTRATOR", "Maria Alegre", "sad", "asd", "maria@gmail.com", "asd", lab1);
         employeeList = new ArrayList<>();
         employeeList.add(ml1);
     }

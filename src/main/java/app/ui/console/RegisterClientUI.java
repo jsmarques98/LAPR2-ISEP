@@ -54,9 +54,9 @@ public class RegisterClientUI implements Runnable{
 
         show(ClientDTO);
 
-
-
-
+        for (int i = 0; i < Company.clientsList.size(); i++) {
+            System.out.println(Company.clientsList.get(i));
+        }
 
     }
 

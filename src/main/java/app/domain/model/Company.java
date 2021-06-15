@@ -135,12 +135,12 @@ public class Company implements Serializable {
 
     public static List<Employee> employeeList = new ArrayList<>(1);
 
-    public static Employee createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode) {
-        return new Employee(role, name, address, phoneNumber, email, socCode);
+    public static Employee createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab) {
+        return new Employee(role, name, address, phoneNumber, email, socCode,lab);
     }
 
-    public static Employee createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, String indxNumber) {
-        return new SpecialistDoctor(role, name, address, phoneNumber, email, socCode, indxNumber);
+    public static Employee createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab, String indxNumber) {
+        return new SpecialistDoctor(role, name, address, phoneNumber, email, socCode, lab, indxNumber);
     }
 
     public boolean validateEmployee(Employee e) {

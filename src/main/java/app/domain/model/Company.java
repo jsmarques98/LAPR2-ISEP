@@ -103,7 +103,7 @@ public class Company implements Serializable {
             return false;
         }
         else{
-
+            authFacade.addUserWithRole(client.getName(),client.getEmail(),client.getPassword(),client.roleID);
             clientsList.add(client);
             return true;
         }

@@ -12,6 +12,7 @@ public class Client implements Serializable {
     String phoneNumber;
     String email;
     String password;
+    String roleID = "Client";
 
     public Client(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
 
@@ -23,6 +24,7 @@ public class Client implements Serializable {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = "";
+        this.roleID = roleID;
     }
 
     @Override
@@ -56,6 +58,18 @@ public class Client implements Serializable {
     }
 
     public String getEmail() { return email; }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getRoleID() {
+        return roleID;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
 
 

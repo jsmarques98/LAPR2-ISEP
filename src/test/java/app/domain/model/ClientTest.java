@@ -62,4 +62,10 @@ class ClientTest {
         String number = "5555555555";
         assertEquals(number, c1.getTINNumber());
     }
+
+    @Test
+    void getroleId() {
+        String id = "Client";
+        assertEquals(id, c1.getRoleID());
+    }
 }

@@ -53,15 +53,8 @@ public class UpdateClientUI implements Runnable {
                 String gender = RegisterClientUI.AskGender();
                 if(confirm()) {
                     c.setGender(gender);
-<<<<<<< HEAD
                     System.out.println("Info updated");
-=======
-<<<<<<< HEAD
-                    System.out.println("Info updated");
-=======
-                    System.out.println("Falta fazer o sexo");
->>>>>>> 269958ed990bc98d72826704946620c2300fbf93
->>>>>>> d309098d02fe892c2444bdf0ea9db181ad317e4d
+
                 }
                 break;
             default:

@@ -99,18 +99,18 @@ public class Company implements Serializable {
 
 
 
-    public boolean save(Client client) {
-        //return false if already exists
-        if(clientsList.contains(client)){
-            return false;
-        }
-        else{
-            authFacade.addUserWithRole(client.getName(),client.getEmail(),client.getPassword(), Constants.ROLE_CLIENT);
-            clientsList.add(client);
-            return true;
-        }
-
-    }
+//    public boolean save(Client client) {
+//        //return false if already exists
+//        if(clientsList.contains(client)){
+//            return false;
+//        }
+//        else{
+//
+//            clientsList.add(client);
+//            return true;
+//        }
+//
+//    }
 
     public Company(String designation) {
         if (designation.length() < 1)
@@ -162,7 +162,7 @@ public class Company implements Serializable {
         }
     }
 
-    public static void sendEmailWithPassword(String idParaONome, String textoAEnviar) {
+    public void sendEmailWithPassword(String idParaONome, String textoAEnviar) {
         try {
             File myObj = new File(idParaONome);
             if (myObj.createNewFile()) {
@@ -192,22 +192,20 @@ public class Company implements Serializable {
 
     //us3
     public static Client createClient(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
-
         return new Client(name, TINNumber, cCard, nhs, date, phoneNumber, email);
     }
         public boolean validateClient(Client e) {
             if (e == null)
                 return false;
-            return !this.clientslist.contains(e);
+            return !this.clientsList.contains(e);
         }
 
         public boolean saveClient(Client e) {
             if (!validateClient(e)) {
                 return false;
             } else {
-                sendEmailWithPassword(e.getRoleID(), e.getPassword());
-                authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleID());
-                return this.clientslist.add(e);
+                authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(), Constants.ROLE_CLIENT);
+                return this.clientsList.add(e);
             }
         }
 

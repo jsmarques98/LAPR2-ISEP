@@ -136,7 +136,11 @@ public class RegisterClientUI implements Runnable{
     }
 
     public String AskGender(){
-
+        String gender = Utils.readLineFromConsole("Enter your gender:%n M(masculin)%n" +
+                "F(Feminine)%n" +   "O(other");
+        if (gender.equalsIgnoreCase("M") || gender.equalsIgnoreCase("F") || gender.equalsIgnoreCase("O")){
+            return gender;
+        }
     return AskGender();
     }
 

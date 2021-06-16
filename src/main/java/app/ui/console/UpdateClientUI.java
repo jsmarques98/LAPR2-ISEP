@@ -38,7 +38,8 @@ public class UpdateClientUI implements Runnable {
             case 2:
                 String address = readLineFromConsole("Insert the new address: ");
                 if(confirm()) {
-                    System.out.println("Falta fazer o set do address");
+                    c.setAddress(address);
+                    System.out.println("Info updated");
                 }
                 break;
             case 3:
@@ -51,13 +52,15 @@ public class UpdateClientUI implements Runnable {
             case 4:
                 String gender = readLineFromConsole("Insert the new gender: ");
                 if(confirm()) {
-                    System.out.println("Falta fazer o sexo");
+                    c.setGender(gender);
+                    System.out.println("Info updated");
                 }
                 break;
             default:
                 System.out.println("Option not found\n");
                 selectParameter(c);
         }
+
 
     }
 

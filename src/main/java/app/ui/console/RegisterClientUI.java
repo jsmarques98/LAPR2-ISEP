@@ -50,9 +50,9 @@ public class RegisterClientUI implements Runnable{
 
         String args[] = {name, number, CCard, NHS, Date, PhoneNumber, Email, Password};
 
-        ClientDTO ClientDTO = controller.createClientDTO(args);
+        Client Client = controller.createClient(args);
 
-        show(ClientDTO);
+        show(Client);
 
         for (int i = 0; i < Company.clientsList.size(); i++) {
             System.out.println(Company.clientsList.get(i));
@@ -62,7 +62,7 @@ public class RegisterClientUI implements Runnable{
 
 
 
-    public void show(ClientDTO C){
+    public void show(Client C){
 
         System.out.println(C.toString());
 

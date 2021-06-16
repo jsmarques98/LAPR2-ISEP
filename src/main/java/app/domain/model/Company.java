@@ -154,18 +154,18 @@ public class Company implements Serializable {
             return false;
         } else {
             String text = "Email: " + e.getEmail() + "\nPassword: " + e.getPassword();
-            sendEmailWithPassword(e.getId(), text);
+            createFile(e.getId(), text);
             authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleId());
             return this.employeeList.add(e);
         }
     }
 
-    public void sendEmailWithPassword(String idParaONome, String textoAEnviar) {
+    public static void createFile(String name, String textToWrite) {
         try {
-            File myObj = new File(idParaONome);
+            File myObj = new File(name);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
-                writePassword(idParaONome, textoAEnviar);
+                writeFile(name, textToWrite);
             } else {
                 System.out.println("File already exists.");
             }
@@ -175,9 +175,9 @@ public class Company implements Serializable {
         }
     }
 
-    public static void writePassword(String idParaONome, String textToWrite) {
+    public static void writeFile(String name, String textToWrite) {
         try {
-            FileWriter myWriter = new FileWriter(idParaONome);
+            FileWriter myWriter = new FileWriter(name);
             myWriter.write(textToWrite);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -208,7 +208,7 @@ public class Company implements Serializable {
             } else {
                 authFacade.addUserWithRole(c.getName(),c.getEmail(),c.getPassword(), Constants.ROLE_CLIENT);
                 String text = "Email: " + c.getEmail() + "\nPassword: " + c.getPassword();
-                sendEmailWithPassword(c.getName(), text);
+                createFile(c.getName(), text);
                 return this.clientsList.add(c);
             }
         }

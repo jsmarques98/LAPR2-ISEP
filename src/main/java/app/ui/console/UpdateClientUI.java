@@ -20,11 +20,18 @@ public class UpdateClientUI implements Runnable {
         }
         System.out.println("Client Menu:\n");
         System.out.println("Client info:\n" + currentClient.toString());
-        selectParameter(currentClient);
-        System.out.println("Client info:\n" + currentClient.toString());
+        if(selectParameter(currentClient)){
+            String writeText = "Email: " + currentClient.getEmail() + "\nInfo updated !";
+            Company.createFile(currentClient.getName() + "Updated", writeText);
+            System.out.println("Client info:\n" + currentClient.toString());
+        }else{
+            System.out.println("Info not saved !");
+        }
+
     }
 
-    public void selectParameter(Client c){
+    public boolean selectParameter(Client c){
+        boolean flag = false;
         System.out.println("What do you want to change ?\n1- Name\n2- Address\n3- Phone Number\n4- Gender");
         int op = readIntegerFromConsole("Select the option number:");
         switch(op) {
@@ -33,6 +40,7 @@ public class UpdateClientUI implements Runnable {
                 if(confirm()){
                     c.setName(name);
                     System.out.println("Info updated");
+                    flag = true;
                 }
                 break;
             case 2:
@@ -40,6 +48,7 @@ public class UpdateClientUI implements Runnable {
                 if(confirm()) {
                     c.setAddress(address);
                     System.out.println("Info updated");
+                    flag = true;
                 }
                 break;
             case 3:
@@ -47,6 +56,7 @@ public class UpdateClientUI implements Runnable {
                 if(confirm()) {
                     c.setPhoneNumber(phoneNumber);
                     System.out.println("Info updated");
+                    flag = true;
                 }
                 break;
             case 4:
@@ -54,16 +64,14 @@ public class UpdateClientUI implements Runnable {
                 if(confirm()) {
                     c.setGender(gender);
                     System.out.println("Info updated");
-
+                    flag = true;
                 }
                 break;
-
             default:
                 System.out.println("Option not found\n");
                 selectParameter(c);
         }
-
-
+        return flag;
     }
 
 }

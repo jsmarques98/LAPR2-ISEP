@@ -19,7 +19,8 @@ public class UpdateClientUI implements Runnable {
            }
         }
         System.out.println("Client Menu:\n");
-        System.out.println("Client info:\n" + currentClient.toString());
+        assert currentClient != null;
+        System.out.println("Client info:\n" + currentClient);
         if(selectParameter(currentClient)){
             String writeText = "Email: " + currentClient.getEmail() + "\nInfo updated !";
             Company.createFile(currentClient.getName() + "Updated", writeText);

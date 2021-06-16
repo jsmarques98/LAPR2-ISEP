@@ -16,6 +16,7 @@ public class ViewTestResultsUI implements Runnable {
             }
         }
         System.out.println("Client Menu:\n");
-        System.out.println("Client info:\n" + currentClient.toString());
+        assert currentClient != null;
+        System.out.println("Client info:\n" + currentClient);
     }
 }

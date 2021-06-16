@@ -6,6 +6,8 @@ import app.domain.model.Company;
 import auth.domain.model.Email;
 
 public class ViewTestResultsUI implements Runnable {
+
+
     @Override
     public void run() {
         Email email = App.getInstance().getCurrentUserSession().getUserId();

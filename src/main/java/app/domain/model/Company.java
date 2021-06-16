@@ -207,8 +207,8 @@ public class Company implements Serializable {
                 return false;
             } else {
                 authFacade.addUserWithRole(c.getName(),c.getEmail(),c.getPassword(), Constants.ROLE_CLIENT);
-//                String text = "Email: " + c.getEmail() + "\nPassword: " + c.getPassword();
-//                sendEmailWithPassword(c.getName(), text);
+                String text = "Email: " + c.getEmail() + "\nPassword: " + c.getPassword();
+                sendEmailWithPassword(c.getName(), text);
                 return this.clientsList.add(c);
             }
         }

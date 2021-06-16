@@ -95,6 +95,8 @@ public class Client implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
+     public void setGender(String gender) {
+        this.gender = gender;
+    }
 }
-
 

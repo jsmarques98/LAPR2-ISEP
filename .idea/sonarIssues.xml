@@ -113,6 +113,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/app/Adapter/ImportTestsCSV.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/app/Adapter/ReflectorUtility.java">
           <value>
             <set />
@@ -134,6 +139,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/app/controller/RegisterLabController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/app/domain/model/Client.java">
           <value>
             <set />
           </value>
@@ -203,6 +213,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/app/ui/console/RegisterClientUI.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/app/ui/console/RegisterLabUI.java">
           <value>
             <set />
@@ -213,7 +228,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/app/ui/console/UpdateClientUI.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/app/ui/console/utils/Utils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/app/domain/model/ClientTest.java">
           <value>
             <set />
           </value>

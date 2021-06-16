@@ -28,8 +28,6 @@ public class Company implements Serializable {
 
     public static List<ValueRecords> valueRecordsList = new ArrayList<>();
 
-    public static List<Client> clientsList = new ArrayList<>();
-
 
     public Client getClient(String email){
         for( Client client : clientsList )
@@ -177,7 +175,7 @@ public class Company implements Serializable {
         }
     }
 
-    public void writePassword(String idParaONome, String textToWrite) {
+    public static void writePassword(String idParaONome, String textToWrite) {
         try {
             FileWriter myWriter = new FileWriter(idParaONome);
             myWriter.write(textToWrite);
@@ -191,6 +189,10 @@ public class Company implements Serializable {
     }
 
     //us3
+
+    public static List<Client> clientsList = new ArrayList<>();
+
+
     public static Client createClient(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
 
         return new Client(name, TINNumber, cCard, nhs, date, phoneNumber, email);
@@ -198,7 +200,7 @@ public class Company implements Serializable {
         public boolean validateClient(Client e) {
             if (e == null)
                 return false;
-            return !this.clientslist.contains(e);
+            return !this.clientsList.contains(e);
         }
 
         public boolean saveClient(Client e) {
@@ -207,7 +209,7 @@ public class Company implements Serializable {
             } else {
                 sendEmailWithPassword(e.getRoleID(), e.getPassword());
                 authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleID());
-                return this.clientslist.add(e);
+                return this.clientsList.add(e);
             }
         }
 

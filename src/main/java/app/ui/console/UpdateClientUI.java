@@ -57,6 +57,7 @@ public class UpdateClientUI implements Runnable {
 
                 }
                 break;
+
             default:
                 System.out.println("Option not found\n");
                 selectParameter(c);

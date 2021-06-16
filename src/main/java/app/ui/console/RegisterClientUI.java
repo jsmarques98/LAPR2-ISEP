@@ -35,7 +35,7 @@ public class RegisterClientUI implements Runnable{
         String Date = AskDate();
         String PhoneNumber = AskPhoneNumber();
         String Email = AskEmail();
-        String Password = "1234566789";
+
 
         if(Utils.confirm()){
             if (controller.createClient(name, number, addres, gender, CCard, NHS, Date, PhoneNumber, Email)){

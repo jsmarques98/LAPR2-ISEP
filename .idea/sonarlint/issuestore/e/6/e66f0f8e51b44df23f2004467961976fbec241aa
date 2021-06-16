@@ -1,0 +1,126 @@
+
+—
+java:S1319°"{The type of the "listCodeCategory" object should be an interface such as "List" rather than the implementation "ArrayList".(á×­ıÿÿÿÿ
+
+java:S1319°"€The type of the "listParameterTestCode" object should be an interface such as "List" rather than the implementation "ArrayList".(á×­ıÿÿÿÿ
+_
+java:S2095´"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(ü‰‚
+A
+java:S1444"+Make this "public static tests" field final(ªø¬
+L
+java:S1444"6Make this "public static valueRecordsList" field final(³ØØ
+I
+java:S1444("3Make this "public static parameterList" field final(è…¿Ì
+G
+java:S1444*",Make this "public static record" field final(ÂÄ¬ûÿÿÿÿ
+F
+java:S14441"0Make this "public static categories" field final(×·²
+J
+java:S14446"/Make this "public static testTypes" field final(´¿ı„úÿÿÿÿ
+H
+java:S1444ˆ"2Make this "public static employeeList" field final(±…îk
+M
+java:S1444Á"1Make this "public static clientsList" field final(ïçªúÿÿÿÿ
+I
+java:S1444á"-Make this "public static labList" field final(£øßÉúÿÿÿÿ
+S
+java:S1444–"7Make this "public static reportedTestsList" field final(ŸÇ„ßûÿÿÿÿ
+K
+java:S3740°"/Provide the parametrized type for this generic.(á×­ıÿÿÿÿ
+K
+java:S3740°"/Provide the parametrized type for this generic.(á×­ıÿÿÿÿ
+W	java:S107"<Method has 8 parameters, which is greater than 7 authorized.(äÔü•øÿÿÿÿ
+W	java:S107Ä"<Method has 9 parameters, which is greater than 7 authorized.(²êœ«üÿÿÿÿ
+Y
+java:S1155X">Use isEmpty() to check whether the collection is empty or not.(€¾öŸúÿÿÿÿ
+Z
+java:S1155ß">Use isEmpty() to check whether the collection is empty or not.(•Ûƒšùÿÿÿÿ
+l	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²êœ«üÿÿÿÿ
+g
+java:S1104"QMake tests a static final constant or non-public and provide accessors if needed.(ªø¬
+r
+java:S1104"\Make valueRecordsList a static final constant or non-public and provide accessors if needed.(³ØØ
+o
+java:S1104("YMake parameterList a static final constant or non-public and provide accessors if needed.(è…¿Ì
+m
+java:S1104*"RMake record a static final constant or non-public and provide accessors if needed.(ÂÄ¬ûÿÿÿÿ
+l
+java:S11041"VMake categories a static final constant or non-public and provide accessors if needed.(×·²
+p
+java:S11046"UMake testTypes a static final constant or non-public and provide accessors if needed.(´¿ı„úÿÿÿÿ
+n
+java:S1104ˆ"XMake employeeList a static final constant or non-public and provide accessors if needed.(±…îk
+s
+java:S1104Á"WMake clientsList a static final constant or non-public and provide accessors if needed.(ïçªúÿÿÿÿ
+o
+java:S1104á"SMake labList a static final constant or non-public and provide accessors if needed.(£øßÉúÿÿÿÿ
+y
+java:S1104–"]Make reportedTestsList a static final constant or non-public and provide accessors if needed.(ŸÇ„ßûÿÿÿÿ
+R
+java:S1128"<Remove this unused import 'auth.domain.store.UserRoleStore'.(‹œ›Ç
+E
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ
+J
+java:S1128"/Remove this unused import 'app.controller.App'.(²ÄÃ®ıÿÿÿÿ
+3
+java:S2386"Make this member "protected".(ªø¬
+3
+java:S2386"Make this member "protected".(³ØØ
+3
+java:S2386("Make this member "protected".(è…¿Ì
+3
+java:S2386ˆ"Make this member "protected".(±…îk
+9
+java:S2386Á"Make this member "protected".(ïçªúÿÿÿÿ
+9
+java:S2386á"Make this member "protected".(£øßÉúÿÿÿÿ
+9
+java:S2386–"Make this member "protected".(ŸÇ„ßûÿÿÿÿ
+U
+java:S6213*":Rename this variable to not match a restricted identifier.(ÂÄ¬ûÿÿÿÿ
+;
+java:S3010t"&Remove this assignment of "testTypes".(ÿÿƒ8
+B
+java:S3010u"'Remove this assignment of "categories".(·¨’øÿÿÿÿ
+8
+java:S3010z""Remove this assignment of "tests".(êØê÷
+V	java:S125d"<This block of commented-out lines of code should be removed.(şÁ”ÿÿÿÿÿÿ
+J
+java:S2209t"5Change this instance-reference to a static reference.(ÿÿƒ8
+@
+java:S2386u"%Make member "categories" "protected".(·¨’øÿÿÿÿ
+P
+java:S2209u"5Change this instance-reference to a static reference.(·¨’øÿÿÿÿ
+K
+java:S2209z"5Change this instance-reference to a static reference.(êØê÷
+Q
+java:S2209•"5Change this instance-reference to a static reference.(Ş”†›ûÿÿÿÿ
+L
+java:S2209Ÿ"5Change this instance-reference to a static reference.(óö´±
+O	java:S106§"9Replace this use of System.out or System.err by a logger.(ò«ÿ
+T	java:S106ª"9Replace this use of System.out or System.err by a logger.(ı¤êöıÿÿÿÿ
+O	java:S106­"9Replace this use of System.out or System.err by a logger.(Àûå 
+O	java:S106·"9Replace this use of System.out or System.err by a logger.(’ôÆà
+O	java:S106º"9Replace this use of System.out or System.err by a logger.(Àûå 
+Q
+java:S2209Ê"5Change this instance-reference to a static reference.(Ç‰‹€şÿÿÿÿ
+L
+java:S2209Ô"5Change this instance-reference to a static reference.(Á×—„
+Q
+java:S2209ı"5Change this instance-reference to a static reference.(‡³ŠŸøÿÿÿÿ
+Q
+java:S2209‹"5Change this instance-reference to a static reference.(™·Âùÿÿÿÿ
+L
+java:S2209“"5Change this instance-reference to a static reference.(—­ª
+K
+java:S2209 "5Change this instance-reference to a static reference.(Ò‹
+Q
+java:S2209¨"5Change this instance-reference to a static reference.(äÔñ¥úÿÿÿÿ
+Q
+java:S2209·"5Change this instance-reference to a static reference.(şÃ¡Âùÿÿÿÿ
+L
+java:S2209¾"5Change this instance-reference to a static reference.(§€±
+Q
+java:S2209Î"5Change this instance-reference to a static reference.(Æ­·­ıÿÿÿÿ
+L
+java:S2209Õ"5Change this instance-reference to a static reference.(›÷úÎ

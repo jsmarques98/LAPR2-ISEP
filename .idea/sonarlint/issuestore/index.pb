@@ -19,8 +19,6 @@ b
 ,src/main/java/app/domain/model/Employee.java,1/7/172c090ab1c754bae4d9ce2efae5056312661a20
 F
 docs/SprintC/README.md,f/a/facb53f23383e1076876744957a421a955453477
-`
-0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
 Z
 *src/main/java/app/ui/console/MenuItem.java,7/4/740030e937298447c12c48a7f0a934b08c3819e9
 K
@@ -143,3 +141,25 @@ N
 docs/SprintD/US17/US17_SD.puml,c/a/cabdb60b3174f791f2bb6f2dfc6c2be61bae965f
 N
 docs/SprintD/US17/US17_CD.puml,6/4/64cb24590ed1291900a8a9705be3d8329faf862f
+W
+'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
+]
+-src/main/java/app/ui/console/utils/Utils.java,0/b/0b7375dbea1ab3a7b99a2948cea2f45e61f6840d
+h
+8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
+j
+:src/main/java/app/controller/RegisterClientController.java,a/5/a50641724b46188ad6d3dde726b57cd5b53bda64
+]
+-src/main/java/app/Adapter/ImportTestsCSV.java,a/2/a29f46372de9716a07a6d13deccf48fd22488bf7
+g
+7src/main/java/app/controller/ImportTestsController.java,0/8/089a51a640ef4cdb8894ef8006d47459957f0eec
+N
+src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
+b
+2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
+[
++src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
+`
+0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
+Z
+*src/main/java/app/domain/model/Client.java,a/1/a1140e0a891f26f51604f14ed5bf2ac976d60132

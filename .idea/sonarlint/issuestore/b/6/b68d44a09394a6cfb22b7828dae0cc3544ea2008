@@ -1,0 +1,49 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÁõª
+k	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ë“­úÿÿÿÿ
+f	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ˆÖÂ
+k	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Ê·¬øÿÿÿÿ
+f	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïßºü
+k	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şˆìøÿÿÿÿ
+f	java:S117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üºÁÛ
+g	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô«ÿß
+q
+java:S1104"VMake controller a static final constant or non-public and provide accessors if needed.(¡Ïè—ùÿÿÿÿ
+J
+java:S1128"4Remove this unused import 'app.domain.model.Client'.(ùÈ‚§
+J
+java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ
+I
+java:S1128	".Remove this unused import 'app.dto.ClientDTO'.(Û§Äÿÿÿÿÿ
+Q
+java:S1128"6Remove this unused import 'app.domain.model.Category'.(ÂÀœúÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(İõ¬çøÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ƒğŠ¿
+W
+java:S1854&"<Remove this useless assignment to local variable "Password".(şˆìøÿÿÿÿ
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(àŞÔ×
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(è•Ú
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(Œ¬ıÿÿÿÿ
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(ê«ó‡
+c	java:S100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é£—…
+V	java:S125:"<This block of commented-out lines of code should be removed.(¯îôËüÿÿÿÿ
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(ÆäŒÅ
+c	java:S100T"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉğÂÔ
+N	java:S106e"9Replace this use of System.out or System.err by a logger.(¶ÖÊù
+h	java:S100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³£´Áúÿÿÿÿ
+N	java:S106|"9Replace this use of System.out or System.err by a logger.(¥‘“Æ
+d	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æîãç
+T	java:S106„"9Replace this use of System.out or System.err by a logger.(Ã§‹ªùÿÿÿÿ
+i	java:S100Š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çĞõ©ıÿÿÿÿ
+c	java:S100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãš˜
+T	java:S106˜"9Replace this use of System.out or System.err by a logger.(×š”•ıÿÿÿÿ
+d	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²Æèı
+O	java:S106¹"9Replace this use of System.out or System.err by a logger.(¿­’ä
+d	java:S100À"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªğ…ç
+E
+java:S1940Â")Use the opposite operator ("!=") instead.(ıØ·úÿÿÿÿ
+T	java:S106Ã"9Replace this use of System.out or System.err by a logger.(Ì­¦ÿÿÿÿÿ
+i	java:S100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½€Àùÿÿÿÿ
+T	java:S106Ì"9Replace this use of System.out or System.err by a logger.(íôƒŞÿÿÿÿÿ
+H
+java:S1481&"-Remove this unused "Password" local variable.(şˆìøÿÿÿÿ

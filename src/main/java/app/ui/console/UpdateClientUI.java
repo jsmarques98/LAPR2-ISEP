@@ -18,7 +18,6 @@ public class UpdateClientUI implements Runnable {
                currentClient = c;
            }
         }
-        System.out.println("Client Menu:\n");
         assert currentClient != null;
         System.out.println("Client info:\n" + currentClient);
         if(selectParameter(currentClient)){

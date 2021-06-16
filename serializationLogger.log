@@ -1,6 +1,6 @@
-Jun 16, 2021 12:08:20 PM app.controller.App load
+Jun 16, 2021 12:27:42 PM app.controller.App load
 INFO: Serialized data is loaded from data/company.ser
-Jun 16, 2021 12:08:20 PM app.controller.App save
+Jun 16, 2021 12:27:42 PM app.controller.App save
 INFO: Saving app.domain.model.Company with HashCode: 1305193908
-Jun 16, 2021 12:08:20 PM app.controller.App save
+Jun 16, 2021 12:27:42 PM app.controller.App save
 INFO: Serialized data is saved in data/company.ser

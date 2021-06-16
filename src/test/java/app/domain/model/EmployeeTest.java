@@ -33,7 +33,7 @@ public class EmployeeTest {
     @Test
     public void generatePasswordEmployee() {
         String teste = "aaaaaaaaaa";
-        String criada = Employee.generatePasswordEmployee();
+        String criada = Employee.generatePassword();
 
         assertEquals(criada.length(),teste.length());
     }

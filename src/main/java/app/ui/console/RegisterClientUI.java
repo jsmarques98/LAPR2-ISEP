@@ -55,22 +55,6 @@ public class RegisterClientUI implements Runnable{
 
 
 
-//    private String RandomPassword(int lenght){
-//        String regex = "ABCDEFGHIJKLMNOPQRSTUVXYWZÇ"+"abcedfghijklmnopqrstuvxywzç"+"0123456789";
-//
-//        StringBuilder password = new StringBuilder(lenght) ;
-//
-//        for(int i = 0; i<lenght;i++){
-//            int index = (int)(regex.length() * Math.random());
-//            password.append(regex.charAt(index));
-//
-//        }
-//
-//        System.out.println("Password randomly created \n");
-//
-//        return password.toString();
-//    }
-
     public String Askname () {
         String name = Utils.readLineFromConsole("Enter name: ");
         if (name.length() > 36 || name.length() == 0){

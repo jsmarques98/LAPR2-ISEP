@@ -5,6 +5,9 @@ import app.domain.shared.Constants;
 import java.io.Serializable;
 import java.io.StringReader;
 import java.util.Objects;
+import java.util.Random;
+
+import static app.domain.model.Employee.generatePassword;
 
 public class Client implements Serializable {
 
@@ -31,7 +34,7 @@ public class Client implements Serializable {
         this.birthdate = date;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.password = "1234566789";
+        this.password = generatePassword();
         this.roleId = Constants.ROLE_CLIENT;
     }
 

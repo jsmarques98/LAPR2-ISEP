@@ -26,7 +26,7 @@ public class Employee implements Serializable {
         this.email = email;
         this.socCode = socCode;
         this.id = createEmployeeId();
-        this.password = generatePasswordEmployee();
+        this.password = generatePassword();
         this.lab = lab;
     }
 
@@ -59,7 +59,7 @@ public class Employee implements Serializable {
         return temp;
     }
 
-    public static String generatePasswordEmployee() {
+    public static String generatePassword() {
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
         int targetStringLength = 10;

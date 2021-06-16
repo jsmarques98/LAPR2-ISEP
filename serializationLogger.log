@@ -1,6 +1,6 @@
-jun 15, 2021 10:22:44 PM app.controller.App load
+jun 16, 2021 11:17:51 AM app.controller.App load
 WARNING: Company in data/company.ser not found! Running bootstrap!
-jun 15, 2021 10:22:45 PM app.controller.App save
+jun 16, 2021 11:17:52 AM app.controller.App save
 INFO: Saving app.domain.model.Company with HashCode: 1174361318
-jun 15, 2021 10:22:45 PM app.controller.App save
+jun 16, 2021 11:17:52 AM app.controller.App save
 INFO: Serialized data is saved in data/company.ser

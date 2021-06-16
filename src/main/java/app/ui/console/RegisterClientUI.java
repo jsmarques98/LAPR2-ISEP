@@ -8,6 +8,7 @@ import app.domain.model.Client;
 import app.domain.model.Company;
 import app.dto.ClientDTO;
 import app.ui.console.utils.Utils;
+import auth.domain.model.Email;
 
 import java.sql.SQLOutput;
 import java.util.*;
@@ -24,89 +25,59 @@ public class RegisterClientUI implements Runnable{
 
     @Override
     public void run() {
-        //run the controller here
-        System.out.println("\n");
 
         String name = Askname();
-
         String number = Asknumber();
-
         String CCard = AskCCard();
-
+        String addres = AskAddres();
+        String gender = AskGender();
         String NHS = AskNHS();
-
         String Date = AskDate();
-
         String PhoneNumber = AskPhoneNumber();
-
         String Email = AskEmail();
+        String Password = "1234566789";
 
-        String Password = RandomPassword(10);
-
-
-
-
-//        MailAdapter mailAdapter = new MailAdapter("1200614", "tua passe aqui");
-
-        String args[] = {name, number, CCard, NHS, Date, PhoneNumber, Email, Password};
-
-        Client Client = controller.createClient(args);
-
-        show(Client);
+        if(Utils.confirm()){
+            if (controller.createClient(name, number, addres, gender, CCard, NHS, Date, PhoneNumber, Email)){
+                    System.out.println("Client successfully created");
+                controller.saveClient();
+            } else {
+                System.out.println("Client not created");
+            }
+        }else{
+            System.out.println("Operation canceld");
+        }
 
         for (int i = 0; i < Company.clientsList.size(); i++) {
             System.out.println(Company.clientsList.get(i));
         }
-
     }
 
 
 
-    public void show(Client C){
-
-        System.out.println(C.toString());
-
-
-        String confirm = Utils.readLineFromConsole("Confirm client?(Yes or No)");
-
-        if(confirm.equalsIgnoreCase("Yes")){
-
-            controller.registerClient(C);
-            System.out.println("Account successfully created \n");
-        }
-        if(confirm.equalsIgnoreCase("No")){
-
-            this.run();
-        }
-
-    }
-
-    private String RandomPassword(int lenght){
-        String regex = "ABCDEFGHIJKLMNOPQRSTUVXYWZÇ"+"abcedfghijklmnopqrstuvxywzç"+"0123456789";
-
-        StringBuilder password = new StringBuilder(lenght) ;
-
-        for(int i = 0; i<lenght;i++){
-            int index = (int)(regex.length() * Math.random());
-            password.append(regex.charAt(index));
-
-        }
-
-        System.out.println("Password randomly created \n");
-
-        return password.toString();
-    }
+//    private String RandomPassword(int lenght){
+//        String regex = "ABCDEFGHIJKLMNOPQRSTUVXYWZÇ"+"abcedfghijklmnopqrstuvxywzç"+"0123456789";
+//
+//        StringBuilder password = new StringBuilder(lenght) ;
+//
+//        for(int i = 0; i<lenght;i++){
+//            int index = (int)(regex.length() * Math.random());
+//            password.append(regex.charAt(index));
+//
+//        }
+//
+//        System.out.println("Password randomly created \n");
+//
+//        return password.toString();
+//    }
 
     public String Askname () {
-
-        String name = Utils.readLineFromConsole("Enter a name: ");
-
-        if (name.length() <= 35){
-            return name;
+        String name = Utils.readLineFromConsole("Enter name: ");
+        if (name.length() > 36 || name.length() == 0){
+            System.out.println("Name must have less than 36 chars and can't null.");
+            return Askname();
         }
-
-        System.out.println("Name too long (<35)");
-        return Askname();
+        return name;
 
     }
 
@@ -155,25 +126,29 @@ public class RegisterClientUI implements Runnable{
 
     }
 
+    public String AskAddres(){
+        String addres = Utils.readLineFromConsole("Enter address: ");
+        if (addres.length() > 31 || addres.length() == 0){
+            System.out.println("Address must have less than 31 chars and can't null.");
+            return AskAddres();
+        }
+        return addres;
+    }
+
+    public String AskGender(){
+
+    return AskGender();
+    }
+
+
     public String AskNHS(){
 
-        String NHS = Utils.readLineFromConsole("Enter a NHS number: ");
-
-        String regex = "\\d{10}";
-
-        Pattern pattern = Pattern.compile(regex);
-
-
-        Matcher matcher = pattern.matcher(NHS);
-        boolean matchFound = matcher.find();
-
-        if(matchFound){
-
-            return NHS;
+        String nhscode = Utils.readLineFromConsole("Enter nhsCode: ");
+        if (nhscode.length() > 10 || nhscode.length() == 0){
+            System.out.println("nhsCode must have less than 12 chars and can't null.");
+            return AskNHS();
         }
-
-        System.out.println("Enter a 10 NHS number");
-        return AskNHS();
+        return nhscode;
 
 
     }
@@ -211,48 +186,21 @@ public class RegisterClientUI implements Runnable{
     }
 
     public String AskPhoneNumber(){
-
-        String PhoneNumber = Utils.readLineFromConsole("Enter a phone number: ");
-
-        String regex = "\\d{11}";
-
-
-        Pattern pattern = Pattern.compile(regex);
-
-
-        Matcher matcher = pattern.matcher(PhoneNumber);
-        boolean matchFound = matcher.find();
-
-
-        if(matchFound){
-            return PhoneNumber;
+        String phoneNumber = Utils.readLineFromConsole("Enter phone number: ");
+        if (!(phoneNumber.length() == 11)){
+            System.out.println("Phone Number must have 11 chars.");
+            return AskPhoneNumber();
         }
-        System.out.println("Enter a 11 digit phone number");
-        return AskPhoneNumber();
+        return phoneNumber;
     }
 
     public String AskEmail(){
-        String email = Utils.readLineFromConsole("Enter an Email: ");
-
-
-
-        String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
-
-        Pattern pattern = Pattern.compile(regex);
-
-
-        Matcher matcher = pattern.matcher(email);
-        boolean matchFound = matcher.find();
-
-        if (matchFound){
-
-            return email;
-
-       }
-
-
-        System.out.println("Enter an valid Email \n");
-        return AskEmail();
+        String mail = Utils.readLineFromConsole("Enter Employee's email: ");
+        if(!Email.checkFormat(mail)){
+            System.out.println("Invalid Email.");
+            return AskEmail();
+        }
+        return mail;
 
     }
 

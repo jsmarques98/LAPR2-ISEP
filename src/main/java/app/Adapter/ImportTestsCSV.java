@@ -86,7 +86,7 @@ public class ImportTestsCSV {
         String clientAddress = args[Address];
 
         RegisterClientController registerClientController = new RegisterClientController();
-        Client client = registerClientController.createClient(clientName,clientTIN, clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
+//        Client client = registerClientController.createClient(clientName,clientTIN, clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
@@ -100,7 +100,7 @@ public class ImportTestsCSV {
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
-            
+
         //reading the dates
         String Reg_DateHour = args[Test_Reg_DateHour];
         String Chemical_DateHour = args[Test_Chemical_DateHour];
@@ -120,9 +120,9 @@ public class ImportTestsCSV {
         boolean success;
 
         Company company = App.getInstance().getCompany();
-        success = company.save(client);
-        if(!success) throw new UnsupportedOperationException();
-        System.out.println(client);
+//        success = company.save(client);
+//        if(!success) throw new UnsupportedOperationException();
+//        System.out.println(client);
 
         RegisterTestToClientController registerTestToClientController = new RegisterTestToClientController();
         success = registerTestToClientController.saveTest(test);

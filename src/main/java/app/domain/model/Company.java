@@ -193,26 +193,23 @@ public class Company implements Serializable {
     public static List<Client> clientsList = new ArrayList<>();
 
 
-    public static Client createClient(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
-        return new Client(name, TINNumber, cCard, nhs, date, phoneNumber, email);
+    public static Client createClient(String name, String TINNumber, String address, String gender, String cCard, String nhs, String date, String phoneNumber, String email) {
+        return new Client(name, TINNumber, address, gender, cCard, nhs, date, phoneNumber, email);
     }
-        public boolean validateClient(Client e) {
-            if (e == null)
+        public boolean validateClient(Client c) {
+            if (c == null)
                 return false;
-            return !this.clientsList.contains(e);
+            return !this.clientsList.contains(c);
         }
 
-        public boolean saveClient(Client e) {
-            if (!validateClient(e)) {
+        public boolean saveClient(Client c) {
+            if (!validateClient(c)) {
                 return false;
             } else {
-<<<<<<< HEAD
-                authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(), Constants.ROLE_CLIENT);
-=======
-                sendEmailWithPassword(e.getRoleID(), e.getPassword());
-                authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleID());
->>>>>>> 0837b11490a8e1321e50ae6aa2a82100f4def25f
-                return this.clientsList.add(e);
+                authFacade.addUserWithRole(c.getName(),c.getEmail(),c.getPassword(), Constants.ROLE_CLIENT);
+//                String text = "Email: " + c.getEmail() + "\nPassword: " + c.getPassword();
+//                sendEmailWithPassword(c.getName(), text);
+                return this.clientsList.add(c);
             }
         }
 

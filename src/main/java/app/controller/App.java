@@ -183,12 +183,12 @@ public class App {
         Company.parameterList.add(parameterTest9);
 
 
-        Client c1 = new Client("Pedro","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","pedro@gmail.com");
-        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
-        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
-        Company.clientsList.add(c1);
-        Company.clientsList.add(c2);
-        Company.clientsList.add(c3);
+//        Client c1 = new Client("Pedro","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","pedro@gmail.com");
+//        Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
+//        Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
+//        Company.clientsList.add(c1);
+//        Company.clientsList.add(c2);
+//        Company.clientsList.add(c3);
 
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);

@@ -127,8 +127,6 @@ G
 -src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4
 O
 docs/SprintC/US14/US14_CD2.puml,9/b/9b74364650b8e4f84128b1b4f8710d3680d068f2
-O
-docs/SprintD/US14/US14_CD2.puml,2/f/2f7710504e95f13056004c2f0e9255ff140fbc63
 M
 docs/SprintD/US17/US17_SD.svg,1/e/1ecf52d45870d097d4ec5f04acb3f85f71f642a6
 O
@@ -139,8 +137,6 @@ N
 docs/SprintD/US14/US14_CD.puml,3/e/3ed373f3b7443d7a88c7855b3e9fb6287f1e96cf
 N
 docs/SprintD/US17/US17_SD.puml,c/a/cabdb60b3174f791f2bb6f2dfc6c2be61bae965f
-N
-docs/SprintD/US17/US17_CD.puml,6/4/64cb24590ed1291900a8a9705be3d8329faf862f
 W
 'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
 ]
@@ -161,3 +157,5 @@ b
 +src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
 `
 0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
+Z
+*src/main/java/app/domain/model/Client.java,a/1/a1140e0a891f26f51604f14ed5bf2ac976d60132

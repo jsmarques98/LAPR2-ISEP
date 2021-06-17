@@ -7,7 +7,7 @@ public class ValueRecords implements Serializable {
     /**
      * The id of value records.
      */
-    private static String id;
+    private String id;
 
     /**
      * The min. value of value records.
@@ -35,6 +35,10 @@ public class ValueRecords implements Serializable {
     public ValueRecords() {
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     /**
      * The constructor of value records.
      *
@@ -49,6 +53,10 @@ public class ValueRecords implements Serializable {
         this.minValue = minValue;
         this.maxValue = maxValue;
         this.registeredValue = registeredValue;
+        this.parametro = parametro;
+    }
+
+    public void setParameter(String parametro) {
         this.parametro = parametro;
     }
 
@@ -111,7 +119,7 @@ public class ValueRecords implements Serializable {
      *
      * @return
      */
-    public static String getId() {
+    public String getId() {
         return id;
     }
 

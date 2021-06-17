@@ -46,6 +46,7 @@ public class RecordTestResultsUI implements Runnable {
             id = Utils.readLineFromConsole("Choose the desired test: ");
             for (Test t : company.getTests()) {
                 if (t.getTestID().equals(id)) {
+                    controller.setTest(t);
                     lista = t.getListParameterTestCode();
                     flag = true;
                 }

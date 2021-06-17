@@ -161,5 +161,3 @@ b
 +src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
 `
 0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
-Z
-*src/main/java/app/domain/model/Client.java,a/1/a1140e0a891f26f51604f14ed5bf2ac976d60132

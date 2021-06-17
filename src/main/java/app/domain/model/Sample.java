@@ -33,7 +33,7 @@ public class Sample implements Serializable {
     private void generateBarcode(String code, String adapter ){
         BarcodeInterface imp = null;
         try {
-            imp = ReflectorUtility.adapterReflection(App.getInstance().getBarcodeAdapter());
+            imp = ReflectorUtility.adapterReflection(adapter);
         }
         catch(NullPointerException e){};
         if (imp != null)

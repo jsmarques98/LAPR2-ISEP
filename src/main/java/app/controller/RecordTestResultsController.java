@@ -4,6 +4,7 @@ import app.domain.model.Company;
 import app.domain.model.Test;
 import app.domain.model.ValueRecords;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -60,8 +61,8 @@ public class RecordTestResultsController {
      * @param parametro
      * @return
      */
-    public boolean createValueRecords(String id, double min, double max, double registeredValue, String parametro) {
-        this.valueRecords = this.company.createValueRecords(id, min, max, registeredValue, parametro);
+    public boolean createValueRecords(String id, double min, double max, double registeredValue, String parametro, LocalDate data) {
+        this.valueRecords = this.company.createValueRecords(id, min, max, registeredValue, parametro, data);
         return this.company.validateValueRecords(valueRecords);
     }
 

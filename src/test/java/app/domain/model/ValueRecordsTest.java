@@ -3,6 +3,9 @@ package app.domain.model;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ValueRecordsTest {
@@ -11,7 +14,7 @@ public class ValueRecordsTest {
 
     @BeforeEach
     void setUp() {
-        records = new ValueRecords("1", 5, 10, 7, "HB000");
+        records = new ValueRecords("1", 5, 10, 7, "HB000", LocalDate.now());
     }
 
     @AfterEach

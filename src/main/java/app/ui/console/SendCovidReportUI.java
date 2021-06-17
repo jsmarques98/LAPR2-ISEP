@@ -28,21 +28,31 @@ public class SendCovidReportUI implements Runnable{
             Company.dateList.add(minData.plusDays(i));
         }
 
-        // Apenas para demonstração
-        for (int i = 0; i < Company.dateList.size(); i++) {
-            System.out.println(Company.dateList.get(i));
+        System.out.println(Company.dateList.toString());
+
+        LocalDate initialDate = selectInitialDate();
+        LocalDate finalDate = selectFinalDate(initialDate);
+
+        for (int i = 0; i < (finalDate.getDayOfMonth()-initialDate.getDayOfMonth()+1); i++) {
+            Company.finaldatesList.add(initialDate.plusDays(i));
         }
 
-        LocalDate iDate = selectInitialDate();
-        LocalDate fDate = selectFinalDate(iDate);
+        System.out.println(Company.finaldatesList.toString());
 
-        System.out.println("Initial: " + iDate + "\nFinal: " + fDate);
+        controller.regressionMenu();
 
     }
 
-
     private int selectHPoints() {
-        int hPoints = Utils.readIntegerFromConsole("Enter the number of historical day points: ");
+        int op = Utils.readIntegerFromConsole("Do you prefer typing: \nDays (1)\nWeeks (2)");
+        if(!(op==1 || op==2)){
+            System.out.println("Choose 1 for Days or 2 for Weeks");
+            selectHPoints();
+        }
+        int hPoints = Utils.readIntegerFromConsole("Enter the number of historical points: ");
+        if(op == 2){
+            hPoints = hPoints * 7;
+        }
         if(Utils.confirm()){
             return hPoints;
         }
@@ -51,23 +61,26 @@ public class SendCovidReportUI implements Runnable{
 
     public LocalDate selectInitialDate(){
         String date = Utils.readLineFromConsole("Enter the begining date: ");
-        LocalDate iDate = LocalDate.parse(date);
-        if(Company.dateList.contains(iDate)){
-            return iDate;
+        if(Utils.verifyDate(date)) {
+            LocalDate initialDate = LocalDate.parse(date);
+            if(Company.dateList.contains(initialDate)){
+                return initialDate;
+            }
         }
         System.out.println("Invalid Date");
         return selectInitialDate();
     }
 
-
-    public LocalDate selectFinalDate(LocalDate iDate){
+    public LocalDate selectFinalDate(LocalDate initialDate){
         String date = Utils.readLineFromConsole("Enter the ending date: ");
-        LocalDate fDate = LocalDate.parse(date);
-        if(Company.dateList.contains(fDate) && iDate.compareTo(fDate) < 0){
-            return fDate;
+        if(Utils.verifyDate(date)) {
+            LocalDate finalDate = LocalDate.parse(date);
+            if (Company.dateList.contains(finalDate) && initialDate.compareTo(finalDate) < 0) {
+                return finalDate;
+            }
         }
         System.out.println("Invalid Date");
-        return selectFinalDate(iDate);
+        return selectFinalDate(initialDate);
     }
 
 }

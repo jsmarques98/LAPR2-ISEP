@@ -1,19 +1,17 @@
 package app.domain.model;
 
-import app.controller.App;
 import app.controller.TestTypeRecord;
 import app.domain.shared.Constants;
 import auth.AuthFacade;
-import auth.domain.store.UserRoleStore;
 
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author Paulo Maio <pam@isep.ipp.pt>
@@ -36,6 +34,8 @@ public class Company implements Serializable {
     }
 
     public static List<ValueRecords> valueRecordsList = new ArrayList<>();
+
+    public static List<LocalDate> dateList = new ArrayList<>();
 
 
     public Client getClient(String email){

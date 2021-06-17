@@ -1,7 +1,5 @@
 package app.ui.console;
 
-import app.domain.model.Company;
-import app.ui.console.utils.SendCovidReportUI;
 import app.ui.console.utils.Utils;
 
 import java.util.ArrayList;

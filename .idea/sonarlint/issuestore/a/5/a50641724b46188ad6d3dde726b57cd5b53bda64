@@ -1,0 +1,13 @@
+
+S
+java:S1128":Remove this unused import 'app.domain.model.Receptionist'.(­ŸÀ¡ûÿÿÿÿ
+G
+java:S1128".Remove this unused import 'app.dto.ClientDTO'.(Û§Äÿÿÿÿÿ
+o
+java:S1450"VRemove the "company" field and declare it as a local variable in the relevant methods.(ûÖòùÿÿÿÿ
+K
+java:S1197"8Move the array designator from the variable to the type.(­ó’d
+T
+java:S1854";Remove this useless assignment to local variable "cliente".(¢ğñƒüÿÿÿÿ
+E
+java:S1481",Remove this unused "cliente" local variable.(¢ğñƒüÿÿÿÿ

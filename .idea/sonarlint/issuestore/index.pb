@@ -19,12 +19,8 @@ b
 ,src/main/java/app/domain/model/Employee.java,1/7/172c090ab1c754bae4d9ce2efae5056312661a20
 F
 docs/SprintC/README.md,f/a/facb53f23383e1076876744957a421a955453477
-`
-0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
 Z
 *src/main/java/app/ui/console/MenuItem.java,7/4/740030e937298447c12c48a7f0a934b08c3819e9
-N
-src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
 K
 docs/SprintC/US4/US4-MD.svg,d/b/db509a6cc1668b9a41811bc86c78f30bd67ecb38
 K
@@ -47,12 +43,8 @@ e
 5src/main/java/app/ui/console/RecordTestResultsUI.java,b/4/b4b6ce38ae73a5902b044455aed8c24e27fbafee
 ]
 -src/main/java/app/Adapter/BarcodeAdapter.java,7/f/7fcb80ef034a52ab1666595f738fa65a5efcc4c1
-]
--src/main/java/app/ui/console/utils/Utils.java,0/b/0b7375dbea1ab3a7b99a2948cea2f45e61f6840d
 K
 docs/SprintC/US4/CD-US4.svg,b/0/b01ebf38c3928f18f0d6fc3e6eb68b6e1ae88e37
-b
-2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
 m
 =src/main/java/app/controller/RecordTestResultsController.java,e/f/ef0bfe9556b0ceb984ab58d9e365e0f9c888f885
 \
@@ -77,8 +69,6 @@ L
 docs/SprintB/US8/US8_CD.puml,8/6/86d6df43adc67a350fa37589c9a0675dafaa3f75
 d
 4src/main/java/app/ui/console/SpecialistDoctorUI.java,8/e/8e4fde63a438f2762f80f6344f21beb4392e356f
-W
-'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
 N
 docs/SprintC/US14/US14_SSD.svg,9/a/9ae189de9b55a2fa2afdd3912a9ca5cbcf55a203
 M
@@ -135,12 +125,8 @@ G
 docs/SprintD/US4/US4.md,c/5/c5d01c52a6f7d9191769bad33015ea3674ddd5e2
 ]
 -src/main/java/app/domain/model/Diagnosis.java,6/1/6192a1a03aaeea59d450b3eccd3fb6941a9cd0b4
-h
-8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
 O
 docs/SprintC/US14/US14_CD2.puml,9/b/9b74364650b8e4f84128b1b4f8710d3680d068f2
-O
-docs/SprintD/US14/US14_CD2.puml,2/f/2f7710504e95f13056004c2f0e9255ff140fbc63
 M
 docs/SprintD/US17/US17_SD.svg,1/e/1ecf52d45870d097d4ec5f04acb3f85f71f642a6
 O
@@ -149,3 +135,27 @@ N
 docs/SprintD/US16/US16_SD.puml,0/1/01e643fff54b0ff596a068cfa7172ed3fdc40f8e
 N
 docs/SprintD/US14/US14_CD.puml,3/e/3ed373f3b7443d7a88c7855b3e9fb6287f1e96cf
+N
+docs/SprintD/US17/US17_SD.puml,c/a/cabdb60b3174f791f2bb6f2dfc6c2be61bae965f
+W
+'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
+]
+-src/main/java/app/ui/console/utils/Utils.java,0/b/0b7375dbea1ab3a7b99a2948cea2f45e61f6840d
+h
+8src/main/java/app/controller/CreateReportController.java,9/5/954d5db3391dc8b57d290338d9603b874969bfe6
+j
+:src/main/java/app/controller/RegisterClientController.java,a/5/a50641724b46188ad6d3dde726b57cd5b53bda64
+]
+-src/main/java/app/Adapter/ImportTestsCSV.java,a/2/a29f46372de9716a07a6d13deccf48fd22488bf7
+g
+7src/main/java/app/controller/ImportTestsController.java,0/8/089a51a640ef4cdb8894ef8006d47459957f0eec
+N
+src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
+b
+2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
+[
++src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
+`
+0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
+Z
+*src/main/java/app/domain/model/Client.java,a/1/a1140e0a891f26f51604f14ed5bf2ac976d60132

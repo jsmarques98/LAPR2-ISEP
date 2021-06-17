@@ -1,30 +1,41 @@
 package app.domain.model;
 
+import app.domain.shared.Constants;
+
 import java.io.Serializable;
+import java.io.StringReader;
 import java.util.Objects;
+import java.util.Random;
+
+import static app.domain.model.Employee.generatePassword;
 
 public class Client implements Serializable {
+
     String name;
     String CCNumber;
     String NHSNumber;
+    String address;
+    String gender;
     String birthdate;
     String TINNumber;
     String phoneNumber;
     String email;
     String password;
-    String roleID = "Client";
+    private String roleId;
 
-    public Client(String name, String TINNumber, String cCard, String nhs, String date, String phoneNumber, String email) {
+    public Client(String name, String TINNumber, String address, String gender, String cCard, String nhs, String date, String phoneNumber, String email) {
 
         this.name = name;
         this.TINNumber = TINNumber;
+        this.address = address;
+        this.gender = gender;
         this.CCNumber = cCard;
         this.NHSNumber = nhs;
         this.birthdate = date;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.password = "";
-        this.roleID = roleID;
+        this.password = generatePassword();
+        this.roleId = Constants.ROLE_CLIENT;
     }
 
     @Override
@@ -41,6 +52,8 @@ public class Client implements Serializable {
                 "name='" + name + '\'' +
                 ", CCNumber='" + CCNumber + '\'' +
                 ", NHSNumber='" + NHSNumber + '\'' +
+                ", Addres='"+ address+'\''+
+                ", gender='"+ gender+'\''+
                 ", birthdate='" + birthdate + '\'' +
                 ", TINNumber='" + TINNumber + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
@@ -57,19 +70,37 @@ public class Client implements Serializable {
         return TINNumber;
     }
 
-    public String getEmail() { return email; }
+    public String getEmail() {
+        return email;
+    }
 
     public String getName() {
         return name;
     }
 
     public String getRoleID() {
-        return roleID;
+        return roleId;
     }
 
     public String getPassword() {
         return password;
     }
-}
 
+    public String getAddress() { return address; }
+
+    public String getGender() { return gender; }
+
+    public void setAddress(String address) { this.address = address; }
+
+    public void setGender(String gender) { this.gender = gender; }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+}
 

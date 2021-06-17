@@ -2,8 +2,9 @@ package app.domain.model;
 
 import app.controller.App;
 import app.controller.TestTypeRecord;
+import app.domain.shared.Constants;
 import auth.AuthFacade;
-
+import auth.domain.store.UserRoleStore;
 
 
 import java.io.File;
@@ -36,7 +37,6 @@ public class Company implements Serializable {
 
     public static List<ValueRecords> valueRecordsList = new ArrayList<>();
 
-    public static List<Client> clientsList = new ArrayList<>();
 
     public Client getClient(String email){
         for( Client client : clientsList )
@@ -147,18 +147,18 @@ public class Company implements Serializable {
 
 
 
-    public boolean save(Client client) {
-        //return false if already exists
-        if(clientsList.contains(client)){
-            return false;
-        }
-        else{
-            authFacade.addUserWithRole(client.getName(),client.getEmail(),client.getPassword(),client.roleID);
-            clientsList.add(client);
-            return true;
-        }
-
-    }
+//    public boolean save(Client client) {
+//        //return false if already exists
+//        if(clientsList.contains(client)){
+//            return false;
+//        }
+//        else{
+//
+//            clientsList.add(client);
+//            return true;
+//        }
+//
+//    }
 
     public Company(String designation) {
         if (designation.length() < 1)
@@ -185,12 +185,12 @@ public class Company implements Serializable {
 
     public static List<Employee> employeeList = new ArrayList<>(1);
 
-    public static Employee createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode) {
-        return new Employee(role, name, address, phoneNumber, email, socCode);
+    public static Employee createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab) {
+        return new Employee(role, name, address, phoneNumber, email, socCode,lab);
     }
 
-    public static Employee createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, String indxNumber) {
-        return new SpecialistDoctor(role, name, address, phoneNumber, email, socCode, indxNumber);
+    public static Employee createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab, String indxNumber) {
+        return new SpecialistDoctor(role, name, address, phoneNumber, email, socCode, lab, indxNumber);
     }
 
     public boolean validateEmployee(Employee e) {
@@ -203,18 +203,19 @@ public class Company implements Serializable {
         if (!validateEmployee(e)) {
             return false;
         } else {
-            sendEmailWithPassword(e.getId(), e.getPassword());
+            String text = "Email: " + e.getEmail() + "\nPassword: " + e.getPassword();
+            createFile(e.getId(), text);
             authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleId());
             return this.employeeList.add(e);
         }
     }
 
-    public void sendEmailWithPassword(String idParaONome, String textoAEnviar) {
+    public static void createFile(String name, String textToWrite) {
         try {
-            File myObj = new File(idParaONome);
+            File myObj = new File(name);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
-                writePassword(idParaONome, textoAEnviar);
+                writeFile(name, textToWrite);
             } else {
                 System.out.println("File already exists.");
             }
@@ -224,9 +225,9 @@ public class Company implements Serializable {
         }
     }
 
-    public void writePassword(String idParaONome, String textToWrite) {
+    public static void writeFile(String name, String textToWrite) {
         try {
-            FileWriter myWriter = new FileWriter(idParaONome);
+            FileWriter myWriter = new FileWriter(name);
             myWriter.write(textToWrite);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -236,6 +237,34 @@ public class Company implements Serializable {
             e.printStackTrace();
         }
     }
+
+    //us3
+
+    public static List<Client> clientsList = new ArrayList<>();
+
+
+    public static Client createClient(String name, String TINNumber, String address, String gender, String cCard, String nhs, String date, String phoneNumber, String email) {
+        return new Client(name, TINNumber, address, gender, cCard, nhs, date, phoneNumber, email);
+    }
+        public boolean validateClient(Client c) {
+            if (c == null)
+                return false;
+            return !this.clientsList.contains(c);
+        }
+
+        public boolean saveClient(Client c) {
+            if (!validateClient(c)) {
+                return false;
+            } else {
+                authFacade.addUserWithRole(c.getName(),c.getEmail(),c.getPassword(), Constants.ROLE_CLIENT);
+                String text = "Email: " + c.getEmail() + "\nPassword: " + c.getPassword();
+                createFile(c.getName(), text);
+                return this.clientsList.add(c);
+            }
+        }
+
+
+
 
 
 //    us8

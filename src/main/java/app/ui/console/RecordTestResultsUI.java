@@ -52,7 +52,8 @@ public class RecordTestResultsUI implements Runnable {
                 }
             }
             if (!flag) {
-                System.out.println("The ID is invalid.");
+                System.out.println("The ID is invalid" +
+                        ".");
             }
         }
 

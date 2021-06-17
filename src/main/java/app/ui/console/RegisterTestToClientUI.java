@@ -76,7 +76,7 @@ public class RegisterTestToClientUI implements Runnable{
     public String selectIdTestType(){
         System.out.println("Test Type List: ");
         System.out.println(Company.record);
-        String idTest = Utils.readLineFromConsole("Enter id Test: ");
+        String idTest = Utils.readLineFromConsole("Enter id Test type: ");
         for(TestType testType : Company.getTestTypes().getRecord()) {
             if (testType.getId().equals(idTest)){
                 return idTest;

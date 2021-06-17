@@ -1,0 +1,64 @@
+
+b
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(©å‡£
+e	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æï2
+k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úúñ¯ûÿÿÿÿ
+c	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø—µi
+i	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ğ‘­ùÿÿÿÿ
+i	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ı‚Œùÿÿÿÿ
+i	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÍ¼Ùıÿÿÿÿ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ì×·e
+\
+java:S2259%"AA "NullPointerException" could be thrown; "str" is nullable here.(Õ”ªÈÿÿÿÿÿ
+V
+java:S2259 "@A "NullPointerException" could be thrown; "br" is nullable here.(ï»Ëâ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(†’ı«
+?
+java:S1940 ")Use the opposite operator ("==") instead.(ï»Ëâ
+N	java:S106""9Replace this use of System.out or System.err by a logger.(ÂÛ…û
+V
+java:S1854V"ARemove this useless assignment to local variable "clientAddress".(Öæ›
+T
+java:S1854F"9Remove this useless assignment to local variable "IgGAN".(”“öüÿÿÿÿ
+T
+java:S1854D"9Remove this useless assignment to local variable "HDL00".(‹‘­…øÿÿÿÿ
+T
+java:S1854B"9Remove this useless assignment to local variable "RBC00".(²À§şÿÿÿÿ
+O
+java:S1854A"9Remove this useless assignment to local variable "PLT00".(œÖô€
+T
+java:S1854@"9Remove this useless assignment to local variable "WBC00".(Í°£óøÿÿÿÿ
+N
+java:S1854?"9Remove this useless assignment to local variable "HB000".(Ù¤d
+Q
+java:S1854>"<Remove this useless assignment to local variable "Category".(¬¥ºs
+W
+java:S1854="<Remove this useless assignment to local variable "TestType".(´àãíıÿÿÿÿ
+U
+java:S1854/":Remove this useless assignment to local variable "Lab_ID".(Ïâ²µşÿÿÿÿ
+Q	java:S125C"<This block of commented-out lines of code should be removed.(íĞß›
+V	java:S125E"<This block of commented-out lines of code should be removed.(·´ÕÍÿÿÿÿÿ
+N	java:S106}"9Replace this use of System.out or System.err by a logger.(äüßí
+N	java:S106‚"9Replace this use of System.out or System.err by a logger.(Äş!
+F
+java:S1481/"+Remove this unused "Lab_ID" local variable.(Ïâ²µşÿÿÿÿ
+H
+java:S1481="-Remove this unused "TestType" local variable.(´àãíıÿÿÿÿ
+B
+java:S1481>"-Remove this unused "Category" local variable.(¬¥ºs
+?
+java:S1481?"*Remove this unused "HB000" local variable.(Ù¤d
+E
+java:S1481@"*Remove this unused "WBC00" local variable.(Í°£óøÿÿÿÿ
+@
+java:S1481A"*Remove this unused "PLT00" local variable.(œÖô€
+E
+java:S1481B"*Remove this unused "RBC00" local variable.(²À§şÿÿÿÿ
+E
+java:S1481D"*Remove this unused "HDL00" local variable.(‹‘­…øÿÿÿÿ
+E
+java:S1481F"*Remove this unused "IgGAN" local variable.(”“öüÿÿÿÿ
+G
+java:S1481V"2Remove this unused "clientAddress" local variable.(Öæ›
+<
+java:S1481")Remove this unused "date" local variable.(€ø°V

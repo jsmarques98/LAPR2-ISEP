@@ -1,6 +1,7 @@
 package app.domain.model;
 
 
+import app.domain.shared.Constants;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,9 +14,11 @@ class ClientTest {
 
     @BeforeEach
     void instantiation() {
-        c1 = new Client("Manuel", "5555555555", "5555555555555555", "555555555555", "03/05/2021", "55555555555", "manel@gmail.com");
-        c2 = new Client("Manuel", "5555555555", "5555555555555555", "555555555555", "03/05/2021", "55555555555", "manel@gmail.com");
-        c3 = new Client("Rui", "0000000000", "0000000000000000", "555555555551", "03/06/2021", "55555555551", "manuyl@gmail.com");
+
+        c1 = new Client("Manuel", "5555555555", "porto", "feminino","5555555555555555", "555555555555", "03/05/2021", "55555555555", "manel@gmail.com");
+        c2 = new Client("Manuel", "5555555555","porto", "feminino", "5555555555555555", "555555555555", "03/05/2021", "55555555555", "manel@gmail.com");
+        c3 = new Client("Rui", "0000000000", "porto", "feminino","0000000000000000", "555555555551", "03/06/2021", "55555555551", "manuyl@gmail.com");
+
     }
 
     @Test
@@ -65,7 +68,7 @@ class ClientTest {
 
     @Test
     void getroleId() {
-        String id = "Client";
-        assertEquals(id, c1.getRoleID());
+        String id = "CLIENT";
+        assertEquals(id, Constants.ROLE_CLIENT);
     }
 }

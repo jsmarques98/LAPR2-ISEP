@@ -15,9 +15,10 @@ public class Employee implements Serializable {
     private final String socCode;
     private final String password;
     private String roleId;
+    private final Lab lab;
 
 
-    public Employee (String roleId, String name, String address, String phoneNumber, String email, String socCode){
+    public Employee (String roleId, String name, String address, String phoneNumber, String email, String socCode, Lab lab){
         this.roleId = roleId;
         this.name = name;
         this.address = address;
@@ -25,7 +26,8 @@ public class Employee implements Serializable {
         this.email = email;
         this.socCode = socCode;
         this.id = createEmployeeId();
-        this.password = generatePasswordEmployee();
+        this.password = generatePassword();
+        this.lab = lab;
     }
 
     public String getName() {return name;}
@@ -57,7 +59,7 @@ public class Employee implements Serializable {
         return temp;
     }
 
-    public static String generatePasswordEmployee() {
+    public static String generatePassword() {
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
         int targetStringLength = 10;
@@ -73,6 +75,8 @@ public class Employee implements Serializable {
 
     public static ArrayList<String> roles = new ArrayList<>(5);
 
+
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -83,6 +87,7 @@ public class Employee implements Serializable {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", socCode='" + socCode + '\'' +
+                ", labId=' "+ lab.getLabId() +'\''+
                 ", password='" + password + '\'' +
                 '}';
     }

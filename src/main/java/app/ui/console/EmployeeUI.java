@@ -4,9 +4,12 @@ import app.controller.AuthController;
 import app.controller.RegisterEmployeeController;
 import app.domain.model.Company;
 import app.domain.model.Employee;
+import app.domain.model.Lab;
 import app.domain.model.SpecialistDoctor;
 import app.ui.console.utils.Utils;
 import auth.domain.model.Email;
+
+import java.util.ArrayList;
 
 public class EmployeeUI implements Runnable{
 
@@ -25,11 +28,12 @@ public class EmployeeUI implements Runnable{
         String phoneNumber = selectPhoneNumber();
         String email = selectEmail();
         String socCode = selectSocCode();
+        Lab lab = selectLab();
 
         if (roleId.equalsIgnoreCase("SPECIALIST_DOCTOR")) {
             String indxNumber = selectIndxNumber();
             if(Utils.confirm()){
-                if (controller.createSpecialistDoctor(roleId, name, address, phoneNumber, email, socCode, indxNumber)) {
+                if (controller.createSpecialistDoctor(roleId, name, address, phoneNumber, email, socCode, lab, indxNumber)) {
                     System.out.println("Specialist Doctor successfully created with index: " + indxNumber);
                     controller.saveEmployee();
                 } else {
@@ -40,7 +44,7 @@ public class EmployeeUI implements Runnable{
             }
         } else {
             if(Utils.confirm()){
-                if (controller.createEmloyee(roleId, name, address, phoneNumber, email, socCode)) {
+                if (controller.createEmloyee(roleId, name, address, phoneNumber, email, socCode, lab)) {
                     System.out.println("Employee successfully created");
                     controller.saveEmployee();
                 } else {
@@ -55,6 +59,7 @@ public class EmployeeUI implements Runnable{
         }
     }
 
+
     public String selectRoleId(){
         System.out.println("Select one of the following roles:");
         for(int i=0;i<Employee.roles.size();i++){
@@ -62,7 +67,7 @@ public class EmployeeUI implements Runnable{
         }
         String role = Utils.readLineFromConsole("Enter Employee's role: ");
         if(!Employee.roles.contains(role)){
-            System.out.println("Role not found."+"\n");
+            System.out.println("Role not found.\n");
             return selectRoleId();
         }
         return role;
@@ -116,5 +121,20 @@ public class EmployeeUI implements Runnable{
         }
         return indexNumb;
     }
+
+    private Lab selectLab() {
+        for (int i = 0; i < Company.labList.size(); i++) {
+            System.out.println(Company.labList.get(i));
+        }
+        String labId =  Utils.readLineFromConsole("Enter Employee's labId: ");
+        for (Lab l : Company.labList) {
+            if(l.getLabId().equals(labId)){
+                return l;
+            }
+        }
+        System.out.println("labId not found\n");
+        return selectLab();
+    }
+
 
 }

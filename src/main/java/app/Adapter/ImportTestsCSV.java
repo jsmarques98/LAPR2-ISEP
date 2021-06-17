@@ -92,8 +92,7 @@ public class ImportTestsCSV {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
         String nhsCode = args[NHS_Code];
-        //assuming that address is the description of the lab
-        String description = args[Address];
+        String address = args[Address];
 
         String testTestType = args[TestType];
         String testCategory1 = args[Category1];
@@ -190,8 +189,7 @@ public class ImportTestsCSV {
         //6. CreateReportController
         //7. ValidationController
 
-        RegisterClientController registerClientController = new RegisterClientController();
-        Client client = registerClientController.createClient(clientName,clientTIN, clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
+        Client client = new Client(clientName,clientTIN, address, "NA" ,clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
 
         TestType testType = company.getTestType(testTestType);
 
@@ -204,7 +202,7 @@ public class ImportTestsCSV {
           //  if(category.getCode().equals(testCategory1) || category.getCode().equals(testCategory2) || category.getCode().equals(testCategory3))
             //    testCategories.add(category);
 
-        registerTestToClientController.createTest(client.getTINNumber(), nhsCode, description, testType.getId(), testCategories , parameterTests);
+        registerTestToClientController.createTest(client.getTINNumber(), nhsCode, "", testType.getId(), testCategories , parameterTests);
 
         Test test = registerTestToClientController.test;
 
@@ -231,7 +229,13 @@ public class ImportTestsCSV {
         }
 
 
-        company.save(client);
+        try {
+
+            company.saveClient(client);
+        }
+        catch(IllegalArgumentException e){
+            return false;
+        }
         System.out.println(client);
 
         company.save(test);

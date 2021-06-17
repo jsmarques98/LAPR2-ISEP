@@ -59,8 +59,6 @@ public class App {
             this.authFacade = this.company.getAuthFacade();
             bootstrap();
         }
-        save(this.company);
-
         props = getProperties();
         barcodeAdapter = props.getProperty("BarcodeAdapter");
         this.authFacade = this.company.getAuthFacade();
@@ -181,7 +179,19 @@ public class App {
         Company.parameterList.add(parameterTest8);
         Company.parameterList.add(parameterTest9);
 
-        /*
+        Category category1 = new Category("categoria1","codigo1");
+        Category category2 = new Category("categoria2","codigo2");
+        Category category3 = new Category("categoria3","codigo3");
+        Category category4 = new Category("categoria4","codigo4");
+        Category category5 = new Category("categoria5","codigo5");
+        Company.categories.add(category1);
+        Company.categories.add(category2);
+        Company.categories.add(category3);
+        Company.categories.add(category4);
+        Company.categories.add(category5);
+
+
+
         Client c1 = new Client("Manuel","5555555555","5555555555555555","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c2 = new Client("Joao","9999999999","9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c3 = new Client("Rui","0000000000","0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
@@ -198,18 +208,17 @@ public class App {
 
 
 
-//        ArrayList listCat;
-//        ArrayList listPara;
-//        Category category1 = new Category("categoria1","codigo1");
-//        Category category2 = new Category("categoria2","codigo2");
-//        listCat = new ArrayList<>();
-//        listPara = new ArrayList<>();
-//        listCat.add(category1);
-//        listCat.add(category2);
-//        listPara.add(parameterTest1);
-//        listPara.add(parameterTest2);
-//
-//        Test test1 =  new Test("0000000000","0000","sad","sdsad1",  listCat, listPara);
+        ArrayList listCat;
+        ArrayList listPara;
+        listCat = new ArrayList<>();
+        listPara = new ArrayList<>();
+        listCat.add(category1);
+        listCat.add(category2);
+        listPara.add(parameterTest1);
+        listPara.add(parameterTest2);
+
+         Test test1 =  new Test("00000002880","0000","sad","sdsad1",  listCat, listPara);
+        company.getTests().add(test1);
 //        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
 //        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
 //        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
@@ -262,16 +271,6 @@ public class App {
 //        company.getTests().add(test3);
 //        company.getTests().add(test4);
 //
-//        Category category1 = new Category("categoria1","codigo1");
-//        Category category2 = new Category("categoria2","codigo2");
-//        Category category3 = new Category("categoria3","codigo3");
-//        Category category4 = new Category("categoria4","codigo4");
-//        Category category5 = new Category("categoria5","codigo5");
-//        Company.categories.add(category1);
-//        Company.categories.add(category2);
-//        Company.categories.add(category3);
-//        Company.categories.add(category4);
-//        Company.categories.add(category5);
 //        Set<Category> listCat1 = new TreeSet<Category>();
 //        listCat1.add(category1);
 //        listCat1.add(category2);
@@ -285,7 +284,7 @@ public class App {
 //        Company.record.add(t1);
 //        Company.record.add(t2);
 
-    */
+
     }
 
     // Extracted from https://www.javaworld.com/article/2073352/core-java/core-java-simply-singleton.html?page=2

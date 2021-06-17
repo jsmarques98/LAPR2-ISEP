@@ -1,10 +1,12 @@
 package app.domain.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Category implements Comparable, Serializable {
     private String name;
     private String code;
+    public ArrayList<ParameterTest> parameterTests;
 
     public String getName() {
         return name;

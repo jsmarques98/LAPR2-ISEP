@@ -27,7 +27,7 @@ public class RecordTestResultsUI implements Runnable {
 
     public void run() {
         String id = null;
-        System.out.println(company.getTests().get(0).getSamples());
+        //System.out.println(company.getTests().get(0).getSamples());
 
         Scanner sc = new Scanner(System.in);
         String option = "";

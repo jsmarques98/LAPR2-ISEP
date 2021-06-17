@@ -1,6 +1,7 @@
 package app.ui.console;
 
 import app.domain.model.Company;
+import app.ui.console.utils.SendCovidReportUI;
 import app.ui.console.utils.Utils;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class AdminUI implements Runnable{
         options.add(new MenuItem("Do the registration of an Employee",new EmployeeUI()));
         options.add(new MenuItem("Specify a new test type", new SpecifyTypeTestUI()));
         options.add(new MenuItem("Do the registration of Lab", new RegisterLabUI()));
+        options.add(new MenuItem("Send Covid-19 reports", new SendCovidReportUI()));
         int option = 0;
         do
         {

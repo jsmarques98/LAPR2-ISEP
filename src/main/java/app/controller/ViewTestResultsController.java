@@ -15,8 +15,15 @@ import java.util.Properties;
 
 public class ViewTestResultsController {
 
+
+
     private Company company;
     private AuthFacade authFacade;
+
+    public ViewTestResultsController() {
+        this.company = App.getInstance().getCompany();
+        this.authFacade = company.getAuthFacade();
+    }
 
     public List<Test> clientTests() {
         List<Test> listaTestesCliente = new ArrayList<>();
@@ -31,9 +38,6 @@ public class ViewTestResultsController {
     }
 
     public Client clientSignedIn() {
-        Properties props = getProperties();
-        this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
-        this.authFacade = company.getAuthFacade();
         UserSession currentSession = authFacade.getCurrentUserSession();
         String userName = currentSession.getUserName();
 

@@ -33,7 +33,7 @@ public class UpdateClientUI implements Runnable {
     public boolean selectParameter(Client c){
         boolean flag = false;
         System.out.println("What do you want to change ?\n1- Name\n2- Address\n3- Phone Number\n4- Gender");
-        int op = readIntegerFromConsole("Select the option number:");
+        int op = readIntegerFromConsole("Select the option number: ");
         switch(op) {
             case 1:
                 String name = readLineFromConsole("Insert the new name: ");

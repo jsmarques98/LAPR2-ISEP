@@ -35,7 +35,11 @@ public class Company implements Serializable {
 
     public static List<ValueRecords> valueRecordsList = new ArrayList<>();
 
+    //All dates from yesterday and x days ago acording to the number of historical day points
     public static List<LocalDate> dateList = new ArrayList<>();
+
+    //Date interval chosen by admin
+    public static List<LocalDate> finaldatesList = new ArrayList<>();
 
 
     public Client getClient(String email){
@@ -382,9 +386,9 @@ public class Company implements Serializable {
 
     //us12
 
-    public ValueRecords createValueRecords(String id, double min, double max, double registeredValue, String parametro) {
+    public ValueRecords createValueRecords(String id, double min, double max, double registeredValue, String parametro, LocalDate data) {
 
-        return new ValueRecords(id, min, max, registeredValue, parametro);
+        return new ValueRecords(id, min, max, registeredValue, parametro, data);
     }
 
 

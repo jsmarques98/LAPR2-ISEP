@@ -166,4 +166,16 @@ public class Utils {
         }
         return confirm();
     }
+
+    public static boolean verifyDate(String dateStr) {
+        DateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+        sdf.setLenient(false);
+        try {
+            sdf.parse(dateStr);
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
+    }
+
 }

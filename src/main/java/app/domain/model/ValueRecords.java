@@ -1,6 +1,7 @@
 package app.domain.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class ValueRecords implements Serializable {
 
@@ -29,6 +30,9 @@ public class ValueRecords implements Serializable {
      */
     private String parametro;
 
+
+    private LocalDate data;
+
     /**
      * The empty constructor of value records.
      */
@@ -48,12 +52,13 @@ public class ValueRecords implements Serializable {
      * @param registeredValue
      * @param parametro
      */
-    public ValueRecords(String id, double minValue, double maxValue, double registeredValue, String parametro) {
+    public ValueRecords(String id, double minValue, double maxValue, double registeredValue, String parametro, LocalDate data) {
         this.id = id;
         this.minValue = minValue;
         this.maxValue = maxValue;
         this.registeredValue = registeredValue;
         this.parametro = parametro;
+        this.data = data;
     }
 
     public void setParameter(String parametro) {
@@ -85,6 +90,10 @@ public class ValueRecords implements Serializable {
      */
     public double getMaxValue() {
         return maxValue;
+    }
+
+    public LocalDate getData() {
+        return data;
     }
 
     /**
@@ -123,11 +132,20 @@ public class ValueRecords implements Serializable {
         return id;
     }
 
+    public String getParametro() {
+        return parametro;
+    }
+
     @Override
     public String toString() {
-        return "Value Records{ Min. Value: " + minValue + " | Max. Value: " + maxValue + " | Registered Value: " + registeredValue
-                + " | ID: " + id + " | Parameter: " + parametro + " }";
-
+        return "ValueRecords{" +
+                "id='" + id + '\'' +
+                ", minValue=" + minValue +
+                ", maxValue=" + maxValue +
+                ", registeredValue=" + registeredValue +
+                ", parametro='" + parametro + '\'' +
+                ", data=" + data +
+                '}';
     }
 }
 

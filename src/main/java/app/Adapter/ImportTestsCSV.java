@@ -3,14 +3,17 @@ package app.Adapter;
 import app.controller.App;
 import app.controller.RegisterClientController;
 import app.controller.RegisterTestToClientController;
-import app.domain.model.Client;
-import app.domain.model.Company;
-import app.domain.model.Test;
+import app.domain.model.*;
+import app.ui.console.utils.Utils;
 
 import java.io.*;
+import java.security.InvalidParameterException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Set;
 
 public class ImportTestsCSV {
 
@@ -59,14 +62,14 @@ public class ImportTestsCSV {
 
             //test
             final int TestType = 11;
-            final int Category = 12;
+            final int Category1 = 12;
             final int HB000 = 13;
             final int WBC00 = 14;
             final int PLT00 = 15;
             final int RBC00 = 16;
-            //final int Category = 17;
+            final int Category2 = 17;
             final int HDL00 = 18;
-            //final int Category = 19;
+            final int Category3 = 19;
             final int IgGAN = 20;
             final int Test_Reg_DateHour = 21;
             final int Test_Chemical_DateHour = 22;
@@ -85,22 +88,130 @@ public class ImportTestsCSV {
         //not a client address, lab address maybe
         String clientAddress = args[Address];
 
-        RegisterClientController registerClientController = new RegisterClientController();
-//        Client client = registerClientController.createClient(clientName,clientTIN, clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
         String nhsCode = args[NHS_Code];
-        //assuming that address is the description of the lab
-        String description = args[Address];
+        String address = args[Address];
 
-        Test test = new Test(clientTIN, nhsCode, description, null, null, null);
+        String testTestType = args[TestType];
+        String testCategory1 = args[Category1];
+        String testHB00 = args[HB000];
+        String testWBC00 = args[WBC00];
+        String testPLT00 = args[PLT00];
+        String testRBC00 = args[RBC00];
+        String testCategory2 = args[Category2];
+        String testHDL00 = args[HDL00];
+        String testCategory3 = args[Category3];
+        String testIgGAN = args[IgGAN];
+
+        String testCode = args[Test_Code];
+
+        Company company = App.getInstance().getCompany();
+
+        if(company.getClient(clientEmail)!=null)
+            return false;
+            //throw new InvalidParameterException("Client with email " + clientEmail + " already exists!");
+
+        if(company.getTest(testCode)!=null)
+            return false;
+            //throw new InvalidParameterException("Test with " + testCode + " already exists!");
+
+
+        ArrayList<Category> testCategories = new ArrayList<>();
+
+        if(!testCategory1.equals("NA"))
+            testCategories.add(new Category(testCategory1,testCategory1));
+        if(!testCategory2.equals("NA"))
+            testCategories.add(new Category(testCategory2,testCategory2));
+        if(!testCategory3.equals("NA"))
+            testCategories.add(new Category(testCategory3,testCategory3));
+
+
+        ArrayList<ParameterTest> parameterTests = new ArrayList<>();
+
+        ArrayList<ValueRecords> valueRecordsList = new ArrayList<>();
+
+        if(!testHB00.equals("NA")) {
+            parameterTests.add(company.getParameterTest("HB00"));
+            ValueRecords valueRecords = new ValueRecords();
+            valueRecords.setId(testCode);
+            valueRecords.setParameter("HB00");
+            valueRecords.setRegisteredValue(Double.parseDouble(testHB00.replace(',','.')));
+            valueRecordsList.add(valueRecords);
+        }
+        if(!testWBC00.equals("NA")) {
+            parameterTests.add(company.getParameterTest("WBC00"));
+            ValueRecords valueRecords = new ValueRecords();
+            valueRecords.setId(testCode);
+            valueRecords.setParameter("WBC00");
+            valueRecords.setRegisteredValue(Double.parseDouble(testWBC00.replace(',','.')));
+            valueRecordsList.add(valueRecords);
+        }
+        if(!testPLT00.equals("NA")) {
+            parameterTests.add(company.getParameterTest("PLT00"));
+            ValueRecords valueRecords = new ValueRecords();
+            valueRecords.setId(testCode);
+            valueRecords.setParameter("PLT00");
+            valueRecords.setRegisteredValue(Double.parseDouble(testPLT00.replace(',','.')));
+            valueRecordsList.add(valueRecords);
+        }
+        if(!testRBC00.equals("NA")) {
+            parameterTests.add(company.getParameterTest("RBC00"));
+            ValueRecords valueRecords = new ValueRecords();
+            valueRecords.setId(testCode);
+            valueRecords.setParameter("RBC00");
+            valueRecords.setRegisteredValue(Double.parseDouble(testRBC00.replace(',','.')));
+            valueRecordsList.add(valueRecords);
+        }
+        if(!testHDL00.equals("NA")) {
+            parameterTests.add(company.getParameterTest("HDL00"));
+            ValueRecords valueRecords = new ValueRecords();
+            valueRecords.setId(testCode);
+            valueRecords.setParameter("HDL00");
+            valueRecords.setRegisteredValue(Double.parseDouble(testHDL00.replace(',','.')));
+            valueRecordsList.add(valueRecords);
+        }
+        if(!testIgGAN.equals("NA")) {
+            parameterTests.add(company.getParameterTest("IgGAN"));
+            ValueRecords valueRecords = new ValueRecords();
+            valueRecords.setId(testCode);
+            valueRecords.setParameter("IgGAN");
+            valueRecords.setRegisteredValue(Double.parseDouble(testIgGAN.replace(',','.')));
+            valueRecordsList.add(valueRecords);
+        }
+
+        //1. RegisterClientController
+        //2. RegisterTestToClientController
+        //3. RegisterLabController
+        //4. CreateSamplesController
+        //5. RecordTestResultsController
+        //6. CreateReportController
+        //7. ValidationController
+
+        Client client = new Client(clientName,clientTIN, address, "NA" ,clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
+
+        TestType testType = company.getTestType(testTestType);
+
+        RegisterTestToClientController registerTestToClientController = new RegisterTestToClientController();
+
+        Set<Category> categories = app.domain.model.TestType.getCategories();
+
+
+        //for(Category category : categories)
+          //  if(category.getCode().equals(testCategory1) || category.getCode().equals(testCategory2) || category.getCode().equals(testCategory3))
+            //    testCategories.add(category);
+
+        registerTestToClientController.createTest(client.getTINNumber(), nhsCode, "", testType.getId(), testCategories , parameterTests);
+
+        Test test = registerTestToClientController.test;
+
         try {
             test.setTestID(args[Test_Code]);
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
-
+            
         //reading the dates
         String Reg_DateHour = args[Test_Reg_DateHour];
         String Chemical_DateHour = args[Test_Chemical_DateHour];
@@ -117,22 +228,28 @@ public class ImportTestsCSV {
             e.printStackTrace();
         }
 
-        boolean success;
 
-        Company company = App.getInstance().getCompany();
-//        success = company.save(client);
-//        if(!success) throw new UnsupportedOperationException();
-//        System.out.println(client);
+        try {
 
-        RegisterTestToClientController registerTestToClientController = new RegisterTestToClientController();
-        success = registerTestToClientController.saveTest(test);
-        if(!success) throw new UnsupportedOperationException();
+            company.saveClient(client);
+        }
+        catch(IllegalArgumentException e){
+            return false;
+        }
+        System.out.println(client);
+
+        company.save(test);
         System.out.println(test);
 
-        return success;
+        for (ValueRecords valueRecords : valueRecordsList)
+            company.saveValueRecords(valueRecords);
+
+        Utils.showList(Company.getValueRecords(testCode), "Registered Records");
+        App.getInstance().save(test);
+        System.out.println(Arrays.toString(Company.getValueRecords(testCode).toArray()));
+        return true;
 
     }
-
 
 
 }

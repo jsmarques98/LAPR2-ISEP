@@ -25,7 +25,7 @@ public class ReflectorUtility {
             return ( (BarcodeInterface) oClass.getDeclaredConstructor().newInstance());
 
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
-            LOGGER.info(e.getMessage());
+            LOGGER.warning("Current class not found: " + e.getMessage());
             return null;
         }
     }
@@ -36,7 +36,7 @@ public class ReflectorUtility {
             return ( (AlgorithmInterface) oClass.getDeclaredConstructor().newInstance());
 
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
-            LOGGER.info(e.getMessage());
+            LOGGER.warning("Current class not found: " + e.getMessage());
             return null;
         }
     }

@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class RegisterTestToClientController {
     private Company company;
-    private Test test;
+    public Test test;
 
     public RegisterTestToClientController() {
         this(App.getInstance().getCompany());

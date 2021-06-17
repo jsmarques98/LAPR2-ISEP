@@ -48,6 +48,7 @@ class Parameters {
 class TestType{
   }
 
+ImportTestsUI ..> ImportTestsController
 ImportTestsController "*" ..> "1" Company : belongs to
 class LaboratoryCoordinator extends Employee
 

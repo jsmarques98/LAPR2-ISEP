@@ -35,7 +35,7 @@ public class RegisterTestToClientUI implements Runnable{
                 System.out.println("Test not created");
             }
         }else{
-            System.out.println("Operation canceld");
+            System.out.println("Operation canceled");
         }
 
         for (int i = 0; i < Company.tests.size(); i++) {

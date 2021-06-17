@@ -26,6 +26,15 @@ public class Company implements Serializable {
 
     public static List<Test> tests = new ArrayList<>();
 
+    public static List<ValueRecords> getValueRecords(String testID) {
+        ArrayList<ValueRecords> returnList = new ArrayList<>();
+        for( ValueRecords valueRecords : valueRecordsList){
+            if (valueRecords.getId().equals(testID))
+                returnList.add(valueRecords);
+        }
+        return returnList;
+    }
+
     public static List<ValueRecords> valueRecordsList = new ArrayList<>();
 
 
@@ -36,8 +45,26 @@ public class Company implements Serializable {
         return null;
     }
 
+    Category getCategory(String codeCategory){
+        //for (Category category : TestType.getCategories()) {
+          //  if (category.getCode().equals(codeCategory)) {
+            //    return category;
+         //   }
+       // }
+        return new Category(codeCategory,codeCategory);
+    }
+
 
     public static List<ParameterTest> parameterList = new ArrayList<>();
+
+    public ParameterTest getParameterTest(String code){
+        for( ParameterTest parameterTest : parameterList ) {
+            if (parameterTest.getCode().equals(code))
+                return parameterTest;
+        }
+        return null;
+    }
+
 
     public static List<TestType> record;
 
@@ -61,6 +88,19 @@ public class Company implements Serializable {
         return testTypes;
     }
 
+    public List<ValueRecords> getValueRecordsList() {
+        return valueRecordsList;
+    }
+
+    public ArrayList<ValueRecords> getValueRecordsList(String testId) {
+        ArrayList<ValueRecords> valueRecordsList = new ArrayList<>();
+        for (ValueRecords valueRecords : this.getValueRecordsList())
+            if(valueRecords.getId().equals(testId))
+                valueRecordsList.add(valueRecords);
+
+    return valueRecordsList;
+    }
+
     /**
      * Get Categories
      * @return
@@ -81,6 +121,16 @@ public class Company implements Serializable {
     public List<Test> getTests() {
         return tests;
     }
+
+    public Test getTest( String testId ) {
+        for(Test current : this.getTests())
+            if(current.getTestID().equals(testId))
+                return current;
+
+        return null;
+    }
+
+
 
     public List<Test> getAvailableTests() {
         ArrayList<Test> availableTests = new ArrayList<>();
@@ -318,6 +368,16 @@ public class Company implements Serializable {
             return this.tests.add(t);
         }
     }
+
+
+    public TestType getTestType(String collection) {
+        //for(TestType testType : Company.getTestTypes().getRecord()){
+          //  if(testType.getCollection().equals(collection))
+            //    return testType;
+        //}
+        return new TestType("00000",collection,collection,null);
+    }
+
 
 
     //us12

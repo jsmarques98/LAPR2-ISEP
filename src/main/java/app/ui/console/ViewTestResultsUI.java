@@ -19,7 +19,6 @@ public class ViewTestResultsUI implements Runnable {
 
     @Override
     public void run() {
-        Email email = App.getInstance().getCurrentUserSession().getUserId();
         List<Test> lista = new ArrayList<>();
         lista = controller.clientTests();
         if(lista.isEmpty()){
@@ -29,6 +28,5 @@ public class ViewTestResultsUI implements Runnable {
                 System.out.println(t);
             }
         }
-
     }
 }

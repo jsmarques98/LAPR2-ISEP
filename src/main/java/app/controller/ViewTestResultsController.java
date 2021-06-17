@@ -6,6 +6,8 @@ import app.domain.model.Test;
 import app.domain.shared.Constants;
 import auth.AuthFacade;
 import auth.UserSession;
+import auth.domain.model.Email;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,8 +16,6 @@ import java.util.List;
 import java.util.Properties;
 
 public class ViewTestResultsController {
-
-
 
     private Company company;
     private AuthFacade authFacade;
@@ -26,23 +26,23 @@ public class ViewTestResultsController {
     }
 
     public List<Test> clientTests() {
-        List<Test> listaTestesCliente = new ArrayList<>();
+        List<Test> listaTestesClients = new ArrayList<>();
         for (Test t : Company.tests) {
             if(t.getTinNumber().equals(clientSignedIn().getTINNumber())){
-                listaTestesCliente.add(t);
+                listaTestesClients.add(t);
             }
         }
 
-
-        return listaTestesCliente;
+        return listaTestesClients;
     }
 
     public Client clientSignedIn() {
+
+        Email email = App.getInstance().getCurrentUserSession().getUserId();
         UserSession currentSession = authFacade.getCurrentUserSession();
-        String userName = currentSession.getUserName();
 
         for (Client c : Company.clientsList) {
-            if (c.getEmail().equals(userName)) {
+            if (email.getEmail().equals(c.getEmail())) {
                 return c;
             }
 
@@ -55,7 +55,6 @@ public class ViewTestResultsController {
 
         // Add default properties and values
         props.setProperty(Constants.PARAMS_COMPANY_DESIGNATION, "Many Labs");
-
 
         // Read configured values
         try {

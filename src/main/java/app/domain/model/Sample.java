@@ -45,8 +45,8 @@ public class Sample implements Serializable {
         return barcode;
     }
 
-//    public String toString(){
-//        return barcode.toString();
-//    }
+    public String toString(){
+        return barcode.toString();
+    }
 
 }

@@ -58,6 +58,7 @@ public class App {
             props = getProperties();
             this.company = new Company(props.getProperty(Constants.PARAMS_COMPANY_DESIGNATION));
             this.authFacade = this.company.getAuthFacade();
+            barcodeAdapter = props.getProperty("BarcodeAdapter");
             bootstrap();
         }
         save(this.company);
@@ -65,8 +66,6 @@ public class App {
         props = getProperties();
         barcodeAdapter = props.getProperty("BarcodeAdapter");
         this.authFacade = this.company.getAuthFacade();
-
-
     }
 
     public boolean save(Object o){
@@ -235,9 +234,13 @@ public class App {
         String arg2 = "00000000002";
         String arg3 = "00000000003";
 //        String arg4 = "00000000004";
-        test1.getSamples().add(new Sample(arg1, barcodeAdapter));
-        test1.getSamples().add(new Sample(arg2, barcodeAdapter));
-        test1.getSamples().add(new Sample(arg3, barcodeAdapter));
+        Sample sample1 = new Sample(arg1, barcodeAdapter);
+        Sample sample2 = new Sample(arg2, barcodeAdapter);
+        Sample sample3 = new Sample(arg3, barcodeAdapter);
+        test1.getSamples().add(sample1);
+        test1.getSamples().add(sample2);
+        test1.getSamples().add(sample3);
+
 //        test1.setSampleLocalDate();
 //        test1.setSampleLocalTime();
 //        test2.getSamples().add(new Sample(arg4, barcodeAdapter));

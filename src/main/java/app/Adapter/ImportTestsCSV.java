@@ -1,19 +1,14 @@
 package app.Adapter;
 
 import app.controller.App;
-import app.controller.RegisterClientController;
 import app.controller.RegisterTestToClientController;
 import app.domain.model.*;
-import app.ui.console.utils.Utils;
 
 import java.io.*;
-import java.security.InvalidParameterException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.Set;
 
 public class ImportTestsCSV {
 
@@ -227,8 +222,11 @@ public class ImportTestsCSV {
             if(!Doctor_DateHour.equals("NA"))
                 test.setTest_Doctor_DateHour(sdf.parse(Doctor_DateHour));
 
-            if(!Validation_DateHour.equals("NA"))
+            if(!Validation_DateHour.equals("NA")) {
                 test.setTest_Validation_DateHour(sdf.parse(Validation_DateHour));
+                for(ValueRecords valueRecord : valueRecordsList)
+                    valueRecord.setDate(sdf.parse(Validation_DateHour));
+            }
         } catch (ParseException e) {
             e.printStackTrace();
             double arst = 0;

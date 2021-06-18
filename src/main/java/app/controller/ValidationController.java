@@ -2,6 +2,7 @@ package app.controller;
 
 import app.domain.model.Company;
 import app.domain.model.Test;
+import app.domain.model.ValueRecords;
 
 import java.util.Date;
 import java.util.List;
@@ -20,7 +21,11 @@ public class ValidationController {
     }
 
     public void validate(Test test){
-       test.setTest_Validation_DateHour(new Date());
+       Date currDate = new Date();
+       test.setTest_Validation_DateHour(currDate);
+       for (ValueRecords valueRecords : company.getValueRecords(test.getTestID())) {
+           valueRecords.setDate(currDate);
+       }
     }
 
 

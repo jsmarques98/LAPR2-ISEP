@@ -61,7 +61,7 @@ public class RecordTestResultsController {
      * @param parametro
      * @return
      */
-    public boolean createValueRecords(String id, double min, double max, double registeredValue, String parametro, LocalDate data) {
+    public boolean createValueRecords(String id, double min, double max, double registeredValue, String parametro, Date data) {
         this.valueRecords = this.company.createValueRecords(id, min, max, registeredValue, parametro, data);
         return this.company.validateValueRecords(valueRecords);
     }

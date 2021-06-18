@@ -10,6 +10,7 @@ import com.example3.CovidReferenceValues1API;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class RecordTestResultsUI implements Runnable {
@@ -88,7 +89,7 @@ public class RecordTestResultsUI implements Runnable {
 
             if (Utils.confirm()) {
 
-                if (controller.createValueRecords(id, min, max, registeredValue, parametro, LocalDate.now())) {
+                if (controller.createValueRecords(id, min, max, registeredValue, parametro, new Date())) {
                     System.out.println("Value records successfully created. Metric: " + medida);
                     System.out.println("");
                     controller.saveValueRecords();

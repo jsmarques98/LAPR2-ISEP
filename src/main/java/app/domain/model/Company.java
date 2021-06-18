@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -335,7 +336,7 @@ public class Company implements Serializable {
 
     //us12
 
-    public ValueRecords createValueRecords(String id, double min, double max, double registeredValue, String parametro, LocalDate data) {
+    public ValueRecords createValueRecords(String id, double min, double max, double registeredValue, String parametro, Date data) {
 
         return new ValueRecords(id, min, max, registeredValue, parametro, data);
     }

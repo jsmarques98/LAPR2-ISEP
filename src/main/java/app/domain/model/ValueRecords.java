@@ -1,37 +1,17 @@
 package app.domain.model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 
 public class ValueRecords implements Serializable {
 
-    /**
-     * The id of value records.
-     */
+    //test id
     private String id;
-
-    /**
-     * The min. value of value records.
-     */
     private double minValue;
-
-    /**
-     * The max. value of value records.
-     */
     private double maxValue;
-
-    /**
-     * The registered value of value records.
-     */
     private double registeredValue;
-
-    /**
-     * The parameter of value records.
-     */
     private String parametro;
-
-
-    private LocalDate data;
+    private Date date;
 
     /**
      * The empty constructor of value records.
@@ -52,13 +32,13 @@ public class ValueRecords implements Serializable {
      * @param registeredValue
      * @param parametro
      */
-    public ValueRecords(String id, double minValue, double maxValue, double registeredValue, String parametro, LocalDate data) {
+    public ValueRecords(String id, double minValue, double maxValue, double registeredValue, String parametro, Date data) {
         this.id = id;
         this.minValue = minValue;
         this.maxValue = maxValue;
         this.registeredValue = registeredValue;
         this.parametro = parametro;
-        this.data = data;
+        this.date = data;
     }
 
     public void setParameter(String parametro) {
@@ -90,10 +70,6 @@ public class ValueRecords implements Serializable {
      */
     public double getMaxValue() {
         return maxValue;
-    }
-
-    public LocalDate getData() {
-        return data;
     }
 
     /**
@@ -136,6 +112,15 @@ public class ValueRecords implements Serializable {
         return parametro;
     }
 
+    public Date getData() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+
     @Override
     public String toString() {
         return "ValueRecords{" +
@@ -144,7 +129,7 @@ public class ValueRecords implements Serializable {
                 ", maxValue=" + maxValue +
                 ", registeredValue=" + registeredValue +
                 ", parametro='" + parametro + '\'' +
-                ", data=" + data +
+                ", data=" + date +
                 '}';
     }
 }

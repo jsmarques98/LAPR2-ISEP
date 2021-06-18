@@ -23,18 +23,19 @@ public class ValidationUI implements Runnable{
 
         Test test = (Test)Utils.showAndSelectOne(company.getTestsToValidate(),"test");
 
-        Utils.showList(company.getValueRecords(test.getTestID()),"valueRecords");
+        if(test != null) {
+            Utils.showList(company.getValueRecords(test.getTestID()), "valueRecords");
 
 
-        System.out.println("Do you validate the reports and the values of tests?(yes/no)");
+            System.out.println("Do you validate the reports and the values of tests?(yes/no)");
 
-
-        if(Utils.confirm()) {
-            controller.validate(test);
-            fileutil.createFile("./results/emailAndSMSMessages.txt");
-            fileutil.writeFile("Your tests are now available in the app!");
-        } else {
-            System.out.println("Need to check the results and report before");
+            if (Utils.confirm()) {
+                controller.validate(test);
+                fileutil.createFile("./results/emailAndSMSMessages.txt");
+                fileutil.writeFile("Your tests are now available in the app!");
+            } else {
+                System.out.println("Need to check the results and report before");
+            }
         }
     }
 }

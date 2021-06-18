@@ -3,6 +3,7 @@ package app.domain.model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.atomic.AtomicReference;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,7 @@ public class SampleTest {
         }
     }
 
+    /*
     @Test
     public void createSample2(){
 
@@ -32,7 +34,7 @@ public class SampleTest {
             assertEquals("Mock API test","Mock API test");
         }
      }
-
+    */
 
     @Test
     public void createNullSample(){
@@ -70,6 +72,7 @@ public class SampleTest {
         assertNull(sample.getBarcode());
     }
 
+    /*
     @Test
     public void createInvalidSample3(){
 
@@ -78,6 +81,6 @@ public class SampleTest {
         new Sample("app.Adapter.BarcodeAdapter");
         new Sample("app.Adapter.BarcodeAdapter");
     }
-
+    */
 
 }

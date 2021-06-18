@@ -246,6 +246,9 @@ public class Company implements Serializable {
 
     public static List<Client> clientsList = new ArrayList<>();
 
+    public List<Client> getClientsList() {
+        return clientsList;
+    }
 
     public static Client createClient(String name, String TINNumber, String address, String gender, String cCard, String nhs, String date, String phoneNumber, String email) {
         return new Client(name, TINNumber, address, gender, cCard, nhs, date, phoneNumber, email);

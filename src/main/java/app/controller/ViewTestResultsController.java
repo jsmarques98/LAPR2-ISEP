@@ -3,10 +3,9 @@ package app.controller;
 import app.domain.model.Client;
 import app.domain.model.Company;
 import app.domain.model.Test;
-
 import auth.AuthFacade;
-import auth.UserSession;
 import auth.domain.model.Email;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class ViewTestResultsController {
     public List<Test> clientTests() {
         List<Test> listaTestesClients = new ArrayList<>();
         for (Test t : Company.tests) {
-            if(t.getTinNumber().equals(clientSignedIn().getTINNumber())){
+            if (t.getTinNumber().equals(clientSignedIn().getTINNumber())) {
                 listaTestesClients.add(t);
             }
         }
@@ -35,8 +34,6 @@ public class ViewTestResultsController {
     public Client clientSignedIn() {
 
         Email email = App.getInstance().getCurrentUserSession().getUserId();
-        UserSession currentSession = authFacade.getCurrentUserSession();
-
         for (Client c : Company.clientsList) {
             if (email.getEmail().equals(c.getEmail())) {
                 return c;
@@ -45,5 +42,6 @@ public class ViewTestResultsController {
         }
         return null;
     }
+
 
 }

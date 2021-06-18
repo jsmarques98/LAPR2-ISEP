@@ -1,12 +1,12 @@
 package app.domain.model;
+
 import java.io.Serializable;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Test implements Serializable {
+public class Test implements Serializable, Comparable {
 
     private String testID;
     private final String tinNumber;
@@ -33,7 +33,7 @@ public class Test implements Serializable {
     //Test_Reg_DateHour
     private Date Test_Reg_DateHour;
 
-    public Test(String tinNumber, String nhscode, String description, String idTestType ,ArrayList<String> listCodeCategory, ArrayList<String> listParameterTestCode) {
+    public Test(String tinNumber, String nhscode, String description, String idTestType, ArrayList<String> listCodeCategory, ArrayList<String> listParameterTestCode) {
         this.testID = generateID();
         this.tinNumber = tinNumber;
         this.nhscode = nhscode;
@@ -51,19 +51,19 @@ public class Test implements Serializable {
 
 
     private String generateID() {
-        if(Company.tests.size()==0)
+        if (Company.tests.size() == 0)
             return String.valueOf(1);
         //look for the last id and generate the next id
-        Integer integer = Integer.parseInt(Company.tests.get(Company.tests.size()-1).getTestID())+1;
+        Integer integer = Integer.parseInt(Company.tests.get(Company.tests.size() - 1).getTestID()) + 1;
 
         return String.valueOf(integer);
     }
 
     //if manual id attribution is required
-    public boolean setTestID( String testID ){
+    public boolean setTestID(String testID) {
         //System.out.println(this.testID);
         //System.out.println(testID);
-        if(Integer.valueOf(this.testID)<=Integer.valueOf(testID)) {
+        if (Integer.valueOf(this.testID) <= Integer.valueOf(testID)) {
             this.testID = testID;
             return true;
         } else {
@@ -100,6 +100,10 @@ public class Test implements Serializable {
         return samples;
     }
 
+    public Date getTest_Reg_DateHour() {
+        return Test_Reg_DateHour;
+    }
+
     public void setTest_Sample_DateHour(Date test_Sample_DateHour) {
         Test_Sample_DateHour = test_Sample_DateHour;
     }
@@ -120,19 +124,21 @@ public class Test implements Serializable {
         Test_Reg_DateHour = test_Reg_DateHour;
     }
 
-    public String toStringIdTest(){
-        return "Test ID: " + testID;
+    public String toStringIdTest() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        String Reg_DateHour = (this.Test_Reg_DateHour != null) ? sdf.format(this.Test_Reg_DateHour) : "null";
+        return "Test ID: " + testID + " | Date: " + Reg_DateHour;
     }
 
     @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
-        String Sample_DateHour = (this.Test_Sample_DateHour!=null)?sdf.format(this.Test_Sample_DateHour):"null";
-        String Validation_DateHour = (this.Test_Validation_DateHour!=null)?sdf.format(this.Test_Validation_DateHour):"null";
-        String Doctor_DateHour = (this.Test_Doctor_DateHour!=null)?sdf.format(this.Test_Doctor_DateHour):"null";
-        String Chemical_DateHour = (this.Test_Chemical_DateHour!=null)?sdf.format(this.Test_Chemical_DateHour):"null";
-        String Reg_DateHour = (this.Test_Reg_DateHour!=null)?sdf.format(this.Test_Reg_DateHour):"null";
+        String Sample_DateHour = (this.Test_Sample_DateHour != null) ? sdf.format(this.Test_Sample_DateHour) : "null";
+        String Validation_DateHour = (this.Test_Validation_DateHour != null) ? sdf.format(this.Test_Validation_DateHour) : "null";
+        String Doctor_DateHour = (this.Test_Doctor_DateHour != null) ? sdf.format(this.Test_Doctor_DateHour) : "null";
+        String Chemical_DateHour = (this.Test_Chemical_DateHour != null) ? sdf.format(this.Test_Chemical_DateHour) : "null";
+        String Reg_DateHour = (this.Test_Reg_DateHour != null) ? sdf.format(this.Test_Reg_DateHour) : "null";
 
         return "Test{" +
                 "testID='" + testID + '\'' +
@@ -150,4 +156,19 @@ public class Test implements Serializable {
                 ", Test_Reg_DateHour=" + Reg_DateHour +
                 '}';
     }
+
+    @Override
+    public int compareTo(Object test) {
+        Date date1 = this.Test_Reg_DateHour;
+        Date date2 = ((Test) test).Test_Reg_DateHour;
+
+        if (date1.before(date2))
+            return -1;
+        else if (date1.after(date2))
+            return 1;
+        else
+            return 0;
+
+    }
+
 }

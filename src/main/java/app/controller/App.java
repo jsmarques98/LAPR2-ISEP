@@ -215,10 +215,20 @@ public class App {
 //        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
 //        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
 
-        ValueRecords v1 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.now());
-        ValueRecords v2 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.now());
+        ValueRecords v1 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.parse("2021-06-05"));
+        ValueRecords v2 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.parse("2021-06-16"));
+        ValueRecords v3 = new ValueRecords(test1.getTestID(),200, 300, 180,"IgGAN", LocalDate.parse("2021-06-16"));
+        ValueRecords v4 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.parse("2021-06-15"));
+        ValueRecords v5 = new ValueRecords(test1.getTestID(),100, 200, 1,"IgGAN", LocalDate.parse("2021-06-14"));
+        ValueRecords v6 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.parse("2021-06-13"));
+        ValueRecords v7 = new ValueRecords(test1.getTestID(),100, 200, 1,"IgGAN", LocalDate.parse("2021-06-12"));
         Company.valueRecordsList.add(v1);
         Company.valueRecordsList.add(v2);
+        Company.valueRecordsList.add(v3);
+        Company.valueRecordsList.add(v4);
+        Company.valueRecordsList.add(v5);
+        Company.valueRecordsList.add(v6);
+        Company.valueRecordsList.add(v7);
 
         String arg1 = "00000000001";
         String arg2 = "00000000002";

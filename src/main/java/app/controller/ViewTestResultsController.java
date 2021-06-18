@@ -3,17 +3,13 @@ package app.controller;
 import app.domain.model.Client;
 import app.domain.model.Company;
 import app.domain.model.Test;
-import app.domain.shared.Constants;
+
 import auth.AuthFacade;
 import auth.UserSession;
 import auth.domain.model.Email;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
+
 
 public class ViewTestResultsController {
 
@@ -50,20 +46,4 @@ public class ViewTestResultsController {
         return null;
     }
 
-    private Properties getProperties() {
-        Properties props = new Properties();
-
-        // Add default properties and values
-        props.setProperty(Constants.PARAMS_COMPANY_DESIGNATION, "Many Labs");
-
-        // Read configured values
-        try {
-            InputStream in = new FileInputStream(Constants.PARAMS_FILENAME);
-            props.load(in);
-            in.close();
-        } catch (IOException ex) {
-
-        }
-        return props;
-    }
 }

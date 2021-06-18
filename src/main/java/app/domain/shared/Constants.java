@@ -12,6 +12,7 @@ public class Constants {
     public static final String ROLE_MEDICAL_LAB_TECHNICIAN = "MEDICAL_LAB_TECHNICIAN";
     public static final String ROLE_SEPECIALIST_DOCTOR = "SPECIALIST_DOCTOR";
     public static final String ROLE_CLIENT = "CLIENT";
+    public static final double MIN_VALUE_OF_IGGAN = 1.4;
 
     public static final String PARAMS_FILENAME = "config.properties";
     public static final String PARAMS_COMPANY_DESIGNATION = "Company.Designation";

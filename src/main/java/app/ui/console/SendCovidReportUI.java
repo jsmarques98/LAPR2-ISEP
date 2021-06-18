@@ -2,8 +2,8 @@ package app.ui.console;
 
 import app.controller.SendCovidReportController;
 import app.domain.model.Company;
+import app.domain.model.ValueRecords;
 import app.ui.console.utils.Utils;
-
 import java.time.LocalDate;
 
 public class SendCovidReportUI implements Runnable{
@@ -20,6 +20,7 @@ public class SendCovidReportUI implements Runnable{
         LocalDate now = LocalDate.now();
         System.out.println("Current date: " + now);
         Company.dateList.clear();
+        Company.finaldatesList.clear();
 
         int hPoints = selectHPoints();
         LocalDate minData = now.minusDays(hPoints);
@@ -28,7 +29,7 @@ public class SendCovidReportUI implements Runnable{
             Company.dateList.add(minData.plusDays(i));
         }
 
-        System.out.println(Company.dateList.toString());
+        System.out.println("Available dates:\n" + Company.dateList.toString());
 
         LocalDate initialDate = selectInitialDate();
         LocalDate finalDate = selectFinalDate(initialDate);
@@ -37,7 +38,7 @@ public class SendCovidReportUI implements Runnable{
             Company.finaldatesList.add(initialDate.plusDays(i));
         }
 
-        System.out.println(Company.finaldatesList.toString());
+        System.out.println(Company.finaldatesList.toString() + "\n");
 
         controller.regressionMenu();
 

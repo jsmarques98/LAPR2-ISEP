@@ -35,12 +35,6 @@ public class Company implements Serializable {
 
     public static List<ValueRecords> valueRecordsList = new ArrayList<>();
 
-    //All dates from yesterday and x days ago acording to the number of historical day points
-    public static List<LocalDate> dateList = new ArrayList<>();
-
-    //Date interval chosen by admin
-    public static List<LocalDate> finaldatesList = new ArrayList<>();
-
 
     public Client getClient(String email){
         for( Client client : clientsList )
@@ -246,6 +240,9 @@ public class Company implements Serializable {
 
     public static List<Client> clientsList = new ArrayList<>();
 
+    public List<Client> getClientsList() {
+        return clientsList;
+    }
 
     public static Client createClient(String name, String TINNumber, String address, String gender, String cCard, String nhs, String date, String phoneNumber, String email) {
         return new Client(name, TINNumber, address, gender, cCard, nhs, date, phoneNumber, email);
@@ -409,14 +406,23 @@ public class Company implements Serializable {
 
     //us15
 
-    public List<Test> getTestsWhitSamples() {
-        ArrayList<Test> availableTests = new ArrayList<>();
-        for(Test current : this.getTests())
-            if(current.getSamples().size() != 0)
-                availableTests.add(current);
+   public List<Test> getTestsWhitSamples() {
+       ArrayList<Test> availableTests = new ArrayList<>();
+       for(Test current : this.getTests())
+           if(current.getSamples().size() != 0)
+               availableTests.add(current);
+       return availableTests;
+   }
 
-        return availableTests;
-    }
+   //us18/19
+
+   //All dates from yesterday and x days ago acording to the number of historical day points
+   public static List<LocalDate> dateList = new ArrayList<>();
+
+   //Date interval chosen by admin
+   public static List<LocalDate> finaldatesList = new ArrayList<>();
+
+
 }
 
 

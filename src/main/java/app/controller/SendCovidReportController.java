@@ -36,8 +36,18 @@ public class SendCovidReportController {
     }
 
     private void simpleRegression(int[] totalCovidTests, int[] totalPositiveCovidTests) {
-        System.out.println("Choose the independent variable\n1- Number of tests.\n2- Mean age.");
+        System.out.println("Choose the independent variable:\n1- Number of tests.\n2- Mean age.");
         int op = Utils.readIntegerFromConsole("Select the option number:");
+        Double confidenceValue = Utils.readDoubleFromConsole("Enter the confidence level value: ");
+        String parameter;
+        do {
+            parameter = Utils.readLineFromConsole("Select witch parameter you want to analyzed (A/B): ");
+        }while(!(parameter.equalsIgnoreCase("A") || parameter.equalsIgnoreCase("B")));
+
+        for (ValueRecords v:company.valueRecordsList) {
+            System.out.println(v.toString());
+        }
+
         switch(op) {
             case 1:
                 totalOfCovidTests(totalCovidTests);
@@ -74,6 +84,8 @@ public class SendCovidReportController {
         for (LocalDate date : company.dateList) {
             for (ValueRecords valueRecords : company.valueRecordsList) {
                 if(valueRecords.getData().equals(date) && valueRecords.getParametro().equals("IgGAN") && valueRecords.getRegisteredValue() > Constants.MIN_VALUE_OF_IGGAN){
+                    System.out.println("Dateeeeee " + date);
+                    System.out.println("Date -------- "+ valueRecords.getData());
                     counter++;
                 }
             }

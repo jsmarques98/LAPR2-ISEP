@@ -28,15 +28,16 @@ public class ConsultTestsUI implements Runnable{
             for (Client c : listaC ) {
                 System.out.println(c.toString());
             }
-            System.out.println("Escolha o cliente :");
+            System.out.println("\nEscolha o cliente :");
             int option = sc.nextInt();
+            Client c = listaC.get(option-1);
             List<Test> lista = new ArrayList<>();
-            lista = controller.clientTestsConsult();
+            lista = controller.clientTestsConsult(c);
             if(lista.isEmpty()){
                 System.out.println("Não existem testes associados a este cliente.");
             }else{
                 for (Test t : lista ) {
-                    System.out.println(lista.get(option-1));
+                    System.out.println(t);
                 }
             }
 

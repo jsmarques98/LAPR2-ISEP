@@ -21,7 +21,7 @@ public class ConsultTestsController {
         return listaClientes;
     }
 
-    public List<Test> clientTestsConsult() {
+    public List<Test> clientTestsConsult(Client client) {
         List<Test> listaTestesClients = new ArrayList<>();
         for (Test t : company.tests) {
             if(t.getTinNumber().equals(client.getTINNumber())){

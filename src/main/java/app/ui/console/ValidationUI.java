@@ -24,13 +24,13 @@ public class ValidationUI implements Runnable{
 
     public void run(){
         int i;
-        for(i = 0; i< Company.reportedTestsList.size(); i++){
-            System.out.println(Company.reportedTestsList.get(i));
+        for(i = 0; i< company.reportedTestsList.size(); i++){
+            System.out.println(company.reportedTestsList.get(i));
         }
 
         int j;
-        for( j = 0; j< Company.valueRecordsList.size(); j++){
-            System.out.println(Company.valueRecordsList.get(i));
+        for( j = 0; j< company.valueRecordsList.size(); j++){
+            System.out.println(company.valueRecordsList.get(i));
         }
 
 
@@ -38,15 +38,11 @@ public class ValidationUI implements Runnable{
 
 
         if(Utils.confirm()) {
-            controller.validate(Company.reportedTestsList.get(i).getTest());
+            controller.validate(company.reportedTestsList.get(i).getTest());
             fileutil.createFile("./results/emailAndSMSMessages.txt");
             fileutil.writeFile("Your tests are now available in the app!");
         } else {
             System.out.println("Need to check the results and report before");
         }
-
-
-
     }
-
 }

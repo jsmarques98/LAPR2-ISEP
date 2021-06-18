@@ -1,5 +1,6 @@
 package app.ui;
 
+import app.controller.App;
 import app.ui.console.MainMenuUI;
 
 /**
@@ -10,6 +11,7 @@ public class Main {
 
     public static void main(String[] args)
     {
+
         try
         {
             MainMenuUI menu = new MainMenuUI();
@@ -19,6 +21,8 @@ public class Main {
         {
             e.printStackTrace();
         }
+
+        App.getInstance().save( new Object() );
     }
 
 }

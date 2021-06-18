@@ -11,17 +11,11 @@ import java.util.ArrayList;
 
 public class CreateReportUI implements Runnable {
 
-    private Company company;
-
     private CreateReportController controller;
-
-    public CreateReportUI(){
-        this(App.getInstance().getCompany());
-    }
-
-    public CreateReportUI(Company company) {
-        this.company = company;
+    private Company company;
+    public CreateReportUI() {
         controller = new CreateReportController();
+        company = App.getInstance().getCompany();
     }
 
     @Override
@@ -43,8 +37,8 @@ public class CreateReportUI implements Runnable {
 
         }
 
-        for(int i = 0; i< Company.reportedTestsList.size(); i++){
-            System.out.println(Company.reportedTestsList.get(i));
+        for(int i = 0; i< company.reportedTestsList.size(); i++){
+            System.out.println(company.reportedTestsList.get(i));
         }
 
     }
@@ -60,8 +54,8 @@ public class CreateReportUI implements Runnable {
 
     public void showTests() {
         System.out.println("Tests to make a report :");
-        for(int i = 0; i< Company.valueRecordsList.size(); i++){
-            System.out.println(Company.valueRecordsList.get(i));
+        for(int i = 0; i< company.valueRecordsList.size(); i++){
+            System.out.println(company.valueRecordsList.get(i));
         }
     }
 

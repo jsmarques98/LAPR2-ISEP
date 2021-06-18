@@ -1,5 +1,6 @@
 package app.ui.console;
 
+import app.controller.App;
 import app.controller.RegisterLabController;
 import app.domain.model.Company;
 import app.ui.console.utils.Utils;
@@ -7,9 +8,11 @@ import app.ui.console.utils.Utils;
 public class RegisterLabUI implements Runnable{
 
     private RegisterLabController controller;
+    private Company company;
 
     public RegisterLabUI(){
         controller = new RegisterLabController();
+        company = App.getInstance().getCompany();
     }
 
 
@@ -29,8 +32,8 @@ public class RegisterLabUI implements Runnable{
             System.out.println("Lab not registered");
         }
 
-        for(int i = 0; i< Company.labList.size(); i++){
-            System.out.println(Company.labList.get(i));
+        for(int i = 0; i< company.labList.size(); i++){
+            System.out.println(company.labList.get(i));
         }
     }
 

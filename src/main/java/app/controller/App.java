@@ -1,15 +1,12 @@
 package app.controller;
 
-import app.Adapter.BarcodeAdapter;
 import app.domain.model.*;
 import app.domain.shared.Constants;
+import app.ui.console.utils.Utils;
 import auth.AuthFacade;
 import auth.UserSession;
 
 import java.io.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -61,7 +58,6 @@ public class App {
             barcodeAdapter = props.getProperty("BarcodeAdapter");
             bootstrap();
         }
-        save(this.company);
 
         props = getProperties();
         barcodeAdapter = props.getProperty("BarcodeAdapter");
@@ -75,7 +71,7 @@ public class App {
             FileOutputStream fileOut =
                     new FileOutputStream("data/company.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(company);
+            out.writeObject(this.company);
             out.close();
             fileOut.close();
             LOGGER.info("Saving " + className + " with HashCode: " + classHash);
@@ -172,23 +168,23 @@ public class App {
         ParameterTest parameterTest7 = new ParameterTest("MCHC0", "Mean Haemo Con.", "Mean Cell Haemoglobin Concentration (MCHC)");
         ParameterTest parameterTest8 = new ParameterTest("ESR00", "Eryth Sed. Rate", "Erythrocyte Sedimentation Rate (ESR)");
         ParameterTest parameterTest9 = new ParameterTest("IgGAN", "IgGAN", "IgGAN");
-        Company.parameterList.add(parameterTest1);
-        Company.parameterList.add(parameterTest2);
-        Company.parameterList.add(parameterTest3);
-        Company.parameterList.add(parameterTest4);
-        Company.parameterList.add(parameterTest5);
-        Company.parameterList.add(parameterTest6);
-        Company.parameterList.add(parameterTest7);
-        Company.parameterList.add(parameterTest8);
-        Company.parameterList.add(parameterTest9);
+        company.parameterList.add(parameterTest1);
+        company.parameterList.add(parameterTest2);
+        company.parameterList.add(parameterTest3);
+        company.parameterList.add(parameterTest4);
+        company.parameterList.add(parameterTest5);
+        company.parameterList.add(parameterTest6);
+        company.parameterList.add(parameterTest7);
+        company.parameterList.add(parameterTest8);
+        company.parameterList.add(parameterTest9);
 
 
         Client c1 = new Client("Pedro","5555555555","Porto","M", "555555555555", "555555555555","03/05/2021","55555555555","pedro@gmail.com");
         Client c2 = new Client("Joao","9999999999","Lisboa", "M", "9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
         Client c3 = new Client("Rui","0000000000","Faro", "M", "0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
-        Company.clientsList.add(c1);
-        Company.clientsList.add(c2);
-        Company.clientsList.add(c3);
+        company.clientsList.add(c1);
+        company.clientsList.add(c2);
+        company.clientsList.add(c3);
 
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
@@ -197,7 +193,7 @@ public class App {
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
         this.authFacade.addUserWithRole("laboratory coordinator", "labcord@gmail.com", "123456", Constants.ROLE_LABORATORY_COORDINATOR);
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
-
+        //csv/tests_Blood100.csv
 
         ArrayList listCat;
         ArrayList listPara;
@@ -209,11 +205,11 @@ public class App {
         listCat.add(category2);
         listPara.add(parameterTest1);
         listPara.add(parameterTest2);
-
+/*
         Test test1 =  new Test("0000000000","0000","sad","sdsad1",  listCat, listPara);
-//        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
-//        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
-//        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
+        Test test2 =  new Test("0000000001","0001","sad1","sdsad2",  listCat, listPara);
+        Test test3 =  new Test("0000000002","0002","sad2","sdsad3",  listCat, listPara);
+        Test test4 =  new Test("0000000003","0003","sad3","sdsad4",  listCat, listPara);
 
         ValueRecords v1 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.parse("2021-06-05"));
         ValueRecords v2 = new ValueRecords(test1.getTestID(),100, 200, 119,"IgGAN", LocalDate.parse("2021-06-16"));
@@ -294,7 +290,7 @@ public class App {
         TestType t2 = new TestType("54321","desc2","colect2",listCat2);
         Company.record.add(t1);
         Company.record.add(t2);
-
+*/
 
     }
 

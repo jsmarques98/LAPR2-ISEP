@@ -11,12 +11,7 @@ public class RegisterEmployeeController{
     private Employee employee;
 
     public RegisterEmployeeController() {
-        this(App.getInstance().getCompany());
-    }
-
-    public RegisterEmployeeController(Company company) {
-        this.company = company;
-        this.employee = null;
+        company = App.getInstance().getCompany();
     }
 
     public boolean createEmloyee(String roleId, String name, String address, String phoneNumber, String email, String socCode, Lab lab) {

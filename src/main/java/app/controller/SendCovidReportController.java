@@ -14,18 +14,14 @@ public class SendCovidReportController {
     private Company company;
 
     public SendCovidReportController() {
-        this(App.getInstance().getCompany());
-    }
-
-    public SendCovidReportController(Company company){
-        this.company = company;
+        this.company = App.getInstance().getCompany();
     }
 
     public void regressionMenu() {
         System.out.println("What regression do you want to choose?\n1- Simple linear regression model.\n2- Multilinear regression model.");
         int op = Utils.readIntegerFromConsole("Select the option number:");
-        int[] totalCovidTests = new int[Company.finaldatesList.size()];
-        int[] totalPositiveCovidTests = new int[Company.dateList.size()];
+        int[] totalCovidTests = new int[company.finaldatesList.size()];
+        int[] totalPositiveCovidTests = new int[company.dateList.size()];
         switch(op) {
             case 1:
                 simpleRegression(totalCovidTests, totalPositiveCovidTests);
@@ -59,8 +55,8 @@ public class SendCovidReportController {
 
     public int[] totalOfCovidTests(int[] totalCovidTests) {
         int counter = 0,i = 0;
-        for (LocalDate date : Company.finaldatesList) {
-            for (ValueRecords valueRecords : Company.valueRecordsList) {
+        for (LocalDate date : company.finaldatesList) {
+            for (ValueRecords valueRecords : company.valueRecordsList) {
                 if(valueRecords.getData().equals(date) && valueRecords.getParametro().equals("IgGAN")){
                     counter++;
                 }
@@ -75,8 +71,8 @@ public class SendCovidReportController {
 
     private void totalPositiveCases(int[] totalPositiveCovidTests) {
         int counter = 0,i = 0;
-        for (LocalDate date : Company.dateList) {
-            for (ValueRecords valueRecords : Company.valueRecordsList) {
+        for (LocalDate date : company.dateList) {
+            for (ValueRecords valueRecords : company.valueRecordsList) {
                 if(valueRecords.getData().equals(date) && valueRecords.getParametro().equals("IgGAN") && valueRecords.getRegisteredValue() > Constants.MIN_VALUE_OF_IGGAN){
                     counter++;
                 }
@@ -89,8 +85,8 @@ public class SendCovidReportController {
     }
 
     private void printTotals(int[] totalCovidTests, int[] totalPositiveCovidTests) {
-        LocalDate date1 = Company.finaldatesList.get(0);
-        LocalDate date2 = Company.dateList.get(0);
+        LocalDate date1 = company.finaldatesList.get(0);
+        LocalDate date2 = company.dateList.get(0);
         for (int i = 0; i < totalCovidTests.length; i++) {
             System.out.println("No dia " + date1.plusDays(i) + " houveram " + totalCovidTests[i] + " total de casos");
         }

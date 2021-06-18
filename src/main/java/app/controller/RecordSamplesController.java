@@ -33,8 +33,8 @@ public class RecordSamplesController {
             throw new IllegalArgumentException("Tin number is null or length is invalid");
 
         for(int i = 0; i < numSamples; i++)
-            test.getSamples().add(new Sample(test.getTinNumber()+(i+1)));
-        test.setTest_Sample_DateHour(new Date());
+            test.getSamples().add(new Sample());
+        test.setTest_Chemical_DateHour(new Date());
         return new TestDTO(test);
     }
 

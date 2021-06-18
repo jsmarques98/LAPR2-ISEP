@@ -39,7 +39,7 @@ public class SampleTest {
 
         String arg = null;
         AtomicReference<Sample> sample = null;
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+        Assertions.assertThrows(NullPointerException.class, () -> {
             sample.set(new Sample(arg));
         });
     }
@@ -68,6 +68,15 @@ public class SampleTest {
         String arg = "12341234123412341234";
         Sample sample = new Sample(arg,"app.Adapter.BarcodeAdapter");
         assertNull(sample.getBarcode());
+    }
+
+    @Test
+    public void createInvalidSample3(){
+
+        new Sample("app.Adapter.BarcodeAdapter");
+        new Sample("app.Adapter.BarcodeAdapter");
+        new Sample("app.Adapter.BarcodeAdapter");
+        new Sample("app.Adapter.BarcodeAdapter");
     }
 
 

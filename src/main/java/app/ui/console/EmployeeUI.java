@@ -1,5 +1,6 @@
 package app.ui.console;
 
+import app.controller.App;
 import app.controller.AuthController;
 import app.controller.RegisterEmployeeController;
 import app.domain.model.Company;
@@ -14,9 +15,11 @@ import java.util.ArrayList;
 public class EmployeeUI implements Runnable{
 
     private RegisterEmployeeController controller;
+    private Company company;
 
     public EmployeeUI(){
         controller = new RegisterEmployeeController();
+        company = App.getInstance().getCompany();
     }
 
     @Override
@@ -54,8 +57,8 @@ public class EmployeeUI implements Runnable{
                 System.out.println("Operation canceld");
             }
         }
-        for (int i = 0; i < Company.employeeList.size(); i++) {
-            System.out.println(Company.employeeList.get(i));
+        for (int i = 0; i < company.employeeList.size(); i++) {
+            System.out.println(company.employeeList.get(i));
         }
     }
 
@@ -123,11 +126,11 @@ public class EmployeeUI implements Runnable{
     }
 
     private Lab selectLab() {
-        for (int i = 0; i < Company.labList.size(); i++) {
-            System.out.println(Company.labList.get(i));
+        for (int i = 0; i < company.labList.size(); i++) {
+            System.out.println(company.labList.get(i));
         }
         String labId =  Utils.readLineFromConsole("Enter Employee's labId: ");
-        for (Lab l : Company.labList) {
+        for (Lab l : company.labList) {
             if(l.getLabId().equals(labId)){
                 return l;
             }

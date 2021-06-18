@@ -14,6 +14,7 @@ public class LaboratoryCoordinatorUI implements Runnable {
         List<MenuItem> options = new ArrayList<MenuItem>();
         options.add(new MenuItem("Validate work done by the clinical chemistry" +
                 "technologist and specialist doctor", new ValidationUI()));
+        options.add(new MenuItem("Import file with tests", new ImportTestsUI()));
 
         int option = 0;
         do

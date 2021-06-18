@@ -9,11 +9,14 @@ import static app.ui.console.utils.Utils.*;
 
 public class UpdateClientUI implements Runnable {
 
+    private Company company;
+
     @Override
     public void run(){
+        company = App.getInstance().getCompany();
         Email email = App.getInstance().getCurrentUserSession().getUserId();
         Client currentClient = null;
-        for (Client c : Company.clientsList) {
+        for (Client c : company.clientsList) {
            if(email.getEmail().equals(c.getEmail())){
                currentClient = c;
            }
@@ -22,7 +25,7 @@ public class UpdateClientUI implements Runnable {
         System.out.println("Client info:\n" + currentClient);
         if(selectParameter(currentClient)){
             String writeText = "Email: " + currentClient.getEmail() + "\nInfo updated !";
-            Company.createFile(currentClient.getName() + "Updated", writeText);
+            company.createFile(currentClient.getName() + "Updated", writeText);
             System.out.println("Client info:\n" + currentClient.toString());
         }else{
             System.out.println("Info not saved !");

@@ -17,7 +17,7 @@ import java.util.Set;
 
 public class ImportTestsCSV {
 
-    public ImportTestsCSV(String path) {
+    public ImportTestsCSV(String path) throws FileNotFoundException {
         String str = null;
         File fc = new File(path);
 
@@ -25,7 +25,7 @@ public class ImportTestsCSV {
         try {
             br = new BufferedReader(new FileReader(fc));
         } catch (FileNotFoundException e) {
-            System.out.println("File not found! File "+path+" not found!");
+            throw new FileNotFoundException("File not found! File "+path+" not found!");
         }
 
 
@@ -83,16 +83,13 @@ public class ImportTestsCSV {
         String clientPhoneNumber = args[PhoneNumber];
         String clientName = args[Name];
         String clientEmail = args[Email];
-
-
-        //not a client address, lab address maybe
         String clientAddress = args[Address];
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
         String nhsCode = args[NHS_Code];
-        String address = args[Address];
+
 
         String testTestType = args[TestType];
         String testCategory1 = args[Category1];
@@ -107,7 +104,9 @@ public class ImportTestsCSV {
 
         String testCode = args[Test_Code];
 
-        Company company = App.getInstance().getCompany();
+        App app = App.getInstance();
+
+        Company company = app.getCompany();
 
         if(company.getClient(clientEmail)!=null)
             return false;
@@ -189,14 +188,11 @@ public class ImportTestsCSV {
         //6. CreateReportController
         //7. ValidationController
 
-        Client client = new Client(clientName,clientTIN, address, "NA" ,clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
+        Client client = new Client(clientName,clientTIN, clientAddress, "NA" ,clientCitizenCard_Number,clientNHS_Number,clientBirthDay,clientPhoneNumber,clientEmail);
 
         TestType testType = company.getTestType(testTestType);
 
         RegisterTestToClientController registerTestToClientController = new RegisterTestToClientController();
-
-        Set<Category> categories = app.domain.model.TestType.getCategories();
-
 
         //for(Category category : categories)
           //  if(category.getCode().equals(testCategory1) || category.getCode().equals(testCategory2) || category.getCode().equals(testCategory3))
@@ -220,21 +216,32 @@ public class ImportTestsCSV {
 
         Date date = null;
         try {
-            test.setTest_Reg_DateHour(sdf.parse(Reg_DateHour));
-            test.setTest_Doctor_DateHour(sdf.parse(Doctor_DateHour));
-            test.setTest_Chemical_DateHour(sdf.parse(Chemical_DateHour));
-            test.setTest_Validation_DateHour(sdf.parse(Validation_DateHour));
+            if(!Chemical_DateHour.equals("NA")) {
+                test.getSamples().add(new Sample());
+                test.setTest_Chemical_DateHour(sdf.parse(Chemical_DateHour));
+            }
+
+            if(!Reg_DateHour.equals("NA"))
+                test.setTest_Reg_DateHour(sdf.parse(Reg_DateHour));
+
+            if(!Doctor_DateHour.equals("NA"))
+                test.setTest_Doctor_DateHour(sdf.parse(Doctor_DateHour));
+
+            if(!Validation_DateHour.equals("NA"))
+                test.setTest_Validation_DateHour(sdf.parse(Validation_DateHour));
         } catch (ParseException e) {
             e.printStackTrace();
+            double arst = 0;
+            double pqwf = 0;
+            double stdh = arst/pqwf;
         }
 
 
         try {
-
             company.saveClient(client);
         }
         catch(IllegalArgumentException e){
-            return false;
+            System.out.println("Client already exists!");
         }
         System.out.println(client);
 
@@ -244,9 +251,10 @@ public class ImportTestsCSV {
         for (ValueRecords valueRecords : valueRecordsList)
             company.saveValueRecords(valueRecords);
 
-        Utils.showList(Company.getValueRecords(testCode), "Registered Records");
-        App.getInstance().save(test);
-        System.out.println(Arrays.toString(Company.getValueRecords(testCode).toArray()));
+        //Utils.showList(Company.getValueRecords(testCode), "Registered Records");
+        //System.out.println(Arrays.toString(Company.getValueRecords(testCode).toArray()));
+
+        app.save(new Object());
         return true;
 
     }

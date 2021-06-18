@@ -30,7 +30,7 @@ public class SpecifyTypeTestController {
     public void specifyTypeOfTest(String id, String description, String collection, Set<Category> categories) {
         TestType type = new TestType(id, description, collection, categories);
         if (validateTestType(type)) {
-            company.getTestTypes().appendTestType(type);
+            company.records.add(type);
         } else {
             //TODO catch exception on UI
             throw new IllegalArgumentException("dados introduzidos são inválidos");

@@ -12,11 +12,38 @@ public class Sample implements Serializable {
 
     private Barcode barcode;
 
-    public Sample( String code ){
-        generateBarcode(code);
+    private static String lastCode = "000000000";
+
+    public Sample(){
+        Long code = Long.parseLong(lastCode)+1;
+
+        String codeString = code.toString();
+        int length = codeString.length();
+        for(int i = 0; i < (11-length); i++)
+            codeString = "0" + codeString;
+
+        System.out.println(codeString);
+        lastCode = codeString;
+
+        generateBarcode(codeString);
     }
+
     public Sample( String code, String adapter){
         generateBarcode(code, adapter);
+    }
+
+    public Sample(String adapter){
+        Long code = Long.parseLong(lastCode)+1;
+
+        String codeString = code.toString();
+        int length = codeString.length();
+        for(int i = 0; i < (11-length); i++)
+            codeString = "0" + codeString;
+
+        System.out.println(codeString);
+        lastCode = codeString;
+
+        generateBarcode(codeString, adapter);
     }
 
 

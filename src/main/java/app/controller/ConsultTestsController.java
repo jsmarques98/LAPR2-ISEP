@@ -23,7 +23,7 @@ public class ConsultTestsController {
 
     public List<Test> clientTestsConsult() {
         List<Test> listaTestesClients = new ArrayList<>();
-        for (Test t : Company.tests) {
+        for (Test t : company.tests) {
             if(t.getTinNumber().equals(client.getTINNumber())){
                 listaTestesClients.add(t);
             }

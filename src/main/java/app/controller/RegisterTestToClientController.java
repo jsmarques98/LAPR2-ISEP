@@ -10,12 +10,7 @@ public class RegisterTestToClientController {
     public Test test;
 
     public RegisterTestToClientController() {
-        this(App.getInstance().getCompany());
-    }
-
-    public RegisterTestToClientController(Company company) {
-        this.company = company;
-        this.test = null;
+        company = App.getInstance().getCompany();
     }
 
     public boolean createTest(String tinNumber, String nhscode, String description, String idTestType , ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
@@ -28,8 +23,4 @@ public class RegisterTestToClientController {
         return this.company.saveTest(test);
     }
 
-    public boolean saveTest( Test test ) {
-        test.setTest_Reg_DateHour(new Date());
-        return this.company.saveTest(test);
-    }
 }

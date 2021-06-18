@@ -52,7 +52,7 @@ public class Client implements Serializable {
                 "name='" + name + '\'' +
                 ", CCNumber='" + CCNumber + '\'' +
                 ", NHSNumber='" + NHSNumber + '\'' +
-                ", Addres='"+ address+'\''+
+                ", Address='"+ address+'\''+
                 ", gender='"+ gender+'\''+
                 ", birthdate='" + birthdate + '\'' +
                 ", TINNumber='" + TINNumber + '\'' +

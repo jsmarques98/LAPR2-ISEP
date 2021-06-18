@@ -1,4 +1,6 @@
 package app.domain.model;
+import app.controller.App;
+
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,11 +17,7 @@ public class Test implements Serializable {
     private final String idTestType;
     private final ArrayList<String> listCodeCategory;
     private final ArrayList<String> listParameterTestCode;
-    private final List<Sample> samples;
-
-
-    //refactor this into a date later
-    private Date Test_Sample_DateHour;
+    private final ArrayList<Sample> samples;
 
     //Test_Validation_DateHour
     private Date Test_Validation_DateHour;
@@ -51,10 +49,11 @@ public class Test implements Serializable {
 
 
     private String generateID() {
-        if(Company.tests.size()==0)
+        Company company = App.getInstance().getCompany();
+        if(company.tests.size()==0)
             return String.valueOf(1);
         //look for the last id and generate the next id
-        Integer integer = Integer.parseInt(Company.tests.get(Company.tests.size()-1).getTestID())+1;
+        Integer integer = Integer.parseInt(company.tests.get(company.tests.size()-1).getTestID())+1;
 
         return String.valueOf(integer);
     }
@@ -63,12 +62,13 @@ public class Test implements Serializable {
     public boolean setTestID( String testID ){
         //System.out.println(this.testID);
         //System.out.println(testID);
+        Company company = App.getInstance().getCompany();
         if(Integer.valueOf(this.testID)<=Integer.valueOf(testID)) {
             this.testID = testID;
             return true;
         } else {
             throw new IllegalArgumentException("This test ID invalidates logical order: " + testID +
-                    ", previous id: " + Company.tests.get(Company.tests.size() - 1).getTestID());
+                    ", previous id: " + company.tests.get(company.tests.size() - 1).getTestID());
         }
     }
 
@@ -100,10 +100,6 @@ public class Test implements Serializable {
         return samples;
     }
 
-    public void setTest_Sample_DateHour(Date test_Sample_DateHour) {
-        Test_Sample_DateHour = test_Sample_DateHour;
-    }
-
     public void setTest_Validation_DateHour(Date test_Validation_DateHour) {
         Test_Validation_DateHour = test_Validation_DateHour;
     }
@@ -128,7 +124,6 @@ public class Test implements Serializable {
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
-        String Sample_DateHour = (this.Test_Sample_DateHour!=null)?sdf.format(this.Test_Sample_DateHour):"null";
         String Validation_DateHour = (this.Test_Validation_DateHour!=null)?sdf.format(this.Test_Validation_DateHour):"null";
         String Doctor_DateHour = (this.Test_Doctor_DateHour!=null)?sdf.format(this.Test_Doctor_DateHour):"null";
         String Chemical_DateHour = (this.Test_Chemical_DateHour!=null)?sdf.format(this.Test_Chemical_DateHour):"null";
@@ -143,7 +138,6 @@ public class Test implements Serializable {
                 ", listCodeCategory=" + listCodeCategory +
                 ", listParameterTestCode=" + listParameterTestCode +
                 ", samples=" + samples +
-                ", Test_Sample_DateHour=" + Sample_DateHour +
                 ", Test_Validation_DateHour=" + Validation_DateHour +
                 ", Test_Doctor_DateHour=" + Doctor_DateHour +
                 ", Test_Chemical_DateHour=" + Chemical_DateHour +

@@ -1,16 +1,10 @@
 package app.ui.console;
-//package auth.domain.model;
 
-//import app.adapter.MailAdapter;
+import app.controller.App;
 import app.controller.RegisterClientController;
-import app.domain.model.Category;
-import app.domain.model.Client;
 import app.domain.model.Company;
-import app.dto.ClientDTO;
 import app.ui.console.utils.Utils;
 import auth.domain.model.Email;
-
-import java.sql.SQLOutput;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -18,9 +12,11 @@ import java.util.regex.Pattern;
 public class RegisterClientUI implements Runnable{
 
     public RegisterClientController controller;
+    public Company company;
 
     public RegisterClientUI(){
         controller = new RegisterClientController();
+        company = App.getInstance().getCompany();
     }
 
     @Override
@@ -48,8 +44,8 @@ public class RegisterClientUI implements Runnable{
             System.out.println("Operation canceld");
         }
 
-        for (int i = 0; i < Company.clientsList.size(); i++) {
-            System.out.println(Company.clientsList.get(i));
+        for (int i = 0; i < company.clientsList.size(); i++) {
+            System.out.println(company.clientsList.get(i));
         }
     }
 

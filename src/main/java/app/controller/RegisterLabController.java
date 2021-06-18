@@ -4,33 +4,12 @@ import app.domain.model.Lab;
 
 
 public class RegisterLabController {
-/**
- * The company of RegisterLabController
- */
-    private Company company;
 
-    /**
-     * The lab of RegisterLabController
-     */
+    private Company company;
     private Lab lab;
 
-
-    /**
-     *
-     */
-
     public RegisterLabController() {
-        this(App.getInstance().getCompany());
-    }
-
-    /**
-     *Builds an instance of RegisterLabController receiving the company, the lab and the test.
-     *
-     * @param company the name of the company.
-     */
-    public RegisterLabController(Company company) {
-        this.company = company;
-        this.lab = null;
+        company = App.getInstance().getCompany();
     }
 
     /**
@@ -46,7 +25,6 @@ public class RegisterLabController {
         this.lab = this.company.registerLab(labId, name, address, phoneNr, tin);
         return this.company.validateLab(lab);
     }
-
 
     /**
      * Saves the instance of the lab created in the registerLab

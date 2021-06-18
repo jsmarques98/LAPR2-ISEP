@@ -7,14 +7,9 @@ public class RegisterClientController {
 
     private Company company;
     private Client client;
+
     public RegisterClientController() {
-        this(App.getInstance().getCompany());
-    }
-
-
-    public RegisterClientController(Company company) {
-        this.company = company;
-        this.client = null;
+       this.company = App.getInstance().getCompany();
     }
 
 

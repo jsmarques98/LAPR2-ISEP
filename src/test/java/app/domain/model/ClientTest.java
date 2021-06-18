@@ -18,7 +18,7 @@ class ClientTest {
         c1 = new Client("Manuel", "5555555555", "porto", "feminino","5555555555555555", "555555555555", "03/05/2021", "55555555555", "manel@gmail.com");
         c2 = new Client("Manuel", "5555555555","porto", "feminino", "5555555555555555", "555555555555", "03/05/2021", "55555555555", "manel@gmail.com");
         c3 = new Client("Rui", "0000000000", "porto", "feminino","0000000000000000", "555555555551", "03/06/2021", "55555555551", "manuyl@gmail.com");
-
+        c1.password = "arst";
     }
 
     @Test
@@ -39,16 +39,21 @@ class ClientTest {
         String date = "03/05/2021";
         String phoneNumber = "55555555555";
         String email = "manel@gmail.com";
+        String address = "porto";
+        String gender = "feminino";
+        String password = "arst";
 
         String str = "Client{" +
                 "name='" + name + '\'' +
                 ", CCNumber='" + cCard + '\'' +
                 ", NHSNumber='" + nhs + '\'' +
+                ", Address='"+ address+'\''+
+                ", gender='"+ gender+'\''+
                 ", birthdate='" + date + '\'' +
                 ", TINNumber='" + number + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
-                ", Password='" + ""+ '\'' +
+                ", Password='" + password + '\'' +
                 '}';
 
         assertEquals(str, c1.toString());

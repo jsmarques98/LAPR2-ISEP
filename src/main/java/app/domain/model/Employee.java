@@ -1,6 +1,8 @@
 package app.domain.model;
 
 
+import app.controller.App;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
@@ -49,7 +51,8 @@ public class Employee implements Serializable {
      * @return String com iniciais + número
      */
     public String createEmployeeId(){
-        int num = Company.employeeList.size()+1;
+        Company company = App.getInstance().getCompany();
+        int num = company.employeeList.size()+1;
         String temp = "";
         String[] arr = name.split(" ");
         for (String var : arr) {

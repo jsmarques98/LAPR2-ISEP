@@ -1,6 +1,5 @@
 package app.domain.model;
 
-import app.controller.TestTypeRecord;
 import app.domain.shared.Constants;
 import auth.AuthFacade;
 
@@ -20,11 +19,42 @@ public class Company implements Serializable {
 
     private String designation;
     private AuthFacade authFacade;
+    public List<Test> tests;
+    public List<ValueRecords> valueRecordsList;
+    public List<ParameterTest> parameterList;
+    public List<TestType> records;
+    public List<Category> categories;
+    public List<Client> clientsList;
+    //us18/19
+    //All dates from yesterday and x days ago acording to the number of historical day points
+    public List<LocalDate> dateList;
+    //Date interval chosen by admin
+    public List<LocalDate> finaldatesList;
+    public List<Lab> labList;
+    public List<Employee> employeeList;
 
 
-    public static List<Test> tests = new ArrayList<>();
+    //us3
+    public Company(String designation) {
+        if (designation.length() < 1)
+            throw new IllegalArgumentException("Designation cannot be blank.");
+        this.designation = designation;
+        this.authFacade = new AuthFacade();
+        this.valueRecordsList = new ArrayList<>();
+        this.tests = new ArrayList<>();
+        this.categories = new ArrayList<>();
+        this.clientsList =  new ArrayList<>();
+        this.parameterList = new ArrayList<>();
+        this.records = new ArrayList<>();
+        dateList = new ArrayList<>();
+        finaldatesList = new ArrayList<>();
+        labList = new ArrayList<>(1);
+        employeeList = new ArrayList<>(1);
 
-    public static List<ValueRecords> getValueRecords(String testID) {
+    }
+
+
+    public List<ValueRecords> getValueRecords(String testID) {
         ArrayList<ValueRecords> returnList = new ArrayList<>();
         for( ValueRecords valueRecords : valueRecordsList){
             if (valueRecords.getId().equals(testID))
@@ -32,8 +62,6 @@ public class Company implements Serializable {
         }
         return returnList;
     }
-
-    public static List<ValueRecords> valueRecordsList = new ArrayList<>();
 
 
     public Client getClient(String email){
@@ -52,9 +80,6 @@ public class Company implements Serializable {
         return new Category(codeCategory,codeCategory);
     }
 
-
-    public static List<ParameterTest> parameterList = new ArrayList<>();
-
     public ParameterTest getParameterTest(String code){
         for( ParameterTest parameterTest : parameterList ) {
             if (parameterTest.getCode().equals(code))
@@ -63,28 +88,6 @@ public class Company implements Serializable {
         return null;
     }
 
-
-    public static List<TestType> record;
-
-    //us9
-
-    /**
-     * Array list where the objects are going to be stored
-     */
-    public static List<Category> categories;
-
-    /**
-     * The test type record.
-     */
-    public static TestTypeRecord testTypes;
-
-    /**
-     * Get TestTypes
-     * @return
-     */
-    public static TestTypeRecord getTestTypes() {
-        return testTypes;
-    }
 
     public List<ValueRecords> getValueRecordsList() {
         return valueRecordsList;
@@ -113,7 +116,7 @@ public class Company implements Serializable {
      * @return
      */
     public boolean save(TestType testType) {
-        return testTypes.appendTestType(testType);
+        return records.add(testType);
     }
 
     public List<Test> getTests() {
@@ -128,8 +131,6 @@ public class Company implements Serializable {
         return null;
     }
 
-
-
     public List<Test> getAvailableTests() {
         ArrayList<Test> availableTests = new ArrayList<>();
         for(Test current : this.getTests())
@@ -142,8 +143,6 @@ public class Company implements Serializable {
     public boolean save(Test test){
         return this.getTests().add(test);
     }
-
-
 
 //    public boolean save(Client client) {
 //        //return false if already exists
@@ -158,17 +157,7 @@ public class Company implements Serializable {
 //
 //    }
 
-    public Company(String designation) {
-        if (designation.length() < 1)
-            throw new IllegalArgumentException("Designation cannot be blank.");
-        this.testTypes = new TestTypeRecord();
-        this.categories = new ArrayList<>();
 
-        this.designation = designation;
-        this.authFacade = new AuthFacade();
-
-        this.tests = new ArrayList<>();
-    }
 
     public String getDesignation() {
         return designation;
@@ -181,13 +170,12 @@ public class Company implements Serializable {
 
 //    us7
 
-    public static List<Employee> employeeList = new ArrayList<>(1);
 
-    public static Employee createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab) {
+    public Employee createEmloyee(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab) {
         return new Employee(role, name, address, phoneNumber, email, socCode,lab);
     }
 
-    public static Employee createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab, String indxNumber) {
+    public Employee createSpecialistDoctor(String role, String name, String address, String phoneNumber, String email, String socCode, Lab lab, String indxNumber) {
         return new SpecialistDoctor(role, name, address, phoneNumber, email, socCode, lab, indxNumber);
     }
 
@@ -208,7 +196,7 @@ public class Company implements Serializable {
         }
     }
 
-    public static void createFile(String name, String textToWrite) {
+    public void createFile(String name, String textToWrite) {
         try {
             File myObj = new File(name);
             if (myObj.createNewFile()) {
@@ -223,7 +211,7 @@ public class Company implements Serializable {
         }
     }
 
-    public static void writeFile(String name, String textToWrite) {
+    public void writeFile(String name, String textToWrite) {
         try {
             FileWriter myWriter = new FileWriter(name);
             myWriter.write(textToWrite);
@@ -236,15 +224,13 @@ public class Company implements Serializable {
         }
     }
 
-    //us3
 
-    public static List<Client> clientsList = new ArrayList<>();
 
     public List<Client> getClientsList() {
         return clientsList;
     }
 
-    public static Client createClient(String name, String TINNumber, String address, String gender, String cCard, String nhs, String date, String phoneNumber, String email) {
+    public Client createClient(String name, String TINNumber, String address, String gender, String cCard, String nhs, String date, String phoneNumber, String email) {
         return new Client(name, TINNumber, address, gender, cCard, nhs, date, phoneNumber, email);
     }
         public boolean validateClient(Client c) {
@@ -259,21 +245,10 @@ public class Company implements Serializable {
             } else {
                 authFacade.addUserWithRole(c.getName(),c.getEmail(),c.getPassword(), Constants.ROLE_CLIENT);
                 String text = "Email: " + c.getEmail() + "\nPassword: " + c.getPassword();
-                createFile(c.getName(), text);
+                createFile("clients/"+c.getName(), text);
                 return this.clientsList.add(c);
             }
         }
-
-
-
-
-
-//    us8
-
-    /**
-     * The array list where the objects of the lab are going to be stored
-     */
-    public static List<Lab> labList = new ArrayList<>(1);
 
 
     /**
@@ -304,7 +279,6 @@ public class Company implements Serializable {
         return !this.labList.contains(lab);
     }
 
-
     /**
      * Saves the object lab in the array list
      *
@@ -318,15 +292,12 @@ public class Company implements Serializable {
         return this.labList.add(lab);
     }
 
-
-
     // US14
-
    public List<Test> getTest(){
         return this.tests;
     }
 
-    public static List<Diagnosis> reportedTestsList = new ArrayList<>(1);
+    public List<Diagnosis> reportedTestsList = new ArrayList<>(1);
 
     public Diagnosis createReport(String report, Test test){
         return new Diagnosis(report, test);
@@ -347,12 +318,8 @@ public class Company implements Serializable {
         return this.reportedTestsList.add(writeRep);
     }
 
-
-
     //us4
-
-
-    public static Test createtest(String tinNumber, String nhscode, String description, String idTestType , ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
+    public Test createtest(String tinNumber, String nhscode, String description, String idTestType , ArrayList listCodeCategory, ArrayList listParameterTestCode)  {
         return new Test(tinNumber, nhscode, description, idTestType ,listCodeCategory, listParameterTestCode);
     }
 
@@ -414,13 +381,6 @@ public class Company implements Serializable {
        return availableTests;
    }
 
-   //us18/19
-
-   //All dates from yesterday and x days ago acording to the number of historical day points
-   public static List<LocalDate> dateList = new ArrayList<>();
-
-   //Date interval chosen by admin
-   public static List<LocalDate> finaldatesList = new ArrayList<>();
 
 
 }

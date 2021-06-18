@@ -1,7 +1,7 @@
 package app.ui.console;
 
+import app.controller.App;
 import app.controller.RegisterTestToClientController;
-import app.controller.TestTypeRecord;
 import app.domain.model.*;
 import app.ui.console.utils.Utils;
 import java.util.ArrayList;
@@ -9,9 +9,11 @@ import java.util.ArrayList;
 public class RegisterTestToClientUI implements Runnable{
 
     private RegisterTestToClientController controller;
+    private Company company;
 
     public RegisterTestToClientUI(){
         controller = new RegisterTestToClientController();
+        company = App.getInstance().getCompany();
     }
 
     @Override
@@ -38,15 +40,18 @@ public class RegisterTestToClientUI implements Runnable{
             System.out.println("Operation canceled");
         }
 
-        for (int i = 0; i < Company.tests.size(); i++) {
-            System.out.println(Company.tests.get(i));
+        Company company = App.getInstance().getCompany();
+
+        for (int i = 0; i < company.tests.size(); i++) {
+            System.out.println(company.tests.get(i));
         }
         }
     }
 
     private String selectTINNumber() {
+        Company company = App.getInstance().getCompany();
         String tinNumber = Utils.readLineFromConsole("Enter TIN Number (0 to cancel): ");
-        for(Client client : Company.clientsList) {
+        for(Client client : company.clientsList) {
             if (client.getTINNumber().equals(tinNumber)){
                 return client.getTINNumber();
             }
@@ -75,9 +80,9 @@ public class RegisterTestToClientUI implements Runnable{
     }
     public String selectIdTestType(){
         System.out.println("Test Type List: ");
-        System.out.println(Company.record);
+        System.out.println(company.records);
         String idTest = Utils.readLineFromConsole("Enter id Test type: ");
-        for(TestType testType : Company.getTestTypes().getRecord()) {
+        for(TestType testType : company.records) {
             if (testType.getId().equals(idTest)){
                 return idTest;
             }
@@ -87,11 +92,12 @@ public class RegisterTestToClientUI implements Runnable{
         return selectIdTestType();
     }
     private ArrayList selectCodeCategory(String idTestType) {
+        Company company = App.getInstance().getCompany();
         ArrayList codeCategoryList = new ArrayList();
         String codeCategory = "";
         boolean flag1 = false;
         System.out.println("\nCodeCategory List: ");
-        for(TestType testType : Company.record) {
+        for(TestType testType : company.records) {
             if(testType.getId().equals(idTestType)){
                 System.out.println(testType.getCategories());
             }
@@ -119,16 +125,17 @@ public class RegisterTestToClientUI implements Runnable{
 
 
     private ArrayList selectParameterTestCode() {
+        Company company = App.getInstance().getCompany();
         ArrayList parameterTestCodeList = new ArrayList();
         String parameterTestCode = "";
         boolean flag1 = false;
         System.out.println("\nParameter Test List: ");
-        for(ParameterTest parameterTest : Company.parameterList) {
+        for(ParameterTest parameterTest : company.parameterList) {
             System.out.println(parameterTest.toString());
         }
         while(!parameterTestCode.equals("0")){
             parameterTestCode = Utils.readLineFromConsole("Enter Parameter Test Code or 0 to exit: ");
-            for(ParameterTest parameterTest : Company.parameterList) {
+            for(ParameterTest parameterTest : company.parameterList) {
                 if(parameterTest.getCode().equals(parameterTestCode)){
                     if(!parameterTestCodeList.contains(parameterTestCode)){
                         parameterTestCodeList.add(parameterTest.getCode());

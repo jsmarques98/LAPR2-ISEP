@@ -23,7 +23,7 @@ public class ViewTestResultsController {
 
     public List<Test> clientTests() {
         List<Test> listaTestesClients = new ArrayList<>();
-        for (Test t : Company.tests) {
+        for (Test t : company.tests) {
             if(t.getTinNumber().equals(clientSignedIn().getTINNumber())){
                 listaTestesClients.add(t);
             }
@@ -37,7 +37,7 @@ public class ViewTestResultsController {
         Email email = App.getInstance().getCurrentUserSession().getUserId();
         UserSession currentSession = authFacade.getCurrentUserSession();
 
-        for (Client c : Company.clientsList) {
+        for (Client c : company.clientsList) {
             if (email.getEmail().equals(c.getEmail())) {
                 return c;
             }

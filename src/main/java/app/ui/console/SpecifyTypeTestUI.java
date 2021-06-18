@@ -63,6 +63,6 @@ public class SpecifyTypeTestUI implements Runnable {
         }else{
             System.out.println("The test type was not created.");
         }
-        System.out.println(company.getTestTypes().getRecord());
+        System.out.println(company.records);
     }
 }

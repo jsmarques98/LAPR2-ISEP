@@ -16,7 +16,6 @@ public class ValidationController {
    }
 
     public List<Test> getdata(){
-    company.getTestsWhitSamples();
     return company.getTestsWhitSamples();
     }
 

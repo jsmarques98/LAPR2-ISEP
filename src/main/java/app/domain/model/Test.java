@@ -120,6 +120,9 @@ public class Test implements Serializable {
         Test_Reg_DateHour = test_Reg_DateHour;
     }
 
+    public String toStringIdTest(){
+        return "Test ID: " + testID;
+    }
 
     @Override
     public String toString() {

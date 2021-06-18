@@ -7,6 +7,7 @@ import auth.domain.model.Email;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ViewTestResultsUI implements Runnable {
 
@@ -19,16 +20,19 @@ public class ViewTestResultsUI implements Runnable {
 
     @Override
     public void run() {
-        Email email = App.getInstance().getCurrentUserSession().getUserId();
+
+        Scanner sc = new Scanner(System.in);
         List<Test> lista = new ArrayList<>();
         lista = controller.clientTests();
         if(lista.isEmpty()){
-            System.out.println("nao ha testes ");
+            System.out.println("Não há testes associados a este cliente.");
         }else {
             for (Test t : lista) {
-                System.out.println(t);
+                System.out.println(t.toStringIdTest());
             }
+            System.out.println("Escolha o teste que quer visualizar:");
+            int option = sc.nextInt();
+            System.out.println(lista.get(option-1));
         }
-
     }
 }

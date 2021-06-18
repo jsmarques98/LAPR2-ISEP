@@ -164,4 +164,15 @@ public class Test implements Serializable, Comparable {
             return 0;
 
     }
+    public Date getTest_Validation_DateHour() {
+        return Test_Validation_DateHour;
+    }
+
+    public Date getTest_Doctor_DateHour() {
+        return Test_Doctor_DateHour;
+    }
+
+    public Date getTest_Chemical_DateHour() {
+        return Test_Chemical_DateHour;
+    }
 }

@@ -32,6 +32,7 @@ public class Company implements Serializable {
     public List<LocalDate> finaldatesList;
     public List<Lab> labList;
     public List<Employee> employeeList;
+    public List<Diagnosis> reportedTestsList;
 
 
     //us3
@@ -50,6 +51,7 @@ public class Company implements Serializable {
         finaldatesList = new ArrayList<>();
         labList = new ArrayList<>(1);
         employeeList = new ArrayList<>(1);
+        reportedTestsList = new ArrayList<>(1);
 
     }
 
@@ -143,21 +145,6 @@ public class Company implements Serializable {
     public boolean save(Test test){
         return this.getTests().add(test);
     }
-
-//    public boolean save(Client client) {
-//        //return false if already exists
-//        if(clientsList.contains(client)){
-//            return false;
-//        }
-//        else{
-//
-//            clientsList.add(client);
-//            return true;
-//        }
-//
-//    }
-
-
 
     public String getDesignation() {
         return designation;
@@ -297,8 +284,6 @@ public class Company implements Serializable {
         return this.tests;
     }
 
-    public List<Diagnosis> reportedTestsList = new ArrayList<>(1);
-
     public Diagnosis createReport(String report, Test test){
         return new Diagnosis(report, test);
     }
@@ -380,6 +365,18 @@ public class Company implements Serializable {
                availableTests.add(current);
        return availableTests;
    }
+
+    public List<Test> getTestsToValidate() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getTest_Chemical_DateHour()!=null &&
+            current.getTest_Doctor_DateHour()!=null &&
+            current.getTest_Reg_DateHour() != null &&
+            current.getTest_Validation_DateHour() == null)
+                availableTests.add(current);
+        return availableTests;
+    }
+
 
 
 

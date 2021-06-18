@@ -12,7 +12,7 @@ public class Diagnosis implements Serializable {
     /**
      * The test we are going to grab the results to do the report
      */
-    private final transient Test test;
+    private final Test test;
 
     public Test getTest() {
         return test;

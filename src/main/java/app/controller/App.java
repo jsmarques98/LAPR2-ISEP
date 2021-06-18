@@ -179,12 +179,12 @@ public class App {
         company.parameterList.add(parameterTest9);
 
 
-        Client c1 = new Client("Pedro","5555555555","Porto","M", "555555555555", "555555555555","03/05/2021","55555555555","pedro@gmail.com");
-        Client c2 = new Client("Joao","9999999999","Lisboa", "M", "9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
-        Client c3 = new Client("Rui","0000000000","Faro", "M", "0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
-        company.clientsList.add(c1);
-        company.clientsList.add(c2);
-        company.clientsList.add(c3);
+        //Client c1 = new Client("Pedro","5555555555","Porto","M", "555555555555", "555555555555","03/05/2021","55555555555","pedro@gmail.com");
+        //Client c2 = new Client("Joao","9999999999","Lisboa", "M", "9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
+        //Client c3 = new Client("Rui","0000000000","Faro", "M", "0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
+        //company.clientsList.add(c1);
+        //company.clientsList.add(c2);
+        //company.clientsList.add(c3);
 
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
@@ -193,7 +193,6 @@ public class App {
         this.authFacade.addUserWithRole("specialist doctor", "specdoc@lei.sem2.pt", "123456", Constants.ROLE_SEPECIALIST_DOCTOR);
         this.authFacade.addUserWithRole("laboratory coordinator", "labcord@gmail.com", "123456", Constants.ROLE_LABORATORY_COORDINATOR);
         this.authFacade.addUserWithRole("mlt", "mlt@lei.sem2.pt", "123456", Constants.ROLE_MEDICAL_LAB_TECHNICIAN);
-        //csv/tests_Blood100.csv
 
         ArrayList listCat;
         ArrayList listPara;

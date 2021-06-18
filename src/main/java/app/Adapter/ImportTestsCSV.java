@@ -253,8 +253,6 @@ public class ImportTestsCSV {
 
         //Utils.showList(Company.getValueRecords(testCode), "Registered Records");
         //System.out.println(Arrays.toString(Company.getValueRecords(testCode).toArray()));
-
-        app.save(new Object());
         return true;
 
     }

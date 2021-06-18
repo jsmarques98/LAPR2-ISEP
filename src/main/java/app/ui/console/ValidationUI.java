@@ -1,14 +1,11 @@
 package app.ui.console;
 
 import app.controller.App;
-import app.controller.RecordTestResultsController;
-import app.controller.RegisterLabController;
 import app.controller.ValidationController;
 import app.controller.utils.FileUtil;
 import app.domain.model.Company;
+import app.domain.model.Test;
 import app.ui.console.utils.Utils;
-
-import java.util.Scanner;
 
 public class ValidationUI implements Runnable{
 
@@ -23,22 +20,17 @@ public class ValidationUI implements Runnable{
     }
 
     public void run(){
-        int i;
-        for(i = 0; i< company.reportedTestsList.size(); i++){
-            System.out.println(company.reportedTestsList.get(i));
-        }
 
-        int j;
-        for( j = 0; j< company.valueRecordsList.size(); j++){
-            System.out.println(company.valueRecordsList.get(i));
-        }
+        Test test = (Test)Utils.showAndSelectOne(company.getTestsToValidate(),"test");
+
+        Utils.showList(company.getValueRecords(test.getTestID()),"valueRecords");
 
 
         System.out.println("Do you validate the reports and the values of tests?(yes/no)");
 
 
         if(Utils.confirm()) {
-            controller.validate(company.reportedTestsList.get(i).getTest());
+            controller.validate(test);
             fileutil.createFile("./results/emailAndSMSMessages.txt");
             fileutil.writeFile("Your tests are now available in the app!");
         } else {

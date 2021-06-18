@@ -20,7 +20,7 @@ public class ValidationController {
     }
 
     public void validate(Test test){
-       test.setTest_Doctor_DateHour(new Date());
+       test.setTest_Validation_DateHour(new Date());
     }
 
 

@@ -2,13 +2,12 @@ package app.domain.model;
 import app.controller.App;
 
 import java.io.Serializable;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Test implements Serializable {
+public class Test implements Serializable, Comparable {
 
     private String testID;
     private final String tinNumber;
@@ -72,6 +71,7 @@ public class Test implements Serializable {
         }
     }
 
+
     public String getTestID() {
         return testID;
     }
@@ -100,6 +100,10 @@ public class Test implements Serializable {
         return samples;
     }
 
+    public Date getTest_Reg_DateHour() {
+        return Test_Reg_DateHour;
+    }
+
     public void setTest_Validation_DateHour(Date test_Validation_DateHour) {
         Test_Validation_DateHour = test_Validation_DateHour;
     }
@@ -116,18 +120,20 @@ public class Test implements Serializable {
         Test_Reg_DateHour = test_Reg_DateHour;
     }
 
-    public String toStringIdTest(){
-        return "Test ID: " + testID;
+    public String toStringIdTest() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        String Reg_DateHour = (this.Test_Reg_DateHour != null) ? sdf.format(this.Test_Reg_DateHour) : "null";
+        return "Test ID: " + testID + " | Date: " + Reg_DateHour;
     }
 
     @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
-        String Validation_DateHour = (this.Test_Validation_DateHour!=null)?sdf.format(this.Test_Validation_DateHour):"null";
-        String Doctor_DateHour = (this.Test_Doctor_DateHour!=null)?sdf.format(this.Test_Doctor_DateHour):"null";
-        String Chemical_DateHour = (this.Test_Chemical_DateHour!=null)?sdf.format(this.Test_Chemical_DateHour):"null";
-        String Reg_DateHour = (this.Test_Reg_DateHour!=null)?sdf.format(this.Test_Reg_DateHour):"null";
+        String Validation_DateHour = (this.Test_Validation_DateHour != null) ? sdf.format(this.Test_Validation_DateHour) : "null";
+        String Doctor_DateHour = (this.Test_Doctor_DateHour != null) ? sdf.format(this.Test_Doctor_DateHour) : "null";
+        String Chemical_DateHour = (this.Test_Chemical_DateHour != null) ? sdf.format(this.Test_Chemical_DateHour) : "null";
+        String Reg_DateHour = (this.Test_Reg_DateHour != null) ? sdf.format(this.Test_Reg_DateHour) : "null";
 
         return "Test{" +
                 "testID='" + testID + '\'' +
@@ -143,5 +149,19 @@ public class Test implements Serializable {
                 ", Test_Chemical_DateHour=" + Chemical_DateHour +
                 ", Test_Reg_DateHour=" + Reg_DateHour +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object test) {
+        Date date1 = this.Test_Reg_DateHour;
+        Date date2 = ((Test) test).Test_Reg_DateHour;
+
+        if (date1.before(date2))
+            return -1;
+        else if (date1.after(date2))
+            return 1;
+        else
+            return 0;
+
     }
 }

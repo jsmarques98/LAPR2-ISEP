@@ -1,1 +1,6 @@
 /target/
+/barcodes/
+/csv/
+/clients/
+/log/
+/data/

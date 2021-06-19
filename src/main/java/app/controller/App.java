@@ -179,12 +179,12 @@ public class App {
         company.parameterList.add(parameterTest9);
 
 
-        //Client c1 = new Client("Pedro","5555555555","Porto","M", "555555555555", "555555555555","03/05/2021","55555555555","pedro@gmail.com");
-        //Client c2 = new Client("Joao","9999999999","Lisboa", "M", "9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
-        //Client c3 = new Client("Rui","0000000000","Faro", "M", "0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
-        //company.clientsList.add(c1);
-        //company.clientsList.add(c2);
-        //company.clientsList.add(c3);
+//        Client c1 = new Client("Pedro","5555555555","Porto","M", "555555555555", "555555555555","03/05/2021","55555555555","pedro@gmail.com");
+//        Client c2 = new Client("Joao","9999999999","Lisboa", "M", "9999999999999999","555555555555","03/05/2021","55555555555","manel@gmail.com");
+//        Client c3 = new Client("Rui","1000000000","Faro", "M", "0000000000000000","555555555555","03/05/2021","55555555555","manel@gmail.com");
+//        company.clientsList.add(c1);
+//        company.clientsList.add(c2);
+//        company.clientsList.add(c3);
 
         //Apenas para testar
         this.authFacade.addUserWithRole("Maria", "maria@gmail.com", "123456", Constants.ROLE_RECEPTIONIST);
@@ -284,12 +284,12 @@ public class App {
         Set<Category> listCat2 = new TreeSet<Category>();
         listCat2.add(category4);
         listCat2.add(category5);
-//
-        TestType t1 = new TestType("12345","desc1","colect1",listCat1);
-        TestType t2 = new TestType("54321","desc2","colect2",listCat2);
+//      TestType t1 = new TestType("12345","desc1","colect1",listCat1);
+//        TestType t2 = new TestType("54321","desc2","colect2",listCat2);
         Company.record.add(t1);
         Company.record.add(t2);
 */
+
 
     }
 

@@ -27,11 +27,15 @@ public class ConsultTestsUI implements Runnable {
         listaC = controller.clientsList();
         System.out.println("How do you want to sort the clients list? (NAME or TIN)");
         String option = sc.nextLine();
-        if (option.equals("NAME")) {
-            algorithms.showNameList(listaC);
+        if (listaC.isEmpty()) {
+            System.out.println("No clients registered in the system.");
         } else {
-            if (option.equals("TIN")) {
-                algorithms.showTINList(listaC);
+            if (option.equals("NAME")) {
+                algorithms.showNameList(listaC);
+            } else {
+                if (option.equals("TIN")) {
+                    algorithms.showTINList(listaC);
+                }
             }
 //        if(listaC.isEmpty()){
 //            System.out.println("Não há clientes registados.");
@@ -39,18 +43,19 @@ public class ConsultTestsUI implements Runnable {
 //            for (Client c : listaC ) {
 //                System.out.println(c.toString());
 //            }
-            System.out.println("\nChoose the client:");
-            int option1 = sc.nextInt();
-            Client c = listaC.get(option1 - 1);
-            List<Test> lista = new ArrayList<>();
-            lista = controller.clientTestsConsult(c);
-            if (lista.isEmpty()) {
-                System.out.println("There are no tests associated to that client.");
-            } else {
-                for (Test t : lista) {
-                    System.out.println(t);
+                System.out.println("\nChoose the client:");
+                int option1 = sc.nextInt();
+                Client c = listaC.get(option1 - 1);
+                List<Test> lista = new ArrayList<>();
+                lista = controller.clientTestsConsult(c);
+                if (lista.isEmpty()) {
+                    System.out.println("There are no tests associated to that client.");
+                } else {
+                    for (Test t : lista) {
+                        System.out.println(t);
+                    }
                 }
             }
-        }
+
     }
 }

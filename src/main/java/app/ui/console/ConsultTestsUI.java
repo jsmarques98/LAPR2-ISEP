@@ -4,6 +4,7 @@ import app.controller.ConsultTestsController;
 import app.domain.model.Client;
 import app.domain.model.Test;
 import app.Adapter.SortClientsAlgorithms;
+import app.domain.model.ValueRecords;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +31,10 @@ public class ConsultTestsUI implements Runnable {
         if (listaC.isEmpty()) {
             System.out.println("No clients registered in the system.");
         } else {
-            if (option.equals("NAME")) {
+            if (option.equalsIgnoreCase("NAME")) {
                 algorithms.showNameList(listaC);
             } else {
-                if (option.equals("TIN")) {
+                if (option.equalsIgnoreCase("TIN")) {
                     algorithms.showTINList(listaC);
                 }
             }
@@ -41,6 +42,7 @@ public class ConsultTestsUI implements Runnable {
             int option1 = sc.nextInt();
             Client c = listaC.get(option1 - 1);
             List<Test> lista = new ArrayList<>();
+            List<ValueRecords> listaValueRecords= new ArrayList<>();
             lista = controller.clientTestsConsult(c);
             if (lista.isEmpty()) {
                 System.out.println("There are no tests associated to that client.");
@@ -51,7 +53,11 @@ public class ConsultTestsUI implements Runnable {
                 System.out.println("\n Choose the test you want to analyze: ");
                 int option2 = sc.nextInt();
                 Test t = lista.get(option2-1);
-                System.out.println(t.toString());
+                listaValueRecords = controller.valueRecords(t);
+                System.out.println(t);
+                for (ValueRecords v : listaValueRecords ) {
+                    System.out.println(v);
+                }
             }
         }
     }

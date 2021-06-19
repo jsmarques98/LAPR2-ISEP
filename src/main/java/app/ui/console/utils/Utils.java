@@ -5,6 +5,10 @@ import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -176,6 +180,12 @@ public class Utils {
             return false;
         }
         return true;
+    }
+
+    public static Date localDateToDate(LocalDate d) {
+        ZonedDateTime zdt = d.atStartOfDay(ZoneId.systemDefault());
+        Instant instant = zdt.toInstant();
+        return Date.from(instant);
     }
 
 }

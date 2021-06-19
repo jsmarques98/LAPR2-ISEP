@@ -22,9 +22,16 @@ class ViewTestResultsControllerTest {
 
     @Test
     void clientTests() {
+        ctrl = new ViewTestResultsController();
     }
 
     @Test
     void clientSignedIn() {
+        ctrl = new ViewTestResultsController();
+    }
+
+    @Test
+    void valueRecords(){
+        ctrl = new ViewTestResultsController();
     }
 }

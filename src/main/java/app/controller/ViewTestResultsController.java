@@ -29,7 +29,6 @@ public class ViewTestResultsController {
                 listaTestesClients.add(t);
             }
         }
-
         return listaTestesClients;
     }
 

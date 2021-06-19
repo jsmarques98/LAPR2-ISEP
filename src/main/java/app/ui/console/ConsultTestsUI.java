@@ -37,25 +37,22 @@ public class ConsultTestsUI implements Runnable {
                     algorithms.showTINList(listaC);
                 }
             }
-//        if(listaC.isEmpty()){
-//            System.out.println("Não há clientes registados.");
-//        }else{
-//            for (Client c : listaC ) {
-//                System.out.println(c.toString());
-//            }
-                System.out.println("\nChoose the client:");
-                int option1 = sc.nextInt();
-                Client c = listaC.get(option1 - 1);
-                List<Test> lista = new ArrayList<>();
-                lista = controller.clientTestsConsult(c);
-                if (lista.isEmpty()) {
-                    System.out.println("There are no tests associated to that client.");
-                } else {
-                    for (Test t : lista) {
-                        System.out.println(t);
-                    }
+            System.out.println("\nChoose the client:");
+            int option1 = sc.nextInt();
+            Client c = listaC.get(option1 - 1);
+            List<Test> lista = new ArrayList<>();
+            lista = controller.clientTestsConsult(c);
+            if (lista.isEmpty()) {
+                System.out.println("There are no tests associated to that client.");
+            } else {
+                for (Test t : lista) {
+                    System.out.println(t.toStringIdTest());
                 }
+                System.out.println("\n Choose the test you want to analyze: ");
+                int option2 = sc.nextInt();
+                Test t = lista.get(option2-1);
+                System.out.println(t.toString());
             }
-
+        }
     }
 }

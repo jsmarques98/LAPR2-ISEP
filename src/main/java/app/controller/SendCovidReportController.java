@@ -6,13 +6,8 @@ import app.domain.model.ValueRecords;
 import app.domain.shared.Constants;
 import app.ui.console.utils.Utils;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class SendCovidReportController {

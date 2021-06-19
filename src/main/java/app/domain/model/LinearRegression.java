@@ -16,6 +16,8 @@ public class LinearRegression {
         private final double intercept, slope;
         private final double r2;
         private final double svar0, svar1;
+        private final double xbar;
+        private final double xxbar;
 
         /**
          * Performs a linear regression on the data points (y[i], x[i]).
@@ -25,6 +27,7 @@ public class LinearRegression {
          * @throws IllegalArgumentException if the lengths of the two arrays are not equal
          */
         public LinearRegression(double[] x, double[] y) {
+            double xxbar1;
             if (x.length != y.length) {
                 throw new IllegalArgumentException("array lengths are not equal");
             }
@@ -37,16 +40,18 @@ public class LinearRegression {
                 sumx2 += x[i]*x[i];
                 sumy  += y[i];
             }
-            double xbar = sumx / n;
+            xbar = sumx / n;
             double ybar = sumy / n;
 
             // second pass: compute summary statistics
-            double xxbar = 0.0, yybar = 0.0, xybar = 0.0;
+            xxbar1 = 0.0;
+            double yybar = 0.0, xybar = 0.0;
             for (int i = 0; i < n; i++) {
-                xxbar += (x[i] - xbar) * (x[i] - xbar);
+                xxbar1 += (x[i] - xbar) * (x[i] - xbar);
                 yybar += (y[i] - ybar) * (y[i] - ybar);
                 xybar += (x[i] - xbar) * (y[i] - ybar);
             }
+            xxbar = xxbar1;
             slope  = xybar / xxbar;
             intercept = ybar - slope * xbar;
 
@@ -123,6 +128,10 @@ public class LinearRegression {
         public double predict(double x) {
             return slope*x + intercept;
         }
+
+        public double averageX(){return xbar;}
+
+        public double sumX(){return xxbar;}
 
         /**
          * Returns a string representation of the simple linear regression model.

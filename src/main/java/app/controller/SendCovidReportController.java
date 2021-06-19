@@ -28,12 +28,17 @@ public class SendCovidReportController {
     public void regressionMenu() {
         System.out.println("What regression do you want to choose?\n1- Simple linear regression model.\n2- Multilinear regression model.");
         int op = Utils.readIntegerFromConsole("Select the option number:");
+        // For an interval of dates given by admin
         double[] covidTestsInterval = new double[company.finaldatesList.size()];
         double[] covidPositiveTestsInterval = new double[company.finaldatesList.size()];
+        // For all x given Historical points
         double[] covidPositiveTestsTotal = new double[company.dateList.size()];
+
+        double[][] intrevaloPrevisao = new double[company.dateList.size()][2];
+
         switch(op) {
             case 1:
-                simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal);
+                simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, intrevaloPrevisao);
                 break;
             case 2:
 
@@ -44,10 +49,11 @@ public class SendCovidReportController {
         }
     }
 
-    private void simpleRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidPositiveTestsTotal) {
+    private void simpleRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao) {
         System.out.println("Choose the independent variable:\n1- Number of tests.\n2- Mean age.");
         int op = Utils.readIntegerFromConsole("Select the option number:");
         Double confidenceValue = Utils.readDoubleFromConsole("Enter the confidence level value: ");
+        Double tc = (1-confidenceValue/100)/2;
         String parameter;
         do {
             parameter = Utils.readLineFromConsole("Select witch parameter you want to analyzed (A/B): ");
@@ -58,17 +64,24 @@ public class SendCovidReportController {
                 totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
                 totalPositiveCases(covidPositiveTestsTotal);
                 printTotals(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal);
+
                 LinearRegression lr = new LinearRegression(covidTestsInterval, covidPositiveTestsInterval);
                 String equacaoReta = ("Y = " + lr.intercept() + " + " + lr.slope() + " * X");
                 String coeficienteDeterminacao = String.valueOf(lr.R2());
-                System.out.println(equacaoReta + "\nR2: " + coeficienteDeterminacao);
+
+                intrevaloPrevisao = intervaloPrevisao(intrevaloPrevisao, covidTestsInterval, lr, covidPositiveTestsTotal, tc);
+                for (int i = 0; i < intrevaloPrevisao.length; i++) {
+                    System.out.println("\n" + i + ": " + intrevaloPrevisao[i][0]);
+                    System.out.println(i + ": " + intrevaloPrevisao[i][1] + "\n");
+                }
+
+                testeHipotese(covidTestsInterval, parameter, lr, tc);
                 break;
             case 2:
-
                 break;
             default:
                 System.out.println("Option not found");
-                simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal);
+                simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, intrevaloPrevisao);
         }
     }
 
@@ -112,17 +125,43 @@ public class SendCovidReportController {
     private void printTotals(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidPositiveTestsTotal) {
         LocalDate date1 = company.finaldatesList.get(0);
         LocalDate date2 = company.dateList.get(0);
-        System.out.println("Total de testes de Covid: ");
+        System.out.println("Total of Covid cases: ");
         for (int i = 0; i < covidTestsInterval.length; i++) {
-            System.out.println("No dia " + date1.plusDays(i) + " houveram " + covidTestsInterval[i] + " total de testes de Covid");
-            System.out.println("Sendo que " + covidPositiveTestsInterval[i] + " foram positivos");
+            System.out.println("On day " + date1.plusDays(i) + " ----> " + covidTestsInterval[i] + " total of Covid tests");
+            System.out.println("Knowing that " + covidPositiveTestsInterval[i] + " of them were positives");
         }
-        System.out.println("Total de testes Positivos: ");
+        System.out.println("Total of positives tests: ");
         for (int i = 0; i < covidPositiveTestsTotal.length; i++) {
-            System.out.println("No dia " + date2.plusDays(i) + " houveram " + covidPositiveTestsTotal[i] + " total de casos positivos");
+            System.out.println("On day " + date2.plusDays(i) + " ----> " + covidPositiveTestsTotal[i] + " total of positive cases");
         }
     }
 
+    private double[][] intervaloPrevisao(double[][] intrevaloPrevisao, double[] covidTestsInterval, LinearRegression lr, double[] covidPositiveTestsTotal, Double tc) {
+        for (int i = 0; i < intrevaloPrevisao.length; i++) {
+            intrevaloPrevisao[i][0] = covidPositiveTestsTotal[i]-tc*Math.sqrt(1+1/covidTestsInterval.length+ Math.pow(-lr.averageX(),2)/lr.sumX());
+            intrevaloPrevisao[i][1] = covidPositiveTestsTotal[i]+tc*Math.sqrt(1+1/covidTestsInterval.length+ Math.pow(-lr.averageX(),2)/lr.sumX());
+        }
+        return intrevaloPrevisao;
+    }
 
+    private void testeHipotese(double[] covidTestsInterval, String parameter, LinearRegression lr, Double tc) {
+        if(parameter.equalsIgnoreCase("A")){
+            Double ta = lr.intercept()/Math.sqrt(1/covidTestsInterval.length+Math.pow(lr.averageX(),2)/lr.sumX());
+            if(ta > tc)
+                anova();
+            else
+                System.out.println("Inconclusive test");
+        }else{
+            Double tb = lr.slope()/Math.sqrt(lr.sumX());
+            if(tb > tc)
+                anova();
+            else
+                System.out.println("Inconclusive test");
+        }
+
+    }
+
+    private void anova() {
+    }
 
 }

@@ -1,7 +1,6 @@
 package app.ui.console.utils;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -188,4 +187,31 @@ public class Utils {
         return Date.from(instant);
     }
 
+    public static void createFile(String name, String textToWrite) {
+        try {
+            File myObj = new File(name);
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+                writeFile(name, textToWrite);
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeFile(String name, String textToWrite) {
+        try {
+            FileWriter myWriter = new FileWriter(name);
+            myWriter.write(textToWrite);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
 }

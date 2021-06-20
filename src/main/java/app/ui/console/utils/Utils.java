@@ -1,10 +1,13 @@
 package app.ui.console.utils;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -177,5 +180,56 @@ public class Utils {
         }
         return true;
     }
+
+    public static Date localDateToDate(LocalDate d) {
+        ZonedDateTime zdt = d.atStartOfDay(ZoneId.systemDefault());
+        Instant instant = zdt.toInstant();
+        return Date.from(instant);
+    }
+
+    public static void createFile(String name, String textToWrite) {
+        try {
+            File myObj = new File(name);
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+                writeFile(name, textToWrite);
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeFile(String name, String textToWrite) {
+        try {
+            FileWriter myWriter = new FileWriter(name);
+            myWriter.write(textToWrite);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public static String[] convertDoubleToStringArr(double[] arr){
+        String[] str = new String[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            str[i] = String.valueOf(arr[i]);
+        }
+        return str;
+    }
+    public static String[][] convertDoubleToStringArr2(double[][] arr){
+        String[][] str = new String[arr.length][2];
+        for (int i = 0; i < arr.length; i++) {
+            str[i][0] = String.valueOf(arr[i][0]);
+            str[i][1] = String.valueOf(arr[i][1]);
+        }
+        return str;
+    }
+
 
 }

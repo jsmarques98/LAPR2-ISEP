@@ -40,8 +40,6 @@ public class SendCovidReportUI implements Runnable{
             company.finaldatesList.add(initialDate.plusDays(i));
         }
 
-        System.out.println(company.finaldatesList.toString() + "\n");
-
         controller.regressionMenu();
 
     }

@@ -1,6 +1,7 @@
 package app.domain.model;
 
 import app.domain.shared.Constants;
+import app.ui.console.utils.Utils;
 import auth.AuthFacade;
 
 
@@ -178,42 +179,11 @@ public class Company implements Serializable {
             return false;
         } else {
             String text = "Email: " + e.getEmail() + "\nPassword: " + e.getPassword();
-            createFile(e.getId(), text);
+            Utils.createFile(e.getId(), text);
             authFacade.addUserWithRole(e.getName(),e.getEmail(),e.getPassword(),e.getRoleId());
             return this.employeeList.add(e);
         }
     }
-
-    public void createFile(String name, String textToWrite) {
-        try {
-            File myObj = new File(name);
-            if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
-                writeFile(name, textToWrite);
-            } else {
-                System.out.println("File already exists.");
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-    }
-
-    public void writeFile(String name, String textToWrite) {
-        try {
-            FileWriter myWriter = new FileWriter(name);
-            myWriter.write(textToWrite);
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-    }
-
-
-
     public List<Client> getClientsList() {
         return clientsList;
     }
@@ -233,7 +203,7 @@ public class Company implements Serializable {
             } else {
                 authFacade.addUserWithRole(c.getName(),c.getEmail(),c.getPassword(), Constants.ROLE_CLIENT);
                 String text = "Email: " + c.getEmail() + "\nPassword: " + c.getPassword();
-                createFile("clients/"+c.getName(), text);
+                Utils.createFile("clients/"+c.getName(), text);
                 return this.clientsList.add(c);
             }
         }
@@ -367,7 +337,7 @@ public class Company implements Serializable {
        return availableTests;
    }
 
-    public List<Test> getTestsToValidate() {
+    public List<Test> getTestsWaitingValidation() {
         ArrayList<Test> availableTests = new ArrayList<>();
         for(Test current : this.getTests())
             if(current.getTest_Chemical_DateHour()!=null &&
@@ -378,8 +348,38 @@ public class Company implements Serializable {
         return availableTests;
     }
 
+    public List<Test> getTestsWaitingResults() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getTest_Chemical_DateHour()!=null &&
+                    current.getTest_Doctor_DateHour()!=null &&
+                    current.getTest_Reg_DateHour() != null &&
+                    current.getTest_Validation_DateHour() == null)
+                availableTests.add(current);
+        return availableTests;
+    }
 
+    public List<Test> getTestsWaitingDiagnosis() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getTest_Chemical_DateHour()!=null &&
+                    current.getTest_Doctor_DateHour() ==null &&
+                    current.getTest_Reg_DateHour() != null &&
+                    current.getTest_Validation_DateHour() == null)
+                availableTests.add(current);
+        return availableTests;
+    }
 
+    public List<Test> getTestsValidated() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getTest_Chemical_DateHour()!=null &&
+                    current.getTest_Doctor_DateHour() !=null &&
+                    current.getTest_Reg_DateHour() != null &&
+                    current.getTest_Validation_DateHour() != null)
+                availableTests.add(current);
+        return availableTests;
+    }
 
 }
 

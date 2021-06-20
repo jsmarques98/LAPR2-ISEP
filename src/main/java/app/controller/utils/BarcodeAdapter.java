@@ -1,5 +1,6 @@
-package app.Adapter;
+package app.controller.utils;
 
+import app.Adapter.BarcodeInterface;
 import net.sourceforge.barbecue.Barcode;
 import net.sourceforge.barbecue.BarcodeException;
 import net.sourceforge.barbecue.BarcodeFactory;

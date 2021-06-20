@@ -1,4 +1,4 @@
-package app.Adapter;
+package app.controller.utils;
 
 import app.controller.App;
 import app.controller.RegisterTestToClientController;
@@ -229,9 +229,6 @@ public class ImportTestsCSV {
             }
         } catch (ParseException e) {
             e.printStackTrace();
-            double arst = 0;
-            double pqwf = 0;
-            double stdh = arst/pqwf;
         }
 
 

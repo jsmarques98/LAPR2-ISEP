@@ -1,12 +1,6 @@
 package app.domain.model;
 
-import app.Adapter.ImportTestsCSV;
-import app.controller.App;
-import app.ui.console.utils.Utils;
 import org.junit.jupiter.api.Test;
-
-import java.io.FileNotFoundException;
-import java.security.InvalidParameterException;
 
 public class importTest {
 

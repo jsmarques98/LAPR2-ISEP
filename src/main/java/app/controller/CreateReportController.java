@@ -5,6 +5,7 @@ import app.domain.model.Diagnosis;
 import app.domain.model.Test;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class CreateReportController implements Serializable {
 
@@ -39,6 +40,7 @@ public class CreateReportController implements Serializable {
      */
      public boolean createReport(String report, Test test) {
         this.writeRep = this.company.createReport(report, test);
+        test.setTest_Doctor_DateHour(new Date());
         return this.company.validateReport(writeRep);
      }
 

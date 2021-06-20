@@ -1,12 +1,11 @@
 package app.domain.model;
 
 import app.Adapter.BarcodeInterface;
-import app.Adapter.ReflectorUtility;
+import app.controller.utils.ReflectorUtility;
 import app.controller.App;
 import net.sourceforge.barbecue.Barcode;
 
 import java.io.Serializable;
-import java.lang.reflect.InvocationTargetException;
 
 public class Sample implements Serializable {
 

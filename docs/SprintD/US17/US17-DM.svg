@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="663px" preserveAspectRatio="none" style="width:206px;height:663px;" version="1.1" viewBox="0 0 206 663" width="206px" zoomAndPan="magnify"><defs><filter height="300%" id="f1gq7qs2mt9856" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f1gq7qs2mt9856)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="80" x="7" y="13"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="20.5" y="26.1481">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="86" y1="31.4001" y2="31.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="39.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="54" x="27" y="44.6901">designation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="51.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="37" x="27" y="56.6901">address</text><rect fill="#FEFECE" filter="url(#f1gq7qs2mt9856)" height="62.4001" style="stroke:#A80036;stroke-width:1.5;" width="70" x="122" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="26" x="144" y="20.1481">User</text><line style="stroke:#A80036;stroke-width:1.5;" x1="123" x2="191" y1="25.4001" y2="25.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="130" y="33.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="26" x="142" y="38.6901">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="130" y="45.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="24" x="142" y="50.6901">email</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="130" y="57.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="44" x="142" y="62.6901">password</text><rect fill="#FEFECE" filter="url(#f1gq7qs2mt9856)" height="110.4" style="stroke:#A80036;stroke-width:1.5;" width="93" x="55.5" y="146"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="23" x="90.5" y="159.1481">Test</text><line style="stroke:#A80036;stroke-width:1.5;" x1="56.5" x2="147.5" y1="164.4001" y2="164.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="63.5" y="172.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="27" x="75.5" y="177.6901">testID</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="63.5" y="184.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="40" x="75.5" y="189.6901">nhscode</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="63.5" y="196.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="50" x="75.5" y="201.6901">description</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="63.5" y="208.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="66" x="75.5" y="213.6901">dateDiagnosis</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="63.5" y="220.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="64" x="75.5" y="225.69">timeDiagnosis</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="63.5" y="232.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="67" x="75.5" y="237.69">dateValidation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="63.5" y="244.4"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="65" x="75.5" y="249.69">timeValidation</text><rect fill="#FEFECE" filter="url(#f1gq7qs2mt9856)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="80" x="62" y="333"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="50" x="77" y="346.1481">TestType</text><line style="stroke:#A80036;stroke-width:1.5;" x1="63" x2="141" y1="351.4001" y2="351.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="70" y="359.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="40" x="82" y="364.6901">testType</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="70" y="371.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="54" x="82" y="376.6901">designation</text><rect fill="#FEFECE" filter="url(#f1gq7qs2mt9856)" height="50.4001" style="stroke:#A80036;stroke-width:1.5;" width="64" x="70" y="460"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="50" x="77" y="473.1481">Category</text><line style="stroke:#A80036;stroke-width:1.5;" x1="71" x2="133" y1="478.4001" y2="478.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="78" y="486.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="26" x="90" y="491.6901">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="78" y="498.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="23" x="90" y="503.6901">code</text><rect fill="#FEFECE" filter="url(#f1gq7qs2mt9856)" height="62.4001" style="stroke:#A80036;stroke-width:1.5;" width="80" x="62" y="587"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="73.5" y="600.1481">Parameter</text><line style="stroke:#A80036;stroke-width:1.5;" x1="63" x2="141" y1="605.4001" y2="605.4001"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="70" y="613.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="23" x="82" y="618.6901">code</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="70" y="625.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="50" x="82" y="630.6901">shortName</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="70" y="637.4001"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="54" x="82" y="642.6901">designation</text><!--MD5=[7e4bc624457760b649895ff2ead938fa]
+link Company to Test--><path codeLine="39" d="M49.64,63.01 C51.76,78.41 55.33,98.7 61,116 C63.73,124.33 67.13,132.88 70.8,141.19 " fill="none" id="Company-to-Test" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="72.87,145.78,72.8129,135.9313,70.8128,141.2228,65.5213,139.2228,72.87,145.78" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="62" y="112.077">performs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="42.4196" y="83.4433">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="63.6197" y="134.4424">*</text><!--MD5=[e981d4f96c4342412d1e68160b30cf70]
+link Test to TestType--><path codeLine="40" d="M102,256.21 C102,280.25 102,307.59 102,327.72 " fill="none" id="Test-to-TestType" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="102,332.94,106,323.94,102,327.94,98,323.94,102,332.94" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="25" x="103" y="299.077">is of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="94.5516" y="276.3345">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="94.0594" y="321.2934">1</text><!--MD5=[2148a3300dad30af455fcbe81ca204c2]
+link TestType to Category--><path codeLine="41" d="M102,383.1 C102,403.59 102,433.08 102,454.88 " fill="none" id="TestType-to-Category" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="102,459.97,106,450.97,102,454.97,98,450.97,102,459.97" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="103" y="426.077">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="94.1031" y="403.5564">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="96.3281" y="448.3314">*</text><!--MD5=[9e2b536d5f14dafa66c4d5113ebdcad2]
+link Category to Parameter--><path codeLine="42" d="M102,510.03 C102,530.08 102,558.94 102,581.63 " fill="none" id="Category-to-Parameter" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="102,586.67,106,577.67,102,581.67,98,577.67,102,586.67" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="103" y="553.077">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="94.1031" y="530.4684">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="96.4531" y="575.2748">*</text><!--MD5=[76cecde56a704a8af4e77d242905ce83]
+link User to Test--><path codeLine="43" d="M146.65,69.28 C139.77,89.44 130.5,116.58 122.19,140.91 " fill="none" id="User-to-Test" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="120.54,145.74,127.2332,138.515,122.1554,141.0081,119.6622,135.9303,120.54,145.74" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="137" y="112.077">registers</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="136.7934" y="89.376">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="117.6954" y="134.3971">*</text><!--MD5=[0b8a322937c2517745679bff09838bab]
+@startuml
+
+object Company{
+-designation
+-address
+}
+
+object User{
+- name
+- email
+- password
+}
+
+object Test{
+-testID
+-nhscode
+-description
+-dateDiagnosis
+-timeDiagnosis
+-dateValidation
+-timeValidation
+}
+
+object TestType{
+- testType
+- designation
+}
+
+object Category{
+- name
+- code
+}
+
+object Parameter{
+- code
+- shortName
+- designation
+}
+
+Company "1" - -> "*" Test : performs
+Test "1" - -> "1" TestType : is of
+TestType "1" - -> "*" Category: has
+Category "1" - -> "*" Parameter: has
+User "1" - -> "*" Test : registers
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

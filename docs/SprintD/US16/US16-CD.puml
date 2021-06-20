@@ -1,0 +1,61 @@
+@startuml
+package "UI" #DDDDDD {
+class ImportTestsUI {
+  +AskPath(pathname)
+  +show(args)
+}
+}
+
+package "Controller" #DDDDDD {
+class OverviewTestsController {
+  +Date earlyDate
+  +Date lateDate
+  +int numAvailableTests
+  +int numRegisteredTests
+  +int numValidatedTests
+  +ArrayList<Test> validatedTests
+
+  +setEarlyDate(date1)
+  +setLateDate(date2)
+}
+}
+
+package "Domain" #DDDDDD {
+class Company {
+  +List<Test> getRegisteredTests()
+  +List<Test> getValidatedTests()
+  +List<Test> getAvailableTests()
+}
+class Test {
+-Date validationDate
++Date getValidationDate()
+}
+
+
+
+}
+OverviewTestsController ..> Company
+
+
+
+Company "1" --> "*" Test
+
+package "Adapter" #DDDDDD {
+
+class ReflectorUtility
+package "ContingentSum" #DDDDDD {
+interface AlgorithmInterface
+
+AlgorithmAdapter -|> AlgorithmInterface
+}
+
+ReflectorUtility ..> AlgorithmAdapter : creates using reflection
+}
+OverviewTestsUI ..> OverviewTestsController
+
+OverviewTestsController --> AlgorithmInterface
+
+OverviewTestsController ..> ReflectorUtility
+
+@enduml
+

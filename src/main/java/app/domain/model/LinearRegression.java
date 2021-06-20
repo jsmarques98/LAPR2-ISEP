@@ -16,6 +16,8 @@ public class LinearRegression {
         private final double intercept, slope;
         private final double r2;
         private final double svar0, svar1;
+        private final double xbar, ybar;
+        private final double xxbar, yybar;
 
         /**
          * Performs a linear regression on the data points (y[i], x[i]).
@@ -37,16 +39,19 @@ public class LinearRegression {
                 sumx2 += x[i]*x[i];
                 sumy  += y[i];
             }
-            double xbar = sumx / n;
-            double ybar = sumy / n;
+            xbar = sumx / n;
+            ybar = sumy / n;
 
             // second pass: compute summary statistics
-            double xxbar = 0.0, yybar = 0.0, xybar = 0.0;
+            double xxbar1 = 0.0, yybar1 = 0.0;
+            double xybar = 0.0;
             for (int i = 0; i < n; i++) {
-                xxbar += (x[i] - xbar) * (x[i] - xbar);
-                yybar += (y[i] - ybar) * (y[i] - ybar);
+                xxbar1 += (x[i] - xbar) * (x[i] - xbar);
+                yybar1 += (y[i] - ybar) * (y[i] - ybar);
                 xybar += (x[i] - xbar) * (y[i] - ybar);
             }
+            xxbar = xxbar1;
+            yybar = yybar1;
             slope  = xybar / xxbar;
             intercept = ybar - slope * xbar;
 
@@ -123,6 +128,14 @@ public class LinearRegression {
         public double predict(double x) {
             return slope*x + intercept;
         }
+
+        public double averageX(){return xbar;}
+
+        public double averageY(){return ybar;}
+
+        public double sumX(){return xxbar;}
+
+        public double sumY(){return yybar;}
 
         /**
          * Returns a string representation of the simple linear regression model.

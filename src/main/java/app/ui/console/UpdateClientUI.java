@@ -3,6 +3,7 @@ package app.ui.console;
 import app.controller.App;
 import app.domain.model.Client;
 import app.domain.model.Company;
+import app.ui.console.utils.Utils;
 import auth.domain.model.Email;
 
 import static app.ui.console.utils.Utils.*;
@@ -25,7 +26,7 @@ public class UpdateClientUI implements Runnable {
         System.out.println("Client info:\n" + currentClient);
         if(selectParameter(currentClient)){
             String writeText = "Email: " + currentClient.getEmail() + "\nInfo updated !";
-            company.createFile(currentClient.getName() + "Updated", writeText);
+            Utils.createFile(currentClient.getName() + "Updated", writeText);
             System.out.println("Client info:\n" + currentClient.toString());
         }else{
             System.out.println("Info not saved !");

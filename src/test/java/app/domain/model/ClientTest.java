@@ -76,4 +76,61 @@ class ClientTest {
         String id = "CLIENT";
         assertEquals(id, Constants.ROLE_CLIENT);
     }
+
+
+    @Test
+    void getEmail() {
+        String email = "joao@gmail.com";
+                assertEquals(email, email);
+    }
+
+    @Test
+    void getName() {
+        String name = "joao";
+        assertEquals(name, name);
+    }
+
+
+    @Test
+    void getPassword() {
+        int pass = 4;
+        int created = c1.getPassword().length();
+        assertEquals(pass, created);
+    }
+
+    @Test
+    void getAddress() {
+        String address = "Rua antonio vieira";
+        assertEquals(address, address);
+    }
+
+    @Test
+    void getGender() {
+        String gender = "Masculino";
+        assertEquals(gender, gender);
+    }
+
+    @Test
+    void setAddress() {
+        String address = "Rua antonio vieira";
+        assertEquals(address, address);
+    }
+
+    @Test
+    void setGender() {
+        String gender = "Masculino";
+        assertEquals(gender, gender);
+    }
+
+    @Test
+    void setName() {
+        String name = "joao";
+        assertEquals(name, name);
+    }
+
+    @Test
+    void setPhoneNumber() {
+        String number = "55555555555";
+        assertEquals(number, c1.phoneNumber);
+    }
 }

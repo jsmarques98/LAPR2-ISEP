@@ -4,6 +4,7 @@ import app.domain.model.Client;
 import app.domain.model.Company;
 import app.domain.model.Test;
 
+import app.domain.model.ValueRecords;
 import auth.AuthFacade;
 import auth.UserSession;
 import auth.domain.model.Email;
@@ -28,7 +29,6 @@ public class ViewTestResultsController {
                 listaTestesClients.add(t);
             }
         }
-
         return listaTestesClients;
     }
 
@@ -44,6 +44,16 @@ public class ViewTestResultsController {
 
         }
         return null;
+    }
+
+    public List<ValueRecords> valueRecords(Test t){
+        List<ValueRecords> listaFinal= new ArrayList<>();
+        for (ValueRecords v : company.valueRecordsList) {
+            if(v.getId().equals(t.getTestID())){
+                listaFinal.add(v);
+            }
+        }
+        return listaFinal;
     }
 
 }

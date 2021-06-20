@@ -1,0 +1,12 @@
+
+b	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(„Èå±ıÿÿÿÿ8¤ÆÅÉ¡/
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Èå±ıÿÿÿÿ8ªÆÅÉ¡/
+G
+java:S1128"1Remove this unused import 'java.io.StringReader'.(¡Ö£
+O
+java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8­ÆÅÉ¡/
+r
+java:S1206*"PThis class overrides "equals()" and should therefore also override "hashCode()".(İ¢êÍıÿÿÿÿ8¯ÆÅÉ¡/
+t	java:S116"SRename this field "CCNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ‰æøûÿÿÿÿ8±ÆÅÉ¡/
+u	java:S116"TRename this field "NHSNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×‚Ï“úÿÿÿÿ8±ÆÅÉ¡/
+u	java:S116"TRename this field "TINNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½½Ìûÿÿÿÿ8±ÆÅÉ¡/

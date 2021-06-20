@@ -142,7 +142,7 @@ public class Test implements Serializable, Comparable {
         String Chemical_DateHour = (this.Test_Chemical_DateHour != null) ? sdf.format(this.Test_Chemical_DateHour) : "null";
         String Reg_DateHour = (this.Test_Reg_DateHour != null) ? sdf.format(this.Test_Reg_DateHour) : "null";
 
-        return "Test{" + " Test ID:" + testID + " | TIN Number: " + tinNumber + " | Description: " + description + " | Test Type ID: " + idTestType + " | List Code Category: " +
+        return "Test{" + " Test ID: " + testID + " | TIN Number: " + tinNumber + " | Description: " + description + " | Test Type ID: " + idTestType + " | List Code Category: " +
                 listCodeCategory + " | List Parameter Test Code: " + listParameterTestCode + " | Samples: " + samples + " | Test Validation Date/Hour: " + Validation_DateHour +
                 " | Doctor Test Date/Hour: " + Doctor_DateHour + " | Chemical Test Date/Hour: " + Chemical_DateHour + " | Reg. Test Date/Hour: " + Reg_DateHour + " }";
 

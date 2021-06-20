@@ -1,8 +1,6 @@
 package app.ui.console;
 
-import app.Adapter.ImportTestsCSV;
-import app.controller.RecordSamplesController;
-import app.dto.TestDTO;
+import app.controller.utils.ImportTestsCSV;
 import app.ui.console.utils.Utils;
 
 import java.io.FileNotFoundException;

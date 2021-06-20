@@ -1,4 +1,7 @@
-package app.Adapter;
+package app.controller.utils;
+
+import app.Adapter.AlgorithmInterface;
+import app.Adapter.BarcodeInterface;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Logger;

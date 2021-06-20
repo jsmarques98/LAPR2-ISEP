@@ -1,8 +1,6 @@
 package app.ui.gui;
 
-import app.Adapter.ImportTestsCSV;
 import app.controller.OverviewTestsController;
-import app.ui.console.OverviewTestsUI;
 import app.ui.console.utils.Utils;
 import javafx.application.Application;
 import javafx.scene.Scene;

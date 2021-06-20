@@ -1,4 +1,6 @@
-package app.Adapter;
+package app.controller.utils;
+
+import app.Adapter.AlgorithmInterface;
 
 import java.util.Random;
 

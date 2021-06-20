@@ -28,7 +28,7 @@ public class SampleTest {
 
         String arg = "42100005264";
         try {
-            Sample sample = new Sample(arg,"app.Adapter.BarcodeAdapter");
+            Sample sample = new Sample(arg,"app.controller.utils.BarcodeAdapter");
             assertEquals(arg, sample.getBarcode().toString(), arg);
         }catch (NullPointerException e) {
             assertEquals("Mock API test","Mock API test");
@@ -52,7 +52,7 @@ public class SampleTest {
         String arg = null;
         AtomicReference<Sample> sample = null;
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            sample.set(new Sample(arg,"app.Adapter.BarcodeAdapter"));
+            sample.set(new Sample(arg,"app.controller.utils.BarcodeAdapter"));
         });
     }
 
@@ -68,7 +68,7 @@ public class SampleTest {
     public void createInvalidSample2(){
 
         String arg = "12341234123412341234";
-        Sample sample = new Sample(arg,"app.Adapter.BarcodeAdapter");
+        Sample sample = new Sample(arg,"app.controller.utils.BarcodeAdapter");
         assertNull(sample.getBarcode());
     }
 
@@ -76,10 +76,10 @@ public class SampleTest {
     @Test
     public void createInvalidSample3(){
 
-        new Sample("app.Adapter.BarcodeAdapter");
-        new Sample("app.Adapter.BarcodeAdapter");
-        new Sample("app.Adapter.BarcodeAdapter");
-        new Sample("app.Adapter.BarcodeAdapter");
+        new Sample("app.controller.utils.BarcodeAdapter");
+        new Sample("app.controller.utils.BarcodeAdapter");
+        new Sample("app.controller.utils.BarcodeAdapter");
+        new Sample("app.controller.utils.BarcodeAdapter");
     }
     */
 

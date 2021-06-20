@@ -33,4 +33,10 @@ class ConsultTestsControllerTest {
 
         ctrl = new ConsultTestsController();
     }
+
+    @Test
+    void valueRecords(){
+
+        ctrl = new ConsultTestsController();
+    }
 }

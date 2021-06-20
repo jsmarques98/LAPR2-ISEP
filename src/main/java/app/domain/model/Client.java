@@ -48,18 +48,10 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "name='" + name + '\'' +
-                ", CCNumber='" + CCNumber + '\'' +
-                ", NHSNumber='" + NHSNumber + '\'' +
-                ", Address='"+ address+'\''+
-                ", gender='"+ gender+'\''+
-                ", birthdate='" + birthdate + '\'' +
-                ", TINNumber='" + TINNumber + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", Password='" + password + '\'' +
-                '}';
+        return "Client{" + " Name: " + name + " | CC Number: " + CCNumber + " | NHS Number: " + NHSNumber + " | Adress: " + address +
+                " | Gender: " + gender + " | Birthdate: " + birthdate + " | TIN Number: " + TINNumber + " | Phone Number: " + phoneNumber +
+                " | Email: " + email + " | Password: " + password + " }";
+
     }
 
     public String getCCNumber() {

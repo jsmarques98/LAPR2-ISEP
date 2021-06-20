@@ -4,11 +4,11 @@ package app.domain.model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class DiagnosisTest {
+
+    private Diagnosis diagnosis;
 
     private app.domain.model.Test test;
     Diagnosis writeRep = new Diagnosis("TelevisionTelevisionTelevisionTelevision" +
@@ -102,5 +102,11 @@ class DiagnosisTest {
         String result = String.format("Report: %s%nTest: %s%n", writeRep.getReport(), this.test);
 
         Assertions.assertEquals(result, writeRep.toString());
+    }
+
+    @Test
+    public void checkReport(){
+        boolean flag = true;
+        assertTrue(flag);
     }
 }

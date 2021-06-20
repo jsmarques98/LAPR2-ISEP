@@ -123,14 +123,8 @@ public class ValueRecords implements Serializable {
 
     @Override
     public String toString() {
-        return "ValueRecords{" +
-                "id='" + id + '\'' +
-                ", minValue=" + minValue +
-                ", maxValue=" + maxValue +
-                ", registeredValue=" + registeredValue +
-                ", parametro='" + parametro + '\'' +
-                ", data=" + date +
-                '}';
+        return "ValueRecords{" + " ID: " + id + " | Min. Value: " + minValue + " | Max. Value: " + maxValue + " | Registered Value: "
+                + registeredValue + " | Parameter: " + parametro + " | Data: " + date + " }";
     }
 }
 

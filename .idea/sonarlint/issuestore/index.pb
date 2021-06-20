@@ -15,8 +15,6 @@ Z
 *src/main/java/auth/domain/model/Email.java,e/d/edb6b3c21ef668b316815c4e848363ea45df2a59
 b
 2src/main/java/auth/domain/store/UserRoleStore.java,d/f/df87a76751166dc90bf2d9baaa17c0f9f9f052bc
-\
-,src/main/java/app/domain/model/Employee.java,1/7/172c090ab1c754bae4d9ce2efae5056312661a20
 F
 docs/SprintC/README.md,f/a/facb53f23383e1076876744957a421a955453477
 Z
@@ -137,8 +135,6 @@ N
 docs/SprintD/US14/US14_CD.puml,3/e/3ed373f3b7443d7a88c7855b3e9fb6287f1e96cf
 N
 docs/SprintD/US17/US17_SD.puml,c/a/cabdb60b3174f791f2bb6f2dfc6c2be61bae965f
-W
-'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
 ]
 -src/main/java/app/ui/console/utils/Utils.java,0/b/0b7375dbea1ab3a7b99a2948cea2f45e61f6840d
 h
@@ -153,9 +149,17 @@ N
 src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
 b
 2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
-[
-+src/main/java/app/domain/model/Company.java,e/6/e66f0f8e51b44df23f2004467961976fbec241aa
 `
 0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
 Z
 *src/main/java/app/domain/model/Client.java,a/1/a1140e0a891f26f51604f14ed5bf2ac976d60132
+d
+4src/main/java/app/domain/model/LinearRegression.java,e/f/ef5960dabed51a1941528b4c7b1fcdd5985bd7fb
+N
+docs/SprintD/US17/US17_CD.puml,6/4/64cb24590ed1291900a8a9705be3d8329faf862f
+O
+docs/SprintD/US14/US14_CD2.puml,2/f/2f7710504e95f13056004c2f0e9255ff140fbc63
+W
+'src/main/java/app/domain/model/Lab.java,d/a/daf6f4b4de1e5a9b0bf1ecbe913a9918808164f1
+\
+,src/main/java/app/domain/model/Employee.java,1/7/172c090ab1c754bae4d9ce2efae5056312661a20

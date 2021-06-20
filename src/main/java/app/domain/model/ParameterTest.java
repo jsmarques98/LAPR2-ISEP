@@ -20,10 +20,7 @@ public class ParameterTest implements Serializable {
 
     @Override
     public String toString() {
-        return "ParameterTest{" +
-                "code='" + code + '\'' +
-                ", shortName='" + shortName + '\'' +
-                ", designation='" + designation + '\'' +
-                '}';
+        return "ParameterTest{" + " Code: " + code + " | Short Name" + shortName + " | Designation: " + designation + " }";
+
     }
 }

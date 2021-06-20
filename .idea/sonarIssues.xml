@@ -3,6 +3,21 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Downloads/MultipleLinearRegression.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Downloads/MultiplelinearRegression.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/docs/SprintC/DomainModel/domainModel.puml">
           <value>
             <set />
@@ -44,6 +59,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/docs/SprintC/US14/US14_SSD.svg">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/docs/SprintD/Glossario.md">
           <value>
             <set />
           </value>
@@ -143,6 +163,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/app/controller/SendCovidReportController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/app/domain/model/Client.java">
           <value>
             <set />
@@ -169,6 +194,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/app/domain/model/MultilinearRegression.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/app/domain/model/MultipleLinearRegression.java">
           <value>
             <set />
           </value>

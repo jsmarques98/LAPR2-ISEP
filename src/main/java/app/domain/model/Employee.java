@@ -82,16 +82,7 @@ public class Employee implements Serializable {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id='" + id + '\'' +
-                ", roleId='" + roleId + '\'' +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", socCode='" + socCode + '\'' +
-                ", labId=' "+ lab.getLabId() +'\''+
-                ", password='" + password + '\'' +
-                '}';
+        return "Employee{" + "ID: " + id + " | Role ID: " + roleId + " | Name: " + name + " | Adress: " + address + " | Phone Number: " + phoneNumber + " | Email: " +
+                socCode + " | Lab ID: " + lab.getLabId() + " | Password: " + password + " }";
     }
 }

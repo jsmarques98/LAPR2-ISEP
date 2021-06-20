@@ -70,9 +70,7 @@ public class TestType implements Serializable {
 
     @Override
     public String toString() {
-        return "TestType{" +
-                "id='" + id + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return "TestType{" + " ID: " + id + " | Description: " + description + " }";
+
     }
 }

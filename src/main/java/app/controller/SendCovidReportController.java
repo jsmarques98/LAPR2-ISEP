@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.controller.utils.LinearRegression;
 import app.domain.model.*;
 import app.domain.shared.Constants;
 import app.ui.console.utils.Utils;

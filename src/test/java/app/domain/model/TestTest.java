@@ -49,6 +49,13 @@ class TestTest {
         assertEquals("sad",test1.getDescription());
     }
 
+    @Test
+    void getTinNumber() {
+        assertEquals("sad",test1.getDescription());
+    }
+
+
+
 //    @Test
 //    void getSamples() {
 //

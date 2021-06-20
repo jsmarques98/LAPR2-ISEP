@@ -1,7 +1,6 @@
 package app.controller;
 
 import app.domain.model.*;
-import app.dto.ClientDTO;
 
 public class RegisterClientController {
 

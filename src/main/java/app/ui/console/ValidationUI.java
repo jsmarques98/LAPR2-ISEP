@@ -3,7 +3,7 @@ package app.ui.console;
 import app.controller.App;
 import app.controller.ValidationController;
 import app.controller.utils.FileUtil;
-import app.domain.model.Company;
+import app.controller.Company;
 import app.domain.model.Test;
 import app.ui.console.utils.Utils;
 

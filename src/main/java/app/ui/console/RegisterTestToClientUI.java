@@ -1,6 +1,7 @@
 package app.ui.console;
 
 import app.controller.App;
+import app.controller.Company;
 import app.controller.RegisterTestToClientController;
 import app.domain.model.*;
 import app.ui.console.utils.Utils;

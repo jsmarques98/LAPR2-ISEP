@@ -2,7 +2,7 @@ package app.ui.console;
 
 import app.controller.App;
 import app.domain.model.Client;
-import app.domain.model.Company;
+import app.controller.Company;
 import app.ui.console.utils.Utils;
 import auth.domain.model.Email;
 

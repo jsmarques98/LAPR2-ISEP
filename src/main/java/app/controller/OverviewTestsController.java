@@ -1,7 +1,5 @@
 package app.controller;
-import app.domain.model.Company;
 import app.domain.model.Test;
-import app.ui.gui.LineChartGraph;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;

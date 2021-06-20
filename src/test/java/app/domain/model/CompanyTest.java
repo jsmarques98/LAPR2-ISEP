@@ -1,5 +1,6 @@
 package app.domain.model;
 
+import app.controller.Company;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

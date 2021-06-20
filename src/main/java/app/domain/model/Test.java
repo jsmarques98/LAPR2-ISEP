@@ -1,5 +1,6 @@
 package app.domain.model;
 import app.controller.App;
+import app.controller.Company;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;

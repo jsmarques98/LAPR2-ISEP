@@ -3,13 +3,11 @@ package app.controller;
 import app.domain.model.*;
 import app.domain.shared.Constants;
 import app.ui.console.utils.Utils;
+import com.nhs.report.Report2NHS;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.Date;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SendCovidReportController{
 
@@ -61,7 +59,7 @@ public class SendCovidReportController{
         Double confidenceValue = Utils.readDoubleFromConsole("Enter the confidence level value: ");
         LinearRegression lr;
         Double tc = (1-confidenceValue/100)/2;
-        String parameter;
+        String parameter, texto;
         do {
             parameter = Utils.readLineFromConsole("Select witch parameter you want to analyzed (A/B): ");
         }while(!(parameter.equalsIgnoreCase("A") || parameter.equalsIgnoreCase("B")));
@@ -81,14 +79,10 @@ public class SendCovidReportController{
                 estimatedPositiveCases = estimatedPositives(covidTestsTotal, lr);
                 String decision;
                 String t = String.valueOf(test);
-                if(test > tc){
-                    decision = t + "\nDecision:\nNo reject";
-                    anova(anova, covidTestsInterval, lr);
-                }else {
-                    decision = t + "\nDecision:\nReject";
-                    System.out.println("Inconclusive test");
-                }
-                exportToFile(equacaoReta, finalR, decision, anova, covidPositiveTestsTotal, estimatedPositiveCases, intrevaloPrevisao);
+                decision = t + "\nDecision:\nNo reject";
+                anova(anova, covidTestsInterval, lr);
+                texto = exportToFile(equacaoReta, finalR, decision, anova, covidPositiveTestsTotal, estimatedPositiveCases, intrevaloPrevisao);
+                nhs(texto);
                 break;
             case 2:
                 totalOfCovidTests2(covidMeanAgeInterval, covidPositiveTestsInterval);
@@ -111,7 +105,8 @@ public class SendCovidReportController{
                     decision2 = t2 + "\nDecision:\nReject";
                     System.out.println("Inconclusive test");
                 }
-                exportToFile2(equacaoReta2, finalR2, decision2, anova, covidPositiveTestsTotal, estimatedPositiveCases, intrevaloPrevisao);
+                texto = exportToFile2(equacaoReta2, finalR2, decision2, anova, covidPositiveTestsTotal, estimatedPositiveCases, intrevaloPrevisao);
+                nhs(texto);
                 break;
             default:
                 System.out.println("Option not found");
@@ -211,7 +206,7 @@ public class SendCovidReportController{
     }
 
 
-    private void exportToFile(String equacaoReta, String coeficienteDeterminacao, String decision, double[][] anova, double[] covidPositiveTestsTotal, double[] estimatedPositiveCases, double[][] intrevaloPrevisao) {
+    private String exportToFile(String equacaoReta, String coeficienteDeterminacao, String decision, double[][] anova, double[] covidPositiveTestsTotal, double[] estimatedPositiveCases, double[][] intrevaloPrevisao) {
         String [] positiveTest = Utils.convertDoubleToStringArr(covidPositiveTestsTotal);
         String [] estimatedCases = Utils.convertDoubleToStringArr(estimatedPositiveCases);
         String [][] intervalo = Utils.convertDoubleToStringArr2(intrevaloPrevisao);
@@ -228,7 +223,8 @@ public class SendCovidReportController{
                 + "\nNumber of ESTIMATED positive cases: " + estimatedCases
                 + "\n95% intervals                     : " + intervalo;
 
-        Utils.createFile("Linear Regression", texto);
+//        Utils.createFile("Linear Regression", texto);
+        return texto;
     }
 
     public void totalOfCovidTests2(double[] covidMeanAgeInterval, double[]  covidPositiveTestsInterval) {
@@ -296,7 +292,7 @@ public class SendCovidReportController{
     }
 
 
-    private void exportToFile2(String equacaoReta, String coeficienteDeterminacao, String decision, double[][] anova, double[] covidPositiveTestsTotal, double[] estimatedPositiveCases, double[][] intrevaloPrevisao) {
+    private String exportToFile2(String equacaoReta, String coeficienteDeterminacao, String decision, double[][] anova, double[] covidPositiveTestsTotal, double[] estimatedPositiveCases, double[][] intrevaloPrevisao) {
         String [] positiveTest = Utils.convertDoubleToStringArr(covidPositiveTestsTotal);
         String [] estimatedCases = Utils.convertDoubleToStringArr(estimatedPositiveCases);
         String [][] intervalo = Utils.convertDoubleToStringArr2(intrevaloPrevisao);
@@ -313,7 +309,12 @@ public class SendCovidReportController{
                 + "\nNumber of ESTIMATED positive cases: " + estimatedCases
                 + "\n95% intervals                     : " + intervalo;
 
-        Utils.createFile("Linear Regression", texto);
+//        Utils.createFile("Linear Regression", texto);
+        return texto;
+    }
+
+    public void nhs(String texto) {
+        Report2NHS.writeUsingFileWriter(texto);
     }
 
 }

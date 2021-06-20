@@ -2,7 +2,6 @@ package app.controller;
 
 import app.domain.model.*;
 import app.domain.shared.Constants;
-import app.ui.console.utils.Utils;
 import auth.AuthFacade;
 import auth.UserSession;
 

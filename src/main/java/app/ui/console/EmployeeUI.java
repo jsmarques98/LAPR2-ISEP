@@ -1,16 +1,12 @@
 package app.ui.console;
 
 import app.controller.App;
-import app.controller.AuthController;
 import app.controller.RegisterEmployeeController;
-import app.domain.model.Company;
+import app.controller.Company;
 import app.domain.model.Employee;
 import app.domain.model.Lab;
-import app.domain.model.SpecialistDoctor;
 import app.ui.console.utils.Utils;
 import auth.domain.model.Email;
-
-import java.util.ArrayList;
 
 public class EmployeeUI implements Runnable{
 

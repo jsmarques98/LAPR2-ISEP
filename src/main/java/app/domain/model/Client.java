@@ -19,7 +19,7 @@ public class Client implements Serializable {
     String birthdate;
     String TINNumber;
     String phoneNumber;
-    String email;
+    public String email;
     String password;
     private String roleId;
 

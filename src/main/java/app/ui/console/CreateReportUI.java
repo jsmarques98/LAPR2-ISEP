@@ -2,11 +2,10 @@ package app.ui.console;
 
 import app.controller.App;
 import app.controller.CreateReportController;
-import app.domain.model.Company;
+import app.controller.Company;
 import app.domain.model.Test;
 import app.domain.model.ValueRecords;
 import app.ui.console.utils.Utils;
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 
 import java.util.ArrayList;
 

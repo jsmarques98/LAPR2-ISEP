@@ -2,13 +2,12 @@ package app.ui.console;
 
 import app.controller.App;
 import app.controller.RecordTestResultsController;
-import app.domain.model.Company;
+import app.controller.Company;
 import app.domain.model.Test;
 import app.ui.console.utils.Utils;
 import com.example1.ExternalModule3API;
 import com.example3.CovidReferenceValues1API;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;

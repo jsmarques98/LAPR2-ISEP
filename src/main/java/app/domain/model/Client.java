@@ -82,6 +82,8 @@ public class Client implements Serializable {
 
     public String getGender() { return gender; }
 
+    public String getBirthdate() {return birthdate; }
+
     public void setAddress(String address) { this.address = address; }
 
     public void setGender(String gender) { this.gender = gender; }

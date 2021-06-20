@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
+import static javafx.application.Platform.exit;
+
 
 public class LineChartGraph extends Application {
 
@@ -51,23 +53,28 @@ public class LineChartGraph extends Application {
     @Override public void start(Stage stage) throws FileNotFoundException {
         //stage.setTitle("Line Chart Sample");
 
-        OverviewTestsController overviewTestsController = new OverviewTestsController();
+        OverviewTestsController overviewTestsController;
+        try {
+            overviewTestsController = new OverviewTestsController();
+            while (!overviewTestsController.setEarlyDateUser(Utils.readLineFromConsole("Insert early date:")));
+            while (!overviewTestsController.setEarlyDateUser(Utils.readLineFromConsole("Insert late date:")));
 
-        while (!overviewTestsController.setEarlyDateUser(Utils.readLineFromConsole("Insert early date:")));
-        while (!overviewTestsController.setEarlyDateUser(Utils.readLineFromConsole("Insert late date:")));
+            overviewTestsController.createEntries();
+            FlowPane root = new FlowPane();
 
-        overviewTestsController.createEntries();
+            root.getChildren().addAll(OverviewTestsController.dailyEntries,
+                    OverviewTestsController.weeklyEntries,
+                    OverviewTestsController.monthlyEntries,
+                    OverviewTestsController.yearlyEntries);
+            Scene scene  = new Scene(root, 1010,675);
+            stage.setScene(scene);
+            stage.show();
 
+        } catch (IndexOutOfBoundsException e){
+            System.out.println("There are no tests to show!");
+            exit();
+        }
 
-        FlowPane root = new FlowPane();
-
-        root.getChildren().addAll(OverviewTestsController.dailyEntries,
-                OverviewTestsController.weeklyEntries,
-                OverviewTestsController.monthlyEntries,
-                OverviewTestsController.yearlyEntries);
-        Scene scene  = new Scene(root, 1010,675);
-        stage.setScene(scene);
-        stage.show();
     }
 
     public static void main(String[] args) {

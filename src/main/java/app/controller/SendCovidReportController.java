@@ -47,12 +47,21 @@ public class SendCovidReportController{
                 simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, covidTestsTotal, intrevaloPrevisao, estimatedPositiveCases, anova, covidMeanAgeInterval, covidMeanAgeTotal);
                 break;
             case 2:
-
+                //multilinearRegression(covidTestsInterval, covidPositiveTestsInterval,covidPositiveTestsTotal);
                 break;
             default:
                 System.out.println("Option not found");
                 regressionMenu();
         }
+    }
+
+    private void multilinearRegression(double[] covidTestsInterval, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
+
+        totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
+        totalPositiveCases(covidTestsTotal, covidPositiveTestsTotal);
+        totalOfCovidTests2(covidMeanAgeInterval, covidPositiveTestsInterval);
+        totalPositiveCases2(covidMeanAgeTotal, covidPositiveTestsTotal);
+
     }
 
     private void simpleRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal) {
@@ -327,20 +336,5 @@ public class SendCovidReportController{
         //Utils.createFile("Linear Regression", texto);
     }
 
-    private void multilinearRegression(double[] covidTestsInterval, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
 
-        totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
-        totalPositiveCases(covidTestsTotal, covidPositiveTestsTotal);
-        totalOfCovidTests2(covidMeanAgeInterval, covidPositiveTestsInterval);
-        totalPositiveCases2(covidMeanAgeTotal, covidPositiveTestsTotal);
-
-        System.out.println();
-    }
-
-    public Double medianage(){
-        System.out.println("Choose a median age for the covid tests");
-        double age = Utils.readDoubleFromConsole("Write de median age of the covid tests:");
-
-        return age;
-    }
 }

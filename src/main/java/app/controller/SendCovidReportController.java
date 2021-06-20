@@ -327,12 +327,14 @@ public class SendCovidReportController{
         //Utils.createFile("Linear Regression", texto);
     }
 
-    private void multilinearRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
+    private void multilinearRegression(double[] covidTestsInterval, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
 
         totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
         totalPositiveCases(covidTestsTotal, covidPositiveTestsTotal);
+        totalOfCovidTests2(covidMeanAgeInterval, covidPositiveTestsInterval);
+        totalPositiveCases2(covidMeanAgeTotal, covidPositiveTestsTotal);
 
-
+        System.out.println();
     }
 
     public Double medianage(){

@@ -8,6 +8,7 @@ import com.nhs.report.Report2NHS;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Date;
 
 public class SendCovidReportController{
@@ -46,7 +47,7 @@ public class SendCovidReportController{
                 simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, covidTestsTotal, intrevaloPrevisao, estimatedPositiveCases, anova, covidMeanAgeInterval, covidMeanAgeTotal);
                 break;
             case 2:
-                System.out.println("The number o covid test positive are" + covidPositiveTestsTotal + "the number of total tests are" + covidTestsTotal + "and the covid mean age is" + covidMeanAgeTotal);
+                System.out.println("The number o covid test positive are " + covidPositiveTestsTotal.length + " the number of total tests are " + covidTestsTotal.length + " and the covid mean age is " + covidMeanAgeTotal.length);
 
                 break;
             default:

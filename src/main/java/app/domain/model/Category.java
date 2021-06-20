@@ -37,9 +37,6 @@ public class Category implements Comparable, Serializable {
 
     @Override
     public String toString() {
-        return "Category{" +
-                "name='" + name + '\'' +
-                ", code='" + code + '\'' +
-                '}';
+        return "Category{" + " Name: " + name + " | Code: " + code + " }";
     }
 }

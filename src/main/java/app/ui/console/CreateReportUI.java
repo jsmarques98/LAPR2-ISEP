@@ -6,6 +6,7 @@ import app.domain.model.Company;
 import app.domain.model.Test;
 import app.domain.model.ValueRecords;
 import app.ui.console.utils.Utils;
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 
 import java.util.ArrayList;
 
@@ -13,9 +14,11 @@ public class CreateReportUI implements Runnable {
 
     private CreateReportController controller;
     private Company company;
+
     public CreateReportUI() {
         controller = new CreateReportController();
         company = App.getInstance().getCompany();
+
     }
 
     @Override
@@ -61,11 +64,12 @@ public class CreateReportUI implements Runnable {
 
     public String setTest() {
         String testToReport = Utils.readLineFromConsole("Choose the test you want to do the report for :");
-
         ArrayList<ValueRecords> valueRecords = company.getValueRecordsList(testToReport);
-        if(valueRecords.size() != 0)
-            Utils.showList(valueRecords, "valueRecords");
-
+        for (ValueRecords v : valueRecords) {
+            if(v.getId().equals(testToReport)){
+                return v.getId();
+            }
+        }
         System.out.println("There are no reports to show, exiting");
         System.exit(0);
         return null;

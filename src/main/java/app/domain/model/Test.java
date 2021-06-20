@@ -53,21 +53,28 @@ public class Test implements Serializable, Comparable {
             return String.valueOf(1);
         //look for the last id and generate the next id
         Integer integer = Integer.parseInt(company.tests.get(company.tests.size()-1).getTestID())+1;
+        while(!setTestID(String.valueOf(integer)))
+            integer++;
 
         return String.valueOf(integer);
     }
 
     //if manual id attribution is required
     public boolean setTestID( String testID ){
-        //System.out.println(this.testID);
-        //System.out.println(testID);
+
+        //look for every test id
         Company company = App.getInstance().getCompany();
-        if(Integer.valueOf(this.testID)<=Integer.valueOf(testID)) {
+
+        Test foundTest = company.getTest(testID);
+
+        //Integer.valueOf(this.testID)<=Integer.valueOf(testID)
+        if(foundTest == null) {
             this.testID = testID;
             return true;
         } else {
-            throw new IllegalArgumentException("This test ID invalidates logical order: " + testID +
-                    ", previous id: " + company.tests.get(company.tests.size() - 1).getTestID());
+            System.out.println("Test with this id exists!");
+            return false;
+
         }
     }
 

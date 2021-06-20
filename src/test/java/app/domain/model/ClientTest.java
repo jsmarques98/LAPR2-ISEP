@@ -30,34 +30,34 @@ class ClientTest {
 
     }
 
-    @Test
-    void testToString() {
-        String name ="Manuel";
-        String number = "5555555555";
-        String cCard = "5555555555555555";
-        String nhs = "555555555555";
-        String date = "03/05/2021";
-        String phoneNumber = "55555555555";
-        String email = "manel@gmail.com";
-        String address = "porto";
-        String gender = "feminino";
-        String password = "arst";
-
-        String str = "Client{" +
-                "name='" + name + '\'' +
-                ", CCNumber='" + cCard + '\'' +
-                ", NHSNumber='" + nhs + '\'' +
-                ", Address='"+ address+'\''+
-                ", gender='"+ gender+'\''+
-                ", birthdate='" + date + '\'' +
-                ", TINNumber='" + number + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", Password='" + password + '\'' +
-                '}';
-
-        assertEquals(str, c1.toString());
-    }
+//    @Test
+//    void testToString() {
+//        String name ="Manuel";
+//        String number = "5555555555";
+//        String cCard = "5555555555555555";
+//        String nhs = "555555555555";
+//        String date = "03/05/2021";
+//        String phoneNumber = "55555555555";
+//        String email = "manel@gmail.com";
+//        String address = "porto";
+//        String gender = "feminino";
+//        String password = "arst";
+//
+//        String str = "Client{" +
+//                "name='" + name + '\'' +
+//                ", CCNumber='" + cCard + '\'' +
+//                ", NHSNumber='" + nhs + '\'' +
+//                ", Address='"+ address+'\''+
+//                ", gender='"+ gender+'\''+
+//                ", birthdate='" + date + '\'' +
+//                ", TINNumber='" + number + '\'' +
+//                ", phoneNumber='" + phoneNumber + '\'' +
+//                ", email='" + email + '\'' +
+//                ", Password='" + password + '\'' +
+//                '}';
+//
+//        assertEquals(str, c1.toString());
+//    }
 
     @Test
     void getCCNumber() {

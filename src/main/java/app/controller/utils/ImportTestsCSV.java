@@ -1,6 +1,7 @@
 package app.controller.utils;
 
 import app.controller.App;
+import app.controller.Company;
 import app.controller.RegisterTestToClientController;
 import app.domain.model.*;
 

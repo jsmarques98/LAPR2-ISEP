@@ -49,15 +49,22 @@ class TestTest {
         assertEquals("sad",test1.getDescription());
     }
 
+    @Test
+    void getTinNumber() {
+        assertEquals("sad",test1.getDescription());
+    }
+
+
+
 //    @Test
 //    void getSamples() {
 //
 //    }
 
-    @Test
-    void testToString() {
-        String result = "Test{testID='"+test1.getTestID()+ "', tinNumber='0000000000', nhscode='0000', description='sad', idTestType='sdsad', listCodeCategory=[Category{name='categoria1', code='codigo1'}, Category{name='categoria2', code='codigo2'}], listParameterTestCode=[ParameterTest{code='c1', shortName='sangue', designation='desc1'}, ParameterTest{code='c2', shortName='sangue', designation='desc2'}], samples=[], Test_Validation_DateHour=null, Test_Doctor_DateHour=null, Test_Chemical_DateHour=null, Test_Reg_DateHour=null}";
-        System.out.println(test1.toString());
-        Assertions.assertEquals(result, test1.toString());
-    }
+//    @Test
+//    void testToString() {
+//        String result = "Test{testID='"+test1.getTestID()+ "', tinNumber='0000000000', nhscode='0000', description='sad', idTestType='sdsad', listCodeCategory=[Category{name='categoria1', code='codigo1'}, Category{name='categoria2', code='codigo2'}], listParameterTestCode=[ParameterTest{code='c1', shortName='sangue', designation='desc1'}, ParameterTest{code='c2', shortName='sangue', designation='desc2'}], samples=[], Test_Validation_DateHour=null, Test_Doctor_DateHour=null, Test_Chemical_DateHour=null, Test_Reg_DateHour=null}";
+//        System.out.println(test1.toString());
+//        Assertions.assertEquals(result, test1.toString());
+//    }
 }

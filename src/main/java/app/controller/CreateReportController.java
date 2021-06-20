@@ -1,6 +1,5 @@
 package app.controller;
 
-import app.domain.model.Company;
 import app.domain.model.Diagnosis;
 import app.domain.model.Test;
 

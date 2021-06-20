@@ -1,4 +1,4 @@
-package app.domain.model;
+package app.controller.utils;
 
 
 public class MultipleLinearRegression {

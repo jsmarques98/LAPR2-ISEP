@@ -2,7 +2,7 @@ package app.ui.console;
 
 import app.controller.App;
 import app.controller.RegisterLabController;
-import app.domain.model.Company;
+import app.controller.Company;
 import app.ui.console.utils.Utils;
 
 public class RegisterLabUI implements Runnable{

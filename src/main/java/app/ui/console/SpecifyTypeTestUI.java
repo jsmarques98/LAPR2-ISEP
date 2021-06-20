@@ -3,8 +3,7 @@ package app.ui.console;
 import app.controller.App;
 import app.controller.SpecifyTypeTestController;
 import app.domain.model.Category;
-import app.domain.model.Company;
-import org.w3c.dom.ls.LSOutput;
+import app.controller.Company;
 
 import java.util.*;
 

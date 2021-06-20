@@ -31,8 +31,6 @@ T
 $src/main/java/app/dto/ClientDTO.java,8/9/891c0cd46f7e383459b0b6f89abb23aaef3e918d
 _
 /src/main/java/app/Adapter/ReflectorUtility.java,f/a/faa28d5c839262116521cf0d05c6aa311878ed94
-_
-/src/main/java/app/Adapter/BarcodeInterface.java,d/3/d3c257ccb92f1c5e5af4df2de0b7b0ce50f481ac
 Y
 )docs/SprintC/DomainModel/domainModel.puml,1/3/132508e65e346ea769828f703248b860a0f5ed2e
 X
@@ -47,8 +45,6 @@ m
 =src/main/java/app/controller/RecordTestResultsController.java,e/f/ef0bfe9556b0ceb984ab58d9e365e0f9c888f885
 \
 ,src/main/java/app/domain/model/TestType.java,2/4/2423c136bbc016d77dbe900fd13fca08fa27b56a
-d
-4src/main/java/app/domain/model/SpecialistDoctor.java,1/f/1fe2526cdf6f266c0d2cb8c4e936e3c475559125
 Z
 *src/main/java/app/domain/model/Sample.java,b/a/ba164b4c03f593dbc5a575d2806dae1ffe3dfe0c
 ^
@@ -61,8 +57,6 @@ X
 (src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036
 `
 0src/test/java/app/domain/model/FileUtilTest.java,5/e/5eff9f112944b9b5a18da40c7265de859fd096f3
-\
-,src/main/java/app/ui/console/EmployeeUI.java,e/3/e3718c935b16861ca776cc589d879593448ba254
 L
 docs/SprintB/US8/US8_CD.puml,8/6/86d6df43adc67a350fa37589c9a0675dafaa3f75
 d
@@ -145,16 +139,12 @@ j
 -src/main/java/app/Adapter/ImportTestsCSV.java,a/2/a29f46372de9716a07a6d13deccf48fd22488bf7
 g
 7src/main/java/app/controller/ImportTestsController.java,0/8/089a51a640ef4cdb8894ef8006d47459957f0eec
-N
-src/main/java/app/ui/Main.java,7/7/774d0aff326a0164e53c11cda4e3afaaa607428f
 b
 2src/main/java/app/ui/console/RegisterClientUI.java,b/6/b68d44a09394a6cfb22b7828dae0cc3544ea2008
 `
 0src/main/java/app/ui/console/ReceptionistUI.java,2/4/2478e4fd65ba3b863bd3994f61803ae4aaeafb2f
 Z
 *src/main/java/app/domain/model/Client.java,a/1/a1140e0a891f26f51604f14ed5bf2ac976d60132
-d
-4src/main/java/app/domain/model/LinearRegression.java,e/f/ef5960dabed51a1941528b4c7b1fcdd5985bd7fb
 N
 docs/SprintD/US17/US17_CD.puml,6/4/64cb24590ed1291900a8a9705be3d8329faf862f
 O

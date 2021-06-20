@@ -1,9 +1,6 @@
 package app.controller;
-import app.domain.model.Company;
 import app.domain.model.Employee;
 import app.domain.model.Lab;
-
-import java.util.ArrayList;
 
 public class RegisterEmployeeController{
 

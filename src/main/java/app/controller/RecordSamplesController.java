@@ -1,12 +1,10 @@
 package app.controller;
 
-import app.domain.model.Company;
 import app.domain.model.Sample;
 import app.domain.model.Test;
 import app.dto.TestDTO;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class RecordSamplesController {

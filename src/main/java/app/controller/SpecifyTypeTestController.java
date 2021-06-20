@@ -1,7 +1,6 @@
 package app.controller;
 
 import app.domain.model.Category;
-import app.domain.model.Company;
 import app.domain.model.TestType;
 import java.util.Set;
 

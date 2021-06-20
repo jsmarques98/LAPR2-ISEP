@@ -1,0 +1,20 @@
+The regression model fitted using data from the interval
+Y = NaN + NaN * X
+Other statistics
+R2 = NaN
+R = NaN
+Hypothesis tests for regression coefficients
+HO:b=0 (a=0) H1: b<>0 (a<>0)
+t_obs = NaN
+Decision:
+No reject
+Significance model with Anova
+H0: b=0  H1:b<>0
+		 df	SS	MS	F
+Regression	1.0	0.0	0.0	NaN
+Residual  	4.0	0.0	0.0
+Total     	5.0	0.0
+Date                              : [2021-06-10, 2021-06-11, 2021-06-12, 2021-06-13, 2021-06-14, 2021-06-15, 2021-06-16, 2021-06-17, 2021-06-18, 2021-06-19]
+Number of OBSERVED positive cases : [Ljava.lang.String;@2f7a2457
+Number of ESTIMATED positive cases: [Ljava.lang.String;@566776ad
+95% intervals                     : [[Ljava.lang.String;@6108b2d7

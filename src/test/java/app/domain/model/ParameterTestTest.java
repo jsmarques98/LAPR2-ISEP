@@ -25,17 +25,17 @@ class ParameterTestTest {
         assertEquals(code, criada);
     }
 
-    @Test
-    void testToString() {
-
-        String result = String.format("ParameterTest{" +
-                "code='" + pt1.getCode() + '\'' +
-                ", shortName='" + "rggg" + '\'' +
-                ", designation='" + "gfdgfdg" + '\'' +
-
-                '}');
-
-        Assertions.assertEquals(result, pt1.toString());
-    }
+//    @Test
+//    void testToString() {
+//
+//        String result = String.format("ParameterTest{" +
+//                "code='" + pt1.getCode() + '\'' +
+//                ", shortName='" + "rggg" + '\'' +
+//                ", designation='" + "gfdgfdg" + '\'' +
+//
+//                '}');
+//
+//        Assertions.assertEquals(result, pt1.toString());
+//    }
 
 }

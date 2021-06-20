@@ -93,22 +93,22 @@ public class EmployeeTest {
         assertEquals(PARAMS_COMPANY_DESIGNATION, Constants.PARAMS_COMPANY_DESIGNATION);
     }
 
-    @Test
-    void testToString() {
-        String result = String.format("Employee{" +
-                "id='" + e1.getId() + '\'' +
-                ", roleId='" + e1.getRoleId() + '\'' +
-                ", name='" + e1.getName() + '\'' +
-                ", address='" + "sad" + '\'' +
-                ", phoneNumber='" + "asd" + '\'' +
-                ", email='" + e1.getEmail() + '\'' +
-                ", socCode='" + "asd" + '\'' +
-                ", labId='" + " 11111"+ '\''+
-                ", password='" + e1.getPassword() + '\'' +
-                '}');
-
-        Assertions.assertEquals(result, e1.toString());
-    }
+//    @Test
+//    void testToString() {
+//        String result = String.format("Employee{" +
+//                "id='" + e1.getId() + '\'' +
+//                ", roleId='" + e1.getRoleId() + '\'' +
+//                ", name='" + e1.getName() + '\'' +
+//                ", address='" + "sad" + '\'' +
+//                ", phoneNumber='" + "asd" + '\'' +
+//                ", email='" + e1.getEmail() + '\'' +
+//                ", socCode='" + "asd" + '\'' +
+//                ", labId='" + " 11111"+ '\''+
+//                ", password='" + e1.getPassword() + '\'' +
+//                '}');
+//
+//        Assertions.assertEquals(result, e1.toString());
+//    }
 
 
 }

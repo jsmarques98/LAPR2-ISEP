@@ -1,2 +1,7 @@
+<<<<<<< HEAD
+Jun 20, 2021 6:14:21 PM app.controller.App load
+WARNING: Company in data/company.ser not found! Running bootstrap!
+=======
 jun 20, 2021 7:44:13 PM app.controller.App load
 INFO: Serialized data is loaded from data/company.ser
+>>>>>>> 78d8856baaaacac84beb8645374cffbd00a13136

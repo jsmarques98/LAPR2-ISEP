@@ -51,10 +51,6 @@ Z
 .src/test/java/app/domain/model/SampleTest.java,3/0/30a600e399b7ae013cc66d630992203751d9841b
 `
 0src/test/java/app/domain/model/EmployeeTest.java,e/3/e3c8c18d9e7436b0c6e2317e0e84a55d7e796e7a
-Y
-)src/main/java/app/ui/console/AdminUI.java,0/a/0a9fb9c3271ce78061d523da4e5474691abf5009
-X
-(src/main/java/app/ui/console/AuthUI.java,a/c/ac569ed985938d514a4808da16cd4fbc88fa6036
 `
 0src/test/java/app/domain/model/FileUtilTest.java,5/e/5eff9f112944b9b5a18da40c7265de859fd096f3
 L
@@ -95,8 +91,6 @@ q
 Asrc/main/java/app/domain/model/ClinicalChemestryTechnologist.java,8/f/8f6b8d168e2a0ba7ba2026c264df47159bad3649
 `
 0src/main/java/app/domain/model/ValueRecords.java,5/5/5546cb56d2512813025570520fd60de1ad4d89d4
-U
-%src/main/java/app/controller/App.java,4/7/47cfbdc47faac4c1edcb93d1b6968a5d5bdad509
 N
 docs/SprintC/US14/US14_SD.puml,f/9/f960283a378495f21348b4fbfe72afab274bb9c9
 O

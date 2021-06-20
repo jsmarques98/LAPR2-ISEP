@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="336px" preserveAspectRatio="none" style="width:582px;height:336px;" version="1.1" viewBox="0 0 582 336" width="582px" zoomAndPan="magnify"><defs><filter height="300%" id="f1e88pk46io813" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1e88pk46io813)" height="144.0001" style="stroke:#A80036;stroke-width:1.0;" width="10" x="88" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f1e88pk46io813)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="533" y="145"/><rect fill="#FFFFFF" filter="url(#f1e88pk46io813)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="533" y="204.2"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="93" x2="93" y1="88.7999" y2="251.8"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="537.5" x2="537.5" y1="88.7999" y2="251.8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="20" y="85.0059">Laboratory Cordinator</text><ellipse cx="93" cy="15" fill="#FEFECE" filter="url(#f1e88pk46io813)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M93,23 L93,50 M80,31 L106,31 M93,50 L80,65 M93,50 L106,65 " fill="none" filter="url(#f1e88pk46io813)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="20" y="263.8059">Laboratory Cordinator</text><ellipse cx="93" cy="277.5999" fill="#FEFECE" filter="url(#f1e88pk46io813)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M93,285.5999 L93,312.5999 M80,293.5999 L106,293.5999 M93,312.5999 L80,327.5999 M93,312.5999 L106,327.5999 " fill="none" filter="url(#f1e88pk46io813)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1e88pk46io813)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="65" x="503.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="510.5" y="73.0059">:System</text><rect fill="#FEFECE" filter="url(#f1e88pk46io813)" height="30.7999" style="stroke:#A80036;stroke-width:1.5;" width="65" x="503.5" y="250.8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="510.5" y="270.8059">:System</text><rect fill="#FFFFFF" filter="url(#f1e88pk46io813)" height="144.0001" style="stroke:#A80036;stroke-width:1.0;" width="10" x="88" y="98.7999"/><rect fill="#FFFFFF" filter="url(#f1e88pk46io813)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="533" y="145"/><rect fill="#FFFFFF" filter="url(#f1e88pk46io813)" height="29.6" style="stroke:#A80036;stroke-width:1.0;" width="10" x="533" y="204.2"/><polygon fill="#A80036" points="521,141,531,145,521,149,525,145" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="98" x2="527" y1="145" y2="145"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="105" y="139.477">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="248" x="116" y="139.477">wants to import clinical tests from CSV file</text><polygon fill="#A80036" points="109,170.6,99,174.6,109,178.6,105,174.6" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="103" x2="537" y1="174.6" y2="174.6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="115" y="169.077">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="240" x="126" y="169.077">asks to introduce the path of the CSV file</text><polygon fill="#A80036" points="521,200.2,531,204.2,521,208.2,525,204.2" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="98" x2="527" y1="204.2" y2="204.2"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="105" y="198.677">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="116" y="198.677">inserts the requested data</text><polygon fill="#A80036" points="109,229.8,99,233.8,109,237.8,105,233.8" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="103" x2="537" y1="233.8" y2="233.8"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="115" y="228.277">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="400" x="126" y="228.277">validates the path and informs success or insuccess of the operation</text><!--MD5=[12ef0a7744ea74a1c553c014ec51518a]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant ":System" as System
+
+
+activate LC
+
+loop
+LC -> System: wants to import clinical tests from CSV file
+
+activate System
+
+System -> LC: asks to introduce the path of the CSV file
+
+deactivate System
+
+LC -> System:  inserts the requested data
+
+activate System
+
+System -> LC: validates the path and informs success or insuccess of the operation
+
+deactivate System
+
+
+
+@enduml
+
+@startuml
+
+autonumber
+
+actor  "Laboratory Cordinator" as LC
+
+participant ":System" as System
+
+
+activate LC
+
+loop
+LC -> System: wants to import clinical tests from CSV file
+
+activate System
+
+System -> LC: asks to introduce the path of the CSV file
+
+deactivate System
+
+LC -> System:  inserts the requested data
+
+activate System
+
+System -> LC: validates the path and informs success or insuccess of the operation
+
+deactivate System
+
+
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 12:20:28 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

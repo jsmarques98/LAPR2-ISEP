@@ -214,4 +214,22 @@ public class Utils {
             e.printStackTrace();
         }
     }
+
+    public static String[] convertDoubleToStringArr(double[] arr){
+        String[] str = new String[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            str[i] = String.valueOf(arr[i]);
+        }
+        return str;
+    }
+    public static String[][] convertDoubleToStringArr2(double[][] arr){
+        String[][] str = new String[arr.length][2];
+        for (int i = 0; i < arr.length; i++) {
+            str[i][0] = String.valueOf(arr[i][0]);
+            str[i][1] = String.valueOf(arr[i][1]);
+        }
+        return str;
+    }
+
+
 }

@@ -229,9 +229,6 @@ public class ImportTestsCSV {
             }
         } catch (ParseException e) {
             e.printStackTrace();
-            double arst = 0;
-            double pqwf = 0;
-            double stdh = arst/pqwf;
         }
 
 

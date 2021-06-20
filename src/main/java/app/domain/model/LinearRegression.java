@@ -16,8 +16,8 @@ public class LinearRegression {
         private final double intercept, slope;
         private final double r2;
         private final double svar0, svar1;
-        private final double xbar;
-        private final double xxbar;
+        private final double xbar, ybar;
+        private final double xxbar, yybar;
 
         /**
          * Performs a linear regression on the data points (y[i], x[i]).
@@ -27,7 +27,6 @@ public class LinearRegression {
          * @throws IllegalArgumentException if the lengths of the two arrays are not equal
          */
         public LinearRegression(double[] x, double[] y) {
-            double xxbar1;
             if (x.length != y.length) {
                 throw new IllegalArgumentException("array lengths are not equal");
             }
@@ -41,17 +40,18 @@ public class LinearRegression {
                 sumy  += y[i];
             }
             xbar = sumx / n;
-            double ybar = sumy / n;
+            ybar = sumy / n;
 
             // second pass: compute summary statistics
-            xxbar1 = 0.0;
-            double yybar = 0.0, xybar = 0.0;
+            double xxbar1 = 0.0, yybar1 = 0.0;
+            double xybar = 0.0;
             for (int i = 0; i < n; i++) {
                 xxbar1 += (x[i] - xbar) * (x[i] - xbar);
-                yybar += (y[i] - ybar) * (y[i] - ybar);
+                yybar1 += (y[i] - ybar) * (y[i] - ybar);
                 xybar += (x[i] - xbar) * (y[i] - ybar);
             }
             xxbar = xxbar1;
+            yybar = yybar1;
             slope  = xybar / xxbar;
             intercept = ybar - slope * xbar;
 
@@ -131,7 +131,11 @@ public class LinearRegression {
 
         public double averageX(){return xbar;}
 
+        public double averageY(){return ybar;}
+
         public double sumX(){return xxbar;}
+
+        public double sumY(){return yybar;}
 
         /**
          * Returns a string representation of the simple linear regression model.

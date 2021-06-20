@@ -337,7 +337,7 @@ public class Company implements Serializable {
        return availableTests;
    }
 
-    public List<Test> getTestsToValidate() {
+    public List<Test> getTestsWaitingValidation() {
         ArrayList<Test> availableTests = new ArrayList<>();
         for(Test current : this.getTests())
             if(current.getTest_Chemical_DateHour()!=null &&
@@ -348,8 +348,38 @@ public class Company implements Serializable {
         return availableTests;
     }
 
+    public List<Test> getTestsWaitingResults() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getTest_Chemical_DateHour()!=null &&
+                    current.getTest_Doctor_DateHour()!=null &&
+                    current.getTest_Reg_DateHour() != null &&
+                    current.getTest_Validation_DateHour() == null)
+                availableTests.add(current);
+        return availableTests;
+    }
 
+    public List<Test> getTestsWaitingDiagnosis() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getTest_Chemical_DateHour()!=null &&
+                    current.getTest_Doctor_DateHour() ==null &&
+                    current.getTest_Reg_DateHour() != null &&
+                    current.getTest_Validation_DateHour() == null)
+                availableTests.add(current);
+        return availableTests;
+    }
 
+    public List<Test> getTestsValidated() {
+        ArrayList<Test> availableTests = new ArrayList<>();
+        for(Test current : this.getTests())
+            if(current.getTest_Chemical_DateHour()!=null &&
+                    current.getTest_Doctor_DateHour() !=null &&
+                    current.getTest_Reg_DateHour() != null &&
+                    current.getTest_Validation_DateHour() != null)
+                availableTests.add(current);
+        return availableTests;
+    }
 
 }
 

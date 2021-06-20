@@ -9,8 +9,10 @@ import app.ui.console.utils.Utils;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class SendCovidReportController {
+public class SendCovidReportController{
 
     private Company company;
 
@@ -28,12 +30,17 @@ public class SendCovidReportController {
         double[] covidPositiveTestsInterval = new double[company.finaldatesList.size()];
         // For all x given Historical points
         double[] covidPositiveTestsTotal = new double[company.dateList.size()];
+        double[] covidTestsTotal = new double[company.dateList.size()];
 
         double[][] intrevaloPrevisao = new double[company.dateList.size()][2];
 
+        double[] estimatedPositiveCases = new double[company.dateList.size()];
+
+        double[][] anova = new double[3][4];
+
         switch(op) {
             case 1:
-                simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, intrevaloPrevisao);
+                simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, covidTestsTotal, intrevaloPrevisao, estimatedPositiveCases, anova);
                 break;
             case 2:
 
@@ -44,7 +51,7 @@ public class SendCovidReportController {
         }
     }
 
-    private void simpleRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao) {
+    private void simpleRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova) {
         System.out.println("Choose the independent variable:\n1- Number of tests.\n2- Mean age.");
         int op = Utils.readIntegerFromConsole("Select the option number:");
         Double confidenceValue = Utils.readDoubleFromConsole("Enter the confidence level value: ");
@@ -57,30 +64,36 @@ public class SendCovidReportController {
         switch(op) {
             case 1:
                 totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
-                totalPositiveCases(covidPositiveTestsTotal);
-                printTotals(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal);
-
+                totalPositiveCases(covidTestsTotal, covidPositiveTestsTotal);
+//                printTotals(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal);
                 LinearRegression lr = new LinearRegression(covidTestsInterval, covidPositiveTestsInterval);
                 String equacaoReta = ("Y = " + lr.intercept() + " + " + lr.slope() + " * X");
-                String coeficienteDeterminacao = String.valueOf(lr.R2());
-
+                String r2 = String.valueOf(lr.R2());
+                String r = String.valueOf(Math.sqrt(lr.R2()));
+                String finalR = "R2 = " + r2 + "\nR = " + r;
                 intrevaloPrevisao = intervaloPrevisao(intrevaloPrevisao, covidTestsInterval, lr, covidPositiveTestsTotal, tc);
-                for (int i = 0; i < intrevaloPrevisao.length; i++) {
-                    System.out.println("\n" + i + ": " + intrevaloPrevisao[i][0]);
-                    System.out.println(i + ": " + intrevaloPrevisao[i][1] + "\n");
-                }
+                Double test = testeHipotese(covidTestsInterval, parameter, lr);
+                estimatedPositiveCases = estimatedPositives(covidTestsTotal, lr);
 
-                testeHipotese(covidTestsInterval, parameter, lr, tc);
+                String decision;
+                String t = String.valueOf(test);
+//                if(test > tc){
+                    decision = t + "\nDecision:\nNo reject";
+                    anova(anova, covidTestsInterval, lr);
+//                }else {
+//                    decision = t + "\nDecision:\nReject";
+//                    System.out.println("Inconclusive test");
+//                }
+                exportToFile(equacaoReta, finalR, decision, anova, covidPositiveTestsTotal, estimatedPositiveCases, intrevaloPrevisao);
                 break;
             case 2:
                 break;
             default:
                 System.out.println("Option not found");
-                simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, intrevaloPrevisao);
         }
     }
 
-    public void totalOfCovidTests(double[] covidTestsInterval,double[]  covidPositiveTestsInterval) {
+    public void totalOfCovidTests(double[] covidTestsInterval, double[]  covidPositiveTestsInterval) {
         int totalCounter = 0, positivesCounter = 0, i = 0;
         for (LocalDate d : company.finaldatesList) {
             for (ValueRecords valueRecords : company.valueRecordsList) {
@@ -101,19 +114,24 @@ public class SendCovidReportController {
         }
     }
 
-    private void totalPositiveCases(double[] covidPositiveTestsTotal) {
-        int counter = 0,i = 0;
+    private void totalPositiveCases(double[] covidTestsTotal, double[] covidPositiveTestsTotal) {
+        int totalCounter = 0, positivesCounter = 0, i = 0;
         for (LocalDate d : company.dateList) {
             for (ValueRecords valueRecords : company.valueRecordsList) {
                 Date date = Utils.localDateToDate(d);
                 Date vrDate = valueRecords.getData();
-                if(sdf.format(vrDate).equals(sdf.format(date)) && valueRecords.getParametro().equals("IgGAN") && valueRecords.getRegisteredValue() > Constants.MIN_VALUE_OF_IGGAN){
-                    counter++;
+                if(sdf.format(vrDate).equals(sdf.format(date)) && valueRecords.getParametro().equals("IgGAN")){
+                    totalCounter++;
+                    if(valueRecords.getRegisteredValue() > Constants.MIN_VALUE_OF_IGGAN){
+                        positivesCounter++;
+                    }
                 }
             }
-            covidPositiveTestsTotal[i] = counter;
+            covidPositiveTestsTotal[i] = totalCounter;
+            covidTestsTotal[i] = positivesCounter;
             i++;
-            counter = 0;
+            totalCounter = 0;
+            positivesCounter = 0;
         }
     }
 
@@ -139,24 +157,53 @@ public class SendCovidReportController {
         return intrevaloPrevisao;
     }
 
-    private void testeHipotese(double[] covidTestsInterval, String parameter, LinearRegression lr, Double tc) {
+    private Double testeHipotese(double[] covidTestsInterval, String parameter, LinearRegression lr) {
         if(parameter.equalsIgnoreCase("A")){
-            Double ta = lr.intercept()/Math.sqrt(1/covidTestsInterval.length+Math.pow(lr.averageX(),2)/lr.sumX());
-            if(ta > tc)
-                anova();
-            else
-                System.out.println("Inconclusive test");
+            return lr.intercept()/Math.sqrt(1/covidTestsInterval.length+Math.pow(lr.averageX(),2)/lr.sumX());
         }else{
-            Double tb = lr.slope()/Math.sqrt(lr.sumX());
-            if(tb > tc)
-                anova();
-            else
-                System.out.println("Inconclusive test");
+            return lr.slope()/Math.sqrt(lr.sumX());
         }
-
     }
 
-    private void anova() {
+    private double[] estimatedPositives(double[] covidTestsTotal, LinearRegression lr) {
+        double[] temp = new double[covidTestsTotal.length];
+        for (int i = 0; i < covidTestsTotal.length; i++) {
+            temp[i] = lr.predict(covidTestsTotal[i]);
+        }
+        return temp;
+    }
+
+    private void anova(double[][] anova, double[] covidTestsInterval, LinearRegression lr) {
+        anova[0][0] = 1;
+        anova[1][0] = covidTestsInterval.length-2;
+        anova[2][0] = anova[0][0]+anova[1][0];
+        anova[0][1] = lr.sumY();
+        anova[1][1] = Math.pow(lr.averageY(),2);
+        anova[2][1] = anova[0][1]+anova[1][1];
+        anova[0][2] = anova[0][1]/anova[0][0];
+        anova[1][2] = anova[1][1]/anova[1][0];
+        anova[0][3] = anova[0][2]/anova[1][2];
+    }
+
+
+    private void exportToFile(String equacaoReta, String coeficienteDeterminacao, String decision, double[][] anova, double[] covidPositiveTestsTotal, double[] estimatedPositiveCases, double[][] intrevaloPrevisao) {
+        String [] positiveTest = Utils.convertDoubleToStringArr(covidPositiveTestsTotal);
+        String [] estimatedCases = Utils.convertDoubleToStringArr(estimatedPositiveCases);
+        String [][] intervalo = Utils.convertDoubleToStringArr2(intrevaloPrevisao);
+
+        String texto = "The regression model fitted using data from the interval\n" + equacaoReta + "\nOther statistics\n"
+                + coeficienteDeterminacao + "\n" + "Hypothesis tests for regression coefficients\nHO:b=0 (a=0) H1: b<>0 (a<>0)\nt_obs = "
+                + decision + "\nSignificance model with Anova\nH0: b=0  H1:b<>0\n"
+                + "\t\t df\tSS\tMS\tF\n"
+                + "Regression\t" + anova[0][0] + "\t" + anova[0][1] + "\t" + anova[0][2] + "\t" + anova[0][3] + "\n"
+                + "Residual  \t" + anova[1][0] + "\t" + anova[1][1] + "\t" + anova[1][2] + "\n"
+                + "Total     \t" + anova[2][0] + "\t" + anova[2][1]
+                + "\nDate                              : " + company.dateList.toString()
+                + "\nNumber of OBSERVED positive cases : " + positiveTest
+                + "\nNumber of ESTIMATED positive cases: " + estimatedCases
+                + "\n95% intervals                     : " + intervalo;
+
+        Utils.createFile("Linear Regression", texto);
     }
 
 }

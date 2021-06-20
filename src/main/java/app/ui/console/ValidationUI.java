@@ -21,7 +21,7 @@ public class ValidationUI implements Runnable{
 
     public void run(){
 
-        Test test = (Test)Utils.showAndSelectOne(company.getTestsToValidate(),"test");
+        Test test = (Test)Utils.showAndSelectOne(company.getTestsWaitingValidation(),"test");
 
         if(test != null) {
             Utils.showList(company.getValueRecords(test.getTestID()), "valueRecords");

@@ -242,6 +242,7 @@ public class SendCovidReportController{
 
     public void totalOfCovidTests2(double[] covidMeanAgeInterval, double[]  covidPositiveTestsInterval) {
         int totalCounter = 0, positivesCounter = 0, i = 0, totalAge=0;
+        double media = 0;
         for (LocalDate d : company.finaldatesList) {
             for (ValueRecords valueRecords : company.valueRecordsList) {
                 Date date = Utils.localDateToDate(d);
@@ -260,8 +261,12 @@ public class SendCovidReportController{
                     }
                 }
             }
-            double media  = totalAge/totalCounter;
-            covidMeanAgeInterval[i] = media;
+            if(totalCounter != 0 ) {
+                media = totalAge / totalCounter;
+                covidMeanAgeInterval[i] = media;
+            }else {
+                covidMeanAgeInterval[i] = 0;
+            }
             covidPositiveTestsInterval[i] = positivesCounter;
             i++;
             totalCounter = 0;

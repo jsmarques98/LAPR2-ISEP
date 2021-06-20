@@ -47,7 +47,8 @@ public class SendCovidReportController{
                 simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, covidTestsTotal, intrevaloPrevisao, estimatedPositiveCases, anova, covidMeanAgeInterval, covidMeanAgeTotal);
                 break;
             case 2:
-                //multilinearRegression(covidTestsInterval, covidPositiveTestsInterval,covidPositiveTestsTotal);
+                System.out.println("The number o covid test positive are" + covidPositiveTestsTotal + "the number of total tests are" + covidTestsTotal + "and the covid mean age is" + covidMeanAgeTotal);
+
                 break;
             default:
                 System.out.println("Option not found");
@@ -55,14 +56,16 @@ public class SendCovidReportController{
         }
     }
 
-    private void multilinearRegression(double[] covidTestsInterval, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
+    /*private void multilinearRegression(double[] covidTestsInterval, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
 
         totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
         totalPositiveCases(covidTestsTotal, covidPositiveTestsTotal);
         totalOfCovidTests2(covidMeanAgeInterval, covidPositiveTestsInterval);
         totalPositiveCases2(covidMeanAgeTotal, covidPositiveTestsTotal);
 
-    }
+
+
+    }*/
 
     private void simpleRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal) {
         System.out.println("Choose the independent variable:\n1- Number of tests.\n2- Mean age.");

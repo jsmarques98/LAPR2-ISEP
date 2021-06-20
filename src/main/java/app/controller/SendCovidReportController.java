@@ -316,4 +316,29 @@ public class SendCovidReportController{
         Utils.createFile("Linear Regression", texto);
     }
 
+
+    private void goToFile(double[] covidPositiveTestsTotal,double[] covidTestsTotal){
+
+        String [] positiveTest = Utils.convertDoubleToStringArr(covidPositiveTestsTotal);
+
+
+        //String texto = ;
+
+        //Utils.createFile("Linear Regression", texto);
+    }
+
+    private void multilinearRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
+
+        totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
+        totalPositiveCases(covidTestsTotal, covidPositiveTestsTotal);
+
+
+    }
+
+    public Double medianage(){
+        System.out.println("Choose a median age for the covid tests");
+        double age = Utils.readDoubleFromConsole("Write de median age of the covid tests:");
+
+        return age;
+    }
 }

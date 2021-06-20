@@ -45,6 +45,7 @@ public class SendCovidReportController{
                 simpleRegression(covidTestsInterval, covidPositiveTestsInterval, covidPositiveTestsTotal, covidTestsTotal, intrevaloPrevisao, estimatedPositiveCases, anova, covidMeanAgeInterval, covidMeanAgeTotal);
                 break;
             case 2:
+                System.out.println("The number o covid test positive are" + covidPositiveTestsTotal + "the number of total tests are" + covidTestsTotal + "and the covid mean age is" + covidMeanAgeTotal);
 
                 break;
             default:
@@ -52,6 +53,17 @@ public class SendCovidReportController{
                 regressionMenu();
         }
     }
+
+    /*private void multilinearRegression(double[] covidTestsInterval, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova){
+
+        totalOfCovidTests(covidTestsInterval, covidPositiveTestsInterval);
+        totalPositiveCases(covidTestsTotal, covidPositiveTestsTotal);
+        totalOfCovidTests2(covidMeanAgeInterval, covidPositiveTestsInterval);
+        totalPositiveCases2(covidMeanAgeTotal, covidPositiveTestsTotal);
+
+
+
+    }*/
 
     private void simpleRegression(double[] covidTestsInterval, double[] covidPositiveTestsInterval, double[] covidTestsTotal, double[] covidPositiveTestsTotal, double[][] intrevaloPrevisao, double[] estimatedPositiveCases, double[][] anova, double[] covidMeanAgeInterval, double[] covidMeanAgeTotal) {
         System.out.println("Choose the independent variable:\n1- Number of tests.\n2- Mean age.");
@@ -316,5 +328,17 @@ public class SendCovidReportController{
     public void nhs(String texto) {
         Report2NHS.writeUsingFileWriter(texto);
     }
+
+
+    private void goToFile(double[] covidPositiveTestsTotal,double[] covidTestsTotal){
+
+        String [] positiveTest = Utils.convertDoubleToStringArr(covidPositiveTestsTotal);
+
+
+        //String texto = ;
+
+        //Utils.createFile("Linear Regression", texto);
+    }
+
 
 }

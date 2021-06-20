@@ -1,0 +1,100 @@
+@startuml
+package "UI" #DDDDDD {
+class ImportTestsUI {
+show(ClientDTO)
+show(TestDTO)
+}
+}
+
+
+package "Controller" #DDDDDD {
+class ImportTestsController {
+    +import(pathName)
+}
+}
+
+package "DTO" #DDDDDD {
+class ClientDTO {
+ }
+
+class TestDTO {
+ }
+
+
+ class Mapper {
+    toDTO(<S>)
+    toNormal(<DTO>)
+ }
+
+ Mapper   ..>  TestDTO
+ Mapper   ..>  ClientDTO
+  ImportTestsUI   ..>  TestDTO
+  ImportTestsUI   ..>  ClientDTO
+  ImportTestsController  ..> Mapper
+}
+
+
+package "Domain" #DDDDDD {
+ Mapper   ..>  Client
+ Mapper   ..>  Test
+
+ Company  "1" --> "*" Client
+ Company  "1" --> "*" Test
+  Client  "1" --> "*" Test
+  Company  "1" --> "*" Lab
+  Lab "1" --> "*" Test
+   Company  "1" --> "*" Parameters
+   Company  "1" --> "*" ValueRecords
+   Test  "1" --> "*" ValueRecords
+Test "1" --> "*" TestType
+
+class ValueRecords{
+  }
+
+
+class Company {
+    +App.getInstance().getCompany()
+    +save(args)
+}
+
+class Client {
+ }
+
+class Test {
+ }
+
+class Lab {
+ }
+
+class Parameters {
+ }
+
+class TestType{
+  }
+
+
+
+
+}
+ImportTestsController --> Company
+
+package "Adapter" #DDDDDD {
+
+class ReflectorUtility {
+    +ImporterInterface ImporterReflection(adapterClass)
+}
+package "Importer" #DDDDDD {
+interface ImporterInterface
+
+CSVImporterAdapter -|> ImporterInterface
+}
+
+ReflectorUtility ..> CSVImporterAdapter : creates using reflection
+}
+ImportTestsUI ..> ImportTestsController
+ImportTestsController --> ImporterInterface
+
+ImportTestsController ..> ReflectorUtility
+
+@enduml
+

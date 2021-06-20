@@ -11,6 +11,7 @@ participant ImportTestsUI
 participant ImportTestsController
 participant ReflectorUtility
 activate ReflectorUtility
+activate Mapper
 
 activate LC
 
@@ -54,10 +55,13 @@ activate TestType
 
 'controller saves file instances
 ImporterInterface -> ImportTestsController : return args
-ImportTestsController -> Company : save(args)
-ImportTestsController -> ImportTestsUI : show(args)
-
+ImportTestsController -> Company : boolean success = save(args)
+alt success then
+    ImportTestsController -> Mapper : ClientDTO = toDTO(Client)
+    ImportTestsController -> Mapper : TestDTO = toDTO(Test)
+    ImportTestsController -> ImportTestsUI : show(args)
 end
+ImportTestsController -> ImportTestsUI : show(success)
 
 ImportTestsUI -> LC: validates the path and informs success or insuccess of the operation
 

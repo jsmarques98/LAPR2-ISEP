@@ -10,6 +10,7 @@ participant OverviewTestsUI
 participant OverviewTestsController
 participant Company
 participant ReflectorUtility
+participant AlgorithmInterface
 activate ReflectorUtility
 
 activate LC
@@ -24,38 +25,46 @@ activate OverviewTestsController
 OverviewTestsController -> Company ** : company = App.getInstance().getCompany()
 activate Company
 
-OverviewTestsController -> Company : tests = ArrayList<Test> getRealizedTests()
-Company -> Company : getRealizedTests()
+OverviewTestsController -> Company : numRegisteredTests = getRegisteredTests().size()
+OverviewTestsController -> Company : numValidatedTests = getValidatedTests().size()
+OverviewTestsController -> Company : numAvailableTests = getAvailableTests().size()
+OverviewTestsController -> Company : ArrayList<Test> tests = getValidatedTests()
+Company -> Company : getValidatedTests()
 
+OverviewTestsController -> OverviewTestsController : earlyDate = getEarliestDate(tests)
+OverviewTestsController -> OverviewTestsController : lateDate = getLatestDate(tests)
 
-OverviewTestsUI <- OverviewTestsController : show(tests)
+OverviewTestsUI <- OverviewTestsController : show(numRegisteredTests,numValidatedTests,numAvailableTests,earlyDate,lateDate)
 
-OverviewTestsUI -> LC: shows all the tests that were performed and asks to know which Graphs and Statistics that he wants to see
+OverviewTestsUI -> LC: shows the tests that were performed and asks to know which Graphs and Statistics that he wants to see
 
 
 deactivate OverviewTestsUI
 
-LC -> OverviewTestsUI: selects the requested data
+LC -> OverviewTestsUI: selects the requested date Interval
 
 activate OverviewTestsUI
 
-OverviewTestsUI -> OverviewTestsUI : showAndSelectIndex(params)
+OverviewTestsUI -> OverviewTestsUI : selectDates(date1, date2)
 
-OverviewTestsUI -> LC: asks to confirm the data
+OverviewTestsUI -> LC: asks to confirm the date Interval
 
 deactivate OverviewTestsUI
 
 LC -> OverviewTestsUI: confirms data
-
 activate OverviewTestsUI
-OverviewTestsUI -> OverviewTestsController
 
-OverviewTestsController -> AlgorithmInterface ** : create()
+OverviewTestsUI -> OverviewTestsController : changeDates(date1,date2)
+
+OverviewTestsController -> OverviewTestsController : setEarlyDate(date1)
+OverviewTestsController -> OverviewTestsController : setLateDate(date2)
+
+ReflectorUtility -> AlgorithmInterface  : adapterReflection(App.getInstance().getAlgorithmAdapter())
 activate AlgorithmInterface
-AlgorithmInterface -> ReflectorUtility : adapterReflection(App.getInstance().getAlgorithmAdapter())
-ReflectorUtility -> AlgorithmAdapter ** : create
-activate AlgorithmAdapter
-AlgorithmAdapter -> AlgorithmAdapter : calculate(data)
+OverviewTestsController -> AlgorithmInterface : GraphData = createEntries(earlyDate, lateDate)
+
+
+AlgorithmInterface -> AlgorithmInterface : GraphData = calculate(tests)
 OverviewTestsUI <- OverviewTestsController : javaFX.Draw(GraphData)
 OverviewTestsUI -> LC: informs success or insuccess of the operation
 

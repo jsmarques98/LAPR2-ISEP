@@ -1,4 +1,4 @@
-package app.Adapter;
+package app.controller.utils;
 
 import app.controller.App;
 import app.controller.RegisterTestToClientController;

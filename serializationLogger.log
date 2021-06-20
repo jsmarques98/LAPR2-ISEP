@@ -1,2 +1,6 @@
+<<<<<<< HEAD
+Jun 18, 2021 4:52:28 PM app.controller.App load
+=======
 jun 20, 2021 12:24:07 AM app.controller.App load
+>>>>>>> e63c532ba2474c4b2837fac21afaded775c78ce8
 WARNING: Company in data/company.ser not found! Running bootstrap!

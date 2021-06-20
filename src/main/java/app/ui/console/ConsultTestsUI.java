@@ -3,7 +3,7 @@ package app.ui.console;
 import app.controller.ConsultTestsController;
 import app.domain.model.Client;
 import app.domain.model.Test;
-import app.Adapter.SortClientsAlgorithms;
+import app.controller.utils.SortClientsAlgorithms;
 import app.domain.model.ValueRecords;
 
 import java.util.ArrayList;
